@@ -281,6 +281,74 @@ h1,h2,h3{font-family:var(--display);font-weight:800;margin:0;text-wrap:balance;l
 .skill-bars{display:flex;flex-direction:column;gap:11px}
 .skill-bars .sb{display:grid;grid-template-columns:82px 1fr 46px;gap:10px;align-items:center;font-size:14px}
 .toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--ground);padding:10px 18px;border-radius:99px;font-size:14px;font-weight:600;z-index:80;box-shadow:var(--shadow-lift)}
+/* ---------- hội thoại ---------- */
+.topic{cursor:pointer}
+.topic-dlg{align-self:flex-start;font-size:12.5px;font-weight:700;color:var(--accent-ink);background:var(--accent-soft);padding:4px 11px;border-radius:99px}
+.topic-dlg:hover{background:var(--accent);color:var(--on-accent)}
+.dlg-list{display:flex;flex-direction:column;gap:10px}
+.dlg-card{display:flex;gap:14px;align-items:flex-start;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow);transition:box-shadow .15s ease}
+.dlg-card:hover{box-shadow:var(--shadow-lift)}
+.dlg-num{font-size:20px;color:var(--faint);line-height:1.25;flex:none}
+.dlg-card h3{font-size:16.5px}
+.dlg-first{margin:3px 0 7px;color:var(--muted);font-size:14.5px;font-style:italic;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dlg-meta{display:flex;gap:6px;flex-wrap:wrap;align-items:center;font-size:12.5px;color:var(--faint);font-family:var(--mono)}
+.dlg-src{font-size:12px;color:var(--faint);margin-top:26px;line-height:1.55}
+.dlg-head{display:flex;gap:8px;align-items:center}
+.dlg-pos{margin-left:auto;font-size:13px;color:var(--muted)}
+.dlg-title{font-size:clamp(22px,3.6vw,28px);margin:14px 0}
+.dlg-tools{display:flex;gap:10px 14px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
+.dlg-tog{display:inline-flex;gap:6px;align-items:center;font-size:14px;font-weight:600;color:var(--ink-2);cursor:pointer}
+.dlg-hint{font-size:13px;color:var(--faint)}
+.dlg-lines{display:flex;flex-direction:column;gap:10px}
+.dl{display:flex;gap:8px;align-items:flex-end;max-width:88%}
+.dl.b{flex-direction:row-reverse;align-self:flex-end}
+.dl-who{flex:none;min-width:28px;height:28px;padding:0 7px;border-radius:99px;display:grid;place-items:center;font-size:12px;font-weight:800;font-family:var(--display);background:var(--sunk);color:var(--ink-2)}
+.dl.b .dl-who{background:var(--accent);color:var(--on-accent)}
+.dl.me .dl-who{background:var(--chalk);color:var(--surface)}
+.dl-bub{background:var(--surface);border:1px solid var(--line);border-radius:14px 14px 14px 4px;padding:9px 13px;box-shadow:var(--shadow);cursor:pointer;min-width:0}
+.dl.b .dl-bub{background:var(--accent-soft);border-color:transparent;border-radius:14px 14px 4px 14px}
+.dl.cur .dl-bub{outline:2.5px solid var(--chalk);outline-offset:1px}
+.dl-en{font-size:16.5px;line-height:1.5}
+.dl-vi{font-size:14px;color:var(--muted);margin-top:3px;line-height:1.45}
+.dl .speak-btn{width:32px;height:32px;font-size:14px}
+.dw{font:inherit;color:var(--accent-ink);font-weight:700;border-bottom:2px solid var(--chalk);padding:0;border-radius:0}
+.dw{border-bottom-style:dotted;border-bottom-color:var(--line-2);font-weight:600}
+.dw.new{border-bottom:2px solid var(--chalk);font-weight:700}
+.dw:hover{background:var(--chalk-soft)}
+h3 .dw{pointer-events:none}
+.dlg-newc{color:var(--chalk);font-weight:500}
+.dlg-h3{font-size:15px;margin:26px 0 10px}
+.dlg-words{display:flex;flex-wrap:wrap;gap:7px}
+.dlg-w{display:inline-flex;gap:6px;align-items:baseline;padding:6px 11px;border-radius:9px;background:var(--surface);border:1px solid var(--line);font-size:14px;text-align:left}
+.dlg-w span{color:var(--muted);font-size:13px}
+.dlg-w:hover{border-color:var(--accent)}
+.role-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:16px;box-shadow:var(--shadow-lift)}
+.role-card.me{border:2px solid var(--chalk)}
+.role-lab{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);font-weight:700;margin-bottom:8px}
+.role-card .dl-en.big{font-size:19px}
+.role-card .dl-vi.big{font-size:18px;color:var(--ink);font-weight:600;margin:0 0 6px}
+.role-act{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-top:14px}
+.role-card .mic{width:76px;height:76px;font-size:30px;margin:14px auto 4px}
+.say .ok{color:var(--good)}
+.say .miss{color:var(--again);text-decoration:underline wavy;text-underline-offset:3px}
+.bank{position:sticky;top:0;z-index:2;display:flex;flex-wrap:wrap;gap:6px;justify-content:center;background:var(--ground);padding:8px 0 12px;margin-bottom:6px}
+.bank .tile{padding:6px 11px;font-size:14.5px}
+.gapin{font:inherit;font-weight:700;color:var(--accent-ink);background:var(--surface-2);border:0;border-bottom:2px solid var(--accent);border-radius:4px 4px 0 0;padding:0 4px;text-align:center;min-width:4ch;max-width:100%}
+.gapin:focus{outline:none;background:var(--chalk-soft)}
+.gapin.ok{border-color:var(--good);color:var(--good);background:var(--good-soft)}
+.gapin.no{border-color:var(--again);color:var(--again);background:var(--again-soft)}
+.gap-fix{font-size:13px;color:var(--good);font-weight:700;margin-left:3px}
+@media (max-width:640px){.dl{max-width:96%}.dl-en{font-size:16px}}
+.pager{display:flex;align-items:center;justify-content:center;gap:5px;flex-wrap:wrap;margin:22px 0 4px}
+.pg{min-width:38px;height:38px;padding:0 9px;border-radius:10px;font-family:var(--mono);font-weight:500;font-size:14px;color:var(--ink-2);background:var(--surface);border:1px solid var(--line)}
+.pg:hover{border-color:var(--accent);color:var(--accent-ink)}
+.pg.on{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.pg[disabled]{opacity:.35;pointer-events:none}
+.pg-gap{color:var(--faint);padding:0 3px}
+.pg-info{flex-basis:100%;text-align:center;font-size:12px;color:var(--faint);margin-top:4px}
+.gtabs{margin-bottom:18px}
+.gtabs button{flex:0 0 auto;padding:8px 12px}
+.gtabs button .mono{font-size:11px;opacity:.7;margin-left:2px}
 </style>
 
 <div class="shell">
@@ -553,12 +621,10 @@ function speak(text,opts={}){
   try{
     speechSynthesis.cancel();
     const u=new SpeechSynthesisUtterance(text);
-    const v=pickVoice(); if(v){u.voice=v;u.lang=v.lang;} else u.lang=S.dialect;
-    u.rate=opts.rate||S.rate; u.pitch=1;
-    if(opts.btn){
-      opts.btn.classList.add('playing');
-      u.onend=u.onerror=()=>opts.btn.classList.remove('playing');
-    }
+    const v=opts.voice||pickVoice(); if(v){u.voice=v;u.lang=v.lang;} else u.lang=S.dialect;
+    u.rate=opts.rate||S.rate; u.pitch=opts.pitch||1;
+    if(opts.btn) opts.btn.classList.add('playing');
+    u.onend=u.onerror=()=>{ if(opts.btn) opts.btn.classList.remove('playing'); if(opts.onend) opts.onend(); };
     speechSynthesis.speak(u);
   }catch(e){}
 }
@@ -600,18 +666,52 @@ function updateFoot(){
   const nd=$('#navDue'); if(nd){ nd.hidden=c.due===0; nd.textContent=c.due; }
 }
 
+/* ---------- Phân trang dùng chung ---------- */
+const PAGES={};   // key -> trang đang xem; nhớ lại khi quay về danh sách
+function paginate(host,key,items,size,drawItem,opts={}){
+  const n=Math.max(1,Math.ceil(items.length/size));
+  let p=Math.max(0,Math.min(PAGES[key]||0,n-1));
+  const box=el('div',opts.cls||''), nav=el('nav','pager');
+  nav.setAttribute('aria-label','Phân trang');
+  host.appendChild(box); host.appendChild(nav);
+  const draw=scroll=>{
+    PAGES[key]=p; box.innerHTML='';
+    items.slice(p*size,(p+1)*size).forEach((it,i)=>{ const e=drawItem(it,p*size+i); if(e) box.appendChild(e); });
+    nav.hidden=n<=1;
+    nav.innerHTML=pagerHtml(p,n,items.length,size,opts.unit||'mục');
+    nav.querySelectorAll('[data-p]').forEach(b=>b.onclick=()=>{ p=+b.dataset.p; draw(true); });
+    if(scroll){ try{ (opts.top||box).scrollIntoView({block:'start',behavior:'smooth'}); }catch(e){} }
+  };
+  draw(false);
+}
+function pagerHtml(p,n,total,size,unit){
+  const nums=[];                                   // 1 … 4 5 6 … 12
+  for(let i=0;i<n;i++){
+    if(i===0||i===n-1||Math.abs(i-p)<=1) nums.push(i);
+    else if(nums[nums.length-1]!=='…') nums.push('…');
+  }
+  const from=p*size+1, to=Math.min(total,(p+1)*size);
+  return `<button class="pg" data-p="${p-1}" ${p?'':'disabled'} aria-label="Trang trước">‹</button>
+    ${nums.map(i=>i==='…'?'<span class="pg-gap">…</span>'
+      :`<button class="pg${i===p?' on':''}" data-p="${i}"${i===p?' aria-current="page"':''}>${i+1}</button>`).join('')}
+    <button class="pg" data-p="${p+1}" ${p<n-1?'':'disabled'} aria-label="Trang sau">›</button>
+    <span class="pg-info mono">${from}–${to} / ${total} ${unit}</span>`;
+}
+
 /* ============================================================
    5. Các màn hình
    ============================================================ */
 function render(){
+  dlgStop();
+  const navV={dialogs:'topics',dialog:'topics'}[route.v]||route.v;
   document.querySelectorAll('[data-nav]').forEach(b=>
-    b.setAttribute('aria-current', b.dataset.nav===route.v?'page':'false'));
+    b.setAttribute('aria-current', b.dataset.nav===navV?'page':'false'));
   if(route.v==='study'){ $('#main').innerHTML='<div class="study" id="studyRoot"></div>'; renderStudy(); return; }
   if(route.v==='gdrill'){ $('#main').innerHTML='<div class="study" id="studyRoot"></div>'; renderDrill(); return; }
   if(!$('#view')){ $('#main').innerHTML='<div class="wrap" id="view"></div>'; }
   const t=$('#view');
   t.innerHTML='';
-  ({home:viewHome,topics:viewTopics,grammar:viewGrammar,lesson:viewLesson,plan:viewPlan,placement:viewPlacement,browse:viewBrowse,stats:viewStats,settings:viewSettings}[route.v]||viewHome)(t);
+  ({home:viewHome,topics:viewTopics,grammar:viewGrammar,lesson:viewLesson,plan:viewPlan,placement:viewPlacement,dialogs:viewDialogs,dialog:viewDialog,browse:viewBrowse,stats:viewStats,settings:viewSettings}[route.v]||viewHome)(t);
   updateFoot();
 }
 
@@ -702,15 +802,17 @@ function topicStat(tp){
   return {tp,nw,learn,known,due,total:tp.words.length,seen:tp.words.length-nw};
 }
 function topicCard(ts){
-  const {tp}=ts;
-  const b=el('button','topic');
+  const {tp}=ts, nd=(DIALOGS[tp.id]||[]).length;
+  const b=el('div','topic'); b.tabIndex=0; b.setAttribute('role','button');
   b.innerHTML=`
     <div class="topic-top"><span class="topic-ico">${tp.icon}</span>
       <div style="min-width:0"><h3>${esc(tp.name)}</h3>
         <div class="topic-meta">${ts.known}/${ts.total} thuộc${ts.due?` · <span style="color:var(--chalk)">${ts.due} tới hạn</span>`:''}</div>
       </div></div>
-    <div class="bar"><i class="b-known" style="width:${ts.known/ts.total*100}%"></i><i class="b-learn" style="width:${ts.learn/ts.total*100}%"></i></div>`;
-  b.onclick=()=>startSession(tp.id);
+    <div class="bar"><i class="b-known" style="width:${ts.known/ts.total*100}%"></i><i class="b-learn" style="width:${ts.learn/ts.total*100}%"></i></div>
+    ${nd?`<button class="topic-dlg">💬 ${nd} hội thoại</button>`:''}`;
+  b.onclick=e=>{ if(e.target.closest('.topic-dlg')){ go('dialogs',{t:tp.id}); return; } startSession(tp.id); };
+  b.onkeydown=e=>{ if((e.key==='Enter'||e.key===' ')&&e.target===b){ e.preventDefault(); startSession(tp.id); } };
   return b;
 }
 
@@ -723,9 +825,7 @@ function viewTopics(root){
       <span><i style="background:var(--chalk)"></i>Đang học</span>
       <span><i style="background:var(--line-2)"></i>Chưa chạm</span>
     </div>`;
-  const grid=el('div','topics');
-  TOPICS.forEach(tp=>grid.appendChild(topicCard(topicStat(tp))));
-  root.appendChild(grid);
+  paginate(root,'topics',TOPICS,12,tp=>topicCard(topicStat(tp)),{cls:'topics',unit:'chủ đề'});
 }
 
 /* ---------- Tra từ ---------- */
@@ -755,8 +855,7 @@ function viewBrowse(root){
     const r=$('#res');r.innerHTML='';
     if(!list.length){r.innerHTML='<div class="empty"><span class="big">🕳️</span>Không tìm thấy từ nào.</div>';return;}
     r.appendChild(el('div','eyebrow','<div style="margin-bottom:8px">'+list.length+' từ</div>'));
-    const box=el('div','wlist');
-    list.slice(0,300).forEach(w=>{
+    paginate(r,'browse',list,40,w=>{
       const cls=isNew(w.id)?'d-new':isKnown(w.id)?'d-known':'d-learn';
       const b=el('button','wrow');
       b.innerHTML=`<span class="ic">${w.pic}</span>
@@ -765,15 +864,14 @@ function viewBrowse(root){
           <br><span class="m">${esc(w.vi)}</span></span>
         <span class="dot ${cls}" title="trạng thái"></span>`;
       b.onclick=()=>openDetail(w);
-      box.appendChild(b);
-    });
-    r.appendChild(box);
-    if(list.length>300) r.appendChild(el('p','empty','Hiển thị 300 từ đầu — hãy lọc hẹp hơn.'));
+      return b;
+    },{cls:'wlist',unit:'từ',top:r});
   };
-  $('#q').oninput=e=>{browseQ=e.target.value;draw();};
-  $('#ft').onchange=e=>{browseT=e.target.value;draw();};
-  $('#fs').onchange=e=>{browseS=e.target.value;draw();};
-  $('#fo').onchange=e=>{browseO=e.target.value;draw();};
+  // đổi bộ lọc -> về trang 1
+  $('#q').oninput=e=>{browseQ=e.target.value;PAGES.browse=0;draw();};
+  $('#ft').onchange=e=>{browseT=e.target.value;PAGES.browse=0;draw();};
+  $('#fs').onchange=e=>{browseS=e.target.value;PAGES.browse=0;draw();};
+  $('#fo').onchange=e=>{browseO=e.target.value;PAGES.browse=0;draw();};
   draw();
 }
 
@@ -1015,9 +1113,14 @@ function viewGrammar(root){
       <div class="stat"><b class="mono">${c.done}</b><span>Đã luyện</span></div>
       <div class="stat"><b class="mono">${c.known}</b><span>Đã vững</span></div>
       <div class="stat new"><b class="mono">${c.total-c.done}</b><span>Chưa học</span></div>
-    </div><div id="gGroups"></div>`;
+    </div>
+    <div class="skillsw gtabs" id="gTabs" role="tablist" aria-label="Nhóm ngữ pháp">${GRAMMAR.map((g,i)=>
+      `<button role="tab" data-g="${i}" aria-pressed="${i===(PAGES.grammar||0)}">${g.icon} ${esc(g.group)} <span class="mono">${g.points.length}</span></button>`).join('')}</div>
+    <div id="gGroups"></div>`;
   const host=$('#gGroups');
-  GRAMMAR.forEach(g=>{
+  const gi=Math.min(PAGES.grammar||0,GRAMMAR.length-1);
+  $('#gTabs').querySelectorAll('[data-g]').forEach(b=>b.onclick=()=>{ PAGES.grammar=+b.dataset.g; render(); });
+  [GRAMMAR[gi]].forEach(g=>{
     const sec=el('div','gr-group');
     sec.innerHTML=`<h2><span>${g.icon}</span>${esc(g.group)}</h2><div class="gr-list"></div>`;
     const list=sec.querySelector('.gr-list');
@@ -1348,10 +1451,12 @@ function viewPlan(root){
       <div class="eyebrow" style="margin-bottom:10px">Mẹo theo từng phần thi</div>
       <div id="parts"></div>
     </div>`;
-  $('#reset').onclick=()=>{ if(confirm('Xoá lộ trình hiện tại và tạo lại từ đầu?')){PLAN=null;savePlan();render();} };
+  $('#reset').onclick=()=>{ if(confirm('Xoá lộ trình hiện tại và tạo lại từ đầu?')){PLAN=null;delete PAGES.plan;savePlan();render();} };
 
   const host=$('#weeks');
-  PLAN.weekList.forEach(w=>{
+  // 4 tuần một trang; lần đầu mở trang chứa tuần hiện tại
+  if(PAGES.plan==null&&cw) PAGES.plan=Math.floor((cw.week-1)/4);
+  paginate(host,'plan',PLAN.weekList,4,w=>{
     const isNow=cw&&cw.week===w.week;
     const box=el('div','card');
     box.style.cssText='padding:16px 18px;margin-bottom:12px'+(isNow?';border-color:var(--accent);box-shadow:var(--shadow-lift)':'');
@@ -1406,8 +1511,8 @@ function viewPlan(root){
       acts.appendChild(chk);
       list.appendChild(row);
     });
-    host.appendChild(box);
-  });
+    return box;
+  },{unit:'tuần',top:host});
 
   const ph=$('#parts');
   X.parts.forEach(p=>{
@@ -1865,10 +1970,378 @@ function renderDone(root){
     </div>
     <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px">
       <button class="btn btn-primary btn-lg" id="more">Học tiếp</button>
+      ${SES.topic&&DIALOGS[SES.topic]?'<button class="btn btn-lg" id="dlgGo">💬 Luyện hội thoại</button>':''}
       <button class="btn btn-lg" id="home">Về trang chính</button>
     </div></div>`;
+  $('#dlgGo')?.addEventListener('click',()=>{const t=SES.topic;SES=null;go('dialogs',{t});});
   $('#more').onclick=()=>startSession(SES.topic);
   $('#home').onclick=()=>{SES=null;go('home');};
+}
+
+/* ============================================================
+   9. Hội thoại theo chủ đề — nguồn DailyDialog (CC BY-NC-SA 4.0)
+   ============================================================ */
+const DIALOGS=DATA.dialogs||{};          // {topicId:[{id,title,en[],vi[]}]}
+const LS_D='bnt.dlg.v1';
+let DLGP=lsGet(LS_D,{});                 // {dialogId:{v:1 đã đọc, r:% đóng vai tốt nhất, f:% điền từ tốt nhất}}
+function saveD(){lsSet(LS_D,DLGP);}
+const DLG={mode:'read',role:1,vi:false,peek:false};
+const DLGPLAY={tok:0}; let DLGSEQ=0;
+const DLG_SRC='Hội thoại lấy nguyên văn từ kho <b>DailyDialog</b> (Li và cộng sự, IJCNLP 2017), '+
+  'giấy phép CC BY-NC-SA 4.0 — chỉ dùng phi thương mại. Câu tiếng Anh chỉ chuẩn hoá dấu câu; '+
+  'bản dịch tiếng Việt do app biên dịch.';
+
+// Bản đồ dạng viết -> mục từ của chủ đề (gồm cả dạng số nhiều, quá khứ, so sánh...)
+const FORM_MAPS=new Map();
+function formMap(tid){
+  if(FORM_MAPS.has(tid)) return FORM_MAPS.get(tid);
+  const m=new Map();
+  const add=(f,w,strong)=>{f=String(f).toLowerCase().trim(); if(f&&(strong||!m.has(f))) m.set(f,w);};
+  for(const w of WORDS){
+    if(w.t!==tid) continue;
+    const b=w.w.toLowerCase();
+    add(b,w,true);
+    String(w.forms||'').split(/[·,\/;]/).forEach(x=>{
+      x=x.replace(/\(.*?\)/g,'').trim();
+      if(/^[a-z][a-z'-]*$/i.test(x)&&!/^(more|most|less|least)$/i.test(x)) add(x,w);});   // "more · most" không phải dạng của từ
+    const d=b+b.slice(-1);
+    [b+'s',b+'es',b+'ed',b+'d',b+'ing',b+'er',b+'r',b+'est',b+'st',d+'er',d+'est',d+'ed',d+'ing',
+     b.replace(/e$/,'ing'),b.replace(/y$/,'ies'),b.replace(/y$/,'ier'),b.replace(/y$/,'iest')].forEach(x=>add(x,w));
+    if(/e$/.test(b)&&b.length>=6) add(b.slice(0,-1),w);   // blonde -> blond
+  }
+  FORM_MAPS.set(tid,m); return m;
+}
+// Tách câu thành đoạn chữ thường / đoạn là từ của chủ đề.
+// allow: tập từ đã duyệt là dùng đúng nghĩa trong đoạn này (d.words) — từ khác nghĩa không tô.
+function dlgTokens(text,tid,allow){
+  const m=formMap(tid), out=[], re=/[A-Za-z]+(?:[-'][A-Za-z]+)*/g;
+  const look=t=>{ const w=m.get(t.toLowerCase()); return w&&(!allow||allow.has(w.w.toLowerCase()))?w:null; };
+  let last=0,x;
+  const hit=(s,at,w)=>{ if(at>last) out.push({s:text.slice(last,at)}); out.push({s,w}); last=at+s.length; };
+  while((x=re.exec(text))){
+    const tok=x[0].replace(/'s$/i,''), at=x.index;
+    const w=look(tok);
+    if(w){ hit(tok,at,w); continue; }
+    if(tok.includes('-')){
+      let off=at;
+      for(const part of tok.split('-')){ const pw=look(part); if(pw) hit(part,off,pw); off+=part.length+1; }
+    }
+  }
+  if(last<text.length) out.push({s:text.slice(last)});
+  return out;
+}
+const dlgAllow=d=>d.words&&d.words.length?new Set(d.words):null;
+// Từ mới của mỗi đoạn = từ chưa xuất hiện ở các đoạn đứng trước trong danh sách
+const DLG_NEW=new Map();
+function dlgNew(tid,d){
+  if(!DLG_NEW.has(tid)){
+    const seen=new Set(), map=new Map();
+    (DIALOGS[tid]||[]).forEach(x=>{
+      const ws=dlgWords(x,tid).map(w=>w.w.toLowerCase()).filter(w=>!seen.has(w));
+      ws.forEach(w=>seen.add(w)); map.set(x.id,new Set(ws));
+    });
+    DLG_NEW.set(tid,map);
+  }
+  return DLG_NEW.get(tid).get(d.id)||new Set();
+}
+const dlgLineHtml=(text,tid,d)=>{
+  const nw=d?dlgNew(tid,d):new Set();
+  return dlgTokens(text,tid,d&&dlgAllow(d)).map(t=>t.w
+    ?`<button class="dw${nw.has(t.w.w.toLowerCase())?' new':''}" data-w="${esc(t.w.id)}">${esc(t.s)}</button>`:esc(t.s)).join('');
+};
+function dlgWords(d,tid){
+  const seen=new Map(), allow=dlgAllow(d);
+  d.en.forEach(s=>dlgTokens(s,tid,allow).forEach(t=>{ if(t.w&&!seen.has(t.w.id)) seen.set(t.w.id,t.w); }));
+  return [...seen.values()];
+}
+function dlgTopicCover(tid){
+  const ids=new Set(); (DIALOGS[tid]||[]).forEach(d=>dlgWords(d,tid).forEach(w=>ids.add(w.id)));
+  return ids.size;
+}
+
+/* ---- giọng đọc: hai người nói dùng hai giọng khác nhau ---- */
+function dlgVoices(){
+  const a=pickVoice(); if(!a) return [null,null,false];
+  const r=rankedVoices();
+  const b=r.find(v=>v!==a&&v.lang===a.lang)||r.find(v=>v!==a)||a;
+  return [a,b,a===b];
+}
+function dlgSay(d,k,opts={}){
+  const [va,vb,same]=dlgVoices();
+  speak(d.en[k],{voice:k%2?vb:va,pitch:(k%2&&same)?0.8:1,btn:opts.btn,onend:opts.onend});
+}
+function dlgStop(){
+  if(DLGPLAY.tok){ DLGPLAY.tok=0; try{speechSynthesis.cancel();}catch(e){} }
+}
+
+/* ---------- Danh sách hội thoại của một chủ đề ---------- */
+function viewDialogs(root){
+  const tid=route.t, tp=TOPIC_BY_ID.get(tid), list=DIALOGS[tid]||[];
+  if(!tp){go('topics');return;}
+  const cover=dlgTopicCover(tid);
+  root.innerHTML=`<button class="btn btn-sm" id="dBack">← Chủ đề</button>
+    <div class="page-h" style="margin-top:14px"><div>
+      <h1>${tp.icon} Hội thoại</h1>
+      <p>${esc(tp.name)} · ${list.length} đoạn hội thoại có thật, từ ngắn đến dài.
+        Mỗi đoạn mang thêm từ mới, ít lặp lại — cả bộ dùng ${cover}/${tp.words.length} từ của chủ đề.</p></div>
+      <button class="btn btn-primary" id="dStudy">Học thẻ từ chủ đề này</button></div>`;
+  paginate(root,'dlg:'+tid,list,10,(d,i)=>{
+    const n=dlgNew(tid,d).size, p=DLGP[d.id]||{};
+    const b=el('button','dlg-card');
+    b.innerHTML=`<div class="dlg-num mono">${String(i+1).padStart(2,'0')}</div>
+      <div style="min-width:0;flex:1"><h3>${esc(d.title)}</h3>
+        <p class="dlg-first">“${esc(d.en[0])}”</p>
+        <div class="dlg-meta"><span>${d.en.length} lượt · <b class="dlg-newc">+${n} từ mới</b></span>
+          ${p.v?'<span class="chip">✓ đã đọc</span>':''}
+          ${p.r!=null?`<span class="chip">🎙 ${p.r}%</span>`:''}
+          ${p.f!=null?`<span class="chip">✎ ${p.f}%</span>`:''}</div></div>`;
+    b.onclick=()=>go('dialog',{t:tid,i});
+    return b;
+  },{cls:'dlg-list',unit:'đoạn'});
+  if(!list.length) root.appendChild(el('div','empty','<span class="big">💬</span>Chủ đề này chưa có hội thoại.'));
+  root.appendChild(el('p','dlg-src',DLG_SRC));
+  $('#dBack').onclick=()=>go('topics');
+  $('#dStudy').onclick=()=>startSession(tid);
+}
+
+/* ---------- Một đoạn hội thoại ---------- */
+function viewDialog(root){
+  const tid=route.t, list=DIALOGS[tid]||[], d=list[route.i];
+  if(!d){go('dialogs',{t:tid});return;}
+  DLGP[d.id]=Object.assign(DLGP[d.id]||{},{v:1}); saveD();
+  PAGES['dlg:'+tid]=Math.floor(route.i/10);        // quay về danh sách đúng trang chứa đoạn này
+  root.innerHTML=`<div class="dlg-head">
+      <button class="btn btn-sm" id="dBack">← Danh sách</button>
+      <span class="mono dlg-pos">${route.i+1}/${list.length}</span>
+      <button class="btn btn-sm" id="dPrev" aria-label="Đoạn trước" ${route.i?'':'disabled'}>‹</button>
+      <button class="btn btn-sm" id="dNext" aria-label="Đoạn sau" ${route.i<list.length-1?'':'disabled'}>›</button></div>
+    <h1 class="dlg-title">${esc(d.title)}</h1>
+    <div class="skillsw" id="dMode" role="group" aria-label="Chế độ luyện">
+      <button data-m="read">📖 Đọc & nghe</button><button data-m="role">🎙 Đóng vai</button><button data-m="fill">✎ Điền từ</button></div>
+    <div id="dBody"></div>
+    <p class="dlg-src">${DLG_SRC}</p>`;
+  $('#dBack').onclick=()=>go('dialogs',{t:tid});
+  $('#dPrev').onclick=()=>go('dialog',{t:tid,i:route.i-1});
+  $('#dNext').onclick=()=>go('dialog',{t:tid,i:route.i+1});
+  $('#dMode').querySelectorAll('[data-m]').forEach(b=>{
+    b.setAttribute('aria-pressed',b.dataset.m===DLG.mode);
+    b.onclick=()=>{ dlgStop(); DLG.mode=b.dataset.m; render(); };
+  });
+  const body=$('#dBody');
+  // chạm từ tô màu -> mở thẻ từ
+  body.addEventListener('click',e=>{
+    const t=e.target.closest('[data-w]'); if(!t) return;
+    e.stopPropagation(); const w=BY_ID.get(t.dataset.w); if(w) openDetail(w);
+  });
+  ({read:dlgRead,role:dlgRole,fill:dlgFill}[DLG.mode])(body,d,tid);
+}
+
+const dlgBubble=(d,k,inner,cls='',who)=>`<div class="dl ${k%2?'b':'a'} ${cls}" data-k="${k}">
+  <span class="dl-who">${who||(k%2?'B':'A')}</span>
+  <div class="dl-bub">${inner}</div>`;
+
+/* ---- chế độ 1: đọc & nghe ---- */
+function dlgRead(host,d,tid){
+  const words=dlgWords(d,tid), nw=dlgNew(tid,d);
+  const fresh=words.filter(w=>nw.has(w.w.toLowerCase())), again=words.filter(w=>!nw.has(w.w.toLowerCase()));
+  const chips=ws=>ws.map(w=>`<button class="dlg-w" data-w="${esc(w.id)}"><b>${esc(w.w)}</b><span>${esc(w.vi)}</span></button>`).join('');
+  host.innerHTML=`<div class="dlg-tools">
+      <button class="btn btn-primary btn-sm" id="dPlay">▶ Nghe cả đoạn</button>
+      <label class="dlg-tog"><input type="checkbox" id="dVi" ${DLG.vi?'checked':''}> Hiện tiếng Việt</label>
+      <span class="dlg-hint">Chạm vào một câu để xem nghĩa câu đó</span></div>
+    <div class="dlg-lines">${d.en.map((s,k)=>dlgBubble(d,k,
+      `<div class="dl-en">${dlgLineHtml(s,tid,d)}</div><div class="dl-vi" ${DLG.vi?'':'hidden'}>${esc(d.vi[k])}</div>`)+
+      `<button class="speak-btn dl-sp" data-k="${k}" aria-label="Nghe câu này">🔊</button></div>`).join('')}</div>
+    ${fresh.length?`<h3 class="dlg-h3"><span class="dw new">Từ mới</span> trong đoạn này (${fresh.length})</h3>
+    <div class="dlg-words">${chips(fresh)}</div>`:''}
+    ${again.length?`<h3 class="dlg-h3"><span class="dw">Ôn lại</span> từ đã gặp ở đoạn trước (${again.length})</h3>
+    <div class="dlg-words">${chips(again)}</div>`:''}`;
+  const play=$('#dPlay',host);
+  const mark=k=>host.querySelectorAll('.dl').forEach(x=>x.classList.toggle('cur',+x.dataset.k===k));
+  const stopUi=()=>{ play.textContent='▶ Nghe cả đoạn'; mark(-1); };
+  play.onclick=()=>{
+    if(DLGPLAY.tok){ dlgStop(); stopUi(); return; }
+    const tok=++DLGSEQ; DLGPLAY.tok=tok; play.textContent='■ Dừng';
+    const step=k=>{
+      if(DLGPLAY.tok!==tok) return;
+      if(k>=d.en.length){ DLGPLAY.tok=0; stopUi(); return; }
+      mark(k);
+      const row=host.querySelector(`.dl[data-k="${k}"]`);
+      try{ row.scrollIntoView({block:'nearest',behavior:'smooth'}); }catch(e){}
+      dlgSay(d,k,{onend:()=>setTimeout(()=>step(k+1),350)});
+    };
+    step(0);
+  };
+  host.querySelectorAll('.dl-sp').forEach(b=>b.onclick=e=>{
+    dlgStop(); stopUi(); dlgSay(d,+b.dataset.k,{btn:e.currentTarget});
+  });
+  host.querySelectorAll('.dl-bub').forEach(b=>b.onclick=e=>{ if(e.target.closest('[data-w]')) return; const v=b.querySelector('.dl-vi'); v.hidden=!v.hidden; });
+  $('#dVi',host).onchange=e=>{
+    DLG.vi=e.target.checked; host.querySelectorAll('.dl-vi').forEach(v=>v.hidden=!DLG.vi);
+  };
+}
+
+/* ---- chế độ 2: đóng vai (nói phần của mình vào micro) ---- */
+const sayWords=s=>norm(String(s).replace(/[-–—]/g,' ')).split(' ').filter(Boolean);
+function sayScore(target,alts){
+  const tw=sayWords(target); let best={s:-1,hit:[]};
+  for(const a of alts){
+    const bag=new Map(); sayWords(a).forEach(x=>bag.set(x,(bag.get(x)||0)+1));
+    const hit=tw.map(x=>{const n=bag.get(x)||0; if(n){bag.set(x,n-1);return true;} return false;});
+    const s=Math.round(hit.filter(Boolean).length/Math.max(1,tw.length)*100);
+    if(s>best.s) best={s,hit};
+  }
+  return best;
+}
+// Tô xanh từ đã nói đúng, đỏ từ bị thiếu
+function sayDiffHtml(target,hit){
+  let i=0;
+  return target.split(/(\s+)/).map(piece=>{
+    if(/^\s*$/.test(piece)) return piece;
+    const n=sayWords(piece).length; if(!n) return esc(piece);
+    const ok=hit.slice(i,i+n).every(Boolean); i+=n;
+    return `<span class="${ok?'ok':'miss'}">${esc(piece)}</span>`;
+  }).join('');
+}
+function dlgRole(host,d,tid){
+  const me=DLG.role, R={k:0,sc:{}};
+  host.innerHTML=`<div class="dlg-tools">
+      <div class="seg" id="rRole" role="group" aria-label="Chọn vai">
+        <button data-r="0" aria-pressed="${me===0}">Tôi là A</button><button data-r="1" aria-pressed="${me===1}">Tôi là B</button></div>
+      <span class="dlg-hint">${SR_CLASS?'App đọc lời người kia, bạn nói lời của mình vào micro.'
+        :'Trình duyệt này không nhận dạng giọng nói: bạn đọc to phần của mình rồi bấm Tiếp.'}</span></div>
+    <div class="dlg-lines" id="rLines"></div><div id="rNow"></div>`;
+  host.querySelectorAll('#rRole [data-r]').forEach(b=>b.onclick=()=>{ dlgStop(); DLG.role=+b.dataset.r; dlgRole(host,d,tid); });
+  const lines=$('#rLines',host), now=$('#rNow',host);
+  const isMe=k=>k%2===me;
+  const logLine=(k,html)=>lines.insertAdjacentHTML('beforeend',
+    dlgBubble(d,k,`<div class="dl-en${isMe(k)?' say':''}">${html}</div><div class="dl-vi">${esc(d.vi[k])}</div>`,
+      isMe(k)?'me':'',isMe(k)?'Bạn':'')+'</div>');
+  function next(){
+    const k=R.k;
+    if(k>=d.en.length) return finish();
+    if(!isMe(k)){
+      now.innerHTML=`<div class="role-card"><div class="role-lab">${k%2?'B':'A'} nói</div>
+        <div class="dl-en big">${dlgLineHtml(d.en[k],tid,d)}</div><div class="dl-vi">${esc(d.vi[k])}</div>
+        <div class="role-act"><button class="btn btn-sm" id="rRep">🔊 Nghe lại</button>
+          <button class="btn btn-sm btn-primary" id="rGo">Tiếp ›</button></div></div>`;
+      const adv=()=>{ if(R.k!==k) return; dlgStop(); logLine(k,dlgLineHtml(d.en[k],tid,d)); R.k++; next(); };
+      const play=()=>{ const tok=++DLGSEQ; DLGPLAY.tok=tok;
+        dlgSay(d,k,{onend:()=>setTimeout(()=>{ if(DLGPLAY.tok===tok) adv(); },450)}); };
+      $('#rRep',now).onclick=play;
+      $('#rGo',now).onclick=adv;
+      play();
+      return;
+    }
+    let got=null;
+    now.innerHTML=`<div class="role-card me"><div class="role-lab">Lượt của bạn — nói câu này bằng tiếng Anh</div>
+      <div class="dl-vi big">${esc(d.vi[k])}</div>
+      <div class="dl-en big say" id="rEn" ${DLG.peek?'':'hidden'}>${esc(d.en[k])}</div>
+      ${SR_CLASS?'<button class="mic" id="rMic" aria-label="Bấm để nói">🎙</button>':''}
+      <div class="heard" id="rHeard"></div>
+      <div class="role-act">
+        <button class="btn btn-sm" id="rPeek" aria-pressed="${DLG.peek}">👁 ${DLG.peek?'Ẩn':'Xem'} câu gốc</button>
+        <button class="btn btn-sm" id="rHear">🔊 Nghe mẫu</button>
+        <button class="btn btn-sm btn-primary" id="rGo" style="margin-left:auto">${SR_CLASS?'Bỏ qua ›':'Tôi đã nói ›'}</button></div></div>`;
+    const en=$('#rEn',now);
+    $('#rPeek',now).onclick=e=>{ DLG.peek=!DLG.peek; en.hidden=!DLG.peek&&!got;
+      e.currentTarget.innerHTML=`👁 ${DLG.peek?'Ẩn':'Xem'} câu gốc`; };
+    $('#rHear',now).onclick=e=>{ dlgStop(); dlgSay(d,k,{btn:e.currentTarget}); };
+    $('#rGo',now).onclick=()=>{
+      if(SR_CLASS) R.sc[k]=got?got.s:0;
+      logLine(k,got?sayDiffHtml(d.en[k],got.hit):esc(d.en[k])); R.k++; next();
+    };
+    const mic=$('#rMic',now); if(!mic) return;
+    let rec=null,running=false;
+    mic.onclick=()=>{
+      if(running){ try{rec.stop();}catch(e){} return; }
+      dlgStop();
+      try{
+        rec=new SR_CLASS(); rec.lang=S.dialect; rec.interimResults=false; rec.maxAlternatives=5;
+        rec.onstart=()=>{running=true;mic.classList.add('rec');mic.textContent='■';$('#rHeard',now).textContent='Đang nghe…';};
+        rec.onend=()=>{running=false;mic.classList.remove('rec');mic.textContent='🎙';};
+        rec.onerror=ev=>{ $('#rHeard',now).textContent=ev.error==='not-allowed'||ev.error==='service-not-allowed'
+          ?'Trang chưa được cấp quyền micro.':'Không nghe rõ — bấm micro nói lại.'; };
+        rec.onresult=ev=>{
+          const alts=[...ev.results[0]].map(r=>r.transcript), sc=sayScore(d.en[k],alts);
+          if(!got||sc.s>=got.s) got=sc;
+          en.hidden=false; en.innerHTML=sayDiffHtml(d.en[k],got.hit);
+          $('#rHeard',now).innerHTML=`Nghe được: <b>“${esc(alts[0])}”</b> · khớp <b>${sc.s}%</b>`+
+            (sc.s>=80?' 👏':' — nghe mẫu rồi nói lại');
+          $('#rGo',now).textContent='Tiếp ›';
+        };
+        rec.start();
+      }catch(e){ $('#rHeard',now).textContent='Không khởi động được micro.'; }
+    };
+  }
+  function finish(){
+    const vals=Object.values(R.sc), avg=vals.length?Math.round(vals.reduce((a,b)=>a+b,0)/vals.length):null;
+    if(avg!=null){ const p=DLGP[d.id]||{}; p.r=Math.max(p.r||0,avg); DLGP[d.id]=p; saveD(); }
+    const list=DIALOGS[tid]||[];
+    now.innerHTML=`<div class="role-card" style="text-align:center">
+      <div style="font-size:40px">🎭</div><h2 style="font-size:22px;margin-top:6px">Xong vai ${me?'B':'A'}</h2>
+      <p style="color:var(--muted);margin:6px 0 0">${avg!=null?`Độ khớp phát âm trung bình <b class="mono">${avg}%</b>`:'Bạn đã đọc hết phần của mình.'}</p>
+      <div class="role-act" style="justify-content:center">
+        <button class="btn btn-sm" id="rSwap">Đổi sang vai ${me?'A':'B'}</button>
+        <button class="btn btn-sm" id="rAgain">Làm lại</button>
+        ${route.i<list.length-1?'<button class="btn btn-sm btn-primary" id="rNext">Đoạn tiếp ›</button>':''}</div></div>`;
+    $('#rSwap',now).onclick=()=>{ DLG.role=1-me; dlgRole(host,d,tid); };
+    $('#rAgain',now).onclick=()=>dlgRole(host,d,tid);
+    $('#rNext',now)?.addEventListener('click',()=>go('dialog',{t:tid,i:route.i+1}));
+  }
+  next();
+}
+
+/* ---- chế độ 3: điền từ còn thiếu ---- */
+function dlgFill(host,d,tid){
+  const blanks=[], nw=dlgNew(tid,d);
+  const rows=d.en.map((s,k)=>dlgTokens(s,tid,dlgAllow(d)).map(t=>{
+    if(!t.w) return esc(t.s);
+    if(!nw.has(t.w.w.toLowerCase()))       // từ đã học ở đoạn trước: chỉ tô, không che
+      return `<button class="dw" data-w="${esc(t.w.id)}">${esc(t.s)}</button>`;
+    const n=blanks.push({ans:t.s,w:t.w})-1;
+    return `<input class="gapin" data-b="${n}" aria-label="Chỗ trống ${n+1}" autocomplete="off" autocapitalize="off" spellcheck="false" style="width:${Math.max(4,t.s.length+2)}ch">`;
+  }).join(''));
+  if(!blanks.length){ host.innerHTML='<div class="empty">Đoạn này không có từ mới nào để điền.</div>'; return; }
+  const bank=shuffle([...new Set(blanks.map(b=>b.ans.toLowerCase()))]);
+  host.innerHTML=`<div class="dlg-tools"><span class="dlg-hint">Điền ${blanks.length} chỗ trống bằng từ mới của đoạn này. Chạm từ trong ngân hàng để điền vào ô đang chọn.</span></div>
+    <div class="bank" id="fBank">${bank.map(b=>`<button class="tile" data-a="${esc(b)}">${esc(b)}</button>`).join('')}</div>
+    <div class="dlg-lines">${rows.map((h,k)=>dlgBubble(d,k,`<div class="dl-en">${h}</div><div class="dl-vi">${esc(d.vi[k])}</div>`)+'</div>').join('')}</div>
+    <div class="role-act" style="justify-content:center;margin-top:18px">
+      <button class="btn btn-primary" id="fCheck">Kiểm tra</button>
+      <button class="btn" id="fReset">Làm lại</button></div>
+    <div class="feedback" id="fRes"></div>`;
+  const ins=[...host.querySelectorAll('.gapin')];
+  let focus=ins[0];
+  ins.forEach((inp,i)=>{
+    inp.onfocus=()=>{focus=inp;};
+    inp.onkeydown=e=>{ if(e.key==='Enter'){ e.preventDefault(); (ins[i+1]||$('#fCheck',host)).focus(); } };
+    inp.oninput=()=>inp.classList.remove('ok','no');
+  });
+  $('#fBank',host).onclick=e=>{
+    const t=e.target.closest('[data-a]'); if(!t) return;
+    const tgt=(focus&&!focus.value)?focus:(ins.find(x=>!x.value)||focus);
+    if(!tgt) return;
+    tgt.value=t.dataset.a; tgt.classList.remove('ok','no');
+    const nx=ins.find(x=>!x.value); (nx||tgt).focus();
+  };
+  const fix=s=>String(s).toLowerCase().replace(/[’`]/g,"'").trim();
+  $('#fCheck',host).onclick=()=>{
+    host.querySelectorAll('.gap-fix').forEach(x=>x.remove());
+    let ok=0;
+    ins.forEach((inp,i)=>{
+      const good=fix(inp.value)===fix(blanks[i].ans);
+      inp.classList.toggle('ok',good); inp.classList.toggle('no',!good);
+      if(good) ok++;
+      else inp.insertAdjacentHTML('afterend',`<span class="gap-fix">${esc(blanks[i].ans)}</span>`);
+    });
+    const pct=Math.round(ok/blanks.length*100);
+    const p=DLGP[d.id]||{}; p.f=Math.max(p.f||0,pct); DLGP[d.id]=p; saveD();
+    const r=$('#fRes',host);
+    r.className='feedback '+(pct>=80?'ok':'no');
+    r.textContent=`Đúng ${ok}/${blanks.length} (${pct}%)`+(pct===100?' — xuất sắc!':pct>=80?' — tốt lắm':' — xem đáp án màu xanh rồi làm lại');
+  };
+  $('#fReset',host).onclick=()=>dlgFill(host,d,tid);
 }
 
 /* ---- phím tắt ---- */

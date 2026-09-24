@@ -9,6 +9,8 @@ mở bằng trình duyệt là web, cài ra màn hình chính là app chạy to�
 - **Lặp lại ngắt quãng** theo thuật toán SM-2 của Anki
 - **50 chuyên đề ngữ pháp** A1→C1, 300 bài tập 4 dạng
 - **Lộ trình luyện thi** TOEIC / IELTS sinh theo mục tiêu và quỹ thời gian
+- **Hội thoại theo chủ đề** lấy nguyên văn từ kho DailyDialog: đọc & nghe hai giọng, đóng vai
+  nói vào micro, điền từ. Mỗi đoạn mang thêm từ mới, ít lặp (hiện có chủ đề 1: 44 đoạn, 96/102 từ)
 - **869 ảnh minh hoạ** thật, phần còn lại dùng biểu tượng
 - Chạy hoàn toàn phía trình duyệt — **không cần máy chủ ứng dụng, không có cơ sở dữ liệu**
 
@@ -172,8 +174,9 @@ data/t01..t40.json    3.669 mục từ, chia 40 chủ đề
 data/ex2/             Câu ví dụ thứ hai + bản dịch, kèm nhãn nguồn
 data/grammar/         50 chuyên đề ngữ pháp, 300 bài tập
 data/exam.json        Cấu trúc TOEIC / IELTS, mẹo từng phần, thư viện nhiệm vụ
+data/dialogues/       Hội thoại theo chủ đề (DailyDialog) + bản dịch + từ đúng nghĩa từng đoạn
 build/*.py            Script dựng, tải ảnh, đối chiếu Oxford, chọn câu ví dụ
-build/smoke*.js       Kiểm thử tự động (49 mục)
+build/smoke*.js       Kiểm thử tự động (78 mục)
 pwa/                  ★ Bản deploy — đây là thứ đưa lên server
 ```
 
@@ -181,9 +184,10 @@ pwa/                  ★ Bản deploy — đây là thứ đưa lên server
 
 ```bash
 npm install            # chỉ cần jsdom
-node build/smoke.js            # 28 mục: từ vựng, SRS, 4 kỹ năng, tra từ
-node build/smoke_grammar.js    #  9 mục: ngữ pháp, 4 dạng bài, chấm điểm
-node build/smoke_plan.js       # 12 mục: lộ trình, kiểm tra trình độ
+node build/smoke.js            # 30 mục: từ vựng, SRS, 4 kỹ năng, tra từ, phân trang
+node build/smoke_grammar.js    # 10 mục: ngữ pháp, 4 dạng bài, chấm điểm
+node build/smoke_plan.js       # 13 mục: lộ trình, kiểm tra trình độ
+node build/smoke_dialog.js     # 25 mục: hội thoại, từ mới không lặp, đóng vai, điền từ
 ```
 
 ### Tải lại dữ liệu nguồn (đã loại khỏi git vì nặng)
@@ -194,6 +198,14 @@ python build/get_oxford.py     # PDF Oxford 3000 gốc
 python build/compare_oxford.py # đối chiếu độ phủ danh sách Oxford
 ```
 
+### Thêm hội thoại cho một chủ đề
+
+```bash
+python build/pick_dialogs.py t02   # chọn đoạn: nhiều từ mới nhất, ít lặp nhất (tự tải kho ~4 MB)
+# đọc build/dlg_review/t02.txt, ghi đoạn loại / từ sai nghĩa vào build/dlg_review/t02.json, chạy lại
+python build/dialogues.py t02      # xuất data/dialogues/t02.json (giữ bản dịch đã có)
+```
+
 ---
 
 ## Nguồn và giấy phép
@@ -202,6 +214,7 @@ python build/compare_oxford.py # đối chiếu độ phủ danh sách Oxford
 |---|---|
 | Danh sách 3000 từ | **The Oxford 3000™** — Oxford University Press. Dùng làm danh sách đối chiếu; nghĩa tiếng Việt, IPA và chú giải trong app là nội dung riêng. |
 | Câu ví dụ thứ hai | **Tatoeba** — CC BY 2.0 FR. Câu tiếng Anh lấy nguyên từ kho; bản dịch tiếng Việt được đối chiếu lại, mỗi câu có ghi nhãn nguồn trong app. |
+| Hội thoại | **DailyDialog** (Li và cộng sự, IJCNLP 2017) — **CC BY-NC-SA 4.0, chỉ dùng phi thương mại**. Câu tiếng Anh giữ nguyên (chỉ chuẩn hoá dấu câu và sửa vài lỗi gõ ghi trong `build/dialogues.py`); bản dịch tiếng Việt do dự án biên dịch. |
 | Ảnh minh hoạ | **Wikipedia / Wikimedia** — ảnh đại diện bài viết, có ghi tên bài trong bảng chi tiết từ. |
 | Phông chữ | **Bricolage Grotesque, IBM Plex Mono, Source Sans 3** — SIL Open Font License, tải về tự host trong `pwa/fonts/`. |
 | Giọng đọc | Web Speech API — giọng cài sẵn trong trình duyệt và hệ điều hành người dùng. |

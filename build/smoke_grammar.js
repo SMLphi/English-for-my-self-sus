@@ -31,8 +31,17 @@ const norm = s => String(s).toLowerCase().replace(/[’`]/g, "'")
   okc('phan bo trinh do: ' + Object.entries(lv).map(([k, v]) => k + '=' + v).join(' '));
 
   E('go')('grammar'); await tick();
-  const items = d.querySelectorAll('.gr-item').length;
-  items === 50 ? okc('man hinh Ngu phap liet ke du ' + items + ' chuyen de') : fail('liet ke ' + items + '/50');
+  // moi nhom mot tab: cong don qua cac tab phai du 50
+  const tabs = d.querySelectorAll('#gTabs [data-g]').length;
+  let items = 0;
+  for (let i = 0; i < tabs; i++) {
+    d.querySelectorAll('#gTabs [data-g]')[i].click(); await tick();
+    items += d.querySelectorAll('.gr-item').length;
+  }
+  items === 50 ? okc('Ngu phap: ' + tabs + ' tab nhom, cong lai du ' + items + ' chuyen de') : fail('liet ke ' + items + '/50');
+  d.querySelector('#gTabs [data-g="2"]').click(); await tick();
+  E('go')('home'); await tick(); E('go')('grammar'); await tick();
+  d.querySelector('#gTabs [aria-pressed="true"]').dataset.g === '2' ? okc('quay lai van o tab nhom da chon') : fail('khong nho tab nhom');
 
   d.querySelector('.gr-item').click(); await tick();
   const hasForms = d.querySelector('.gr-forms'), hasTrap = d.querySelector('.gr-trap');

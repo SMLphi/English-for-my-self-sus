@@ -170,6 +170,14 @@ process.on('uncaughtException', e => { fail('ngoai le: ' + e.message); finish();
     q.dispatchEvent(new w.Event('input')); await tick();
     const rows = d.querySelectorAll('.wrow').length;
     if (rows) okc('tra tu: tim "family" ra ' + rows + ' ket qua'); else fail('tra tu khong ra ket qua');
+    // bo loc rong -> 40 tu/trang, co phan trang
+    q.value = ''; q.dispatchEvent(new w.Event('input')); await tick();
+    const all = d.querySelectorAll('#res .wrow').length, info = (d.querySelector('#res .pg-info') || {}).textContent || '';
+    all === 40 && /1–40 \//.test(info) ? okc('tra tu phan trang: 40 tu/trang (' + info + ')') : fail('tra tu phan trang sai: ' + all + ' ' + info);
+    E('go')('topics'); await tick();
+    const tc = d.querySelectorAll('.topics .topic').length;
+    tc === 12 ? okc('chu de phan trang: 12/trang') : fail('chu de hien ' + tc);
+    E('go')('browse'); await tick();
     d.querySelector('.wrow').click(); await tick(); await tick();
     if (d.querySelector('.detail')) okc('mo duoc bang chi tiet tu'); else fail('khong mo duoc chi tiet tu');
     d.querySelector('#dClose') && d.querySelector('#dClose').click();

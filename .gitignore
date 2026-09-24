@@ -34,3 +34,5 @@ build/vi_batch*.json
 *.log
 Thumbs.db
 desktop.ini
+# ban in doc duyet cua pick_dialogs.py, sinh lai duoc
+build/dlg_review/*.txt

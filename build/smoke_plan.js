@@ -67,8 +67,14 @@ const okc = m => { passed++; console.log('  ok  ' + m); };
   try {
     E('PLAN = buildPlan({exam:"toeic",target:700,weeks:6,hours:7,level:"B1"}); savePlan();');
     E('go')('plan'); await tick();
-    const weeks = d.querySelectorAll('#weeks > .card').length;
-    weeks === 6 ? okc('lo trinh hien du ' + weeks + ' tuan') : fail('hien ' + weeks + '/6 tuan');
+    // 4 tuan mot trang: trang 1 co 4 tuan, trang 2 co 2 tuan
+    const weeks = d.querySelectorAll('#weeks .card').length;
+    const pgs = d.querySelectorAll('#weeks .pager [data-p]').length;
+    const info = (d.querySelector('#weeks .pg-info') || {}).textContent || '';
+    weeks === 4 && /1–4 \/ 6 tuần/.test(info) ? okc('lo trinh phan trang: trang 1 hien 4/6 tuan') : fail('trang 1 hien ' + weeks + ' tuan, "' + info + '"');
+    d.querySelector('#weeks .pager [data-p="1"]').click(); await tick();
+    d.querySelectorAll('#weeks .card').length === 2 ? okc('sang trang 2: 2 tuan con lai') : fail('trang 2 sai');
+    d.querySelector('#weeks .pager [data-p="0"]').click(); await tick();
     const rows = d.querySelectorAll('#weeks .wrow').length;
     rows > 10 ? okc(rows + ' dau viec co the danh dau hoan thanh') : fail('qua it dau viec: ' + rows);
     const btns = [...d.querySelectorAll('#weeks .wrow button')].filter(b => b.textContent === '○');

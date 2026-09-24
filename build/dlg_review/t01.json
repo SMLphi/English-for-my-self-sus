@@ -1,0 +1,143 @@
+{
+ "reject": [
+  "dd498",
+  "dd2140",
+  "dd6700",
+  "dd3486",
+  "dd2459",
+  "dd44",
+  "dd5908",
+  "dd10574",
+  "dd10528",
+  "dd12847",
+  "dd170",
+  "dd4134",
+  "dd10753",
+  "dd1884",
+  "dd6732",
+  "dd10070",
+  "dd6400",
+  "dd13114",
+  "dd9402",
+  "dd6658",
+  "dd8803",
+  "dd1362",
+  "dd9403",
+  "dd10575"
+ ],
+ "skip": {
+  "dd1155": [
+   "build",
+   "baby"
+  ],
+  "dd8230": [
+   "neat"
+  ],
+  "dd1102": [
+   "tooth"
+  ],
+  "dd956": [
+   "feature"
+  ],
+  "dd7384": [
+   "twin"
+  ],
+  "dd11084": [
+   "twin"
+  ],
+  "dd12076": [
+   "overweight"
+  ],
+  "dd5471": [
+   "identity"
+  ],
+  "dd8029": [
+   "ugly"
+  ],
+  "dd9067": [
+   "ugly",
+   "figure"
+  ],
+  "dd8715": [
+   "plump"
+  ],
+  "dd4649": [
+   "slender"
+  ],
+  "dd4708": [
+   "name"
+  ],
+  "dd2464": [
+   "build",
+   "thin"
+  ],
+  "dd2434": [
+   "figure"
+  ],
+  "dd2221": [
+   "plain"
+  ],
+  "dd9290": [
+   "youth"
+  ],
+  "dd8379": [
+   "neat"
+  ],
+  "dd7381": [
+   "gentleman"
+  ],
+  "dd13056": [
+   "neat"
+  ],
+  "dd1514": [
+   "build",
+   "generation"
+  ],
+  "dd2689": [
+   "feature"
+  ],
+  "dd2657": [
+   "fair"
+  ],
+  "dd5112": [
+   "twin"
+  ],
+  "dd8030": [
+   "youth"
+  ],
+  "dd11391": [
+   "thin"
+  ],
+  "dd629": [
+   "twin"
+  ],
+  "dd8861": [
+   "twin"
+  ]
+ },
+ "pick": [],
+ "sense": {
+  "fair": "fair[- ](hair|haired|skin|skinned|complexion)",
+  "plain": "plain[- ](jane|looking|girl|woman|face|white|black|blue|shirt|dress|clothes)",
+  "twin": "\\btwins?\\b(?! (room|bed|beds|theatre|theater))",
+  "youth": "\\b(my|his|her|their|our|your|in) youth\\b",
+  "feature": "(facial|her|his|your|my|best) features?",
+  "generation": "(next|younger|older|same|my|our|your|their|new) generations?(?! of)",
+  "build": "well-built|built like|(his|her|slight|heavy|medium|strong|athletic) build\\b",
+  "figure": "(her|his|your|my|slim|slender|good|nice|elegant|great) figure",
+  "neat": "neat (freak|and|appearance|handwriting|clothes)|and neat|(so|very|always) neat and",
+  "dark": "dark(er)? (hair|eyes|skin|colou?r|brown|blue|suit|ones|complexion)",
+  "straight": "straight (hair|nose|teeth)|(very|long and|is) straight\\b",
+  "short": "short (hair|girls?|man|woman|guy|ones|legs)|(quite|very|kind of|so|too|is|she's|he's|i'm) short\\b",
+  "ugly": "ugly (dress|face|man|woman|shirt|duckling)|(it's|is|so|looks?) ugly",
+  "slender": "slender (figure|body|girl|woman|legs|fingers|waist)|(is|looks?|so|very) slender",
+  "overweight": "(i'm|i am|is|are|he's|she's|you're|be|being|get|getting) overweight",
+  "plump": "plump(?! up)",
+  "tooth": "(?<!sweet )tooth|teeth",
+  "thin": "thin (man|woman|girl|boy|face|arms|legs|lips)|(so|very|too|you're|she's|he's|is|looks?|enough) thin\\b",
+  "appearance": "(?<!court )appearance",
+  "smart": "smart(est)?\\b",
+  "baby": "\\bbab(y|ies)\\b(?!-smooth)",
+  "man": "\\bm[ae]n\\b(?!!)"
+ }
+}

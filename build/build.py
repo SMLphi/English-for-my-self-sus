@@ -60,7 +60,15 @@ def main():
     ox = {w: oxlev[w] for w in seen_words if w in oxlev}
     pf = os.path.join(ROOT, 'build', 'photos.json')
     photos = json.load(io.open(pf, encoding='utf-8')) if os.path.exists(pf) else {}
-    payload = json.dumps({'topics': topics, 'photos': photos, 'grammar': grammar, 'exam': exam, 'ox': ox},
+    # hoi thoai theo chu de (DailyDialog, CC BY-NC-SA 4.0): {tid: [{id,title,en[],vi[]}]}
+    dialogs = {}
+    for df in sorted(glob.glob(os.path.join(ROOT, 'data', 'dialogues', 't*.json'))):
+        doc = json.load(io.open(df, encoding='utf-8'))
+        dialogs[os.path.basename(df)[:-5]] = [
+            {'id': d['id'], 'title': d['title'], 'words': d.get('words', []), 'en': d['en'], 'vi': d['vi']}
+            for d in doc['items']]
+    payload = json.dumps({'topics': topics, 'photos': photos, 'grammar': grammar, 'exam': exam, 'ox': ox,
+                          'dialogs': dialogs},
                          ensure_ascii=False, separators=(',', ':'))
 
     shell = io.open(os.path.join(ROOT, 'app', 'shell.html'), encoding='utf-8').read()
@@ -82,6 +90,8 @@ def main():
     nex = sum(len(p['ex']) for g in grammar for p in g['points'])
     print(f'anh that: {nph}/{total} tu · con lai dung bieu tuong')
     print(f'ngu phap: {npt} chuyen de · {nex} bai tap')
+    nd = sum(len(v) for v in dialogs.values())
+    print(f'hoi thoai: {nd} doan · {len(dialogs)} chu de')
     print(f'ky thi: {", ".join(exam[k]["short"] for k in exam)}')
     print(f'Oxford 3000: {len(ox)}/{total} tu co nhan CEFR · phu {len(ox)}/{len(oxlev)} danh sach goc ({len(ox)/len(oxlev)*100:.1f}%)')
 
