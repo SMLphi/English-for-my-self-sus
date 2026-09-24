@@ -32,14 +32,14 @@ hoạt động đầy đủ ngay cả khi chưa có HTTPS.
 build.bat             # Windows
 ```
 
-Chuỗi việc: `sprites.py` (ghép ảnh) → `build.py` (nhúng dữ liệu vào HTML) →
-`make_icons.py` → `make_pwa.py` (xuất thư mục `pwa/`).
+Chuỗi việc: `get_fonts.py` (lần đầu, tải phông về tự host) → `sprites.py` (ghép ảnh) →
+`build.py` (nhúng dữ liệu vào HTML) → `make_icons.py` → `make_pwa.py` (xuất `pwa/`).
 
 ---
 
 ## Deploy lên server
 
-Thư mục cần đưa lên là **`pwa/`** — 9,1 MB, toàn tệp tĩnh. Không cần Node, PHP hay
+Thư mục cần đưa lên là **`pwa/`** — 9,4 MB, toàn tệp tĩnh. Không cần Node, PHP hay
 database. Không cần rewrite rule cho SPA vì app không dùng định tuyến theo URL.
 
 ### Ba điều bắt buộc
@@ -81,8 +81,8 @@ server {
         add_header Cache-Control "public, max-age=3600";
     }
 
-    # Ảnh và icon đổi tên khi đổi nội dung -> cache dài
-    location ~* ^/(img|icons)/ {
+    # Ảnh, icon và phông chữ đều có tên gắn mã băm -> cache dài
+    location ~* ^/(img|icons|fonts)/ {
         expires 30d;
         add_header Cache-Control "public, max-age=2592000, immutable";
     }
@@ -102,7 +102,7 @@ AddType application/manifest+json .webmanifest
 <Files "index.html">
     Header set Cache-Control "no-cache"
 </Files>
-<FilesMatch "\.(jpg|png)$">
+<FilesMatch "\.(jpg|png|woff2)$">
     Header set Cache-Control "public, max-age=2592000, immutable"
 </FilesMatch>
 
@@ -121,6 +121,7 @@ vocab.example.com {
     header /index.html Cache-Control "no-cache"
     header /img/* Cache-Control "public, max-age=2592000, immutable"
     header /icons/* Cache-Control "public, max-age=2592000, immutable"
+    header /fonts/* Cache-Control "public, max-age=2592000, immutable"
     file_server
 }
 ```
@@ -133,7 +134,7 @@ vocab.example.com {
   (iOS không cho trình duyệt khác cài PWA.)
 
 Cài xong: có icon riêng, mở toàn màn hình không thanh địa chỉ, và **chạy được khi mất mạng**
-vì service worker đã lưu sẵn 37 tệp gồm cả ảnh.
+vì service worker đã lưu sẵn 53 tệp gồm cả ảnh và phông chữ.
 
 ### Đặt ở thư mục con cũng được
 
@@ -143,6 +144,15 @@ vì service worker đã lưu sẵn 37 tệp gồm cả ảnh.
 ---
 
 ## Dữ liệu người học
+
+### Không gọi ra bên ngoài
+
+Bản trong `pwa/` **không gửi request nào ra ngoài tên miền của bạn**: không CDN, không
+Google Fonts, không analytics. Phông chữ đã tải về `pwa/fonts/` (15 tệp woff2, 334 KB,
+chỉ giữ bộ chữ Latin và tiếng Việt). Nhờ vậy mất mạng app vẫn hiển thị đúng phông, và
+trình duyệt người dùng không kết nối tới máy chủ bên thứ ba nào.
+
+Muốn tải lại phông: `python build/get_fonts.py`.
 
 Tiến độ lưu bằng `localStorage`, ảnh người dùng tự thêm lưu bằng IndexedDB — **nằm
 trong máy người học, không gửi đi đâu**. Vì thế server không cần database và không giữ
@@ -193,6 +203,7 @@ python build/compare_oxford.py # đối chiếu độ phủ danh sách Oxford
 | Danh sách 3000 từ | **The Oxford 3000™** — Oxford University Press. Dùng làm danh sách đối chiếu; nghĩa tiếng Việt, IPA và chú giải trong app là nội dung riêng. |
 | Câu ví dụ thứ hai | **Tatoeba** — CC BY 2.0 FR. Câu tiếng Anh lấy nguyên từ kho; bản dịch tiếng Việt được đối chiếu lại, mỗi câu có ghi nhãn nguồn trong app. |
 | Ảnh minh hoạ | **Wikipedia / Wikimedia** — ảnh đại diện bài viết, có ghi tên bài trong bảng chi tiết từ. |
+| Phông chữ | **Bricolage Grotesque, IBM Plex Mono, Source Sans 3** — SIL Open Font License, tải về tự host trong `pwa/fonts/`. |
 | Giọng đọc | Web Speech API — giọng cài sẵn trong trình duyệt và hệ điều hành người dùng. |
 
 Bộ ngữ pháp, lộ trình luyện thi và toàn bộ mã nguồn là nội dung riêng của dự án.

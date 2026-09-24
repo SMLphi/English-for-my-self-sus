@@ -14,6 +14,8 @@ build/oxford_raw/
 build/ex2gen/
 # anh goc tai tu Wikipedia, chi can khi them tu moi: python build/fetch_images.py
 build/imgcache/
+# phong chu trung gian, tai lai bang: python build/get_fonts.py (ban da chep vao pwa/fonts)
+build/fonts/
 
 # --- ban dung lai duoc trong vai giay: python build/build.py ---
 dist/

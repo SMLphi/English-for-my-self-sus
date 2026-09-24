@@ -1,5 +1,5 @@
 // Ba Nghin Tu - service worker: luu toan bo app de chay offline
-const VERSION = 'bnt-333c8acf22';
+const VERSION = 'bnt-c5454db107';
 const ASSETS = [
 "./",
 "index.html",
@@ -37,7 +37,23 @@ const ASSETS = [
 "img/t37.jpg",
 "img/t38.jpg",
 "img/t39.jpg",
-"img/t40.jpg"
+"img/t40.jpg",
+"fonts.css",
+"fonts/-F63fjptAgt5VM-kVkqdyU8n1i8q1w-d196e8.woff2",
+"fonts/-F63fjptAgt5VM-kVkqdyU8n1iAq129k-d41ec0.woff2",
+"fonts/-F63fjptAgt5VM-kVkqdyU8n1iEq129k-7f25d9.woff2",
+"fonts/-F6qfjptAgt5VM-kVkqdyU8n3twJwl5FgtIU-b42080.woff2",
+"fonts/-F6qfjptAgt5VM-kVkqdyU8n3twJwl9FgtIU-0bd1c2.woff2",
+"fonts/-F6qfjptAgt5VM-kVkqdyU8n3twJwlBFgg-a7544c.woff2",
+"fonts/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGGInHEVA-a4fe79.woff2",
+"fonts/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGHInHEVA-25c61c.woff2",
+"fonts/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGIInE-a97232.woff2",
+"fonts/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqLlOxCYSmrfB-32b28d.woff2",
+"fonts/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqLlOxCcSmrfB-44588f.woff2",
+"fonts/nwpDtKy2OAdR1K-IwhWudF-R3woAa8opPOrG97lwqLlOxCkSmg-abd974.woff2",
+"fonts/nwpStKy2OAdR1K-IwhWudF-R3w8aZQ-29afb6.woff2",
+"fonts/nwpStKy2OAdR1K-IwhWudF-R3wAaZfrc-17cf42.woff2",
+"fonts/nwpStKy2OAdR1K-IwhWudF-R3wEaZfrc-e951ce.woff2"
 ];
 
 self.addEventListener('install', e => {

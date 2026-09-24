@@ -15,6 +15,13 @@ if body.startswith('<title>'):
     title = body[7:end]
     body = body[end + 8:].lstrip('\n')
 
+# Ban tu host: khong goi ra Google Fonts nua. Go cac the <link> do khoi than trang,
+# thay bang mot stylesheet noi bo dat trong <head>.
+import re as _re
+GF = _re.compile(r'<link[^>]*(?:fonts\.googleapis\.com|fonts\.gstatic\.com)[^>]*>\s*', _re.I)
+n_removed = len(GF.findall(body))
+body = GF.sub('', body)
+
 HEAD = '''<!doctype html>
 <html lang="vi">
 <head>
@@ -23,7 +30,7 @@ HEAD = '''<!doctype html>
 <title>%s</title>
 <meta name="description" content="Học 3000 từ vựng tiếng Anh Oxford theo chủ đề: nghe, nói, đọc, viết, ngữ pháp và lộ trình luyện thi.">
 <meta name="theme-color" content="#1F6F5C">
-<link rel="manifest" href="manifest.webmanifest">
+%%FONTCSS%%<link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -51,6 +58,11 @@ if ('serviceWorker' in navigator) {
 </body>
 </html>
 '''
+has_fonts = os.path.exists(os.path.join(ROOT, 'build', 'fonts', 'fonts.css'))
+HEAD = HEAD.replace('%FONTCSS%',
+                    '<link rel="stylesheet" href="fonts.css">\n' if has_fonts else '')
+if not has_fonts:
+    print('CANH BAO: chua co phong tu host -> chay: python build/get_fonts.py')
 io.open(os.path.join(PWA, 'index.html'), 'w', encoding='utf-8', newline='').write(HEAD + body + FOOT)
 
 manifest = {
@@ -75,6 +87,15 @@ manifest = {
 json.dump(manifest, io.open(os.path.join(PWA, 'manifest.webmanifest'), 'w', encoding='utf-8'),
           ensure_ascii=False, indent=2)
 
+fsrc = os.path.join(ROOT, 'build', 'fonts')
+if os.path.isdir(fsrc):
+    fdst = os.path.join(PWA, 'fonts')
+    if os.path.isdir(fdst): shutil.rmtree(fdst)
+    os.makedirs(fdst)
+    for f in os.listdir(fsrc):
+        if f.endswith('.woff2'): shutil.copy2(os.path.join(fsrc, f), os.path.join(fdst, f))
+    shutil.copy2(os.path.join(fsrc, 'fonts.css'), os.path.join(PWA, 'fonts.css'))
+
 for sub in ('img', 'icons'):
     src, dst = os.path.join(DIST, sub), os.path.join(PWA, sub)
     if os.path.isdir(src):
@@ -84,6 +105,9 @@ for sub in ('img', 'icons'):
 assets = ['./', 'index.html', 'manifest.webmanifest']
 assets += sorted('icons/' + os.path.basename(p) for p in glob.glob(os.path.join(PWA, 'icons', '*.png')))
 assets += sorted('img/' + os.path.basename(p) for p in glob.glob(os.path.join(PWA, 'img', '*.jpg')))
+if os.path.exists(os.path.join(PWA, 'fonts.css')):
+    assets.append('fonts.css')
+    assets += sorted('fonts/' + os.path.basename(p) for p in glob.glob(os.path.join(PWA, 'fonts', '*.woff2')))
 ver = hashlib.md5(io.open(os.path.join(PWA,'index.html'),encoding='utf-8').read().encode()).hexdigest()[:10]
 
 SW = '''// Ba Nghin Tu - service worker: luu toan bo app de chay offline
@@ -130,3 +154,4 @@ total = sum(os.path.getsize(os.path.join(dp, f))
             for dp, dn, fn in os.walk(PWA) for f in fn)
 print('ban PWA: %d tep dc luu offline, tong %.1f MB' % (len(assets), total / 1048576))
 print('phien ban cache:', ver)
+print('da go %d the <link> tro toi Google Fonts' % n_removed)

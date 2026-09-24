@@ -5,19 +5,25 @@ setlocal
 set PYTHONIOENCODING=utf-8
 
 echo.
-echo [1/4] Ghep anh thanh sprite...
+if not exist "build\fonts\fonts.css" (
+  echo [0/5] Tai phong chu ve de tu host...
+  python build\get_fonts.py || goto :err
+  echo.
+)
+
+echo [1/5] Ghep anh thanh sprite...
 python build\sprites.py || goto :err
 
 echo.
-echo [2/4] Dung du lieu va nhung vao HTML...
+echo [2/5] Dung du lieu va nhung vao HTML...
 python build\build.py || goto :err
 
 echo.
-echo [3/4] Tao icon...
+echo [3/5] Tao icon...
 python build\make_icons.py || goto :err
 
 echo.
-echo [4/4] Dung ban PWA (thu muc pwa\)...
+echo [4/5] Dung ban PWA (thu muc pwa\)...
 python build\make_pwa.py || goto :err
 
 echo.
