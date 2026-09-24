@@ -1,0 +1,497 @@
+{
+"transport": [
+"Music has the power to transport me back to special moments in my life.",
+"Âm nhạc có sức mạnh đưa tôi quay về những khoảnh khắc đặc biệt trong đời tôi.",
+"T"
+],
+"vehicle": [
+"Why don't you buy a vehicle?",
+"",
+"E"
+],
+"car": [
+"He showed off his new car.",
+"Anh ấy đã khoe cái ô tô mới của mình.",
+"T"
+],
+"bus": [
+"Where do I get the bus?",
+"Tôi có thể đón xe buýt ở đâu?",
+"T"
+],
+"train": [
+"The train is always on time.",
+"Chiếc xe lửa này luôn luôn đúng giờ.",
+"T"
+],
+"plane": [
+"We watched the plane fly over.",
+"Chúng tôi đã ngắm máy bay bay qua.",
+"T"
+],
+"ship": [
+"He's the captain of the ship.",
+"Ông ấy là thuyền trưởng của con tàu.",
+"T"
+],
+"boat": [
+"We named the boat the Half Moon.",
+"Chúng tôi đặt tên con thuyền là Nửa Vầng Trăng.",
+"T"
+],
+"ferry": [
+"The ferry has come into port.",
+"",
+"E"
+],
+"bicycle": [
+"I go to school by bicycle.",
+"Tôi đi học bằng xe đạp.",
+"T"
+],
+"motorbike": [
+"My motorbike uses up a lot of gas.",
+"Xe gắn máy của tôi ngốn rất nhiều xăng.",
+"T"
+],
+"taxi": [
+"I had trouble getting a taxi.",
+"Tôi đã gặp khố khăn để kiếm một xe tắc xi.",
+"T"
+],
+"truck": [
+"The dog was hit by a truck.",
+"Con chó bị xe tải đâm.",
+"T"
+],
+"van": [
+"The Van Horn family was wealthy.",
+"",
+"E"
+],
+"helicopter": [
+"The helicopter is flying very low.",
+"",
+"E"
+],
+"road": [
+"A new road is under construction.",
+"Người ta đang thi công một con đường mới.",
+"T"
+],
+"street": [
+"We're still living on Park Street.",
+"Chúng tôi vẫn đang sống ở phố Park.",
+"T"
+],
+"motorway": [
+"There are no traffic lights on the motorway.",
+"Không có đèn giao thông ở trên đường cao tốc.",
+"T"
+],
+"lane": [
+"Leaves lay thick in the lane.",
+"",
+"E"
+],
+"path": [
+"Each path I consider reveals its own challenges.",
+"Mỗi con đường tôi chọn đều chứa đầy những thử thách.",
+"T"
+],
+"bridge": [
+"The bridge was finished on time.",
+"Cây cầu được hoàn thành đúng tiến độ.",
+"T"
+],
+"tunnel": [
+"The accident occurred at the mouth of the tunnel.",
+"Tai nạn xảy ra ở cửa của đường hầm.",
+"T"
+],
+"crossroads": [
+"The accident happened at a crossroads.",
+"",
+"E"
+],
+"roundabout": [
+"Don't say it in a roundabout way.",
+"",
+"E"
+],
+"traffic": [
+"The traffic lights were all red.",
+"Tất cả đèn giao thông đều bật đỏ.",
+"T"
+],
+"traffic light": [
+"Turn right at the traffic light.",
+"Rẽ phải ở chỗ đèn giao thông.",
+"T"
+],
+"traffic jam": [
+"I couldn't have arrived any earlier. There was a terrible traffic jam.",
+"Tôi đã không thể đến sớm hơn được. Đã có một trận kẹt xe kinh khủng.",
+"T"
+],
+"rush hour": [
+"I want to avoid rush hour.",
+"",
+"E"
+],
+"station": [
+"I'm sitting in the railway station.",
+"Tôi đang ngồi trong nhà ga.",
+"T"
+],
+"stop": [
+"If only it would stop raining!",
+"Ước gì trời tạnh mưa!",
+"T"
+],
+"platform": [
+"Take the express train from platform 9.",
+"",
+"E"
+],
+"airport": [
+"How far away is the airport?",
+"Sân bay cách đây bao xa?",
+"T"
+],
+"port": [
+"We began to sail in the direction of the port.",
+"Chúng tôi bắt đầu lái thuyền về hướng cảng.",
+"T"
+],
+"car park": [
+"You should park your car in a car park.",
+"Bạn nên đỗ xe hơi của bạn trong một bãi đỗ xe.",
+"T"
+],
+"petrol station": [
+"The petrol station is at the entrance to the village.",
+"Trạm xăng ở đầu làng.",
+"T"
+],
+"ticket": [
+"Did you already buy the ticket?",
+"Bạn đã mua vé chưa?",
+"T"
+],
+"fare": [
+"Do you have a student fare?",
+"",
+"E"
+],
+"passenger": [
+"You are not inspiring passenger confidence!",
+"",
+"E"
+],
+"driver": [
+"The taxi driver drove me around the city.",
+"Tài xế taxi đã chở tôi đi khắp thành phố.",
+"T"
+],
+"pedestrian": [
+"The ambulance went out of control and came close to running over a pedestrian.",
+"Xe cứu thương mất lái và suýt nữa cán phải một người đi bộ.",
+"T"
+],
+"seat belt": [
+"Drivers should wear seat belts.",
+"Những người lái xe phải thắt dây an toàn.",
+"T"
+],
+"helmet": [
+"You should wear a helmet when riding a motorcycle.",
+"Bạn nên đội một cái mũ bảo hiểm khi đi xe máy.",
+"T"
+],
+"wheel": [
+"The wheel began to roll slowly.",
+"",
+"E"
+],
+"tyre": [
+"Could you check the tyre pressure?",
+"",
+"E"
+],
+"engine": [
+"The engine has broken down again.",
+"",
+"E"
+],
+"brake": [
+"My car needs a brake job.",
+"",
+"E"
+],
+"horn": [
+"Did you get the horn fixed?",
+"",
+"E"
+],
+"fuel": [
+"The fuel level is below empty.",
+"",
+"E"
+],
+"licence": [
+"She doesn't have a driving licence.",
+"",
+"E"
+],
+"drive": [
+"I advised him not to drive.",
+"Tôi đã khuyên anh ấy không lái xe.",
+"T"
+],
+"ride": [
+"I ride my bike to work.",
+"Tôi đi làm bằng xe đạp.",
+"T"
+],
+"travel": [
+"I want to travel around the world.",
+"Tôi muốn đi vòng quanh thế giới.",
+"T"
+],
+"park": [
+"Her house is near the park.",
+"Nhà cô ấy gần công viên.",
+"T"
+],
+"crash": [
+"Tom was killed in a plane crash.",
+"Tom đã ra đi vì một vụ tai nạn máy bay.",
+"T"
+],
+"accident": [
+"This is how the accident happened.",
+"Đây chính là cách mà vụ tai nạn đã xãy ra.",
+"T"
+],
+"overtake": [
+"You cannot overtake the truck now.",
+"",
+"E"
+],
+"reverse": [
+"It will probably be easier to reverse into that parking space.",
+"Có lẽ sẽ dễ dàng hơn khi cho lùi vào chỗ đậu xe đó.",
+"T"
+],
+"speed": [
+"We should observe the speed limit.",
+"",
+"E"
+],
+"slow down": [
+"You may want to slow down.",
+"",
+"E"
+],
+"speed up": [
+"The air will speed up the drying.",
+"",
+"E"
+],
+"get on": [
+"I get on pretty well with my new classmates.",
+"Tôi khá hòa hợp với những người bạn cùng lớp mới.",
+"T"
+],
+"get off": [
+"Let's get off the bus here.",
+"",
+"E"
+],
+"get in": [
+"Without wearing a tie, you won't get in here!",
+"Nếu không đeo cà vạt, bạn sẽ không được bước chân vào đây!",
+"T"
+],
+"get out of": [
+"We can't get out of this.",
+"Mình không thể thoát khỏi đây được.",
+"T"
+],
+"set off": [
+"We should have set off earlier.",
+"",
+"E"
+],
+"arrive": [
+"How much longer before you arrive?",
+"Còn mấy tiếng nữa thì bạn đến vậy?",
+"T"
+],
+"depart": [
+"What time does your plane depart?",
+"",
+"E"
+],
+"delay": [
+"I must apologize for the delay.",
+"",
+"E"
+],
+"cancel": [
+"I'd like to cancel tomorrow's meeting.",
+"",
+"E"
+],
+"board": [
+"Stick a notice on the board.",
+"",
+"E"
+],
+"land": [
+"We are from a far away land.",
+"Chúng tôi tới từ một hòn đảo rất xa.",
+"T"
+],
+"take off": [
+"May I take off my coat?",
+"",
+"E"
+],
+"route": [
+"This is the shortest route.",
+"Đây là tuyến đường ngắn nhất.",
+"T"
+],
+"direction": [
+"What direction is the wind coming from?",
+"Gió thổi từ hướng nào?",
+"T"
+],
+"map": [
+"The map is on the wall.",
+"Bản đồ ở trên tường.",
+"T"
+],
+"distance": [
+"I saw a light in the distance.",
+"Ở đằng xa, tôi nhìn thấy một ngọn lửa.",
+"T"
+],
+"journey": [
+"Is she equal to a long journey?",
+"Cô ấy có chịu được một chuyến đi dài không?",
+"T"
+],
+"trip": [
+"How are you? Did you have a good trip?",
+"Bạn khỏe không? Bạn có 1 chuyến đi tốt chứ?",
+"T"
+],
+"commute": [
+"I commute to work by bicycle.",
+"Tôi đi làm bằng xe đạp.",
+"T"
+],
+"timetable": [
+"The new timetable is a nightmare.",
+"",
+"E"
+],
+"return": [
+"The birds return in the Spring.",
+"Loài chim sẽ chở về vào mùa xuân.",
+"T"
+],
+"crowded": [
+"The room was crowded with furniture.",
+"",
+"E"
+],
+"convenient": [
+"When is convenient for you?",
+"Lúc nào thích hợp với bạn?",
+"T"
+],
+"safe": [
+"Let's put this in the safe.",
+"Chúng ta hãy cất cái này vào trong két đi.",
+"T"
+],
+"dangerous": [
+"It's dangerous to play with fire.",
+"Chơi với lửa rất nguy hiểm.",
+"T"
+],
+"punctual": [
+"She is not as punctual as her little sister.",
+"Cô ta không đúng giờ bằng em gái của mình.",
+"T"
+],
+"public": [
+"Tom becomes nervous whenever he has to speak in public.",
+"Tom bối rối mỗi khi nó nói chuyện trước công chúng.",
+"T"
+],
+"bump": [
+"The plane landed with a bump.",
+"",
+"E"
+],
+"signal": [
+"A smile sends a friendship signal.",
+"",
+"E"
+],
+"cross": [
+"It is dangerous to cross the street here.",
+"Băng qua đường ở đây rất nguy hiểm.",
+"T"
+],
+"turn": [
+"Turn left at the next corner.",
+"Hãy rẽ trái ở góc phố tới.",
+"T"
+],
+"follow": [
+"You should follow the doctor's advice.",
+"Bạn nên làm theo lời bác sĩ.",
+"T"
+],
+"stuck": [
+"He could have got stuck in traffic.",
+"Có lẽ anh ấy đã bị kẹt xe.",
+"T"
+],
+"on foot": [
+"He goes to school on foot.",
+"Anh ấy đi bộ đến trường.",
+"T"
+],
+"catch": [
+"Can I catch a taxi here?",
+"Tôi có thể bắt taxi ở đây không?",
+"T"
+],
+"miss": [
+"I really don't want to miss that.",
+"Tôi thực sự không muốn bỏ lỡ điều đó.",
+"T"
+],
+"break down": [
+"The whole system would break down.",
+"",
+"E"
+],
+"pick up": [
+"I'm off to pick up Tom.",
+"Tôi đi đón Tom đây.",
+"T"
+],
+"drop off": [
+"Can I drop off the car?",
+"",
+"E"
+]
+}

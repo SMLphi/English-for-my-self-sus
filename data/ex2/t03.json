@@ -1,0 +1,497 @@
+{
+"feeling": [
+"I'm feeling a bit blue today.",
+"Hôm nay tôi đang cảm thấy hơi buồn.",
+"V"
+],
+"emotion": [
+"Man is a creature of emotion.",
+"Con người là sinh vật của cảm xúc.",
+"C"
+],
+"mood": [
+"This music suits my present mood.",
+"Bản nhạc này hợp với tâm trạng của tôi lúc này.",
+"C"
+],
+"happy": [
+"I don't think she is happy.",
+"Tôi nghĩ là cô ấy không hạnh phúc.",
+"V"
+],
+"sad": [
+"This is such a sad story.",
+"Đây quả là một câu chuyện buồn.",
+"C"
+],
+"angry": [
+"I believe that he was angry.",
+"Tôi nghĩ là anh ấy đã giận.",
+"V"
+],
+"afraid": [
+"I am afraid he will fail.",
+"Tôi e là anh ta sẽ thất bại.",
+"V"
+],
+"scared": [
+"Why is everybody scared of me?",
+"Tại sao tất cả mọi người lại sợ tôi?",
+"V"
+],
+"excited": [
+"She told him not to get excited.",
+"Cô ấy bảo cậu ta đừng có phấn khích.",
+"V"
+],
+"bored": [
+"I'm bored because I have nothing to do.",
+"Tôi chán vì tôi không có gì để làm cả.",
+"V"
+],
+"tired": [
+"I'm tired of eating fast food.",
+"Tôi ngán thức ăn nhanh quá rồi.",
+"V"
+],
+"nervous": [
+"Do insects have a nervous system?",
+"Côn trùng có hệ thần kinh không?",
+"V"
+],
+"anxious": [
+"I've been anxious to meet you.",
+"Tôi đã nóng lòng muốn gặp bạn.",
+"C"
+],
+"worried": [
+"I wonder why she is so worried.",
+"Tôi tự hỏi vì sao cô ấy lại lo lắng đến vậy.",
+"V"
+],
+"calm": [
+"You should calm down a little.",
+"Bình tĩnh một tí đi mà.",
+"V"
+],
+"relaxed": [
+"Some people get relaxed by reading.",
+"Một số người thấy thư giãn nhờ đọc sách.",
+"C"
+],
+"surprised": [
+"I was too surprised to speak.",
+"Tôi đã không thể nói nên lời vì quá ngạc nhiên.",
+"V"
+],
+"shocked": [
+"I don't think that Tom was shocked.",
+"Tôi không nghĩ rằng Tom đã bị sốc.",
+"V"
+],
+"confused": [
+"I suspect that Tom and Mary are confused.",
+"Tôi nghi là Tom và Mary đang bối rối.",
+"V"
+],
+"disappointed": [
+"Both Tom and I were disappointed.",
+"Tom và tôi đều thất vọng.",
+"V"
+],
+"upset": [
+"Both Tom and Mary looked upset and disappointed.",
+"Cả Tom lẫn Mary đều trông có vẻ thất vọng và không vui.",
+"V"
+],
+"lonely": [
+"I wonder if Tom realizes how lonely I am.",
+"Tôi tự hỏi liệu Tom có nhận ra tôi cô đơn đến nhường nào không.",
+"V"
+],
+"jealousy": [
+"I can't stand her jealousy.",
+"Tôi không thể chịu dựng được sự ghen tuông của cô ấy.",
+"V"
+],
+"guilty": [
+"I feel guilty about forgetting my friend's birthday.",
+"Tôi cảm thấy có lỗi vì đã quên mất ngày sinh nhật bạn tôi.",
+"V"
+],
+"ashamed": [
+"I am ashamed of having been rude to her.",
+"Tôi cảm thấy xấu hổ vì đã cư xử thô lỗ với cô ấy.",
+"V"
+],
+"embarrassed": [
+"Tom told me that he wasn't embarrassed.",
+"Tom đã nói với tôi rằng anh ấy không xấu hổ.",
+"V"
+],
+"hope": [
+"We hope to arrive on time.",
+"Chúng tôi hy vọng là sẽ đến đúng giờ.",
+"V"
+],
+"fear": [
+"I see fear in your eyes.",
+"Tôi thấy nỗi sợ trong mắt của bạn.",
+"V"
+],
+"joy": [
+"This music brings me pure joy.",
+"Âm nhạc này mang đến cho tôi niềm vui thuần tuý.",
+"V"
+],
+"pleasure": [
+"It's my pleasure to come to your university.",
+"Tôi rất vui khi đến thăm quý trường.",
+"V"
+],
+"sorrow": [
+"The president's death caused great sorrow.",
+"Cái chết của vị tổng thống đã gây ra nỗi đau buồn lớn.",
+"V"
+],
+"grief": [
+"Crying is an expression of grief.",
+"Khóc là một cách bộc lộ nỗi đau buồn.",
+"C"
+],
+"stress": [
+"I want to stress this point.",
+"Tôi muốn nhấn mạnh điểm này.",
+"V"
+],
+"pride": [
+"That victory became a source of national pride.",
+"Chiến thắng đó trở thành nguồn sức mạnh khơi dậy niềm tự hào dân tộc.",
+"V"
+],
+"character": [
+"Bill resembles his father in character.",
+"Bill giống cha mình về tính cách.",
+"C"
+],
+"personality": [
+"She has a wonderful personality.",
+"Cô ấy có một tính cách tuyệt vời.",
+"V"
+],
+"attitude": [
+"You should make your attitude clear.",
+"Bạn nên nói rõ thái độ của mình.",
+"C"
+],
+"behaviour": [
+"We were surprised by his behaviour.",
+"Chúng tôi ngạc nhiên vì hành vi của anh ta.",
+"C"
+],
+"patient": [
+"Be patient please. It takes time.",
+"Làm ơn kiên nhẫn một chút đi, cái này phải tốn thì giờ.",
+"V"
+],
+"impatient": [
+"You're so impatient with me.",
+"Bạn thiếu kiên nhẫn với tôi quá.",
+"C"
+],
+"confident": [
+"I'm not confident about the future.",
+"Tôi không tự tin về tương lai.",
+"V"
+],
+"shy": [
+"The shy pupil whispered his answer.",
+"Cậu học trò rụt rè khẽ nói thầm câu trả lời của cậu.",
+"V"
+],
+"brave": [
+"Tom is a brave person.",
+"Tom là một người can đảm.",
+"V"
+],
+"cheerful": [
+"My boss is very cheerful today.",
+"Hôm nay sếp tôi rất vui vẻ.",
+"C"
+],
+"serious": [
+"Getting married is a serious matter.",
+"Kết hôn là một vấn đề quan trọng.",
+"V"
+],
+"funny": [
+"I had a funny dream last night.",
+"Đêm qua tôi có một giấc mơ buồn cười.",
+"C"
+],
+"polite": [
+"She isn't very polite, is she?",
+"Cô ấy không lịch sự lắm, phải không?",
+"C"
+],
+"rude": [
+"It is rude to point at people.",
+"Chỉ vào người khác là bất lịch sự.",
+"V"
+],
+"friendly": [
+"Tom is just as friendly as I am.",
+"Tom cũng chỉ thân thiện như tôi mà thôi.",
+"V"
+],
+"gentle": [
+"Today is a fine day with gentle winds.",
+"Hôm nay là một ngày đẹp trời với những cơn gió nhẹ.",
+"V"
+],
+"strict": [
+"I can be strict when necessary.",
+"Khi cần thì tôi có thể nghiêm khắc.",
+"V"
+],
+"lazy": [
+"I'm too lazy to do my homework.",
+"Tôi lười làm bài quá.",
+"V"
+],
+"ambitious": [
+"She was a very ambitious woman.",
+"Bà ấy từng là một phụ nữ đầy tham vọng.",
+"C"
+],
+"reliable": [
+"Tom is a very reliable guy.",
+"Tom là một chàng trai rất đáng tin cậy.",
+"V"
+],
+"responsible": [
+"You're responsible for what you do.",
+"Bạn phải chịu trách nhiệm cho những gì bạn làm.",
+"V"
+],
+"sensitive": [
+"Most writers are sensitive to criticism.",
+"Hầu hết nhà văn đều nhạy cảm với lời phê bình.",
+"C"
+],
+"sensible": [
+"I'm supposed to be sensible human.",
+"Đáng lẽ tôi phải là người biết điều.",
+"C"
+],
+"clever": [
+"My best friend is so clever, she always gets good score on her exams.",
+"Bạn thân của tôi rất thông minh, cô ấy luôn đạt điểm cao trong các kỳ thi của mình.",
+"V"
+],
+"curious": [
+"I'm really curious how the two of you met.",
+"Tôi thực sự tò mò hai người đã gặp nhau như thế nào.",
+"V"
+],
+"honest": [
+"I don't think Tom is being honest.",
+"Tôi không nghĩ là Tom đang nói thật.",
+"V"
+],
+"optimistic": [
+"How can you be so optimistic?",
+"Sao bạn có thể lạc quan đến vậy?",
+"C"
+],
+"pessimistic": [
+"Tom said that he was pessimistic.",
+"Tom nói rằng anh ấy bi quan.",
+"C"
+],
+"moody": [
+"She can be moody at times.",
+"Cô ấy đôi khi thất thường.",
+"C"
+],
+"stubborn": [
+"I'm not as stubborn as Tom.",
+"Tôi không ngoan cố như Tom.",
+"V"
+],
+"aggressive": [
+"He is so aggressive that others avoid him.",
+"Anh ta hung hăng đến nỗi người khác phải né tránh.",
+"C"
+],
+"enthusiastic": [
+"He became enthusiastic about personal computers.",
+"Anh ấy trở nên say mê máy tính cá nhân.",
+"C"
+],
+"mature": [
+"The plan is not mature.",
+"Kế hoạch chưa chín muồi.",
+"C"
+],
+"smile": [
+"His smile made me feel welcome.",
+"Nụ cười của anh làm tôi cảm thấy được chào đón.",
+"V"
+],
+"laugh": [
+"I love to see you laugh.",
+"Tôi thích thấy bạn cười.",
+"V"
+],
+"cry": [
+"Cry: tears are the heart's petals.",
+"Khóc đi: nước mắt là những cánh hoa của trái tim.",
+"C"
+],
+"shout": [
+"The boy gave a great shout.",
+"Cậu bé hét lên một tiếng thật lớn.",
+"C"
+],
+"complain": [
+"People often complain about the weather.",
+"Mọi người thường phàn nàn về thời tiết.",
+"V"
+],
+"worry": [
+"She told him not to worry.",
+"Cô ấy bảo anh ấy đừng lo lắng.",
+"V"
+],
+"enjoy": [
+"I enjoy watching soccer on TV.",
+"Tôi thích xem đá bóng trên ti vi.",
+"V"
+],
+"prefer": [
+"Do you prefer tea or coffee?",
+"Bạn thích trà hay cà phê hơn?",
+"V"
+],
+"dislike": [
+"If you dislike doing that, then don't do it.",
+"Nếu bạn không thích làm việc đó thì đừng làm.",
+"C"
+],
+"admire": [
+"I admire you for your courage.",
+"Tôi ngưỡng mộ lòng can đảm của bạn.",
+"C"
+],
+"envy": [
+"He said so out of envy.",
+"Anh ta nói vậy vì ghen tức.",
+"V"
+],
+"regret": [
+"Leave her alone or you'll regret it.",
+"Để cô ấy yên, không thì bạn sẽ hối hận.",
+"C"
+],
+"comfort": [
+"He worked hard in order that his family might live in comfort.",
+"Anh ta làm việc cực khổ để gia đình của anh ta có thể sống thoải mái.",
+"V"
+],
+"encourage": [
+"I will go to encourage him.",
+"Tôi sẽ đến để động viên anh ấy.",
+"C"
+],
+"frighten": [
+"I didn't want to frighten you.",
+"Tôi không muốn làm bạn sợ.",
+"C"
+],
+"annoy": [
+"Those impossible suggestions just annoy me.",
+"Những đề xuất bất khả thi đó chỉ làm tôi bực mình.",
+"C"
+],
+"bother": [
+"She says that doesn't bother her.",
+"Cô ấy nói điều đó không làm phiền cô ấy.",
+"V"
+],
+"relax": [
+"Before going home, I have a few drinks to relax.",
+"Trước khi về nhà, tôi uống một vài ly để thư giãn.",
+"V"
+],
+"suffer": [
+"They didn't suffer, did they?",
+"Họ đã không phải chịu đựng, có đúng không?",
+"V"
+],
+"mind": [
+"What made you change your mind?",
+"Điều gì khiến bạn đổi ý?",
+"C"
+],
+"temper": [
+"I'm sometimes in a bad temper.",
+"Đôi khi tôi cũng cáu bẳn.",
+"C"
+],
+"passion": [
+"To share one's passion is to live it fully.",
+"Chia sẻ đam mê của mình là sống trọn vẹn với nó.",
+"C"
+],
+"courage": [
+"You must build up your courage.",
+"Bạn phải bồi đắp lòng can đảm của mình.",
+"C"
+],
+"confidence": [
+"He has great confidence in himself.",
+"Anh ấy rất tự tin.",
+"V"
+],
+"sympathy": [
+"We felt sympathy for her.",
+"Chúng tôi đồng cảm với cô ấy.",
+"V"
+],
+"desire": [
+"We soon believe what we desire.",
+"Ta thường sớm tin vào điều ta mong muốn.",
+"C"
+],
+"satisfied": [
+"Are you satisfied with your job?",
+"Bạn có hài lòng với công việc của mình không?",
+"V"
+],
+"proud of": [
+"I'm so proud of my team.",
+"Tôi vô cùng tự hào về đội của tôi.",
+"V"
+],
+"calm down": [
+"Tom told me to calm down.",
+"Tom bảo tớ bình tĩnh.",
+"V"
+],
+"cheer up": [
+"The situation is improving, so cheer up!",
+"Tình hình đang được cải thiện, hãy vui lên!",
+"V"
+],
+"put up with": [
+"I can't put up with him.",
+"Tôi không thể chịu được anh ta.",
+"V"
+],
+"hard-working": [
+"He comes from a hard-working family.",
+"Anh ấy xuất thân từ gia đình cần cù.",
+"M"
+]
+}

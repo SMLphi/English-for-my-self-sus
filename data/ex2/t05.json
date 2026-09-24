@@ -1,0 +1,497 @@
+{
+"house": [
+"Yesterday, a thief entered the house.",
+"Hôm qua, một tên trộm đã đột nhập vào nhà.",
+"V"
+],
+"flat": [
+"I don't like flat-roofed houses.",
+"Tôi không thích những ngôi nhà mái bằng.",
+"V"
+],
+"apartment": [
+"I wasn't allowed to leave my apartment.",
+"Tôi không được phép rời khỏi căn hộ của tôi.",
+"V"
+],
+"building": [
+"The building collapsed in the earthquake.",
+"Tòa nhà đổ sập xuống trong trận động đất.",
+"V"
+],
+"room": [
+"Can I eat in my room?",
+"Tôi ăn trong phòng mình có được không?",
+"V"
+],
+"kitchen": [
+"I'm all thumbs in the kitchen.",
+"Tôi không biết gì chuyện bếp núc.",
+"V"
+],
+"bedroom": [
+"My bedroom is quiet and comfortable.",
+"Phòng ngủ của tôi yên tĩnh và thoải mái.",
+"V"
+],
+"bathroom": [
+"I use the internet in the bathroom.",
+"Tôi dùng internet trong phòng tắm.",
+"V"
+],
+"living room": [
+"Oh, what a big living room!",
+"Ôi, phòng khách rộng thế!",
+"V"
+],
+"dining room": [
+"The dog isn't allowed in the dining room.",
+"Con chó không được phép vào phòng ăn.",
+"V"
+],
+"hall": [
+"This hall was full of people.",
+"Hội trường này đã chật kín người.",
+"C"
+],
+"stairs": [
+"The stairs have up to 22 steps.",
+"Cầu thang có tới 22 bậc.",
+"V"
+],
+"floor": [
+"They really slept on the floor.",
+"Họ thật sự đã ngủ trên sàn nhà.",
+"C"
+],
+"ceiling": [
+"The restaurant has a white ceiling.",
+"Nhà hàng này có trần nhà màu trắng.",
+"V"
+],
+"wall": [
+"The car crashed into the wall.",
+"Chiếc xe đâm vào tường.",
+"C"
+],
+"roof": [
+"Look at that cat on the roof.",
+"Nhìn con mèo trên mái nhà đi.",
+"V"
+],
+"door": [
+"Will you please shut the door?",
+"Bạn đóng cửa giúp tôi được không?",
+"V"
+],
+"window": [
+"He came in through the window.",
+"Anh ấy đã vào bằng cửa sổ.",
+"V"
+],
+"gate": [
+"I was asked to open the gate.",
+"Có người bảo tôi đi mở cánh cổng.",
+"C"
+],
+"garden": [
+"Let's pick flowers from the garden.",
+"Hãy đi hái hoa trong vườn nào.",
+"V"
+],
+"yard": [
+"There are three boys in the yard.",
+"Có ba cậu bé trong sân.",
+"V"
+],
+"garage": [
+"The fire started in his garage.",
+"Ngọn lửa bắt đầu từ gara của cậu ấy.",
+"V"
+],
+"balcony": [
+"The balcony scene happens in the second act.",
+"Cảnh ban công diễn ra ở hồi thứ hai.",
+"V"
+],
+"basement": [
+"The only place Tom hadn't looked was in the basement.",
+"Nơi duy nhất Tom chưa tìm là dưới tầng hầm.",
+"V"
+],
+"furniture": [
+"The truck carried a load of furniture.",
+"Chiếc xe tải đó đã chất đầy nội thất.",
+"V"
+],
+"table": [
+"The silver is on the table.",
+"Bộ đồ bạc ở trên bàn.",
+"C"
+],
+"chair": [
+"The cat is on the chair.",
+"Con mèo ở trên ghế.",
+"V"
+],
+"sofa": [
+"The ball rolled under the sofa.",
+"Quả bóng lăn xuống gầm cái ghế sofa.",
+"V"
+],
+"bed": [
+"I have to go to bed.",
+"Tôi phải đi ngủ.",
+"V"
+],
+"desk": [
+"What a heavy desk this is!",
+"Cái bàn này nặng thế!",
+"V"
+],
+"shelf": [
+"The cup is on the shelf.",
+"Cái cốc ở trên kệ.",
+"V"
+],
+"cupboard": [
+"My mother puts cups in the kitchen cupboard.",
+"Mẹ tôi để ly tách ở trong tủ bếp.",
+"V"
+],
+"wardrobe": [
+"It's hanging in the wardrobe.",
+"Nó đang treo trong tủ quần áo.",
+"V"
+],
+"drawer": [
+"I'm going to keep this in the top drawer.",
+"Tôi sẽ cất nó ở ngăn tủ trên cùng.",
+"V"
+],
+"mirror": [
+"She looked at herself in the mirror.",
+"Cô ấy đã ngắm nhìn mình trong gương.",
+"V"
+],
+"carpet": [
+"I still have to get rid of this carpet.",
+"Tớ còn phải bỏ tấm thảm đi.",
+"V"
+],
+"curtain": [
+"I am going to lower the curtain.",
+"Tôi đang chuẩn bị hạ màn.",
+"V"
+],
+"cushion": [
+"The cushion has lost its spring.",
+"Chiếc gối tựa đã mất độ đàn hồi.",
+"C"
+],
+"pillow": [
+"Tom hid the knife under his pillow.",
+"Tom giấu con dao dưới gối.",
+"V"
+],
+"blanket": [
+"I gave him a blanket.",
+"Tôi đã cho anh ấy một cái chăn.",
+"V"
+],
+"sheet": [
+"Give me a sheet of paper.",
+"Đưa tôi một tờ giấy.",
+"C"
+],
+"towel": [
+"Tom dried himself with a bath towel.",
+"Tom đã lau người bằng khăn tắm.",
+"V"
+],
+"lamp": [
+"Remove the lamp from the table.",
+"Dọn cái đèn khỏi mặt bàn.",
+"C"
+],
+"light": [
+"We saw a light far away.",
+"Chúng tôi đã nhìn thấy ánh sáng ở cách xa.",
+"V"
+],
+"switch": [
+"The switch didn't work on time.",
+"Cái công tắc đã không hoạt động đúng lúc.",
+"C"
+],
+"socket": [
+"Connect the plug to the socket.",
+"Cắm phích vào ổ điện.",
+"C"
+],
+"plug": [
+"What kind of plug is this?",
+"Đây là loại phích cắm gì vậy?",
+"C"
+],
+"fridge": [
+"Tom looked in the fridge to see what he could find to drink.",
+"Tom nhìn vào tủ lạnh xem có gì uống được không.",
+"C"
+],
+"freezer": [
+"I put the meat we just bought in the freezer.",
+"Tôi đã để thịt mà chúng ta vừa mua vào ngăn đá.",
+"V"
+],
+"oven": [
+"The chicken is cooking in the oven.",
+"Gà đang được nấu trong lò.",
+"V"
+],
+"stove": [
+"He warmed himself at the stove.",
+"Ông ấy sưởi ấm bên bếp lò.",
+"C"
+],
+"microwave": [
+"Put it in the microwave.",
+"Cho nó vào lò vi sóng.",
+"V"
+],
+"sink": [
+"Put the dishes in the sink.",
+"Hãy đặt bát đĩa vào bồn rửa.",
+"V"
+],
+"tap": [
+"The main tap is turned off.",
+"Vòi nước chính đã bị khoá.",
+"C"
+],
+"shower": [
+"I need to take a shower.",
+"Tôi cần đi tắm.",
+"V"
+],
+"toilet": [
+"Where can I get toilet paper?",
+"Tôi có thể lấy giấy vệ sinh ở đâu?",
+"V"
+],
+"washing machine": [
+"Tell me how to use the washing machine.",
+"Chỉ cho tôi cách dùng máy giặt với.",
+"C"
+],
+"iron": [
+"I burned my fingers on a hot iron.",
+"Tôi bị bỏng tay vì chiếc bàn là nóng.",
+"C"
+],
+"vacuum": [
+"May I use the vacuum cleaner?",
+"Tôi dùng máy hút bụi được không?",
+"C"
+],
+"broom": [
+"She sweeps the room with a broom.",
+"Cô ấy quét phòng bằng cây chổi.",
+"V"
+],
+"bin": [
+"Do you have a recycle bin?",
+"Bạn có thùng rác tái chế không?",
+"C"
+],
+"rubbish": [
+"There is a lot of rubbish on the streets.",
+"Có rất nhiều rác trên các đường phố.",
+"V"
+],
+"clean": [
+"I don't have any clean socks.",
+"Tôi không có nổi một đôi tất sạch.",
+"V"
+],
+"tidy": [
+"The cottage was clean and tidy.",
+"Ngôi nhà nhỏ sạch sẽ và gọn gàng.",
+"C"
+],
+"messy": [
+"This is going to get messy.",
+"Chuyện này sắp trở nên bừa bộn đây.",
+"C"
+],
+"dirty": [
+"My shirt is all dirty now.",
+"Áo của tôi bẩn hết rồi.",
+"V"
+],
+"dust": [
+"The desk is covered with dust.",
+"Mặt bàn phủ đầy bụi.",
+"C"
+],
+"sweep": [
+"I will sweep out my room.",
+"Tôi sẽ quét dọn phòng mình.",
+"C"
+],
+"wash": [
+"I wash my hair every day.",
+"Mỗi ngày tôi đều gội đầu.",
+"V"
+],
+"repair": [
+"I will have him repair this watch.",
+"Tôi sẽ nhờ anh ấy sửa chiếc đồng hồ này.",
+"C"
+],
+"fix": [
+"I think that Tom would be able to fix your computer.",
+"Tôi nghĩ là Tom có thể sửa máy tính của bạn.",
+"V"
+],
+"decorate": [
+"I like to decorate my room with flowers.",
+"Tôi thích trang trí phòng bằng hoa.",
+"V"
+],
+"paint": [
+"I helped Tom paint the fence.",
+"Tôi đã giúp Tom sơn hàng rào.",
+"V"
+],
+"rent": [
+"My salary isn't even enough to cover my rent and bills.",
+"Tiền lương của tôi không đủ chi trả tiền thuê và các hoá đơn.",
+"V"
+],
+"own": [
+"Does somebody here own this watch?",
+"Cái đồng hồ này có thuộc về ai ở đây không?",
+"V"
+],
+"owner": [
+"I'm the owner of this building.",
+"Tôi là chủ tòa nhà này.",
+"V"
+],
+"landlord": [
+"The landlord barked at his servants.",
+"Ông chủ nhà quát tháo người hầu của mình.",
+"C"
+],
+"tenant": [
+"The previous tenant took care of the apartment.",
+"Người thuê trước đã giữ gìn căn hộ rất tốt.",
+"C"
+],
+"neighbourhood": [
+"You don't live in my neighbourhood.",
+"Bạn không sống trong khu phố của tôi.",
+"C"
+],
+"address": [
+"Write your name and address, please.",
+"Xin hãy viết tên và địa chỉ của bạn.",
+"V"
+],
+"key": [
+"Where did I leave the key?",
+"Mình để chìa khoá ở đâu nhỉ?",
+"V"
+],
+"lock": [
+"They forgot to lock the door.",
+"Họ quên khoá cửa.",
+"C"
+],
+"heating": [
+"My computer started heating up.",
+"Máy tính của tôi bắt đầu nóng lên.",
+"V"
+],
+"air conditioning": [
+"Without air conditioning, it's impossible to travel by car in the middle of August.",
+"Không có điều hoà thì không thể đi ô tô vào giữa tháng Tám.",
+"C"
+],
+"fan": [
+"Stop it! I'm a Giants fan.",
+"Thôi đi, tôi là người hâm mộ đội Giants đấy.",
+"C"
+],
+"comfortable": [
+"She felt pretty comfortable with him.",
+"Cô ấy cảm thấy khá là thoải mái với anh ấy.",
+"V"
+],
+"cosy": [
+"The room has a cosy atmosphere.",
+"Căn phòng có không khí ấm cúng.",
+"C"
+],
+"spacious": [
+"The room was fairly spacious.",
+"Căn phòng khá là rộng rãi.",
+"V"
+],
+"narrow": [
+"The angle would be too narrow.",
+"Góc đó sẽ quá hẹp.",
+"C"
+],
+"upstairs": [
+"I could hear people moving about upstairs.",
+"Tôi có thể nghe thấy tiếng mọi người đi lại trên lầu.",
+"V"
+],
+"downstairs": [
+"Go downstairs and have a wash.",
+"Xuống nhà rửa mặt đi.",
+"C"
+],
+"move in": [
+"Are you going to move in?",
+"Bạn định dọn vào ở à?",
+"C"
+],
+"move out": [
+"I'm not going to move out.",
+"Tôi sẽ không dọn đi đâu.",
+"C"
+],
+"tidy up": [
+"Sit down while I tidy up.",
+"Ngồi xuống đi trong lúc tôi dọn dẹp.",
+"C"
+],
+"throw away": [
+"Don't throw away a good opportunity.",
+"Đừng bỏ lỡ một cơ hội tốt.",
+"C"
+],
+"put away": [
+"I put away 10 dollars each month.",
+"Tôi để dành mười đô mỗi tháng.",
+"C"
+],
+"turn on": [
+"Tom asked Mary to turn on the light.",
+"Tom bảo Mary bật cái đèn lên.",
+"V"
+],
+"turn off": [
+"Do not turn off your computer.",
+"Đừng tắt máy của bạn.",
+"V"
+],
+"household chores": [
+"She went about the household chores.",
+"Cô ấy bắt tay vào làm việc nhà.",
+"C"
+]
+}

@@ -1,0 +1,337 @@
+{
+"property": [
+"She owns a large property.",
+"Cô ấy sở hữu khối tài sản kếch xù.",
+"T"
+],
+"protest": [
+"I interpreted this as a protest.",
+"",
+"E"
+],
+"punishment": [
+"There needs to be a punishment.",
+"Cần có một đòn trừng phạt.",
+"T"
+],
+"quotation": [
+"Can you give me a quotation?",
+"",
+"E"
+],
+"quote": [
+"Don't quote me on this, but I agree with you.",
+"Tôi đồng ý với bạn, nhưng đừng bảo với ai là tôi nói thế.",
+"T"
+],
+"racing": [
+"The bicycle is racing to finish.",
+"",
+"E"
+],
+"range": [
+"He fired at point blank range.",
+"",
+"E"
+],
+"reaction": [
+"You had a perfectly normal reaction.",
+"",
+"E"
+],
+"reality": [
+"The dream has become a reality.",
+"",
+"E"
+],
+"recommendation": [
+"That was not a good recommendation.",
+"",
+"E"
+],
+"relation": [
+"He is no relation to me.",
+"",
+"E"
+],
+"release": [
+"They had no proof against Tom, so they had to release him.",
+"Họ không có bằng chứng chống lại Tom, cho nên họ phải thả anh ấy ra.",
+"T"
+],
+"religion": [
+"What's the difference between religion and philosophy?",
+"Điểm khác biệt giữa tôn giáo và triết học là gì?",
+"T"
+],
+"reservation": [
+"I would like to make a reservation for tonight.",
+"Tôi muốn đặt chỗ trước cho tối nay.",
+"T"
+],
+"risk": [
+"That's a risk I'm willing to take.",
+"Đó là một rủi ro mà tôi sẵn sàng muốn nhận lấy.",
+"T"
+],
+"robot": [
+"The robot went out of control.",
+"",
+"E"
+],
+"roll": [
+"You have to roll up your sleeves.",
+"Bạn phải cuốn tay áo lại.",
+"T"
+],
+"rope": [
+"I want a knife with which to cut the rope.",
+"Tôi cần một con dao để cắt dây thừng.",
+"T"
+],
+"row": [
+"Please line up in a row.",
+"",
+"E"
+],
+"rugby": [
+"Do you play soccer or rugby?",
+"",
+"E"
+],
+"safety": [
+"You should put safety before everything else.",
+"An toàn là trên hết.",
+"T"
+],
+"sailor": [
+"He hoped to be a sailor.",
+"",
+"E"
+],
+"sample": [
+"He wrote away for a sample.",
+"",
+"E"
+],
+"script": [
+"Did you read the whole script?",
+"",
+"E"
+],
+"sculpture": [
+"I really can't understand modern sculpture.",
+"",
+"E"
+],
+"security": [
+"If you want security in your old age, begin saving now.",
+"Nếu bạn mong muốn một cuộc sống yên ả lúc về già, thì bây giờ hãy bắt đầu tiết kiệm đi.",
+"T"
+],
+"servant": [
+"I want to hire a servant.",
+"",
+"E"
+],
+"setting": [
+"Bad weather prevented me from setting out.",
+"Thời tiết xấu đã ngăn tôi khởi hành.",
+"T"
+],
+"sex": [
+"She probably didn't have sex with him.",
+"Chắc là cô ấy đã không làm tình với anh ấy.",
+"T"
+],
+"shell": [
+"Life is not an empty shell.",
+"",
+"E"
+],
+"sight": [
+"Out of sight, out of mind.",
+"Xa mặt cách lòng.",
+"T"
+],
+"software": [
+"He works for a software company.",
+"Anh ấy làm việc cho một công ty phần mềm.",
+"T"
+],
+"spending": [
+"She's spending too much time watching TV.",
+"Cô ta dành quá nhiều thời gian để xem TV.",
+"T"
+],
+"spirit": [
+"Put more spirit into your work.",
+"",
+"E"
+],
+"spot": [
+"Many of my friends still gather at the same spot after all these years.",
+"Nhiều người bạn của tôi vẫn gặp nhau ở cùng một nơi sau rất nhiều năm.",
+"T"
+],
+"stadium": [
+"How much does it cost, on average, to build a football stadium?",
+"Thường thì cần bao tiền để xây một sân vận động bóng đá?",
+"T"
+],
+"statistic": [
+"That statistic is completely made up.",
+"",
+"E"
+],
+"statue": [
+"The statue was moved to this church.",
+"Bức tượng đã được chuyển đến nhà thờ này.",
+"T"
+],
+"strength": [
+"I don't have the strength to keep trying.",
+"Tôi không có sức mạng để tiếp tục cố gắng.",
+"T"
+],
+"string": [
+"A string on my guitar broke.",
+"",
+"E"
+],
+"studio": [
+"We cannot go into the studio.",
+"",
+"E"
+],
+"stuff": [
+"Giving stuff makes you feel great.",
+"Cho đi thứ gì đó khiến bạn cảm thấy tuyệt vời.",
+"T"
+],
+"substance": [
+"This substance is in liquid state.",
+"",
+"E"
+],
+"summary": [
+"Your summary leaves nothing to be desired.",
+"",
+"E"
+],
+"supporter": [
+"He has a wealthy supporter behind him.",
+"",
+"E"
+],
+"surface": [
+"About 9.4% of the surface of the earth is covered in forest.",
+"Khoảng 9,4% bề mặt trái đất bị băng tuyết bao phủ.",
+"T"
+],
+"tape": [
+"The whole tape was recorded in one session.",
+"Toàn bộ cuộn băng đã được thu trong một lần.",
+"T"
+],
+"technique": [
+"What's wrong with my kissing technique?",
+"",
+"E"
+],
+"tent": [
+"They sleep together in a cave or a tent.",
+"Họ ngủ chung lẫn lộn trong hang hoặc trong lều.",
+"T"
+],
+"theme": [
+"What's the theme of the novel?",
+"",
+"E"
+],
+"theory": [
+"I think I have a theory about that.",
+"Tôi nghĩ tôi có một giả thuyết về điều đó.",
+"T"
+],
+"tin": [
+"This box is made of tin.",
+"",
+"E"
+],
+"trade": [
+"Every man for his own trade.",
+"",
+"E"
+],
+"trick": [
+"I don't think it's a trick.",
+"",
+"E"
+],
+"truth": [
+"The truth is that I lied.",
+"Sự thật là tôi đã nói dối.",
+"T"
+],
+"tube": [
+"The Tube is less crowded today.",
+"",
+"E"
+],
+"update": [
+"I never update my operating system.",
+"Tôi không bao giờ cập nhật hệ điều hành.",
+"T"
+],
+"version": [
+"I need the new version no matter what.",
+"Tôi muốn có phiên bản mới bằng bất cứ giá nào.",
+"T"
+],
+"victim": [
+"Tom was the victim of a crime.",
+"Tom là nạn nhân của vụ án.",
+"T"
+],
+"viewer": [
+"The viewer is watching television.",
+"",
+"E"
+],
+"volunteer": [
+"Do you think anyone will volunteer?",
+"Bạn có nghĩ rằng ai cũng sẽ tình nguyện?",
+"T"
+],
+"vote": [
+"We will vote to decide the winner.",
+"Chúng ta hãy bỏ phiếu để quyết định người thắng cuộc.",
+"T"
+],
+"warning": [
+"A storm warning is out now.",
+"",
+"E"
+],
+"weapon": [
+"A good memory is his weapon.",
+"",
+"E"
+],
+"wonder": [
+"I wonder what I should do today.",
+"Hôm nay mình nên làm gì đây ta?",
+"T"
+],
+"divide": [
+"Divide these apples between you three.",
+"",
+"E"
+],
+"bubble tea": [
+"Has Tom tried bubble tea before?",
+"",
+"E"
+]
+}

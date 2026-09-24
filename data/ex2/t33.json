@@ -1,0 +1,392 @@
+{
+"excitement": [
+"I held my breath in excitement.",
+"",
+"E"
+],
+"exhibition": [
+"The exhibition will be held next month.",
+"Buổi triển lãm sẽ được tổ chức vào tháng sau.",
+"T"
+],
+"expedition": [
+"Problems are expected in their expedition.",
+"",
+"E"
+],
+"explosion": [
+"A lot of people died in the explosion.",
+"Vụ nổ làm rất nhiều người chết.",
+"T"
+],
+"export": [
+"The export business isn't doing well.",
+"",
+"E"
+],
+"favour": [
+"May I ask you a favour?",
+"",
+"E"
+],
+"fighting": [
+"Tom is fighting for his life.",
+"Tom đang chiến đấu vì sự sống.",
+"T"
+],
+"flag": [
+"They are flying their national flag.",
+"Họ đang treo quốc kỳ của họ.",
+"T"
+],
+"force": [
+"He took it from her by force.",
+"Anh ta ép cô ấy để giành lấy nó.",
+"T"
+],
+"frame": [
+"He has a heavy frame.",
+"Ông có một khung tranh rất nặng.",
+"T"
+],
+"function": [
+"The motor does not function properly.",
+"",
+"E"
+],
+"ghost": [
+"Please tell me a ghost story.",
+"Hãy kể cho tôi nghe một câu chuyện ma.",
+"T"
+],
+"guard": [
+"You must keep up your guard even after a victory.",
+"Thắng không kiêu, bại không nản.",
+"T"
+],
+"happiness": [
+"But I'm not sure whether it brings happiness to everybody.",
+"Nhưng tôi không chắc rằng nó có mang lại hạnh phúc cho mọi người hay không.",
+"T"
+],
+"headline": [
+"The headline caught my eye this morning.",
+"",
+"E"
+],
+"highlight": [
+"Highlight the text and copy it.",
+"",
+"E"
+],
+"horror": [
+"The boy stood still in horror.",
+"",
+"E"
+],
+"hurricane": [
+"A category 5 hurricane causes maximum damage.",
+"",
+"E"
+],
+"hurry": [
+"They were in a hurry to get home.",
+"Họ rất vội vã đi về nhà.",
+"T"
+],
+"immigrant": [
+"Are you an immigrant in this land?",
+"",
+"E"
+],
+"impact": [
+"How does that impact you today?",
+"",
+"E"
+],
+"import": [
+"Import regulations have been relaxed recently.",
+"",
+"E"
+],
+"importance": [
+"That's a matter of prime importance.",
+"",
+"E"
+],
+"impression": [
+"I didn't mean to give that impression.",
+"Tôi không định gây cho bạn ấn tượng như thế.",
+"T"
+],
+"improvement": [
+"This essay shows a great improvement.",
+"",
+"E"
+],
+"influence": [
+"The teacher creates a good influence on his students.",
+"Người thầy giáo có ảnh hưởng tốt đến học sinh của mình.",
+"T"
+],
+"intelligence": [
+"There's no such thing as Artificial Intelligence.",
+"Không có cái gọi là trí tuệ nhân tạo.",
+"T"
+],
+"intention": [
+"Tom had no intention of ever seeing Mary again.",
+"Tom không có ý định gặp lại Mary nữa.",
+"T"
+],
+"issue": [
+"Now we got an issue.",
+"Bây giờ chúng ta có một vấn đề.",
+"T"
+],
+"journal": [
+"This technical journal is above me.",
+"",
+"E"
+],
+"judge": [
+"Who are you to judge me?",
+"Anh là ai mà phán xét tôi?",
+"T"
+],
+"keyboard": [
+"Do you need a new keyboard?",
+"",
+"E"
+],
+"kick": [
+"Tom kick-started his motorcycle.",
+"Tom đã nổ máy chiếc xe máy của mình.",
+"T"
+],
+"killing": [
+"The magazine is for killing time.",
+"",
+"E"
+],
+"lack": [
+"Compared to our grandparents, we don't lack anything today.",
+"So với các cụ ngày xưa, chúng ta không thiếu thốn gì cả.",
+"T"
+],
+"layer": [
+"Remove the lower-most background layer.",
+"",
+"E"
+],
+"leisure": [
+"He was busy with work and did not have leisure time.",
+"Anh ấy đã bận rộn với công việc và không có thời gian rảnh rỗi.",
+"T"
+],
+"length": [
+"At length, my wish was realized.",
+"",
+"E"
+],
+"limit": [
+"This weighs more than the limit.",
+"",
+"E"
+],
+"literature": [
+"I'm very interested in classical literature.",
+"",
+"E"
+],
+"location": [
+"Can you email me the location?",
+"",
+"E"
+],
+"luxury": [
+"The market for luxury goods is growing fast.",
+"Thị trường sản phẩm cao cấp đang phát triển một cách nhanh chóng.",
+"T"
+],
+"measure": [
+"Money is the measure of worth.",
+"",
+"E"
+],
+"mess": [
+"My room looks like a mess.",
+"",
+"E"
+],
+"mixture": [
+"Air is a mixture of gases.",
+"",
+"E"
+],
+"murder": [
+"The police began to go into the murder case.",
+"Cảnh sát bắt đầu điều tra vụ án giết người.",
+"T"
+],
+"mystery": [
+"I think that we're getting close to solving this mystery.",
+"Tôi nghĩ rằng chúng ta đang tiến gần đến giải quyết bí ẩn này.",
+"T"
+],
+"nail": [
+"Drive the nail into the board.",
+"",
+"E"
+],
+"nation": [
+"The King's address to the nation was moved.",
+"Phát biểu của nhà vua trước toàn quốc đã được chuyển đi.",
+"T"
+],
+"net": [
+"The boy captured the bird with a net.",
+"Cậu bé đã bắt con chim đó bằng một tấm lưới.",
+"T"
+],
+"occasion": [
+"What's the big occasion today?",
+"Hôm nay là một ngày trọng đại.",
+"T"
+],
+"organizer": [
+"He was the organizer of the meeting.",
+"",
+"E"
+],
+"percentage": [
+"What percentage of marriages end in divorce?",
+"",
+"E"
+],
+"photographer": [
+"He is a great photographer and is famous for his beautiful pictures.",
+"Anh ấy là một nhiếp ảnh gia tuyệt vời và nổi tiếng với những bức ảnh đẹp đẽ của mình.",
+"T"
+],
+"photography": [
+"I have an interest in photography.",
+"",
+"E"
+],
+"pin": [
+"I entered the wrong PIN.",
+"Tôi điền sai mã PIN.",
+"T"
+],
+"pipe": [
+"Something is stuck in the pipe.",
+"",
+"E"
+],
+"planning": [
+"I'm planning on staying two nights.",
+"Tôi định ở lại hai đêm.",
+"T"
+],
+"plot": [
+"I don't understand this novel's plot.",
+"",
+"E"
+],
+"poem": [
+"The students learned this poem by heart.",
+"Các sinh viên đã học thuộc lòng bài thơ này.",
+"T"
+],
+"poet": [
+"In my free time, I'm a poet.",
+"Khi tôi rảnh rỗi, tôi là nhà thơ.",
+"T"
+],
+"poetry": [
+"He writes love poetry for me.",
+"Cậu ấy viết tình thơ cho mình.",
+"T"
+],
+"poison": [
+"One man's meat is another man's poison.",
+"Cái sướng của người này là nỗi khổ của người khác.",
+"T"
+],
+"politician": [
+"The great politician passed away in 1963.",
+"",
+"E"
+],
+"politics": [
+"Without politics and media, people would probably not hate each other.",
+"Nếu không có chính trị và truyền thông, người dân sẽ không ghét nhau.",
+"T"
+],
+"portrait": [
+"This is a portrait of my late father.",
+"Đây là bức chân dung người cha quá cố của tôi.",
+"T"
+],
+"poverty": [
+"Poverty is the root of all evil.",
+"Bần cùng sinh đạo tặc.",
+"T"
+],
+"powder": [
+"There was some kind of white powder on the floor.",
+"Có thứ bột trắng gì đó trên sàn.",
+"T"
+],
+"prayer": [
+"Nothing has resulted from her prayer.",
+"",
+"E"
+],
+"prediction": [
+"The prediction was for more snow.",
+"",
+"E"
+],
+"press": [
+"All you have to do is press the button.",
+"Tất cả những gì bạn phải làm là nhấn cái nút.",
+"T"
+],
+"priest": [
+"I want to be a priest at all costs.",
+"Tôi muốn trở thành một linh mục bằng mọi giá.",
+"T"
+],
+"prince": [
+"The prince and the princess went to their room.",
+"Hoàng tử và công chúa đi vào phòng của họ.",
+"T"
+],
+"princess": [
+"Do you want to be a princess?",
+"Bạn có muốn trở thành một công chúa?",
+"T"
+],
+"printing": [
+"In what year was printing invented?",
+"",
+"E"
+],
+"prisoner": [
+"The prisoner was brought before a judge.",
+"Phạm nhân được đưa đến trước thẩm phán.",
+"T"
+],
+"producer": [
+"He left the producer a message on voice mail.",
+"",
+"E"
+],
+"production": [
+"They're launching a new production line.",
+"",
+"E"
+]
+}

@@ -1,0 +1,34 @@
+# Luu y: git khong cho chu thich cung dong voi mau -> moi chu thich mot dong rieng.
+
+# --- phu thuoc ---
+node_modules/
+__pycache__/
+*.pyc
+
+# --- du lieu tai ve, tai lai duoc bang script ---
+# kho cau Tatoeba (~106 MB): python build/get_corpus.py
+build/corpus/
+# PDF Oxford 3000 goc: python build/get_oxford.py
+build/oxford_raw/
+# ket qua trung gian cua gen_examples.py
+build/ex2gen/
+# anh goc tai tu Wikipedia, chi can khi them tu moi: python build/fetch_images.py
+build/imgcache/
+
+# --- ban dung lai duoc trong vai giay: python build/build.py ---
+dist/
+
+# --- tep tam ---
+build/_check.js
+build/_pwa_check.html
+build/qa_*.png
+build/sheet*.png
+build/probe*.py
+build/missing.json
+build/need_vi.json
+build/patch_en*.json
+build/fix*.json
+build/vi_batch*.json
+*.log
+Thumbs.db
+desktop.ini

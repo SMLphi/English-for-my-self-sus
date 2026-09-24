@@ -1,0 +1,532 @@
+{
+"able": [
+"Were you able to find her?",
+"Bạn đã tìm được cô ấy chưa?",
+"T"
+],
+"active": [
+"My grandmother is still very active at eighty-five.",
+"Bà của tôi vẫn còn rất hoạt bát ở tuổi 85.",
+"T"
+],
+"alive": [
+"The fish he caught yesterday is still alive.",
+"Con cá anh ta bắt được hôm qua vẫn còn sống.",
+"T"
+],
+"alternative": [
+"Could you suggest an alternative date?",
+"",
+"E"
+],
+"ancient": [
+"Some ancient peoples thought of the sun as their god.",
+"Một vài người cổ đại coi mặt trời là thần thánh.",
+"T"
+],
+"asleep": [
+"They looked like they were asleep.",
+"Lúc đó họ trông có vẻ là họ đang ngủ.",
+"T"
+],
+"available": [
+"Why isn't it available at midnight?",
+"Sao lại không có vào lúc nửa đêm nhỉ?",
+"T"
+],
+"average": [
+"Great minds discuss ideas, average minds discuss events, small minds discuss people.",
+"Những bộ óc vĩ đại thảo luận về ý tưởng, đầu óc trung bình bàn luận về sự kiện, còn tâm trí nhỏ nhen bình phẩm về mọi người.",
+"T"
+],
+"awful": [
+"I met with an awful accident.",
+"",
+"E"
+],
+"based": [
+"This film is based on a novel.",
+"Bộ phim được dựng dựa trên một cuốn tiểu thuyết.",
+"T"
+],
+"blank": [
+"My brother really doesn't know what to do with these blank CDs.",
+"Anh trai tôi thực sự không biết phải làm gì với những đĩa CD trắng này.",
+"T"
+],
+"bottom": [
+"From the bottom of my heart, thank you.",
+"Từ tận đáy lòng, cảm ơn bạn.",
+"T"
+],
+"brilliant": [
+"A brilliant future lay before him.",
+"",
+"E"
+],
+"broken": [
+"The house was broken into last night.",
+"Ngôi nhà đã bị đột nhập đêm qua.",
+"T"
+],
+"careful": [
+"She should have been more careful.",
+"Cô ấy đáng lẽ phải cẩn thận hơn.",
+"T"
+],
+"certain": [
+"I'm certain that Tom will win.",
+"Tôi chắc chắn là Tom sẽ thắng.",
+"T"
+],
+"classical": [
+"You like classical music, don't you?",
+"",
+"E"
+],
+"closed": [
+"She closed all the windows in the room.",
+"Cô ấy đã đóng hết cửa sổ trong phòng.",
+"T"
+],
+"connected": [
+"It's the first time in my life I've felt so connected with someone.",
+"Đây là lần đầu tiên trong đời tôi cảm thấy được kết nối với một ai đó đến như vậy.",
+"T"
+],
+"crazy": [
+"The people here are crazy for football.",
+"Mọi người đây phát điên vì bóng đá.",
+"T"
+],
+"creative": [
+"Tom doesn't think he's as creative as Mary.",
+"Tôm không nghĩ rằng anh ấy sáng tạo như Mary.",
+"T"
+],
+"criminal": [
+"He is an authority on criminal law.",
+"Ông ấy là một nhà chức trách thực thi pháp luật về hình sự.",
+"T"
+],
+"daily": [
+"These things happen on a daily basis.",
+"Những việc này xảy ra hằng ngày.",
+"T"
+],
+"digital": [
+"All of my books are digital.",
+"",
+"E"
+],
+"direct": [
+"May I direct your attention to this?",
+"Xin làm ơn chú ý.",
+"T"
+],
+"divorced": [
+"That's the reason we got divorced.",
+"Đó là lý do chúng tôi ly dị.",
+"T"
+],
+"electric": [
+"I have an electric guitar.",
+"Tôi có một cây ghita điện.",
+"T"
+],
+"electrical": [
+"Keep away from the electrical equipment.",
+"",
+"E"
+],
+"electronic": [
+"Please turn off your electronic devices.",
+"",
+"E"
+],
+"empty": [
+"There's an empty seat over there.",
+"Ở kia còn chỗ ngồi kìa.",
+"T"
+],
+"enormous": [
+"The earthquake caused enormous damage.",
+"Trận động đất đã gây thiệt hại to lớn.",
+"T"
+],
+"everyday": [
+"We don't see each other everyday.",
+"Chúng tôi không gặp nhau hằng ngày.",
+"T"
+],
+"exact": [
+"I need the exact address so that I may go there.",
+"Tôi cần một địa chỉ chính xác để có thể tới đó.",
+"T"
+],
+"excellent": [
+"The tea we had there was excellent.",
+"Trà mà chúng tôi đã uống ở đó rất tuyệt vời.",
+"T"
+],
+"flying": [
+"Birds are flying in the sky.",
+"Những con chim đang bay trên bầu trời.",
+"T"
+],
+"foreign": [
+"Translating poetry into foreign languages isn't easy.",
+"Dịch thơ sang tiếng nước ngoài không dễ.",
+"T"
+],
+"forward": [
+"I am looking forward to it.",
+"Tôi mong đợi điều đó.",
+"T"
+],
+"further": [
+"Lawyers will urge the parents to take further legal action.",
+"Các luật sư hối thúc những ông ba bà mẹ thực hiện mạnh mẽ hơn những hành động hợp pháp.",
+"T"
+],
+"general": [
+"Does he have general common sense?",
+"",
+"E"
+],
+"gold": [
+"Gold is more expensive than lead.",
+"Vàng đắt hơn chì.",
+"T"
+],
+"helpful": [
+"I gave him some helpful advice.",
+"",
+"E"
+],
+"huge": [
+"That bird can fly very fast thanks to its huge wings.",
+"Con chim đấy có thể bay rất nhanh nhờ có đôi cánh lớn.",
+"T"
+],
+"ideal": [
+"This island has an ideal climate.",
+"",
+"E"
+],
+"impossible": [
+"It is impossible to resolve the conflict.",
+"Việc giải quyết tranh chấp đó là bất khả thi.",
+"T"
+],
+"included": [
+"He was included in the deal.",
+"",
+"E"
+],
+"incredible": [
+"This technology is an incredible thing!",
+"",
+"E"
+],
+"independent": [
+"She is independent of her parents.",
+"Cô ấy độc lập khỏi ba mẹ của cô ấy.",
+"T"
+],
+"informal": [
+"It was only an informal party.",
+"",
+"E"
+],
+"intelligent": [
+"Is there intelligent life on other planets?",
+"Trên hành tinh khác có sinh vật có trí tuệ không?",
+"T"
+],
+"international": [
+"Was yesterday International Friendship Day?",
+"Có phải hôm qua là Ngày Quốc tế Tình bạn không?",
+"T"
+],
+"level": [
+"I am trying my level best.",
+"",
+"E"
+],
+"likely": [
+"She is likely to live to one hundred.",
+"Bà ấy có thể sẽ sống đến 100 tuổi.",
+"T"
+],
+"lost": [
+"He got lost on his way here.",
+"Trên đường đến đây, nó đã đi lạc.",
+"T"
+],
+"lovely": [
+"The singer has a lovely voice.",
+"Người ca sĩ có một giọng hát đáng yêu.",
+"T"
+],
+"low": [
+"Low temperatures turn water into ice.",
+"",
+"E"
+],
+"lucky": [
+"I've always considered myself lucky.",
+"Tôi luôn nghĩ bản thân mình may mắn.",
+"T"
+],
+"major": [
+"What subject do you major in?",
+"",
+"E"
+],
+"medical": [
+"A medical team is on its way to your location.",
+"Một đội y tế đang trên đường đến địa điểm của bạn.",
+"T"
+],
+"middle": [
+"Take the top and you will have the middle.",
+"Cứ lấy phần trên và bạn sẽ có phần giữa.",
+"T"
+],
+"missing": [
+"The book that I borrowed is missing.",
+"Quyển sách tôi mượn đang bị mất.",
+"T"
+],
+"mobile": [
+"I don't have a mobile phone.",
+"Tôi không có điện thoại di động.",
+"T"
+],
+"musical": [
+"Tom comes from a musical family.",
+"Tom đến từ một gia đình có truyền thống âm nhạc.",
+"T"
+],
+"national": [
+"She's in the National Theatre Company.",
+"Cô ấy ở trong Đoàn Nhà hát kịch Quốc gia.",
+"T"
+],
+"necessary": [
+"Sleep is necessary to stay healthy.",
+"Phải ngủ thì mới khoẻ mạnh.",
+"T"
+],
+"noisy": [
+"The radio is so noisy.",
+"Cái Radio ồn ào quá.",
+"T"
+],
+"normal": [
+"Snow is not normal in summer.",
+"Tuyết là không bình thường vào mùa hè.",
+"T"
+],
+"ordinary": [
+"He's just an ordinary student.",
+"Cậu ta chỉ là một học sinh bình thường.",
+"T"
+],
+"original": [
+"Bill has a lot of original ideas.",
+"Bill có rất nhiều ý tưởng độc đáo.",
+"T"
+],
+"particular": [
+"I want to emphasize this point in particular.",
+"Tôi muốn đặc biệt nhấn mạnh điểm này.",
+"T"
+],
+"per cent": [
+"The reward is five per cent.",
+"",
+"E"
+],
+"physical": [
+"I want to do a little physical exercise.",
+"Tôi muốn tập thể dục một chút.",
+"T"
+],
+"pleased": [
+"She was pleased to see him.",
+"Cô ấy rất vui khi gặp anh ấy.",
+"T"
+],
+"pop": [
+"Do you care for pop songs?",
+"",
+"E"
+],
+"recent": [
+"Is it a recent picture?",
+"Tấm hình này có mới không?",
+"T"
+],
+"regular": [
+"That is the regular starting time.",
+"",
+"E"
+],
+"scary": [
+"You have a really scary voice.",
+"Bạn có giọng nói rất đáng sợ.",
+"T"
+],
+"secret": [
+"She revealed the secret to him.",
+"Cô ấy đã thổ lộ bí mật cho anh ấy.",
+"T"
+],
+"separate": [
+"Waiter, give us separate checks, please.",
+"",
+"E"
+],
+"shut": [
+"Be kind enough to shut the door.",
+"Làm ơn hãy đóng cửa.",
+"T"
+],
+"silver": [
+"The ring is made of silver.",
+"Chiếc nhẫn được làm bằng bạc.",
+"T"
+],
+"simple": [
+"I have a simple plan for getting Tom to agree.",
+"Tôi có một kế hoạch đơn giản để khiến Tom đồng ý.",
+"T"
+],
+"social": [
+"Social customs vary from country to country.",
+"Phong tục nè nếp biến đổi khác nhau ở mỗi quốc gia.",
+"T"
+],
+"soft": [
+"I can hear the soft breathing.",
+"",
+"E"
+],
+"specific": [
+"You'll have to be more specific.",
+"",
+"E"
+],
+"square": [
+"A square has four right angles.",
+"Hình vuông có bốn góc vuông.",
+"T"
+],
+"state": [
+"The poor are supported by the state.",
+"Người nghèo được nhà nước hỗ trợ.",
+"T"
+],
+"strange": [
+"I saw a strange woman there.",
+"Tôi đã trông thấy một người phụ nữ lạ mặt ở đó.",
+"T"
+],
+"stupid": [
+"I know that Tom isn't stupid.",
+"Tôi biết Tom không phải là một người ngu ngốc.",
+"T"
+],
+"successful": [
+"The experiment proved to be successful.",
+"Thí nghiệm được đánh giá là thành công.",
+"T"
+],
+"surprising": [
+"That he comes here is surprising.",
+"",
+"E"
+],
+"teenage": [
+"Teenage around-the-world pilot dies.",
+"",
+"E"
+],
+"top": [
+"I can't top up my phone.",
+"Tôi không thể nạp tiền vào điện thoại.",
+"T"
+],
+"toy": [
+"The toy ran out of batteries.",
+"Món đồ chơi đã hết pin rồi.",
+"T"
+],
+"traditional": [
+"People are always seeking this traditional medicine because it is very rare.",
+"Nhiều người luôn đi tìm những vị thuốc cổ truyền thì thuốc này rất hiếm.",
+"T"
+],
+"typical": [
+"The idea is typical of him.",
+"",
+"E"
+],
+"underground": [
+"There is a shopping district underground.",
+"",
+"E"
+],
+"unhappy": [
+"He is a little bit unhappy today.",
+"Hôm nay anh ta có một chút không vui.",
+"T"
+],
+"united": [
+"I have already visited the United States.",
+"Tôi đã thăm nuwows Mỹ rồi.",
+"T"
+],
+"unusual": [
+"This is very, very unusual.",
+"Điều này rất rất không bình thường.",
+"T"
+],
+"usual": [
+"Tom is speaking faster than usual.",
+"Tom đang nói nhanh hơn mọi khi.",
+"T"
+],
+"whole": [
+"The whole city is covered with snow.",
+"Thành phố phủ đầy tuyết.",
+"T"
+],
+"wide": [
+"Life is not long, it is wide!",
+"Cuộc đời không dài nhưng rộng!",
+"T"
+],
+"wooden": [
+"All of the toys are wooden.",
+"",
+"E"
+],
+"working": [
+"Are Tom and Mary still working?",
+"Tom và Mary vẫn đang làm việc có đúng không?",
+"T"
+],
+"worse": [
+"Wet dogs smell worse than dry ones.",
+"Những con chó ướt có mùi hôi hơn những con chó khô.",
+"T"
+],
+"worst": [
+"You should prepare for the worst.",
+"Bạn cần phải chuẩn bị cho những tình huống xấu nhất.",
+"T"
+]
+}

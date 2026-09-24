@@ -1,0 +1,492 @@
+{
+"shop": [
+"She bought a book at the shop.",
+"Bà ấy mua một cuốn sách ở cửa hàng đó.",
+"T"
+],
+"store": [
+"What time does the store close?",
+"Khi nào cửa hàng đóng cửa?",
+"T"
+],
+"market": [
+"The stock market is very active.",
+"Thị trường chứng khoáng rất năng động.",
+"T"
+],
+"supermarket": [
+"They sell eggs at the supermarket.",
+"Trứng được bán trong siêu thị.",
+"T"
+],
+"mall": [
+"Should we go to the mall?",
+"",
+"E"
+],
+"customer": [
+"I was visited by a customer.",
+"",
+"E"
+],
+"client": [
+"The client talked with the lawyer.",
+"",
+"E"
+],
+"seller": [
+"The toy seller was very friendly.",
+"",
+"E"
+],
+"buy": [
+"Buy cheap and waste your money.",
+"Của rẻ là của ôi.",
+"T"
+],
+"sell": [
+"He decided to sell the car.",
+"Anh ấy đã quyết định sẽ bán chiếc ô tô đó.",
+"T"
+],
+"purchase": [
+"We will purchase a new car next week.",
+"Nhà tôi định mua một cái ô tô mới vào tuần sau.",
+"T"
+],
+"price": [
+"What's the price of your wheat?",
+"Giá lúa mì của bạn là bao nhiêu?",
+"T"
+],
+"cost": [
+"How much do the apples cost?",
+"Quả táo này bao nhiêu tiền?",
+"T"
+],
+"cheap": [
+"This market sells very cheap clothes.",
+"Chợ này bán quần áo rất rẻ.",
+"T"
+],
+"expensive": [
+"There's nothing more expensive than love.",
+"Không có gì đắt đỏ hơn tình yêu.",
+"T"
+],
+"afford": [
+"I couldn't afford to do that.",
+"Tôi không đủ khả năng làm việc đó.",
+"T"
+],
+"value": [
+"The sculptures are of great value.",
+"",
+"E"
+],
+"worth": [
+"It's worth three times that much.",
+"Đáng gấp ba lần chỗ đó.",
+"T"
+],
+"discount": [
+"Can you give me a discount?",
+"",
+"E"
+],
+"sale": [
+"Your house is for sale.",
+"Nhà của ngươi đang rao bán.",
+"T"
+],
+"bargain": [
+"This dress is a good bargain.",
+"",
+"E"
+],
+"offer": [
+"You should have refused his offer.",
+"Đáng lẽ ra bạn nên từ chối lời đề nghị của anh ta.",
+"T"
+],
+"deal": [
+"We have to deal with this issue.",
+"Chúng ta phải giải quyết vấn đề này.",
+"T"
+],
+"money": [
+"We need money to do anything.",
+"Chúng tôi làm gì cũng cần tiền.",
+"T"
+],
+"cash": [
+"I usually use a credit card instead of cash.",
+"Bình thường tôi không dùng tiền mặt mà tôi dùng thẻ tín dụng.",
+"T"
+],
+"coin": [
+"The bill was paid in coin.",
+"",
+"E"
+],
+"note": [
+"Please note that we have quoted the lowest possible price.",
+"Xin chú ý rằng chúng tôi đã đưa ra mức giá thấp nhất rồi.",
+"T"
+],
+"currency": [
+"The exchange rates for foreign currency change daily.",
+"Tỷ giá hối đoái của ngoại tệ thay đổi mỗi ngày.",
+"T"
+],
+"change": [
+"I want to change the world.",
+"Tôi muốn thay đổi thế giới.",
+"T"
+],
+"pay": [
+"Did you pay for the book?",
+"Bạn đã trả tiền quyển sách này à?",
+"T"
+],
+"payment": [
+"I am quite ready for payment.",
+"",
+"E"
+],
+"receipt": [
+"Make sure you save the receipt.",
+"",
+"E"
+],
+"refund": [
+"I'd like to get a refund.",
+"",
+"E"
+],
+"exchange": [
+"Can you exchange it for another one?",
+"Bạn có thể đổi cho tôi cái khác dược không?",
+"T"
+],
+"credit card": [
+"I'd like to pay with a credit card.",
+"Tôi muốn thanh toán bằng thẻ tín dụng.",
+"T"
+],
+"bank": [
+"My sister works in a bank as a secretary.",
+"Chị của tôi làm thư ký ở ngân hàng.",
+"T"
+],
+"account": [
+"He never takes into account the fact that I am very busy.",
+"Anh ta không bao giờ để tâm việc tôi bận ra sao.",
+"T"
+],
+"save": [
+"I'm going to save more money.",
+"Tôi sẽ tiết kiệm thêm tiền.",
+"T"
+],
+"savings": [
+"I spent all the savings I had on this.",
+"Tôi đã sử dụng toàn bộ số tiền tiết kiệm của mình để mua cái này.",
+"T"
+],
+"spend": [
+"Don't spend so much time watching TV.",
+"Đừng dành quá nhiều thời gian xem tivi.",
+"T"
+],
+"waste": [
+"After all, I'm a waste of space.",
+"Rốt cuộc thì tôi cũng là người thừa mà.",
+"T"
+],
+"borrow": [
+"Can I borrow your mobile phone?",
+"Tôi có thể mượn điện thoại của bạn không?",
+"T"
+],
+"lend": [
+"Would you lend me a pencil?",
+"Bạn cho tôi mượn một cái bút chì có được không?",
+"T"
+],
+"owe": [
+"I owe ten dollars to her.",
+"Tôi đang vay cô ấy 10 Đô-la.",
+"T"
+],
+"debt": [
+"He needs money because he has debt.",
+"Anh ấy cần tiền vì đang nợ nần.",
+"T"
+],
+"loan": [
+"I want you to give me a loan.",
+"Tôi muốn bạn cho tôi vay tiền.",
+"T"
+],
+"interest": [
+"I have no interest in politics.",
+"Tôi không quan tâm đến chính trị.",
+"T"
+],
+"income": [
+"I'm satisfied with my current income.",
+"Tôi thỏa mãn với thu nhập hiện tại của tôi.",
+"T"
+],
+"salary": [
+"The workers pushed for a raise in salary.",
+"Những người lao động yêu cầu được tăng lương.",
+"T"
+],
+"wage": [
+"The minimum wage is $2.13 an hour.",
+"",
+"E"
+],
+"earn": [
+"He doesn't earn enough money to live on.",
+"Anh ấy không kiếm đủ tiền để sống.",
+"T"
+],
+"profit": [
+"Stock investments do not always yield profit.",
+"Việc đầu tư chứng khoán không phải lúc nào cũng đem lại lợi nhuận.",
+"T"
+],
+"loss": [
+"I'm at a loss for words.",
+"Tôi hết lời để nói.",
+"T"
+],
+"budget": [
+"I reviewed the budget, and decided to cut costs.",
+"Tôi duyệt lại ngân sách và quyết định cắt giảm các chi phí.",
+"T"
+],
+"bill": [
+"This is a hundred dollar bill.",
+"Đây là một tờ 100 Đô-la.",
+"T"
+],
+"tax": [
+"The new tax laws will benefit people on low wages.",
+"Các luật thuế mới sẽ có lợi cho những người có thu nhập thấp.",
+"T"
+],
+"invest": [
+"I invest time in personal development.",
+"Tôi dành thời gian để phát triển bản thân.",
+"T"
+],
+"investment": [
+"She benefited from the sound investment.",
+"",
+"E"
+],
+"rich": [
+"I heard that he was very rich.",
+"Tôi nghe nói anh ta đã rất giàu.",
+"T"
+],
+"wealthy": [
+"No doubt, she is wealthy.",
+"Không nghi ngờ gì, bà ấy giàu có.",
+"T"
+],
+"poor": [
+"Our education system is very poor.",
+"Hệ thống giáo dục của chúng tôi còn rất yếu kém.",
+"T"
+],
+"broke": [
+"I think you broke my bed.",
+"Tôi nghĩ bạn đã làm gãy giường tôi rồi.",
+"T"
+],
+"free": [
+"I feel that I am free.",
+"Tôi cảm thấy mình rất tự do.",
+"T"
+],
+"product": [
+"Our product is best in its class.",
+"Sản phẩm của chúng tôi là tốt nhất trong loại.",
+"T"
+],
+"goods": [
+"The goods arrived in good condition.",
+"Hàng hóa đã đến trong tình trạng tốt.",
+"T"
+],
+"item": [
+"This is a real popular item.",
+"",
+"E"
+],
+"brand": [
+"It is a brand new product.",
+"",
+"E"
+],
+"quality": [
+"I put quantity after quality.",
+"Tôi đặt số lượng sau chất lượng.",
+"T"
+],
+"quantity": [
+"We import a large quantity of food.",
+"Chúng tôi nhập khẩu một lượng lớn thực phẩm.",
+"T"
+],
+"stock": [
+"There was a rapid decline in stock prices.",
+"Đã có một sự sụt giảm nhanh chóng trong giá cổ phiếu.",
+"T"
+],
+"order": [
+"We should order another bottle of wine.",
+"Chúng ta nên gọi một chai rượu vang khác.",
+"T"
+],
+"deliver": [
+"We can deliver it this evening.",
+"",
+"E"
+],
+"delivery": [
+"Please send this by special delivery.",
+"",
+"E"
+],
+"package": [
+"I went to the post office to send a package.",
+"Tôi đến bưu điện để gửi một bưu kiện.",
+"T"
+],
+"basket": [
+"Please put socks in the basket.",
+"Quý khách vui lòng bỏ vớ vào giỏ.",
+"T"
+],
+"trolley": [
+"I always use a shopping trolley.",
+"",
+"E"
+],
+"queue": [
+"The queue is too long at the ticket office.",
+"Hàng chờ trước phòng vé quá dài.",
+"T"
+],
+"till": [
+"Never trouble till trouble troubles you.",
+"Tránh voi chả xấu mặt nào.",
+"T"
+],
+"cashier": [
+"My sister works as a cashier.",
+"",
+"E"
+],
+"label": [
+"Attach this label to your package.",
+"",
+"E"
+],
+"guarantee": [
+"I want a money back guarantee.",
+"",
+"E"
+],
+"complaint": [
+"I am sick of your complaint.",
+"",
+"E"
+],
+"economy": [
+"The strike affected the nation's economy.",
+"Cuộc tấn công ảnh hưởng đến kinh tế truyền thống.",
+"T"
+],
+"inflation": [
+"The inflation issue split the party.",
+"",
+"E"
+],
+"expense": [
+"I'm sorry to put you to such great expense.",
+"Tôi rất tiếc vì đã để bạn tốn nhiều tiền.",
+"T"
+],
+"afford to": [
+"Tom can't afford to buy a house.",
+"Tom không có đủ tiền mua nhà.",
+"T"
+],
+"pay off": [
+"Your efforts will soon pay off.",
+"",
+"E"
+],
+"run out of": [
+"He has run out of energy.",
+"Anh ta hết năng lượng rồi.",
+"T"
+],
+"save up": [
+"She's worked hard to save up money.",
+"",
+"E"
+],
+"take back": [
+"I take back what I said.",
+"",
+"E"
+],
+"shop around": [
+"You'll find the shop around the corner.",
+"",
+"E"
+],
+"cut back": [
+"We have cut back production by 20%.",
+"",
+"E"
+],
+"fee": [
+"The lawyer's fee was very high.",
+"",
+"E"
+],
+"charge": [
+"I'm not in charge of anything.",
+"Mình không phụ trách việc gì cả.",
+"T"
+],
+"ATM": [
+"Where can I find an ATM?",
+"Tôi có thể tìm thấy ATM ở đâu.",
+"T"
+],
+"withdraw": [
+"I need to go to the bank to withdraw money today.",
+"Hôm nay tôi cần đến ngân hàng để rút tiền.",
+"T"
+],
+"deposit": [
+"Deposit your money in the bank.",
+"",
+"E"
+],
+"transfer": [
+"Please transfer 450 dollars to my account.",
+"",
+"E"
+]
+}

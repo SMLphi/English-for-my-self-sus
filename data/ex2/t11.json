@@ -1,0 +1,467 @@
+{
+"school": [
+"Are you going to school tomorrow?",
+"Ngày mai bạn có định đến trường không?",
+"T"
+],
+"education": [
+"The rich and powerful often control education.",
+"Kẻ giàu và kẻ mạnh thường kiểm soát giáo dục.",
+"T"
+],
+"student": [
+"I'm a student, but he isn't.",
+"Tôi là học sinh, nhưng anh ấy thì không phải.",
+"T"
+],
+"pupil": [
+"Every pupil was asked one question.",
+"",
+"E"
+],
+"teacher": [
+"I learned nothing from the teacher.",
+"Tôi không học được gì từ giáo viên đó cả.",
+"T"
+],
+"professor": [
+"The blackboard is behind the professor.",
+"Bảng đen ở phía sau giáo sư.",
+"T"
+],
+"principal": [
+"I bet he is our principal.",
+"",
+"E"
+],
+"classroom": [
+"Don't you talk in the classroom.",
+"Bạn đừng nói chuyện trong lớp.",
+"T"
+],
+"class": [
+"You never have class or what?!",
+"Bạn không bao giờ có lớp hay sao?",
+"T"
+],
+"lesson": [
+"The second lesson is very simple.",
+"Bài thứ hai thì rất đơn giản.",
+"T"
+],
+"subject": [
+"Don't try to change the subject.",
+"Đừng có thay đổi chủ đề.",
+"T"
+],
+"curriculum": [
+"The curriculum needs to be updated.",
+"",
+"E"
+],
+"textbook": [
+"This history textbook is intended for high school students.",
+"Cuốn sách lịch sử này được viết cho học sinh cấp ba.",
+"T"
+],
+"notebook": [
+"He turned the pages of his notebook.",
+"Anh ấy đã lật các trang vở của mình.",
+"T"
+],
+"homework": [
+"He has already finished his homework.",
+"Anh ấy đã làm xong bài tập về nhà.",
+"T"
+],
+"assignment": [
+"When will your assignment be completed?",
+"",
+"E"
+],
+"exam": [
+"I have to pass this exam.",
+"Tôi phải vượt qua kì thi này.",
+"T"
+],
+"test": [
+"Fire is the test of gold.",
+"Lửa thử vàng.",
+"T"
+],
+"quiz": [
+"The quiz consists of ten rounds.",
+"",
+"E"
+],
+"grade": [
+"What grade is your sister in?",
+"",
+"E"
+],
+"mark": [
+"On your mark! Get set! Go!",
+"Vào vị trí, sẵn sàng, chạy!",
+"T"
+],
+"score": [
+"I almost got a perfect score.",
+"",
+"E"
+],
+"result": [
+"Overall, I'm happy with the result.",
+"Nhìn chung, tôi hài lòng với kết quả này.",
+"T"
+],
+"pass": [
+"We will pass an exam tomorrow.",
+"Ngày mai chúng ta sẽ vượt qua bài kiểm tra thôi.",
+"T"
+],
+"fail": [
+"If I should fail, what would my parents say?",
+"Nếu tôi thất bại, ba mẹ của tôi sẽ nói gì.",
+"T"
+],
+"revise": [
+"I cannot revise with this noise.",
+"",
+"E"
+],
+"study": [
+"I study from eight to eleven.",
+"Tôi học từ lúc tám giờ đến mười một giờ.",
+"T"
+],
+"learn": [
+"We learn by trial and error.",
+"Thất bại là mẹ thành công.",
+"T"
+],
+"teach": [
+"Teach me how to use it.",
+"Hãy dạy tôi cách sử dụng nó.",
+"T"
+],
+"explain": [
+"Please explain this sentence to me.",
+"Làm ơn giải thích câu này cho tôi.",
+"T"
+],
+"understand": [
+"I don't expect you to understand.",
+"Mình không nghĩ là bạn sẽ hiểu đâu.",
+"T"
+],
+"remember": [
+"I don't remember anything about that.",
+"Tôi không nhớ gì về điều đó.",
+"T"
+],
+"forget": [
+"Did he forget his money again?",
+"Nó lại quên tiền nữa à?",
+"T"
+],
+"practise": [
+"Do you still practise your religion?",
+"",
+"E"
+],
+"knowledge": [
+"My knowledge of geography is poor.",
+"Tôi có kiến thức hạn hẹp về địa lý.",
+"T"
+],
+"skill": [
+"She prides herself on her skill in cooking.",
+"Cô ấy tự hào về kỹ năng nấu ăn của mình.",
+"T"
+],
+"ability": [
+"He was not at all surprised at her ability.",
+"Anh ta hoàn toàn không ngạc nhiên về khà năng của cô ta.",
+"T"
+],
+"talent": [
+"It's like you have a talent for mistakes.",
+"Cứ như thể bạn có tài mắc sai lầm vậy.",
+"T"
+],
+"degree": [
+"Each is good in its degree.",
+"",
+"E"
+],
+"diploma": [
+"Each boy has received his diploma.",
+"",
+"E"
+],
+"certificate": [
+"Please attach a certificate of quality.",
+"",
+"E"
+],
+"university": [
+"I teach chemistry at the university.",
+"Tôi dạy hoá học ở đại học.",
+"T"
+],
+"college": [
+"I read the newspaper every day when I was in college.",
+"Tôi đọc báo mỗi ngày hồi tôi còn học cao đẳng.",
+"T"
+],
+"kindergarten": [
+"I could draw fairly well by the time I began kindergarten.",
+"Tôi có thể vẽ khá tốt hồi lúc tôi bắt đầu học mẫu giáo.",
+"T"
+],
+"primary school": [
+"Some can't even finish primary school.",
+"",
+"E"
+],
+"secondary school": [
+"This is a chemistry laboratory in an ordinary secondary school.",
+"Đây là một phòng thí nghiệm hoá học trong một ngôi trường cấp hai bình thường.",
+"T"
+],
+"graduate": [
+"Next spring I want to graduate.",
+"",
+"E"
+],
+"scholarship": [
+"He is proud of his scholarship.",
+"",
+"E"
+],
+"tuition": [
+"My college tuition is too expensive.",
+"",
+"E"
+],
+"term": [
+"What are your long term plans?",
+"Kế hoạch dài hạn của bạn là gì?",
+"T"
+],
+"semester": [
+"Are you taking politics this semester?",
+"",
+"E"
+],
+"timetable": [
+"Could I have a bus timetable?",
+"",
+"E"
+],
+"break": [
+"Let's take a ten-minute break.",
+"Hãy nghỉ giải lao 10 phút.",
+"T"
+],
+"playground": [
+"Let's get out of this playground.",
+"",
+"E"
+],
+"library": [
+"See you tomorrow at the library.",
+"Hẹn gặp lại ngày mai ở thư viện.",
+"T"
+],
+"laboratory": [
+"They are in a scientific laboratory.",
+"",
+"E"
+],
+"blackboard": [
+"The teacher wrote the answer with chalk on the blackboard.",
+"Giáo viên đã viết đáp án bằng phấn lên bảng đen.",
+"T"
+],
+"whiteboard": [
+"Write your answer on the whiteboard.",
+"",
+"E"
+],
+"chalk": [
+"Give me three pieces of chalk.",
+"Cho tôi ba viên phấn.",
+"T"
+],
+"pen": [
+"Do you have a pen on you?",
+"Bạn có bút trên người không?",
+"T"
+],
+"pencil": [
+"Can you give me a pencil?",
+"Bạn đưa tôi bút chì có được không?",
+"T"
+],
+"eraser": [
+"Don't forget to bring a pencil and eraser to school.",
+"Đừng quên mang theo bút chì và tẩy đến trường.",
+"T"
+],
+"ruler": [
+"The people resisted their cruel ruler.",
+"",
+"E"
+],
+"scissors": [
+"I wonder whose these scissors are.",
+"",
+"E"
+],
+"glue": [
+"We have to buy glue somewhere.",
+"",
+"E"
+],
+"backpack": [
+"Does this backpack belong to him?",
+"",
+"E"
+],
+"question": [
+"That question is easy to answer.",
+"Câu hỏi đó dễ trả lời thôi.",
+"T"
+],
+"answer": [
+"I could answer all the questions.",
+"Tôi có thể trả lời tất cả những câu hỏi này.",
+"T"
+],
+"essay": [
+"You can finish your essay now.",
+"Bạn có thể kết thúc bài luận của bạn bây giờ.",
+"T"
+],
+"paragraph": [
+"This paragraph doesn't need much explanation.",
+"",
+"E"
+],
+"sentence": [
+"I don't understand that last sentence.",
+"Tôi không hiểu câu cuối cùng đó.",
+"T"
+],
+"vocabulary": [
+"It is about time you studied vocabulary!",
+"Đáng lẽ ra bạn đã phải học từ vựng rồi mới phải!",
+"T"
+],
+"grammar": [
+"This language's grammar is very difficult.",
+"Ngữ pháp của ngôn ngữ này rất khó.",
+"T"
+],
+"spelling": [
+"You have made only a few spelling mistakes.",
+"Bạn mắc có vài lỗi chính tả thôi.",
+"T"
+],
+"punctuation": [
+"Please use punctuation in your sentences.",
+"",
+"E"
+],
+"handwriting": [
+"Do you know whose handwriting this is?",
+"Bạn có biết đây là chữ của ai không?",
+"T"
+],
+"copy": [
+"Is that a library book or is it your own copy?",
+"Sách của bạn hay là mượn thư viện vậy?",
+"T"
+],
+"correct": [
+"If you see a mistake, then please correct it.",
+"Nếu bạn nhìn thấy 1 lỗi, vui lòng hãy sửa nó sau đó.",
+"T"
+],
+"mistake": [
+"She was unconscious of her mistake.",
+"Cô ấy đã không ý thức được sai lầm của mình.",
+"T"
+],
+"improve": [
+"In order to improve the environment.",
+"",
+"E"
+],
+"concentrate": [
+"I can't concentrate when people are looking at me.",
+"Tôi không thể tập trung khi có người cứ nhìn vào mình.",
+"T"
+],
+"attention": [
+"Don't pay any attention to him.",
+"Đừng để ý đến nó.",
+"T"
+],
+"memorise": [
+"I just can't memorise this vocabulary.",
+"",
+"E"
+],
+"ask": [
+"Ask me whenever you're in doubt.",
+"Nếu bạn có chỗ nào không hiểu, bạn có thể hỏi tôi bất cứ lúc nào.",
+"T"
+],
+"raise your hand": [
+"Raise your hand to speak.",
+"Giơ tay để phát biểu.",
+"T"
+],
+"hand in": [
+"I must hand in the report today.",
+"Tôi phải bàn giao báo cáo hôm nay.",
+"T"
+],
+"look up": [
+"Look up page 50 in the textbook.",
+"",
+"E"
+],
+"figure out": [
+"Tom couldn't figure out where the money came from.",
+"Tom không hề biết số tiền đó đến từ đâu.",
+"T"
+],
+"catch up": [
+"He is working hard to catch up with the others.",
+"Anh ấy đang làm việc chăm chỉ để theo kịp những người khác.",
+"T"
+],
+"drop out": [
+"Turn on, tune in, drop out.",
+"",
+"E"
+],
+"take notes": [
+"Take your notebook and take notes.",
+"",
+"E"
+],
+"hand out": [
+"First, put the right hand out.",
+"",
+"E"
+],
+"cheat": [
+"I was being taught to cheat.",
+"",
+"E"
+]
+}

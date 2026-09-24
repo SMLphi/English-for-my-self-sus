@@ -1,0 +1,14 @@
+# Chuan hoa xuong dong: tep text luu LF trong git.
+# Quan trong khi deploy len Linux - build.sh dinh CRLF se khong chay duoc.
+* text=auto eol=lf
+
+# Tep chi chay tren Windows thi giu CRLF
+*.bat text eol=crlf
+
+# Tep nhi phan: khong dung cham
+*.jpg  binary
+*.jpeg binary
+*.png  binary
+*.ico  binary
+*.pdf  binary
+*.bz2  binary

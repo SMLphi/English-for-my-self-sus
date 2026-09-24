@@ -1,0 +1,512 @@
+{
+"person": [
+"He is not a bad person.",
+"Anh ta không phải là người xấu.",
+"V"
+],
+"people": [
+"Few people know about the plan.",
+"Ít người biết về kế hoạch này.",
+"V"
+],
+"man": [
+"The man is wanted for murder.",
+"Người đàn ông bị truy nã về tội giết người.",
+"V"
+],
+"woman": [
+"Where did you see the woman?",
+"Bạn thấy người phụ nữ đó ở đâu?",
+"V"
+],
+"boy": [
+"The boy took the radio apart.",
+"Thằng bé tháo tung cái đài ra.",
+"C"
+],
+"girl": [
+"She is just an ordinary girl.",
+"Cô ta chỉ là một cô gái bình thường.",
+"V"
+],
+"child": [
+"Even a child could do that.",
+"Đến trẻ con còn làm được.",
+"V"
+],
+"baby": [
+"Keep quiet. The baby is sleeping.",
+"Im lặng. Em bé đang ngủ.",
+"V"
+],
+"adult": [
+"In many countries, over eighteen years old is an adult.",
+"Ở nhiều quốc gia, trên mười tám tuổi là người trưởng thành.",
+"V"
+],
+"teenager": [
+"Can you remember the time we visited Tom when he was still a teenager?",
+"Bạn có nhớ lần chúng ta đến thăm Tom khi anh ấy còn là thiếu niên không?",
+"C"
+],
+"human": [
+"I'm a human just like you.",
+"Tôi cũng là con người giống như bạn mà thôi.",
+"V"
+],
+"guy": [
+"Can you describe that strange guy?",
+"Anh có thể mô tả gã đàn ông lạ mặt đó không?",
+"V"
+],
+"lady": [
+"I do not know that lady.",
+"Tôi không biết người phụ nữ đó.",
+"V"
+],
+"gentleman": [
+"I do not know that gentleman.",
+"Tôi không quen vị quý ông đó.",
+"C"
+],
+"name": [
+"Fill in your name and address.",
+"Điền tên và địa chỉ của bạn vào.",
+"V"
+],
+"age": [
+"As people age, they develop wrinkles.",
+"Khi người ta có tuổi, các nếp nhăn xuất hiện.",
+"C"
+],
+"young": [
+"He met a nice young man.",
+"Anh ấy gặp được một người trẻ tuổi tốt bụng.",
+"V"
+],
+"old": [
+"I think she's over 40 years old.",
+"Tôi nghĩ là cô ấy đã ngoài 40 tuổi.",
+"V"
+],
+"tall": [
+"Everyone in his family is tall.",
+"Cả nhà anh ấy đều cao.",
+"C"
+],
+"short": [
+"Shall we take a short rest?",
+"Chúng ta nghỉ ngơi một chút nhé?",
+"V"
+],
+"fat": [
+"He is not fat at all.",
+"Anh ấy không hề béo chút nào.",
+"V"
+],
+"thin": [
+"One book is thin, and the other is thick.",
+"Một quyển thì mỏng, và quyển kia thì dày.",
+"V"
+],
+"slim": [
+"He was tall, slim and strong.",
+"Anh ấy cao, mảnh khảnh và khoẻ mạnh.",
+"C"
+],
+"overweight": [
+"I think I'm not too overweight.",
+"Tôi nghĩ mình không thừa cân lắm.",
+"C"
+],
+"handsome": [
+"He is a handsome young man.",
+"Anh ấy là một chàng trai đẹp trai.",
+"C"
+],
+"beautiful": [
+"Nothing is beautiful but the truth.",
+"Không gì đẹp bằng sự thật.",
+"C"
+],
+"pretty": [
+"You must know them pretty well.",
+"Bạn phải biết rất rõ về chúng.",
+"V"
+],
+"ugly": [
+"I think that house looks really ugly and not pretty.",
+"Tôi nghĩ ngôi nhà đó trông thực sự xấu và không được đẹp.",
+"V"
+],
+"attractive": [
+"Of the three boys, the youngest is the most attractive.",
+"Trong ba cậu bé, cậu nhỏ tuổi nhất là người cuốn hút nhất.",
+"C"
+],
+"cute": [
+"Both of them are very cute.",
+"Cả hai đều rất dễ thương.",
+"V"
+],
+"hair": [
+"I want to wash my hair.",
+"Tôi muốn gội đầu.",
+"V"
+],
+"blonde": [
+"She was a tall, slender blonde.",
+"Cô ấy là một cô gái tóc vàng cao và mảnh mai.",
+"C"
+],
+"bald": [
+"Don't worry too much, or you'll go bald.",
+"Lo lắng nhiều quá thì sẽ bị hói đầu đấy.",
+"V"
+],
+"beard": [
+"Can I touch your beard?",
+"Tôi có thể sờ râu của ông được không?",
+"V"
+],
+"moustache": [
+"Can I grab the soldier's moustache?",
+"Tôi túm ria mép của người lính được không?",
+"C"
+],
+"skin": [
+"Snow White has white skin and black hair.",
+"Bạch Tuyết có làn da trắng và mái tóc đen.",
+"V"
+],
+"face": [
+"Dry your face with a towel.",
+"Hãy dùng khăn lau khô mặt đi.",
+"V"
+],
+"eye": [
+"I'll keep an eye on her.",
+"Tôi sẽ để mắt đến cô ấy.",
+"V"
+],
+"nose": [
+"His nose has been broken twice.",
+"Mũi của anh ấy đã bị gãy hai lần.",
+"V"
+],
+"mouth": [
+"Open your mouth and close your eyes.",
+"Mở miệng ra và nhắm mắt lại.",
+"V"
+],
+"ear": [
+"Tom is deaf in one ear.",
+"Tom bị điếc một tai.",
+"V"
+],
+"lip": [
+"Did you just bite your lip?",
+"Bạn vừa cắn môi à?",
+"V"
+],
+"tooth": [
+"My lower left back tooth hurts.",
+"Chiếc răng hàm dưới bên trái của tôi bị đau.",
+"C"
+],
+"tongue": [
+"She knows many languages, but writes only in her native tongue.",
+"Cô ấy biết nhiều ngôn ngữ, nhưng chỉ viết bằng tiếng mẹ đẻ.",
+"V"
+],
+"cheek": [
+"She kissed him on the cheek.",
+"Cô ấy đã hôn lên má anh ấy.",
+"V"
+],
+"chin": [
+"I hit him on the chin.",
+"Tôi đấm trúng cằm anh ta.",
+"C"
+],
+"forehead": [
+"He kissed me on the forehead.",
+"Anh ấy hôn lên trán tôi.",
+"V"
+],
+"eyebrow": [
+"He raised an eyebrow in surprise.",
+"Anh ấy nhướn mày vì ngạc nhiên.",
+"C"
+],
+"wrinkle": [
+"Hang up your shirts before they wrinkle.",
+"Treo áo lên trước khi chúng bị nhăn.",
+"C"
+],
+"appearance": [
+"He takes care of his appearance.",
+"Anh ấy chăm chút vẻ bề ngoài của mình.",
+"V"
+],
+"look": [
+"Look at the notes on page 10.",
+"Hãy nhìn vào phần chú thích ở trang 10.",
+"V"
+],
+"feature": [
+"This thing has a safety feature built in, I'll bet.",
+"Tôi cá rằng thứ này có tính năng an toàn bên trong.",
+"V"
+],
+"figure": [
+"I didn't figure Tom would come.",
+"Tôi không nghĩ là Tom sẽ đến.",
+"C"
+],
+"height": [
+"They are now the same height.",
+"Bây giờ họ cao bằng nhau.",
+"V"
+],
+"weight": [
+"Are you trying to lose weight?",
+"Bạn đang cố giảm cân có đúng không?",
+"V"
+],
+"build": [
+"I build houses out of stone.",
+"Tôi xây những ngôi nhà bằng đá.",
+"V"
+],
+"smart": [
+"Tom and Mary live in a smart home.",
+"Tom và Mary sống trong một ngôi nhà thông minh.",
+"V"
+],
+"scruffy": [
+"Tom noticed a scruffy old dog following him.",
+"Tom để ý thấy một con chó già luộm thuộm đi theo mình.",
+"C"
+],
+"neat": [
+"Keep your room neat and tidy.",
+"Hãy giữ phòng của bạn gọn gàng ngăn nắp.",
+"C"
+],
+"elegant": [
+"He has a naturally elegant bearing.",
+"Anh ấy có phong thái thanh lịch tự nhiên.",
+"C"
+],
+"stylish": [
+"She's beautiful, stylish and well-educated.",
+"Cô ấy xinh đẹp, sành điệu và có học thức.",
+"C"
+],
+"glasses": [
+"Your glasses fell on the floor.",
+"Kính của bạn đã rơi trên sàn.",
+"V"
+],
+"tattoo": [
+"I just got my first tattoo.",
+"Tôi vừa xăm hình đầu tiên.",
+"C"
+],
+"freckle": [
+"She has a freckle on the top part of her nose.",
+"Cô ấy có một nốt tàn nhang trên sống mũi.",
+"C"
+],
+"complexion": [
+"This soap will improve her complexion.",
+"Loại xà phòng này sẽ cải thiện nước da của cô ấy.",
+"C"
+],
+"curly": [
+"My cousin has blonde curly hair.",
+"Anh họ tôi có mái tóc vàng xoăn.",
+"C"
+],
+"straight": [
+"Go straight over at the traffic lights.",
+"Đi thẳng qua chỗ đèn giao thông.",
+"C"
+],
+"wavy": [
+"The air looks wavy when it's hot.",
+"Không khí trông gợn sóng khi trời nóng.",
+"C"
+],
+"dark": [
+"I reached the village before dark.",
+"Tôi đã về đến ngôi làng trước khi trời tối.",
+"V"
+],
+"fair": [
+"That's not fair! You didn't close your eyes!",
+"Không công bằng! Bạn có nhắm mắt đâu.",
+"C"
+],
+"pale": [
+"What's the matter? You look pale.",
+"Có chuyện gì vậy? Trông bạn xanh xao quá.",
+"C"
+],
+"tanned": [
+"I tanned myself on the beach.",
+"Tôi phơi nắng cho rám da ở bãi biển.",
+"C"
+],
+"muscular": [
+"Why are you getting so muscular?",
+"Sao bạn lại cơ bắp lên thế?",
+"C"
+],
+"slender": [
+"Young girls really want to be slender.",
+"Các cô gái trẻ rất muốn có thân hình mảnh mai.",
+"C"
+],
+"plump": [
+"He always tended to be plump.",
+"Anh ấy luôn có xu hướng mũm mĩm.",
+"C"
+],
+"stocky": [
+"Tom is quite stocky, isn't he?",
+"Tom khá chắc nịch, đúng không?",
+"C"
+],
+"gorgeous": [
+"She's rich, and even better, she's gorgeous.",
+"Cô ấy giàu có, và hơn thế nữa, cô ấy còn tuyệt đẹp.",
+"C"
+],
+"plain": [
+"Explain it in plain terms, please.",
+"Làm ơn giải thích bằng lời lẽ giản dị.",
+"C"
+],
+"charming": [
+"There is something very charming about you.",
+"Có một điều gì đó rất quyến rũ ở em.",
+"V"
+],
+"graceful": [
+"The lady has a graceful manner.",
+"Quý bà ấy có phong thái duyên dáng.",
+"C"
+],
+"youth": [
+"Youth doesn't return once it is gone.",
+"Thanh xuân đi qua rồi thì sẽ không trở lại.",
+"V"
+],
+"childhood": [
+"I miss my friends from childhood.",
+"Tôi nhớ những người bạn thời thơ ấu của mình.",
+"V"
+],
+"adolescence": [
+"Adolescence comes with many physical changes.",
+"Tuổi dậy thì đi kèm nhiều thay đổi về thể chất.",
+"C"
+],
+"elderly": [
+"I would like to help the elderly.",
+"Tôi muốn giúp đỡ những người cao tuổi.",
+"V"
+],
+"generation": [
+"My uncle's views are representative of his generation.",
+"Góc nhìn của bác tôi đại diện cho thế hệ của bác ấy.",
+"V"
+],
+"gender": [
+"The suspect's gender is currently unknown.",
+"Giới tính của nghi phạm hiện chưa rõ.",
+"C"
+],
+"male": [
+"Is that dog male or female?",
+"Con chó đó là đực hay cái?",
+"C"
+],
+"female": [
+"What do we have to do with this female prisoner?",
+"Chúng ta phải làm gì với nữ phạm nhân này?",
+"V"
+],
+"identity": [
+"His identity must be kept secret.",
+"Danh tính của anh ấy phải được giữ bí mật.",
+"C"
+],
+"individual": [
+"Each child has an individual way of thinking.",
+"Mỗi đứa trẻ có một cách suy nghĩ khác nhau.",
+"V"
+],
+"resemble": [
+"The twins do resemble each other.",
+"Hai anh em sinh đôi quả thật giống nhau.",
+"C"
+],
+"resemblance": [
+"I don't see any resemblance.",
+"Tôi không thấy có gì giống nhau hết.",
+"V"
+],
+"twin": [
+"I'd like a twin room, please.",
+"Cho tôi một phòng hai giường đơn.",
+"C"
+],
+"image": [
+"This app can translate from an image.",
+"Ứng dụng này có thể dịch từ một bức ảnh.",
+"C"
+],
+"mirror": [
+"Writing is reversed in a mirror.",
+"Chữ viết bị đảo ngược lại trong gương.",
+"V"
+],
+"wear": [
+"I normally wear jeans on Sundays.",
+"Tôi thường mặc quần jean vào Chủ nhật.",
+"C"
+],
+"dress": [
+"She got a beautiful dress on.",
+"Cô ấy đã mặc một chiếc váy xinh đẹp.",
+"V"
+],
+"shave": [
+"Do you also want a shave?",
+"Anh có muốn cạo râu luôn không?",
+"C"
+],
+"makeup": [
+"She likes to wear makeup to school.",
+"Cô ấy thích trang điểm đến trường.",
+"V"
+],
+"style": [
+"He has a good sense of style.",
+"Anh ấy có gu thời trang tốt.",
+"V"
+],
+"smile": [
+"She gave me a shy smile.",
+"Cô ấy cười với tôi một nụ cười ngượng ngùng.",
+"C"
+],
+"middle-aged": [
+"The class was mostly middle-aged women.",
+"Lớp học chủ yếu là phụ nữ trung niên.",
+"M"
+]
+}

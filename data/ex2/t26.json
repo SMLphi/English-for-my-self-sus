@@ -1,0 +1,507 @@
+{
+"player": [
+"He is a good tennis player.",
+"Anh ấy là người chơi quần vợt giỏi.",
+"T"
+],
+"point": [
+"I'm at the point of tears.",
+"Tôi sắp khóc tới nơi rồi.",
+"T"
+],
+"police": [
+"I think we should call the police.",
+"Tôi nghĩ chúng ta nên gọi cảnh sát.",
+"T"
+],
+"policeman": [
+"Tell him your father's a policeman.",
+"Hãy nói với anh ta rằng bố của bạn là một cảnh sát.",
+"T"
+],
+"pool": [
+"Thursday, we will go to a swimming pool.",
+"Vào thứ Năm, chúng tôi sẽ đi đến một bể bơi.",
+"T"
+],
+"post": [
+"He bumped his head against a post.",
+"Anh ấy đã đâm đầu vào một cái cột.",
+"T"
+],
+"pound": [
+"We bought a pound of tea.",
+"",
+"E"
+],
+"practice": [
+"You should combine theory with practice.",
+"Bạn cần phải gắn kết lý thuyết với thực tế.",
+"T"
+],
+"problem": [
+"I see no problem with that.",
+"Tôi không có ý kiến gì với việc đó.",
+"T"
+],
+"programme": [
+"She's following a get-fit programme.",
+"",
+"E"
+],
+"quarter": [
+"A loss in third-quarter revenues was predicted.",
+"Sự sụt giảm 3/4 doanh thu đã được dữ báo trước.",
+"T"
+],
+"radio": [
+"At that time, radio still wasn't a thing.",
+"Thời đó làm gì có đài ra-đi-ô.",
+"T"
+],
+"reader": [
+"You always were a fast reader.",
+"",
+"E"
+],
+"reading": [
+"I'm reading. Turn the television off.",
+"Tôi đang đọc sách. Tắt tivi đi.",
+"T"
+],
+"reason": [
+"He explained the reason at length.",
+"Anh ta giải thích cặn kẽ lý do.",
+"T"
+],
+"rule": [
+"I make it a rule never to be late for appointments.",
+"Tôi tự đặt ra quy định không bao giờ được đến muộn buổi hẹn.",
+"T"
+],
+"run": [
+"You must walk before you can run.",
+"Bạn phải đi trước rồi mới chạy.",
+"T"
+],
+"sandwich": [
+"I shouldn't have made you that sandwich.",
+"Tôi không nên làm cho bạn miếng san quít đó.",
+"T"
+],
+"science": [
+"Tom loves programming and computer science.",
+"Tom thích lập trình và khoa học máy tính.",
+"T"
+],
+"section": [
+"Who's in charge of this section?",
+"",
+"E"
+],
+"shopping": [
+"I might not go shopping today.",
+"Tôi có lẽ sẽ không đi mua sắm hôm nay.",
+"T"
+],
+"show": [
+"The show starts in ten minutes.",
+"Buổi diễn bắt đầu sau mười phút nữa.",
+"T"
+],
+"singer": [
+"The singer has a very nice voice.",
+"Người ca sĩ có một giọng hát rất hay.",
+"T"
+],
+"situation": [
+"I'm not happy with this situation.",
+"Tình huống này khiến tôi không vui.",
+"T"
+],
+"song": [
+"Yesterday I listened to a very beautiful song.",
+"Hôm qua tui nghe một bản nhạc rất đẹp.",
+"T"
+],
+"sound": [
+"He's in sound health for his age.",
+"Ông ấy có sức khỏe tráng kiện ở độ tuổi của mình.",
+"T"
+],
+"space": [
+"I cleared the room to make space.",
+"Tôi đã dọn dẹp căn phòng để tạo thêm không gian.",
+"T"
+],
+"sport": [
+"In my opinion, soccer is a great sport.",
+"Theo ý tôi, đá banh là môn thể thao tuyệt vời.",
+"T"
+],
+"stand": [
+"Somebody will have to stand watch.",
+"Ai đó sẽ phải đứng canh.",
+"T"
+],
+"star": [
+"The sun is a star.",
+"Mặt trời là một ngôi sao.",
+"T"
+],
+"statement": [
+"Will you give us a statement?",
+"",
+"E"
+],
+"stay": [
+"I'll stay in the house today.",
+"Hôm nay tôi sẽ ở nhà.",
+"T"
+],
+"story": [
+"He told me his life's story.",
+"Anh kể tôi nghe chuyện đời của mình.",
+"T"
+],
+"success": [
+"Her parents were pleased with her success.",
+"Bố mẹ cô ấy hài lòng với sự thành công của cô.",
+"T"
+],
+"swimming": [
+"I'm not very good at swimming.",
+"Tôi bơi không giỏi.",
+"T"
+],
+"telephone": [
+"She talked for three hours on the telephone.",
+"Cô ấy đã nói chuyện suốt ba tiếng đồng hồ trên điện thoại.",
+"T"
+],
+"television": [
+"It's about time you stopped watching television.",
+"Đến lúc tắt ti vi rồi đó.",
+"T"
+],
+"tennis": [
+"You're a very good tennis player.",
+"Bạn là một người chơi quần vợt giỏi.",
+"T"
+],
+"text": [
+"Translating this text will be very easy.",
+"Dịch đoạn văn này sẽ rất dễ.",
+"T"
+],
+"theatre": [
+"I saw her in the theatre.",
+"",
+"E"
+],
+"thing": [
+"I can't think of a thing.",
+"Tôi không nghĩ ra được cái gì hết.",
+"T"
+],
+"title": [
+"What's the title of that book?",
+"Tựa đề của cuốn sách là gì?",
+"T"
+],
+"topic": [
+"The topic of my essay is environment protection.",
+"Đề tài của bài văn của tôi là bảo vệ môi trường.",
+"T"
+],
+"tourist": [
+"Where is the tourist information office?",
+"",
+"E"
+],
+"town": [
+"Not everyone in town likes Tom.",
+"Không phải tất cả mọi người trong thị trấn đều thích Tom.",
+"T"
+],
+"try": [
+"Let's try to answer these questions.",
+"Hãy thử trả lời những câu hỏi này.",
+"T"
+],
+"TV": [
+"My older brother is watching TV.",
+"Anh trai tôi đang xem ti vi.",
+"T"
+],
+"type": [
+"Windows is a type of computer operating system.",
+"Windows là một loại hệ điều hành.",
+"T"
+],
+"use": [
+"Could I please use your phone?",
+"Tôi có thể dùng điện thoại của bạn được không?",
+"T"
+],
+"vacation": [
+"What did you do last vacation?",
+"Kỳ nghỉ vừa rồi bạn đã làm gì?",
+"T"
+],
+"video": [
+"He's good at playing video games.",
+"Anh ấy giỏi chơi trò chơi điện tử.",
+"T"
+],
+"village": [
+"Our school is in this village.",
+"Trường của chúng tôi ở trong làng này.",
+"T"
+],
+"visit": [
+"Please come visit us more often.",
+"Hãy đến thăm chúng tôi thường xuyên hơn nhé.",
+"T"
+],
+"walk": [
+"You should try to walk more.",
+"Bạn nên cố gắng đi bộ nhiều hơn.",
+"T"
+],
+"website": [
+"Let me check their website.",
+"Để tôi kiểm tra website của họ xem.",
+"T"
+],
+"win": [
+"You win some, you lose some.",
+"Được cái này, mất cái kia.",
+"T"
+],
+"word": [
+"A word spoken is past recalling.",
+"Một lời nói ra, ngựa giỏi đuổi không kịp.",
+"T"
+],
+"writer": [
+"Tom is an excellent writer.",
+"Tom là một nhà văn suất sắc.",
+"T"
+],
+"writing": [
+"I don't want anybody writing about me.",
+"Tôi không muốn bất kỳ ai viết về tôi.",
+"T"
+],
+"act": [
+"She had to act as soon as possible.",
+"Cô ấy phải hành động càng sớm càng tốt.",
+"T"
+],
+"advantage": [
+"I don't want to take too much advantage.",
+"Tôi không muốn lạm dụng.",
+"T"
+],
+"adventure": [
+"Bill has no sense of adventure.",
+"",
+"E"
+],
+"amount": [
+"Any amount of information will do.",
+"",
+"E"
+],
+"app": [
+"How do you use this app?",
+"Cái ứng dụng này dùng kiểu gì thế?",
+"T"
+],
+"audience": [
+"The singer will sing a nice song to the audience.",
+"Ca sĩ sẽ hát cho khán giả một bài hát tuyệt vời.",
+"T"
+],
+"author": [
+"Don't you know this author?",
+"Bạn không biết tác gia này ư?",
+"T"
+],
+"award": [
+"The award should be for me!",
+"",
+"E"
+],
+"background": [
+"There is a castle in the background of the picture.",
+"Phần phông nền của bức tranh có một tòa lâu đài.",
+"T"
+],
+"benefit": [
+"This experience will benefit you.",
+"Trải nghiệm này sẽ giúp ích cho bạn.",
+"T"
+],
+"bit": [
+"Can you explain it to me a bit?",
+"Bạn có thể giải thích một ít về nó cho tôi không?",
+"T"
+],
+"case": [
+"I forgot my pencil case at home.",
+"Tôi quên hộp bút chì ở nhà.",
+"T"
+],
+"cause": [
+"Police are investigating the cause of the accident.",
+"Cảnh sát đang điều tra nguyên nhân của vụ tai nạn.",
+"T"
+],
+"chance": [
+"I should give her a chance.",
+"Tôi nên cho cô ấy một cơ hội.",
+"T"
+],
+"choice": [
+"Have you made a choice yet?",
+"Bạn đã đưa ra được lựa chọn chưa?",
+"T"
+],
+"comment": [
+"I disagree with that comment.",
+"Tôi không đồng ý với bình luận này.",
+"T"
+],
+"condition": [
+"His condition will soon change for the better.",
+"Tình trạng của ông sẽ sớm chuyển biến tốt hơn.",
+"T"
+],
+"control": [
+"The situation seemed out of control.",
+"Tình hình có vẻ mất kiểm soát.",
+"T"
+],
+"count": [
+"The intelligent baby can speak and count.",
+"Em bé thông minh có thể nói và đếm.",
+"T"
+],
+"danger": [
+"I warned him of the danger.",
+"Tôi đã cảnh báo anh ta về nguy hiểm.",
+"T"
+],
+"data": [
+"FAIR data improves research quality.",
+"Dữ liệu FAIR cải thiện chất lượng nghiên cứu.",
+"T"
+],
+"death": [
+"Nothing seems more certain than death.",
+"Ai rồi cũng phải chết.",
+"T"
+],
+"dream": [
+"I had a dream about him.",
+"Tôi đã mơ thấy anh ấy.",
+"T"
+],
+"drop": [
+"There's not a drop of water left.",
+"Chẳng còn giọt nước nào còn sót lại.",
+"T"
+],
+"effect": [
+"The new medicine demonstrated an immediate effect.",
+"Loại thuốc mới phô bày hiệu ứng tức thời.",
+"T"
+],
+"equipment": [
+"There's a lot of new equipment in the gym.",
+"Có quá nhiều dụng cụ mới trong phòng gym.",
+"T"
+],
+"error": [
+"Everybody laughed at his error.",
+"Mọi người đều cười nhạo vào lỗi sai của anh ấy.",
+"T"
+],
+"evidence": [
+"They are still looking for evidence.",
+"Họ vẫn đang tìm kiếm bằng chứng.",
+"T"
+],
+"experiment": [
+"This country successfully conducted a nuclear experiment.",
+"Đất nước này đã tiến hành thử nghiệm hạt nhân thành công.",
+"T"
+],
+"explanation": [
+"There's no explanation for what happened to Tom.",
+"Không có lời giải thích nào cho việc xảy đến với Tom.",
+"T"
+],
+"factor": [
+"What factor contributed to the reaction?",
+"",
+"E"
+],
+"focus": [
+"Tom tried to focus on the task at hand.",
+"Tom phải tập trung và việc hiện tại phải làm.",
+"T"
+],
+"gap": [
+"The gap between them has narrowed.",
+"",
+"E"
+],
+"habit": [
+"He picked up that habit from his father.",
+"Anh ấy học thói quen đó từ cha của mình.",
+"T"
+],
+"heat": [
+"The sun gives us light and heat.",
+"Mặt trời cho chúng ta ánh sáng và nhiệt độ.",
+"T"
+],
+"hero": [
+"The hero offered his life for his nation.",
+"Vị anh hùng đã đánh đổi cuộc đời mình cho tổ quốc.",
+"T"
+],
+"hole": [
+"He didn't see the hole while in the dark and fell into it.",
+"Anh ấy không thấy cái hố vì trời tối nên đã rơi xuống.",
+"T"
+],
+"instruction": [
+"We need some formal instruction in literature.",
+"",
+"E"
+],
+"joke": [
+"It is nothing but a joke.",
+"",
+"E"
+],
+"kid": [
+"My mother died when I was a kid.",
+"Mẹ tôi mất từ khi tôi còn nhỏ.",
+"T"
+],
+"luck": [
+"I hope luck knocks on my door.",
+"Tôi hi vọng vận may sẽ gõ cửa.",
+"T"
+],
+"matter": [
+"We debated the matter at length.",
+"Chúng tôi đã thảo luận vụ việc rất lâu.",
+"T"
+]
+}
