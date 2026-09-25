@@ -12,8 +12,8 @@ const dom = new JSDOM('<!doctype html><html><head></head><body>' + html + '</bod
   pretendToBeVisual: true,
   url: 'https://local.test/',
   beforeParse(w) {
-    w.speechSynthesis = { getVoices: () => [], speak() {}, cancel() {} };
-    w.SpeechSynthesisUtterance = function () {};
+    w.speechSynthesis = { getVoices: () => [], speak(u) { (w.__said = w.__said || []).push(u); }, cancel() {} };
+    w.SpeechSynthesisUtterance = function (t) { this.text = t; };
     w.scrollTo = () => {};
     w.confirm = () => true;
     w.onerror = (m) => errors.push(String(m));
@@ -58,16 +58,55 @@ process.on('uncaughtException', e => { fail('ngoai le: ' + e.message); finish();
     } catch (e) { fail('man hinh ' + v + ': ' + e.message); }
   }
 
-  const id = W[0].id, ivs = [];
-  [4, 4, 4, 4].forEach(q => { E('grade')(id, q, 'read'); ivs.push(E('P')[id].i); });
-  if (ivs[0] === 1 && ivs[1] === 6 && ivs[2] > 6 && ivs[3] > ivs[2])
-    okc('SM-2 gian cach tang dan: ' + ivs.join(' -> ') + ' ngay');
-  else fail('khoang lap SM-2 sai: ' + ivs);
+  // --- lap lai ngat quang kieu Anki, thu tren chu de Con nguoi & ngoai hinh (t01) ---
+  const t01 = W.filter(x => x.t === 't01');
+  const id = t01[0].id, NL = E('nextLabel');
+  const lab = () => [0, 3, 4, 5].map(q => NL(id, q)).join(' / ');
+  const l1 = lab();
+  l1 === '1 phút / 6 phút / 10 phút / 4 ngày' ? okc('tu moi: Lai/Kho/Tot/De = ' + l1) : fail('nhan tu moi sai: ' + l1);
+  E('grade')(id, 4, 'read');                      // Tot -> buoc 10 phut
+  const l2 = lab();
+  l2 === '1 phút / 10 phút / 1 ngày / 4 ngày' ? okc('lan 2 trong phien: ' + l2) : fail('nhan lan 2 sai: ' + l2);
+  E('P')[id].due > Date.now() + 9 * 60000 ? okc('the hen 10 phut co gio hen that') : fail('khong co gio hen phut');
+  E('grade')(id, 4, 'read');                      // tot nghiep -> 1 ngay
+  const ivs = [E('P')[id].i];
+  for (let k = 0; k < 3; k++) {
+    const hk = [3, 4, 5].map(q => E('schedule')(E('P')[id], q).i);
+    if (!(hk[0] < hk[1] && hk[1] < hk[2])) fail('lan on ' + (k + 1) + ': Kho/Tot/De khong tang dan ' + hk);
+    E('grade')(id, 4, 'read'); ivs.push(E('P')[id].i);
+  }
+  ivs.every((v, k) => !k || v > ivs[k - 1]) ? okc('on theo ngay tang dan: ' + ivs.join(' -> ') + ' ngay; luon Kho < Tot < De') : fail('khoang on sai ' + ivs);
   const e0 = E('P')[id].e;
   E('grade')(id, 0, 'read');
-  if (E('P')[id].i === 0 && E('P')[id].r === 0)
-    okc('nut "Lai" dat lai the, ease ' + e0.toFixed(2) + ' -> ' + E('P')[id].e.toFixed(2));
-  else fail('nut "Lai" khong dat lai the');
+  const P0 = E('P')[id];
+  P0.s === 3 && P0.r === 0 && P0.e < e0 && E('nextLabel')(id, 4) === '1 ngày' && P0.due > Date.now()
+    ? okc('quen tu da thuoc -> hoc lai sau 10 phut, ease ' + e0.toFixed(2) + ' -> ' + P0.e.toFixed(2))
+    : fail('bam Lai tren the dang on sai ' + JSON.stringify(P0));
+  // ngu phap cham theo ca bai: chi tinh ngay, van Kho < Tot < De
+  const gq = [3, 4, 5].map(q => E('schedule')(null, q, true).i);
+  gq.join() === '1,3,5' ? okc('ngu phap moi: Kho/Tot/De = ' + gq.join('/') + ' ngay') : fail('ngu phap sai ' + gq);
+
+  // --- trong phien: bam Lai thi the quay lai khi toi gio, khong mat the ---
+  try {
+    E('startSession')('t01'); await tick(); await tick();
+    const first = E('SES').queue[0].w.id, n0 = E('SES').queue.length;
+    E('advance')(E('SES').queue[0].w, 0, 'read'); await tick();
+    const back = E('SES').queue.find(x => x.w.id === first);
+    back && back.at > Date.now() && E('SES').queue.length === n0 && E('SES').queue[0].w.id !== first
+      ? okc('phien hoc: bam Lai -> the hen 1 phut, xep sau cac the khac') : fail('the bi Lai khong quay lai dung');
+    back.at = Date.now() - 1; E('renderStudy')(); await tick();
+    E('SES').queue[0].w.id === first ? okc('toi gio -> the do duoc hien lai truoc') : fail('the toi gio khong duoc uu tien');
+    E('SES = null');
+  } catch (e) { fail('phien hoc: ' + e.message); }
+
+  // --- nghe lai cung cau -> doc cham, lan nua -> binh thuong ---
+  w.__said = [];
+  const sp = E('speak'), r0 = E('S').rate;
+  sp('beard'); sp('beard'); sp('beard'); sp('chin');
+  const rates = w.__said.map(u => u.rate);
+  rates[0] === r0 && rates[1] < r0 && rates[2] === r0 && rates[3] === r0
+    ? okc('nghe lai: thuong ' + r0 + ' -> cham ' + rates[1] + ' -> thuong; tu khac doc thuong')
+    : fail('toc do nghe lai sai: ' + rates);
 
   for (const forced of ['auto', 'flash', 'listen', 'write', 'speak']) {
     try {

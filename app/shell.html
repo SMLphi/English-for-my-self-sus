@@ -339,6 +339,13 @@ h3 .dw{pointer-events:none}
 .gapin.no{border-color:var(--again);color:var(--again);background:var(--again-soft)}
 .gap-fix{font-size:13px;color:var(--good);font-weight:700;margin-left:3px}
 @media (max-width:640px){.dl{max-width:96%}.dl-en{font-size:16px}}
+.speak-btn{position:relative}
+.speak-btn.slow::after{content:"🐢";position:absolute;right:-6px;bottom:-5px;font-size:13px;line-height:1}
+.voice-warn{display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.45;border-radius:10px;padding:9px 12px;margin:0 0 12px;background:var(--hard-soft);color:var(--ink-2)}
+.voice-warn.lv2{background:var(--again-soft)}
+.voice-warn span{color:var(--muted)}
+.voice-warn .btn{flex:none;margin-left:auto}
+.early-note{font-size:12.5px;color:var(--muted);text-align:center;margin:-4px 0 10px}
 .pager{display:flex;align-items:center;justify-content:center;gap:5px;flex-wrap:wrap;margin:22px 0 4px}
 .pg{min-width:38px;height:38px;padding:0 9px;border-radius:10px;font-family:var(--mono);font-weight:500;font-size:14px;color:var(--ink-2);background:var(--surface);border:1px solid var(--line)}
 .pg:hover{border-color:var(--accent);color:var(--accent-ink)}
@@ -532,45 +539,75 @@ function fileToDataUrl(file,max=480){
 }
 
 /* ============================================================
-   2. SM-2 (thuật toán lặp lại ngắt quãng của Anki)
+   2. Lặp lại ngắt quãng kiểu Anki
+   - Từ mới / từ quên: học theo các bước tính bằng PHÚT, quay lại ngay trong phiên
+   - Đã thuộc: ôn theo NGÀY, luôn giữ Khó < Tốt < Dễ
    ============================================================ */
-const BLANK=()=>({r:0,i:0,e:2.5,d:0,l:0,n:0,c:0,t:0,k:{read:0,listen:0,speak:0,write:0}});
+const BLANK=()=>({r:0,i:0,e:2.5,d:0,l:0,n:0,c:0,t:0,s:0,st:0,due:0,k:{read:0,listen:0,speak:0,write:0}});
+const LEARN_STEPS=[1,10];        // phút — bước học từ mới
+const RELEARN_STEPS=[10];        // phút — học lại từ vừa quên
+const GRAD_IV=1, EASY_IV=4;      // ngày — khi "tốt nghiệp" bước học
+const MIN=60000;
 const prog=id=>P[id];
 const isNew=id=>!P[id];
-const isDue=id=>P[id] && P[id].d<=today();
+// trạng thái: 0 mới · 1 đang học · 2 ôn · 3 học lại (dữ liệu cũ không có s thì suy ra)
+const srsState=p=>!p?0:(p.s!=null?p.s:(p.r>0?2:1));
+const isDue=id=>{ const p=P[id]; if(!p) return false; return p.due?p.due<=Date.now():p.d<=today(); };
 const isKnown=id=>P[id] && P[id].i>=21;
 const isLearning=id=>P[id] && P[id].i<21;
 
-function grade(id,q,skill){
+// Tính lịch cho một lần chấm, KHÔNG sửa p. Trả về {s,st,i,e,mins}
+function schedule(p,q,daysOnly){
+  const s=srsState(p), e=p?p.e:2.5, i=p?p.i:0, st=p&&p.st||0;
+  const out={s,st,i,e,mins:0};
+  const ivs=base=>{  // Khó / Tốt / Dễ cho thẻ đang ôn — luôn tăng dần
+    const hard=Math.max(base+1,Math.round(base*1.2));
+    const good=Math.max(hard+1,Math.round(base*e));
+    return [hard,good,Math.max(good+1,Math.round(base*e*1.3))];
+  };
+  if(daysOnly){                       // ngữ pháp: chấm theo cả bài, chỉ tính ngày
+    if(q<3){ Object.assign(out,{s:1,i:0,e:Math.max(1.3,e-0.2)}); return out; }
+    out.i=(s===2&&i>0?ivs(i):[1,3,5])[q-3]; out.s=2;
+    out.e=Math.max(1.3,e+[-0.15,0,0.15][q-3]); return out;
+  }
+  if(s===2){                          // thẻ đang ôn theo ngày
+    if(q<3){ Object.assign(out,{s:3,st:0,e:Math.max(1.3,e-0.2),i:1,mins:RELEARN_STEPS[0]}); return out; }   // quên -> học lại, xong thì ôn sau 1 ngày
+    out.i=ivs(Math.max(1,i))[q-3]; out.e=Math.max(1.3,e+[-0.15,0,0.15][q-3]); return out;
+  }
+  const steps=s===3?RELEARN_STEPS:LEARN_STEPS, learnS=s===3?3:1;
+  if(q<3){ Object.assign(out,{s:learnS,st:0,mins:steps[0]}); return out; }
+  if(q===5){ Object.assign(out,{s:2,st:0,i:s===3?Math.max(i+1,EASY_IV):EASY_IV}); return out; }
+  if(q===3){                          // Khó: ở lại bước hiện tại (bước đầu: trung bình 2 bước đầu; chỉ 1 bước: ×1,5)
+    const m=st===0&&steps.length>1?Math.round((steps[0]+steps[1])/2)
+      :steps.length===1?Math.round(steps[0]*1.5):steps[Math.min(st,steps.length-1)];
+    Object.assign(out,{s:learnS,mins:Math.max(m,steps[0]+1)}); return out;
+  }
+  const nx=st+1;                      // Tốt: sang bước sau, hết bước thì tốt nghiệp
+  if(nx>=steps.length){ Object.assign(out,{s:2,st:0,i:s===3?Math.max(1,i):GRAD_IV}); return out; }
+  Object.assign(out,{s:learnS,st:nx,mins:steps[nx]}); return out;
+}
+
+function grade(id,q,skill,daysOnly){
   const p = P[id] || (P[id]=BLANK());
-  const d0=today();
+  const d0=today(), was=srsState(p);
+  const r=schedule(p,q,daysOnly);
   p.n++; if(q>=3) p.c++;
   if(skill && p.k && q>=3) p.k[skill]=(p.k[skill]||0)+1;
-  if(q<3){
-    p.l++; p.r=0; p.i=0; p.d=d0;
-    p.e=Math.max(1.3,p.e-0.2);
-  }else{
-    if(p.r===0) p.i=1;
-    else if(p.r===1) p.i=6;
-    else p.i=Math.max(1,Math.round(p.i*p.e*(q===5?1.3:q===3?0.85:1)));
-    p.r++;
-    p.e=Math.max(1.3,p.e+(0.1-(5-q)*(0.08+(5-q)*0.02)));
-    p.d=d0+p.i;
-  }
+  if(was===2&&q<3){ p.l++; p.r=0; }        // quên một từ đã thuộc
+  else if(q>=3&&r.s===2) p.r++;
+  p.s=r.s; p.st=r.st; p.e=r.e; p.i=r.i;
+  if(r.mins){ p.due=Date.now()+r.mins*MIN; p.d=d0; }
+  else{ p.due=0; p.d=d0+p.i; }
   p.t=Date.now();
   const L=LOG[d0]||(LOG[d0]={n:0,r:0,c:0,a:0});
   L.a++; if(q>=3) L.c++;
-  if(p.r<=1&&q>=3&&p.i<=1) L.n++; else L.r++;
+  if(was===0) L.n++; else L.r++;
   saveP(id);
   return p;
 }
-function nextLabel(id,q){
-  const p=P[id]||BLANK(); const e=p.e, r=p.r, i=p.i;
-  if(q<3) return 'dưới 1 phút';
-  let ni;
-  if(r===0) ni=1; else if(r===1) ni=6; else ni=Math.max(1,Math.round(i*e*(q===5?1.3:q===3?0.85:1)));
-  return ni===1?'1 ngày':ni<30?ni+' ngày':ni<365?(ni/30).toFixed(1).replace('.0','')+' tháng':(ni/365).toFixed(1).replace('.0','')+' năm';
-}
+const fmtIv=(mins,days)=>mins?(mins<60?mins+' phút':Math.round(mins/60)+' giờ')
+  :days<=1?'1 ngày':days<30?days+' ngày':days<365?(days/30).toFixed(1).replace('.0','')+' tháng':(days/365).toFixed(1).replace('.0','')+' năm';
+function nextLabel(id,q){ const r=schedule(P[id],q); return fmtIv(r.mins,r.i); }
 
 /* ---- chuỗi ngày học ---- */
 function streak(){
@@ -616,17 +653,40 @@ function pickVoice(){
   return rankedVoices()[0]||null;
 }
 let speakBtnEl=null;
+// Nghe lại đúng câu vừa đọc (trong 20 giây) thì đọc chậm, bấm lần nữa lại đọc thường — như Google Dịch.
+// Chuỗi đọc liền nhiều câu (có onend) thì luôn đọc tốc độ thường.
+const TTS_LAST={text:'',t:0,slow:false};
+const slowRate=()=>Math.max(0.45,Math.round(S.rate*0.6*100)/100);
 function speak(text,opts={}){
   if(!('speechSynthesis' in window)) return;
   try{
     speechSynthesis.cancel();
     const u=new SpeechSynthesisUtterance(text);
     const v=opts.voice||pickVoice(); if(v){u.voice=v;u.lang=v.lang;} else u.lang=S.dialect;
-    u.rate=opts.rate||S.rate; u.pitch=opts.pitch||1;
-    if(opts.btn) opts.btn.classList.add('playing');
+    let slow=false;
+    if(!opts.onend&&!opts.rate){
+      slow=TTS_LAST.text===text&&Date.now()-TTS_LAST.t<20000?!TTS_LAST.slow:false;
+      TTS_LAST.text=text; TTS_LAST.t=Date.now(); TTS_LAST.slow=slow;
+    }
+    u.rate=opts.rate||(slow?slowRate():S.rate); u.pitch=opts.pitch||1;
+    if(opts.btn){ opts.btn.classList.add('playing'); opts.btn.classList.toggle('slow',slow); }
     u.onend=u.onerror=()=>{ if(opts.btn) opts.btn.classList.remove('playing'); if(opts.onend) opts.onend(); };
     speechSynthesis.speak(u);
   }catch(e){}
+}
+function voiceProblem(){
+  if(!('speechSynthesis' in window)) return {lvl:2,msg:'Trình duyệt này không có chức năng đọc. Hãy dùng Chrome, Edge hoặc Safari.'};
+  const v=pickVoice();
+  if(!v) return {lvl:2,msg:'Máy chưa có giọng tiếng Anh nào, nên trình duyệt có thể đọc bằng giọng tiếng Việt, sai hoàn toàn phát âm.'};
+  if(voiceScore(v)<50) return {lvl:1,msg:'Đang dùng giọng cơ bản “'+v.name+'”: đúng phát âm nhưng nghe như máy.'};
+  return null;
+}
+function voiceHelp(){
+  const ua=navigator.userAgent||'';
+  if(/iPhone|iPad|iPod/i.test(ua)) return 'iPhone: Cài đặt → Trợ năng → Nội dung được đọc → Giọng nói → Tiếng Anh → chọn một giọng có chữ “Nâng cao” và tải về.';
+  if(/Android/i.test(ua)) return 'Android: Cài đặt → Hệ thống → Ngôn ngữ → Chuyển văn bản thành lời nói → chọn “Dịch vụ lời nói của Google” → tải gói English (United States).';
+  if(/Edg\//.test(ua)) return 'Edge: vào Cài đặt của app → Giọng đọc, chọn giọng có chữ “Natural” (Aria, Jenny, Guy...).';
+  return 'Máy tính: mở app bằng Microsoft Edge (có giọng Natural như người thật) hoặc Chrome (giọng Google US English).';
 }
 const SR_CLASS = window.SpeechRecognition||window.webkitSpeechRecognition||null;
 
@@ -982,11 +1042,12 @@ function viewSettings(root){
   <div class="card" style="padding:6px 20px;margin-bottom:16px">
     <div class="set-row"><div><div class="lbl">Giọng đọc</div>
       <div class="hint">App không tải giọng từ mạng — nó dùng kho giọng đọc <b>cài sẵn trong trình duyệt và Windows của bạn</b>. Giọng có chữ <b>Natural</b>, <b>Neural</b> hoặc <b>Google</b> nghe gần người thật nhất; giọng Microsoft David/Zira là giọng máy đời cũ, nghe khô hơn.</div>
-      <div class="hint" style="margin-top:6px">${vs.length?`Đang dùng: <b>${esc(cur?cur.name:'—')}</b> · ${esc(cur?cur.lang:'')} · ${cur?esc(voiceTag(cur)):''}`:'<b style="color:var(--again)">Trình duyệt chưa nạp được giọng nào.</b> Thử tải lại trang, hoặc mở Windows → Cài đặt → Thời gian &amp; ngôn ngữ → Giọng nói → Thêm giọng để cài giọng tiếng Anh.'}</div></div>
+      <div class="hint" style="margin-top:6px">${vs.length?`Đang dùng: <b>${esc(cur?cur.name:'—')}</b> · ${esc(cur?cur.lang:'')} · ${cur?esc(voiceTag(cur)):''}`:'<b style="color:var(--again)">Trình duyệt chưa nạp được giọng tiếng Anh nào.</b> Thử tải lại trang.'}
+        ${voiceProblem()?`<br><span style="color:var(--hard)">${esc(voiceHelp())}</span>`:''}</div></div>
       <select id="sVoice"><option value="">Tự động (chọn giọng tốt nhất)</option>${vs.map(v=>`<option value="${esc(v.voiceURI)}"${S.voice===v.voiceURI?' selected':''}>${esc(v.name)} — ${esc(voiceTag(v))}</option>`).join('')}</select></div>
     <div class="set-row"><div><div class="lbl">Chất giọng ưu tiên</div><div class="hint">Dùng khi để giọng đọc ở chế độ tự động.</div></div>
       <div class="seg"><button data-dia="en-US" aria-pressed="${S.dialect==='en-US'}">Anh–Mỹ</button><button data-dia="en-GB" aria-pressed="${S.dialect==='en-GB'}">Anh–Anh</button></div></div>
-    <div class="set-row"><div><div class="lbl">Tốc độ đọc</div><div class="hint">Chậm hơn giúp nghe rõ từng âm.</div></div>
+    <div class="set-row"><div><div class="lbl">Tốc độ đọc</div><div class="hint">Chậm hơn giúp nghe rõ từng âm. Mẹo: bấm 🔊 lần nữa để nghe chậm (🐢), bấm tiếp để về tốc độ thường.</div></div>
       <div style="display:flex;align-items:center;gap:10px"><input type="range" id="sRate" min="0.6" max="1.3" step="0.02" value="${S.rate}"><span class="mono" id="rateV">${S.rate.toFixed(2)}×</span>
       <button class="btn btn-sm" id="sTest">Thử</button></div></div>
     <div class="set-row"><div><div class="lbl">Tự phát âm thanh</div><div class="hint">Đọc từ ngay khi thẻ hiện ra.</div></div>
@@ -1324,7 +1385,7 @@ function renderDrillDone(root){
     if(!r.n) continue;
     const a=r.c/r.n;
     const q=a>=0.9?5:(a>=0.7?4:(a>=0.5?3:0));
-    grade(gid(id),q,'grammar');
+    grade(gid(id),q,'grammar',true);
     rows.push(`<div class="sb"><span style="font-size:13.5px">${esc(GP_BY_ID.get(id).name)}</span>
       <span class="bar"><i class="b-known" style="width:${Math.round(a*100)}%"></i></span>
       <span class="mono" style="text-align:right">${r.c}/${r.n}</span></div>`);
@@ -1677,7 +1738,15 @@ function renderStudy(){
   STUDY_SEQ++;
   if(!SES){go('home');return;}
   if(!SES.queue.length){ return renderDone(root); }
+  // chọn thẻ: thẻ hẹn giờ đã tới giờ trước, rồi thẻ mới/ôn, cuối cùng là thẻ hẹn giờ sớm nhất (ôn sớm)
+  { const now=Date.now(), Q=SES.queue;
+    let k=-1, best=Infinity;
+    Q.forEach((x,j)=>{ if(x.at&&x.at<=now&&x.at<best){best=x.at;k=j;} });
+    if(k<0) k=Q.findIndex(x=>!x.at);
+    if(k<0){ best=Infinity; Q.forEach((x,j)=>{ if(x.at<best){best=x.at;k=j;} }); }
+    if(k>0){ const [it]=Q.splice(k,1); Q.unshift(it); } }
   const item=SES.queue[0], w=item.w;
+  const early=item.at&&item.at>Date.now()?Math.ceil((item.at-Date.now())/MIN):0;
   const mode = item.mode || (SES.skill!=='auto' ? SES.skill : pickMode(w));
   SES.curMode=mode;
   const pct=SES.total?Math.round(SES.done/SES.total*100):0;
@@ -1687,11 +1756,14 @@ function renderStudy(){
       <span class="bar" style="flex:1"><i class="b-known" style="width:${pct}%"></i></span>
       <span class="study-count">${SES.done}/${SES.total}</span>
     </div>
+    ${(()=>{ const vp=voiceProblem(); return vp&&!SES.vHide?`<div class="voice-warn lv${vp.lvl}"><div><b>${vp.lvl>1?'⚠ Giọng đọc chưa chuẩn':'Giọng đọc có thể tốt hơn'}</b> — ${esc(vp.msg)}<br><span>${esc(voiceHelp())}</span></div><button class="btn btn-sm" id="vHide" aria-label="Ẩn thông báo">✕</button></div>`:''; })()}
+    ${early?`<div class="early-note">Ôn sớm — thẻ này hẹn ${early} phút nữa, nhưng không còn thẻ nào khác</div>`:''}
     <div class="skillsw" id="sw" role="group" aria-label="Chọn kỹ năng luyện">
       <button data-sk="auto" aria-pressed="${SES.skill==='auto'}">Tự động</button>
       ${Object.keys(SKILLS).map(k=>`<button data-sk="${k}" aria-pressed="${SES.skill===k||(SES.skill==='auto'&&mode===k)}">${SKILLS[k]}</button>`).join('')}
     </div>
     <div id="cardHost"></div>`;
+  $('#vHide')?.addEventListener('click',()=>{ SES.vHide=true; $('.voice-warn')?.remove(); });
   $('#quit').onclick=()=>{ if(confirm('Kết thúc phiên học?')){SES=null;go('home');} };
   $('#sw').querySelectorAll('[data-sk]').forEach(b=>b.onclick=()=>{
     SES.skill=b.dataset.sk; delete item.mode; renderStudy();
@@ -1699,12 +1771,13 @@ function renderStudy(){
   ({flash:cardFlash,listen:cardListen,speak:cardSpeak,write:cardWrite}[mode])($('#cardHost'),w,mode);
 }
 function advance(w,q,skill){
-  const wasNew=!P[w.id]||P[w.id].r===0;
+  const wasNew=srsState(P[w.id])===0;
   const mode=SES.curMode;
-  grade(w.id,q,skill);
+  const p=grade(w.id,q,skill);
   SES.answered++; if(q>=3) SES.correct++;
   SES.queue.shift();
-  if(q<3){ SES.queue.splice(Math.min(SES.queue.length,4),0,{w}); }
+  // còn trong bước học (1 phút, 10 phút...) -> quay lại trong phiên khi tới giờ
+  if(p.due){ SES.queue.push({w,at:p.due}); }
   else{
     SES.done++;
     // từ mới vừa học bằng thẻ → cho luyện viết lại ngay trong phiên (kênh vận động)

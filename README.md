@@ -6,7 +6,7 @@ mở bằng trình duyệt là web, cài ra màn hình chính là app chạy to�
 - **3.669 mục từ** — phủ **100% danh sách Oxford 3000** (A1 897 · A2 792 · B1 691 · B2 598),
   cộng 566 từ mở rộng có gắn nhãn riêng
 - **4 kỹ năng**: thẻ ghi nhớ, nghe hiểu, luyện nói (nhận dạng giọng), luyện viết
-- **Lặp lại ngắt quãng** theo thuật toán SM-2 của Anki
+- **Lặp lại ngắt quãng** kiểu Anki: từ mới học theo bước 1 phút / 10 phút ngay trong phiên, thuộc rồi ôn theo ngày (Khó < Tốt < Dễ)
 - **50 chuyên đề ngữ pháp** A1→C1, 300 bài tập 4 dạng
 - **Lộ trình luyện thi** TOEIC / IELTS sinh theo mục tiêu và quỹ thời gian
 - **Hội thoại theo chủ đề** lấy nguyên văn từ kho DailyDialog: đọc & nghe hai giọng, đóng vai
@@ -176,7 +176,7 @@ data/grammar/         50 chuyên đề ngữ pháp, 300 bài tập
 data/exam.json        Cấu trúc TOEIC / IELTS, mẹo từng phần, thư viện nhiệm vụ
 data/dialogues/       Hội thoại theo chủ đề (DailyDialog) + bản dịch + từ đúng nghĩa từng đoạn
 build/*.py            Script dựng, tải ảnh, đối chiếu Oxford, chọn câu ví dụ
-build/smoke*.js       Kiểm thử tự động (78 mục)
+build/smoke*.js       Kiểm thử tự động (85 mục)
 pwa/                  ★ Bản deploy — đây là thứ đưa lên server
 ```
 
@@ -184,7 +184,7 @@ pwa/                  ★ Bản deploy — đây là thứ đưa lên server
 
 ```bash
 npm install            # chỉ cần jsdom
-node build/smoke.js            # 30 mục: từ vựng, SRS, 4 kỹ năng, tra từ, phân trang
+node build/smoke.js            # 37 mục: từ vựng, lặp lại ngắt quãng, đọc chậm, 4 kỹ năng, tra từ
 node build/smoke_grammar.js    # 10 mục: ngữ pháp, 4 dạng bài, chấm điểm
 node build/smoke_plan.js       # 13 mục: lộ trình, kiểm tra trình độ
 node build/smoke_dialog.js     # 25 mục: hội thoại, từ mới không lặp, đóng vai, điền từ
