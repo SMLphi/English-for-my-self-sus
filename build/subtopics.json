@@ -1,0 +1,180 @@
+{
+"_note": "Tach moi chu de lon thanh chu de con theo nghia. Tu viet cach nhau bang dau |. Chu de khong co o day thi tu chia theo van, moi phan <= 25 tu.",
+"t01": [
+ ["Con người & giới tính", "person|people|man|woman|boy|girl|child|baby|adult|teenager|human|guy|lady|gentleman|name|gender|male|female|identity|individual|twin"],
+ ["Tuổi tác & các giai đoạn đời", "age|young|old|youth|childhood|adolescence|middle-aged|elderly|generation"],
+ ["Dáng người", "tall|short|fat|thin|slim|overweight|height|weight|build|figure|muscular|slender|plump|stocky"],
+ ["Khuôn mặt", "face|eye|nose|mouth|ear|lip|tooth|tongue|cheek|chin|forehead|eyebrow|wrinkle|freckle|smile"],
+ ["Tóc & làn da", "hair|blonde|bald|beard|moustache|curly|straight|wavy|skin|complexion|dark|fair|pale|tanned"],
+ ["Nhận xét vẻ ngoài", "handsome|beautiful|pretty|ugly|attractive|cute|gorgeous|plain|charming|graceful|appearance|look|feature|resemble|resemblance"],
+ ["Ăn mặc & chăm chút", "smart|scruffy|neat|elegant|stylish|glasses|tattoo|image|mirror|wear|dress|shave|makeup|style"]
+],
+"t02": [
+ ["Các thành viên gia đình", "family|parent|mother|father|son|daughter|brother|sister|grandmother|grandfather|grandparent|grandchild|uncle|aunt|cousin|nephew|niece|relative|ancestor|descendant|household|home"],
+ ["Tình yêu, hôn nhân & dịp lễ", "husband|wife|partner|couple|marriage|marry|wedding|divorce|engaged|single|widow|date|girlfriend|boyfriend|love|kiss|hug|anniversary|invite|celebrate|birthday|funeral|gift"],
+ ["Sinh ra & nuôi dạy", "birth|born|raise|adopt|care|support|look after|grow up|bring up|care about"],
+ ["Bạn bè & người quen", "friend|friendship|neighbour|colleague|classmate|acquaintance|guest|host|visitor|stranger|enemy|community|company|belong|together|alone|lonely|introduce|meet"],
+ ["Cư xử trong các mối quan hệ", "relationship|hate|trust|respect|miss|quarrel|argue|argument|apologise|forgive|promise|share|help|close|loyal|honest|kind|generous|selfish|jealous|proud|grateful|get on|fall out|make up"]
+],
+"t03": [
+ ["Cảm xúc hằng ngày", "feeling|emotion|mood|happy|sad|angry|afraid|scared|excited|bored|tired|nervous|anxious|worried|calm|relaxed|surprised|shocked|confused|disappointed|upset|lonely"],
+ ["Cảm xúc sâu sắc", "jealousy|guilty|ashamed|embarrassed|hope|fear|joy|pleasure|sorrow|grief|stress|pride|passion|courage|confidence|sympathy|desire|satisfied|proud of|temper"],
+ ["Tính cách tích cực", "character|personality|attitude|behaviour|patient|confident|brave|cheerful|friendly|gentle|hard-working|ambitious|reliable|responsible|sensitive|sensible|clever|curious|honest|optimistic|enthusiastic|mature|polite|funny|serious"],
+ ["Tính cách tiêu cực", "impatient|shy|rude|strict|lazy|pessimistic|moody|stubborn|aggressive"],
+ ["Thể hiện cảm xúc", "smile|laugh|cry|shout|complain|worry|enjoy|prefer|dislike|admire|envy|regret|comfort|encourage|frighten|annoy|bother|relax|suffer|mind|calm down|cheer up|put up with"]
+],
+"t04": [
+ ["Bộ phận cơ thể", "body|head|neck|shoulder|arm|elbow|hand|finger|thumb|chest|stomach|back|waist|leg|knee|foot|toe"],
+ ["Bên trong cơ thể", "heart|lung|brain|blood|bone|muscle|nerve|throat|breathe|breath"],
+ ["Ốm đau & bệnh tật", "health|healthy|ill|sick|pain|ache|hurt|injury|injure|wound|disease|illness|infection|virus|fever|cough|cold|flu|headache|allergy|cancer|symptom|dizzy|weak|pass out|come down with|blind|deaf|disabled|pregnant"],
+ ["Khám & chữa bệnh", "doctor|nurse|dentist|patient|hospital|clinic|surgery|operation|treatment|treat|cure|heal|recover|medicine|pill|tablet|prescription|vaccine|injection|bandage|ambulance|emergency|diagnosis|check-up|appointment|get over"],
+ ["Lối sống lành mạnh", "sleep|rest|exercise|fit|fitness|diet|weight|vitamin|calorie|stress|smoke|drug|alcohol|tired|strong|hygiene"]
+],
+"t05": [
+ ["Nhà & các phòng", "house|flat|apartment|building|room|kitchen|bedroom|bathroom|living room|dining room|hall|stairs|floor|ceiling|wall|roof|door|window|gate|garden|yard|garage|balcony|basement|upstairs|downstairs"],
+ ["Đồ nội thất", "furniture|table|chair|sofa|bed|desk|shelf|cupboard|wardrobe|drawer|mirror|carpet|curtain|cushion|pillow|blanket|sheet|towel|lamp"],
+ ["Thiết bị trong nhà", "light|switch|socket|plug|fridge|freezer|oven|stove|microwave|sink|tap|shower|toilet|washing machine|iron|vacuum|heating|air conditioning|fan|turn on|turn off"],
+ ["Việc nhà", "broom|bin|rubbish|clean|tidy|messy|dirty|dust|sweep|wash|repair|fix|decorate|paint|tidy up|throw away|put away|household chores"],
+ ["Thuê nhà & khu xóm", "rent|own|owner|landlord|tenant|neighbourhood|address|key|lock|comfortable|cosy|spacious|narrow|move in|move out"]
+],
+"t06": [
+ ["Bữa ăn & món chính", "food|meal|breakfast|lunch|dinner|snack|rice|bread|noodle|meat|beef|pork|chicken|fish|seafood|shrimp|egg|soup|salad"],
+ ["Sữa, rau & trái cây", "milk|cheese|butter|yogurt|vegetable|fruit|apple|banana|orange|mango|tomato|potato|onion|garlic|carrot"],
+ ["Gia vị & đồ uống", "sauce|salt|sugar|pepper|oil|spice|flour|water|juice|coffee|tea|beer|wine|drink"],
+ ["Nấu nướng", "eat|cook|bake|boil|fry|grill|roast|steam|chop|slice|mix|stir|pour|serve|recipe|ingredient"],
+ ["Hương vị", "taste|flavour|delicious|tasty|sweet|sour|bitter|salty|spicy|fresh|frozen|raw|ripe|hungry|thirsty|full|give up"],
+ ["Nhà hàng & dụng cụ ăn uống", "restaurant|cafe|menu|order|bill|tip|waiter|chef|plate|bowl|cup|glass|knife|fork|spoon|chopsticks|pan|pot|eat out"]
+],
+"t07": [
+ ["Quần áo", "clothes|clothing|outfit|shirt|T-shirt|blouse|trousers|jeans|shorts|skirt|dress|suit|jacket|coat|sweater|hoodie|uniform|underwear"],
+ ["Giày dép & phụ kiện", "sock|shoe|boot|sandal|slipper|trainers|hat|cap|scarf|glove|belt|tie|jewellery|ring|necklace|bracelet|earring|watch|bag|handbag|wallet|umbrella|accessory|sunglasses|shoelace|heel"],
+ ["Chất liệu & chi tiết", "button|zip|pocket|sleeve|collar|hood|cotton|wool|silk|leather|fabric|material|pattern|stripe|plain|thread|needle"],
+ ["Kích cỡ & phong cách", "size|fit|tight|loose|fashion|fashionable|trend|brand|designer|model|casual|formal|smart|elegant|sleeveless|barefoot|comfortable|warm|light|heavy|second-hand|match"],
+ ["Mặc, may & giặt giũ", "sew|knit|fold|hang|laundry|stain|wrinkled|waterproof|try on|take off|put on|dress up|get changed|wear out|hand down"]
+],
+"t08": [
+ ["Cửa hàng & hàng hoá", "shop|store|market|supermarket|mall|customer|client|seller|buy|sell|purchase|product|goods|item|brand|quality|quantity|stock|basket|trolley|queue|till|cashier|label"],
+ ["Giá cả, đổi trả & giao hàng", "price|cost|cheap|expensive|afford|value|worth|discount|sale|bargain|offer|deal|free|guarantee|complaint|refund|exchange|receipt|order|deliver|delivery|package|take back|shop around|sell out"],
+ ["Tiền & thanh toán", "money|cash|coin|note|currency|change|pay|payment|credit card|bank|account|ATM|withdraw|deposit|transfer|fee|charge|bill"],
+ ["Tiết kiệm & vay nợ", "save|savings|spend|waste|borrow|lend|owe|debt|loan|interest|budget|afford to|pay off|run out of|save up|cut back"],
+ ["Thu nhập & kinh tế", "income|salary|wage|earn|profit|loss|tax|invest|investment|rich|wealthy|poor|broke|economy|inflation|expense"]
+],
+"t09": [
+ ["Tên các nghề", "teacher|engineer|lawyer|accountant|journalist|scientist|farmer|driver|cleaner|builder|electrician|plumber|mechanic|secretary|assistant|receptionist|salesperson|soldier|police officer|firefighter|pilot|artist|designer|programmer|researcher|translator|chef"],
+ ["Nơi làm việc & chức vụ", "job|work|career|profession|occupation|employee|employer|employ|staff|worker|boss|manager|director|supervisor|colleague|team|workplace|professional|expert|apprentice|intern|position|role"],
+ ["Xin việc & tuyển dụng", "interview|apply|application|CV|qualification|experience|skill|train|training|hire|recruit|vacancy|reference|get a job|look for|take on"],
+ ["Chế độ & hợp đồng", "promote|promotion|resign|retire|fire|unemployed|unemployment|shift|overtime|part-time|full-time|contract|holiday|leave|salary|bonus|pension|strike|union"],
+ ["Nhiệm vụ & thành tích", "deadline|task|duty|responsibility|succeed|fail|achieve|achievement|goal|progress|performance|carry out|set up|work out"]
+],
+"t10": [
+ ["Công ty & bộ phận", "business|company|firm|industry|sector|office|headquarters|branch|department|staff meeting|colleague|entrepreneur|startup|management|administration"],
+ ["Họp hành & giấy tờ", "meeting|conference|presentation|report|agenda|minutes|schedule|appointment|document|file|form|email|attachment|printer|photocopy|stationery|project|proposal"],
+ ["Thị trường & khách hàng", "client|supplier|supply|demand|market|marketing|advertise|advertisement|campaign|brand|product|service|launch|customer service|competitor|competition|strategy|target"],
+ ["Tài chính & hợp đồng", "contract|negotiate|agreement|partnership|invoice|finance|accounting|revenue|turnover|budget|invest|shareholder|share|merger|growth|expand|reduce|increase|decrease|profitable|bankrupt"],
+ ["Quản lý & ra quyết định", "manage|organise|procedure|process|policy|deadline|decision|approve|reject|confirm|cancel|postpone|delay|arrange|attend|discuss|suggest|review|evaluate|efficient|productive|reliable|deal with|follow up|take over|put off|sign up"]
+],
+"t11": [
+ ["Trường lớp", "school|education|student|pupil|teacher|professor|principal|classroom|class|lesson|subject|curriculum|term|semester|timetable|break|playground|library|laboratory"],
+ ["Cấp học & bằng cấp", "degree|diploma|certificate|university|college|kindergarten|primary school|secondary school|graduate|scholarship|tuition"],
+ ["Thi cử & điểm số", "exam|test|quiz|grade|mark|score|result|pass|fail|revise|homework|assignment|cheat|drop out"],
+ ["Đồ dùng học tập", "textbook|notebook|blackboard|whiteboard|chalk|pen|pencil|eraser|ruler|scissors|glue|backpack"],
+ ["Học & ghi nhớ", "study|learn|teach|explain|understand|remember|forget|practise|knowledge|skill|ability|talent|concentrate|attention|memorise|improve"],
+ ["Làm bài & viết", "question|answer|essay|paragraph|sentence|vocabulary|grammar|spelling|punctuation|handwriting|copy|correct|mistake|ask|raise your hand|hand in|look up|figure out|catch up|take notes|hand out"]
+],
+"t12": [
+ ["Nói chuyện", "language|communication|communicate|conversation|speak|talk|say|tell|mention|express|describe|explain|discuss|chat|gossip"],
+ ["Tranh luận & khuyên bảo", "argue|debate|agree|disagree|ask|answer|reply|respond|suggest|advise|warn|persuade|convince|point out|bring up|talk over"],
+ ["Nghĩa, dịch & phát âm", "mean|meaning|translate|translation|interpret|pronounce|pronunciation|accent|fluent|fluently|bilingual|native|dialect|phrase|expression|idiom|proverb|dictionary|definition"],
+ ["Tin nhắn & thông báo", "message|letter|note|information|announce|announcement|greet|greeting|introduce|invite|speech|lecture"],
+ ["Giọng nói & cử chỉ", "interrupt|whisper|shout|yell|silence|silent|loud|quiet|voice|tone|gesture|signal|body language|clearly|politely|rudely|misunderstand|misunderstanding|repeat|speak up|get across"]
+],
+"t13": [
+ ["Đơn vị thời gian", "time|moment|second|minute|hour|day|week|month|year|decade|century|date|calendar|clock|schedule|period|stage"],
+ ["Các buổi trong ngày", "morning|afternoon|evening|night|noon|midnight|dawn|dusk|today|tomorrow|yesterday|tonight"],
+ ["Thứ trong tuần", "Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|weekend|weekday"],
+ ["Tháng & mùa", "January|February|March|April|May|June|July|August|September|October|November|December|spring|summer|autumn|winter|season"],
+ ["Tần suất & thời điểm", "early|late|soon|now|then|always|never|often|sometimes|rarely|usually|already|still|yet|recently|immediately|eventually|meanwhile|suddenly|finally"],
+ ["Bắt đầu, kết thúc & hạn chót", "begin|start|finish|end|continue|last|wait|delay|spend|last-minute|deadline|appointment|anniversary|holiday|past|present|future|ago|during|until|since|while|run out of|put off|catch up"]
+],
+"t14": [
+ ["Nắng & bầu trời", "weather|climate|temperature|degree|forecast|sun|sunny|sunshine|sunrise|sunset|cloud|cloudy|sky|air|bright|clear|degree Celsius"],
+ ["Mưa, gió & bão", "rain|rainy|shower|drizzle|downpour|wind|windy|breeze|storm|typhoon|thunder|lightning|rainbow|puddle|mud|flood"],
+ ["Nóng, lạnh & sương tuyết", "fog|foggy|mist|snow|ice|frost|hail|humid|humidity|dry|wet|hot|warm|cool|cold|freezing|mild|chilly|stuffy|fresh"],
+ ["Thiên tai & khí hậu", "drought|atmosphere|pressure|season|tropical|global warming|greenhouse|pollution|disaster|earthquake|landslide|heatwave|severe|extreme|changeable"],
+ ["Đồ dùng & phương hướng", "shelter|umbrella|raincoat|boots|sunglasses|sunscreen|thermometer|north|south|east|west"],
+ ["Động từ về thời tiết", "melt|freeze|blow|shine|pour|soak|predict|affect|rise|fall|cover|protect|survive|warn|evacuate|breeze through|clear up|warm up|cool down|die down|set in"]
+],
+"t15": [
+ ["Đất & địa hình", "nature|environment|earth|world|land|ground|soil|rock|stone|sand|mountain|hill|valley|cliff|cave|island|volcano|flat|steep"],
+ ["Biển, sông & hồ", "beach|coast|sea|ocean|wave|tide|river|stream|lake|waterfall|pond|fresh water|salt water|flow|deep|shallow"],
+ ["Rừng & cảnh quan", "forest|jungle|desert|field|grass|hedge|countryside|view|scenery|landscape|horizon|sunlight|shade|shadow|rural|wild|natural|peaceful|vast|fertile"],
+ ["Năng lượng & tài nguyên", "fire|smoke|energy|fuel|coal|gas|oil|solar|wind power|source|supply|resource|grow|plant|rise|set|erupt"],
+ ["Bảo vệ môi trường", "recycle|waste|litter|plastic|pollute|damage|destroy|protect|preserve|conservation|extinct|endangered|species|wildlife|habitat|ecosystem|climate change|sustainable|organic|clean|dirty|dry up|die out|cut down|clean up|run out|give off"]
+],
+"t16": [
+ ["Vật nuôi & gia súc", "animal|pet|dog|cat|bird|fish|horse|cow|pig|sheep|goat|chicken|duck|goose|buffalo|rabbit|mouse|rat|puppy|kitten"],
+ ["Thú hoang dã", "lion|tiger|bear|elephant|monkey|deer|fox|wolf|snake|frog|turtle|crocodile|lizard|shark|whale|dolphin|crab|mammal|reptile|creature"],
+ ["Côn trùng & chim", "insect|bee|ant|fly|mosquito|butterfly|spider|eagle|owl|parrot|pigeon"],
+ ["Bộ phận & nơi ở", "tail|wing|paw|claw|fur|feather|horn|nest|cage|zoo|farm|herd|flock|stable|egg|vet|leash|kennel"],
+ ["Tập tính động vật", "bark|bite|feed|hunt|chase|escape|breed|migrate|swim|crawl|jump|sting|scratch|tame|fierce|harmless|poisonous|furry|prey|predator|hatch|tail wag|bark at|look after|run away|give birth|set free|die out"]
+],
+"t17": [
+ ["Các bộ phận của cây", "plant|tree|flower|leaf|branch|trunk|root|seed|bud|stem|petal|thorn|grass|bush|weed|bark|wood|timber"],
+ ["Các loài cây & hoa", "rice|wheat|corn|bean|coffee|tea|sugarcane|bamboo|palm|pine|oak|rose|lotus|sunflower|orchid|herb"],
+ ["Nông trại", "crop|harvest|farm|farmer|agriculture|field|soil|fertiliser|pesticide|irrigation|plough|tractor|barn|greenhouse|orchard|garden|pot|soil water|livestock|hay|grain|mill|market garden|fence|gate|well|canal"],
+ ["Trồng & chăm cây", "grow|vegetable patch|sow|water|dig|pick|cut|trim|bloom|blossom|ripen|rot|wither|spread|feed|root out|cut down|dig up|take root|come up|die back|shade|nursery|seedling"],
+ ["Mùa vụ & đặc điểm", "fresh|dead|green|tall|thick|wild|organic|seasonal|fresh produce|yield|drought|pest|season|soil erosion"]
+],
+"t18": [
+ ["Phương tiện", "transport|vehicle|car|bus|train|plane|ship|boat|ferry|bicycle|motorbike|taxi|truck|van|helicopter"],
+ ["Đường sá & nhà ga", "road|street|motorway|lane|path|bridge|tunnel|crossroads|roundabout|traffic|traffic light|traffic jam|rush hour|station|stop|platform|airport|port|car park|petrol station"],
+ ["Vé & hành trình", "ticket|fare|passenger|driver|pedestrian|route|direction|map|distance|journey|trip|commute|timetable|one-way|return"],
+ ["Xe cộ & an toàn", "seat belt|helmet|wheel|tyre|engine|brake|horn|fuel|licence|crash|accident|bump|signal|safe|dangerous"],
+ ["Lái xe & di chuyển", "drive|ride|travel|park|overtake|reverse|speed|slow down|speed up|cross|turn|follow|stuck|on foot|catch|miss|break down|pick up|drop off"],
+ ["Lên xuống & khởi hành", "get on|get off|get in|get out of|set off|arrive|depart|delay|cancel|board|land|take off|crowded|convenient|punctual|public"]
+],
+"t19": [
+ ["Mạo từ & đại từ ngôi 1–3 số ít", "a|an|the|I|me|my|mine|myself|you|your|yours|yourself|he|him|his|himself|she|her|hers|herself"],
+ ["Đại từ ngôi số nhiều", "its|itself|we|us|our|ours|ourselves|they|them|their|theirs|themselves"],
+ ["Từ để hỏi & chỉ định", "this|that|what|which|who|whom|whose|whatever|whenever|wherever|whether"],
+ ["Some, any, every, no", "some|somebody|someone|something|somewhere|any|anybody|anyone|anything|anywhere|every|everybody|everyone|everything|no|nobody|no one|none|nothing"],
+ ["Từ chỉ số lượng", "each|either|neither|both|all|other|another|same|such|much|many|more|most|less|least|few|little|lot|plenty|several|enough|half|double|dozen"],
+ ["Trợ động từ & động từ khuyết thiếu", "be|have|do|can|could|will|would|shall|should|must|might|ought|need|have to|used to"]
+],
+"t20": [
+ ["Giới từ chỉ nơi chốn (1)", "above|across|along|among|around|behind|below|between|beyond|by|down|inside|into|near|next to"],
+ ["Giới từ chỉ nơi chốn (2)", "off|on|onto|opposite|outside|over|round|through|throughout|towards|under|up|upon|via|within"],
+ ["Giới từ khác", "about|after|against|at|before|despite|except|following|for|from|in|including|like|of|out|per|plus|to|unlike|with|without|according to"],
+ ["Liên từ", "although|and|as|because|but|if|nor|once|or|so|than|though|unless|when|where|whereas"],
+ ["Chào hỏi & cảm thán", "all right|hello|hi|hey|goodbye|bye|please|thanks|sorry|welcome|yes|yeah|oh|ah|ok|wow|dear"]
+],
+"t21": [
+ ["Di chuyển & cầm nắm", "bring|carry|come|get|give|keep|put|take|throw|send|let|climb|sit|lie|wake|join|enter"],
+ ["Suy nghĩ & cảm nhận", "believe|think|know|imagine|guess|decide|choose|consider|expect|suppose|realize|recognize|seem|want|hear|see|listen"],
+ ["Tạo ra & thay đổi", "add|create|draw|fill|write|read|sing|spell|prepare|invent|produce|develop|complete|compare|collect|connect|contain|include"],
+ ["Xuất hiện & mất đi", "become|happen|appear|disappear|die|live|lose|find|discover|exist|hide|kill|steal|remove|replace"],
+ ["Giao tiếp & ứng xử", "thank|call|check|accept|allow|refuse|recommend|refer|provide|receive|publish|perform|behave|compete|avoid|prevent|react|depend|involve|identify|organize|solve|cannot"]
+],
+"t22": [
+ ["Màu sắc", "black|blue|brown|cream|grey|pink|purple|red|white|yellow"],
+ ["Khen & chê", "amazing|bad|best|better|boring|exciting|fantastic|fine|fun|good|great|interesting|interested|nice|perfect|terrible|wonderful|useful|special|favourite|famous|popular"],
+ ["Kích thước, tốc độ & độ khó", "big|small|large|long|high|far|fast|quick|slow|hard|easy|difficult"],
+ ["Đúng sai & khả năng", "true|false|right|wrong|real|sure|possible|positive|negative|ready|important|different|similar|common"],
+ ["Tính từ thường gặp khác", "capital|complete|even|extra|final|front|later|left|local|main|married|modern|new|next|online|only|open|personal|routine|very|busy"]
+],
+"t23": [
+ ["Cảm xúc & đánh giá", "awful|brilliant|excellent|incredible|lovely|lucky|pleased|scary|strange|stupid|surprising|unhappy|unusual|crazy|helpful|creative|intelligent|ideal"],
+ ["Kích thước & vị trí", "average|enormous|huge|whole|wide|low|top|bottom|middle|square|level|per cent|empty"],
+ ["Thời gian & mức độ quen thuộc", "ancient|daily|everyday|recent|regular|usual|typical|normal|ordinary|traditional|classical|original"],
+ ["Trạng thái", "able|alive|asleep|available|broken|closed|shut|lost|missing|connected|included|based|blank|secret|separate|certain|likely|impossible|necessary|careful|exact|direct|forward|further"],
+ ["Lĩnh vực & công nghệ", "digital|electric|electrical|electronic|mobile|medical|musical|physical|social|national|international|foreign|criminal|state|united|underground"],
+ ["Chất liệu & tính chất khác", "gold|silver|wooden|soft|noisy|active|simple|pop|toy|flying|working|general|independent|informal|particular|specific|major|alternative|divorced|teenage|successful|worse|worst"]
+],
+"t24": [
+ ["Trạng từ thường gặp", "again|also|away|else|ever|here|there|how|why|just|maybe|perhaps|probably|not|quite|really|too|twice|way|instead|anyway"],
+ ["Mức độ & nơi chốn", "actually|almost|nearly|rather|abroad|everywhere|nowhere|any more|first|o'clock"],
+ ["Trạng từ chỉ cách thức", "quickly|slowly|badly|carefully|correctly|differently|easily|happily|sadly|loudly|quietly|completely|exactly|extremely|especially|certainly|definitely|mostly|normally|fortunately|unfortunately|firstly|secondly|however"],
+ ["Số đếm từ 0 đến 20", "zero|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty"],
+ ["Số lớn & số thứ tự", "thirty|forty|fifty|sixty|seventy|eighty|ninety|hundred|thousand|million|billion|third|fourth|fifth"]
+]
+}

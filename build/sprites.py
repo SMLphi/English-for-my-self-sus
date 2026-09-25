@@ -15,14 +15,14 @@ def main():
     for old in glob.glob(os.path.join(OUT, '*.jpg')):   # xoa sprite cua bo chu de cu
         os.remove(old)
     book = {}
-    for f in sorted(glob.glob(os.path.join(ROOT, 'data', 't*.json'))):
-        d = json.load(io.open(f, encoding='utf-8'))
-        tid = d['id']
-        have, seen = [], set()
-        for a in d['words']:
+    import sys
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from lessons import load_lessons
+    for L in load_lessons()[1]:                          # moi chu de con mot tam sprite
+        tid = L['id']
+        have = []
+        for a in L['rows']:
             w = a[0]
-            if w in seen: continue
-            seen.add(w)
             p = os.path.join(CACHE, w.replace('/', '_') + '.jpg')
             if meta.get(w, {}).get('ok') and os.path.exists(p):
                 have.append((w, p))

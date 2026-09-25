@@ -1,0 +1,527 @@
+{
+"number": [
+"One is not a prime number.",
+"Một không phải là số nguyên tố.",
+"T"
+],
+"advertising": [
+"The advertising campaign generated a lot of business for the company.",
+"Chiến dịch quảng cáo đã tạo ra nhiều công việc kinh doanh cho công ty.",
+"T"
+],
+"airline": [
+"This morning, my friend and I went to buy airline tickets.",
+"Sáng nay, tôi cùng bạn tôi đi mua vé máy bay.",
+"T"
+],
+"ankle": [
+"That's when I injured my ankle.",
+"",
+"E"
+],
+"architect": [
+"That architect builds very modern houses.",
+"",
+"E"
+],
+"architecture": [
+"I majored in architecture in college.",
+"",
+"E"
+],
+"army": [
+"The army is trying to break the enemy's code.",
+"Quân đội đang cố gắng phá mã của kẻ địch.",
+"T"
+],
+"arrangement": [
+"I take lessons in flower arrangement.",
+"",
+"E"
+],
+"athlete": [
+"One must practice every day in order to become a world-class athlete.",
+"Người ta phải thực hành / tập luyện mỗi ngày để trở thành một vận động viên đẳng cấp thế giới.",
+"T"
+],
+"attack": [
+"You just had a heart attack.",
+"Bạn vừa bị nhồi máu cơ tim.",
+"T"
+],
+"bar": [
+"Would you like to wait in the bar?",
+"Bạn có muốn đợi trong quán bar không?",
+"T"
+],
+"baseball": [
+"I like watching baseball, but Tom doesn't.",
+"Tôi thích xem bóng chày, nhưng Tom thì không.",
+"T"
+],
+"basketball": [
+"Soccer and basketball are popular sports.",
+"Bóng đá và bóng rổ là những môn thể thao phổ biến.",
+"T"
+],
+"beat": [
+"Don't beat around the bush.",
+"Đừng đánh trống lảng.",
+"T"
+],
+"biology": [
+"She will write a book on biology.",
+"Cô ấy sẽ viết một cuốn sách về sinh học.",
+"T"
+],
+"biscuit": [
+"The biscuit is under the table.",
+"",
+"E"
+],
+"brush": [
+"I gave my coat a brush.",
+"",
+"E"
+],
+"burn": [
+"Burn this rubbish on the fire.",
+"",
+"E"
+],
+"businessman": [
+"He is nothing but a businessman.",
+"",
+"E"
+],
+"camp": [
+"You're not allowed to camp here.",
+"Anh không được phép cắm trại ở đây.",
+"T"
+],
+"camping": [
+"The idea of camping has never appealed to me.",
+"Ý nghĩ cắm trại chưa bao giờ là điều hấp dẫn tôi.",
+"T"
+],
+"cartoon": [
+"Our daughters like to watch this cartoon.",
+"Con gái tôi thích xem phim hoạt hình này.",
+"T"
+],
+"castle": [
+"An old lady guided us through the castle.",
+"Một người phụ nữ lớn tuổi đã giới thiệu cho chúng tôi bên trong tòa lâu đài.",
+"T"
+],
+"celebrity": [
+"He is something of a celebrity.",
+"",
+"E"
+],
+"charity": [
+"They're going to a charity event.",
+"",
+"E"
+],
+"chemistry": [
+"The chemistry is right for us.",
+"",
+"E"
+],
+"chip": [
+"Did you put a chip in the dog?",
+"Bạn đã đặt chip lên con chó à?",
+"T"
+],
+"church": [
+"I go to church every day.",
+"Mỗi ngày tôi đều đến nhà thờ.",
+"T"
+],
+"cigarette": [
+"Put out your cigarette. Smoking's not permitted here.",
+"Bỏ thuốc ra đi. Không được hút thuốc ở đây.",
+"T"
+],
+"circle": [
+"You stood out in our circle.",
+"",
+"E"
+],
+"coach": [
+"The tour group travelled in a coach.",
+"Nhóm du lịch đã đi lại bằng xe khách.",
+"T"
+],
+"code": [
+"I can't remember the secret code.",
+"",
+"E"
+],
+"column": [
+"Add up this column of figures.",
+"",
+"E"
+],
+"comedy": [
+"That comedy really made me laugh.",
+"",
+"E"
+],
+"context": [
+"Depending on the context, both are possible.",
+"Tuỳ vào bối cảnh, cả hai đều có thể.",
+"T"
+],
+"continent": [
+"Are insects found on every continent?",
+"",
+"E"
+],
+"cooker": [
+"Turn on the rice cooker, please.",
+"",
+"E"
+],
+"corner": [
+"It's just around the corner.",
+"Ngay quanh góc phố.",
+"T"
+],
+"credit": [
+"Give me your credit card.",
+"Đưa tôi thẻ tín dụng của bạn.",
+"T"
+],
+"crime": [
+"The police found evidence that the man committed the crime.",
+"Cảnh sát đã có trong tay bằng chứng chứng minh người đàn ông đó là thủ phạm.",
+"T"
+],
+"crowd": [
+"There is a crowd of people on the street.",
+"Có một đám đông trên đường.",
+"T"
+],
+"cycle": [
+"I never change my sleep cycle.",
+"",
+"E"
+],
+"detective": [
+"He reads detective stories on occasion.",
+"",
+"E"
+],
+"device": [
+"The telephone is one wonderful device.",
+"",
+"E"
+],
+"diary": [
+"I used to keep a diary.",
+"",
+"E"
+],
+"discovery": [
+"It was a very interesting discovery.",
+"Nó đã là một khám phá rất thú vị.",
+"T"
+],
+"discussion": [
+"That subject is not suitable for discussion.",
+"Chủ đề đó không nên được đem ra bàn luận.",
+"T"
+],
+"download": [
+"How do I download the file?",
+"",
+"E"
+],
+"drama": [
+"The drama was presented last month.",
+"",
+"E"
+],
+"drawing": [
+"Drawing is one of my hobbies.",
+"Vẽ vời là một trong số những sở thích của tôi.",
+"T"
+],
+"driving": [
+"He received a fine for driving too fast.",
+"Anh ấy đã lĩnh một vé phạt vì lái xe quá nhanh.",
+"T"
+],
+"electricity": [
+"Nuclear power is used to generate electricity.",
+"Năng lượng hạt nhân được dùng để tạo ra điện.",
+"T"
+],
+"ending": [
+"Every ending is also a new beginning waiting ahead.",
+"Cái kết nào cũng đều là khởi đầu mới đang chờ phía trước.",
+"T"
+],
+"factory": [
+"She works in a car factory.",
+"Cô ấy làm việc trong một nhà máy sản xuất xe hơi.",
+"T"
+],
+"farming": [
+"This land is ideal for farming.",
+"",
+"E"
+],
+"fiction": [
+"The fiction reduced girls to tears.",
+"",
+"E"
+],
+"fight": [
+"The fight ended in a draw.",
+"Trận đấu đã kết thúc với tỷ số hòa.",
+"T"
+],
+"fishing": [
+"Why don't we go fishing together?",
+"Hay là chúng ta đi câu cá cùng nhau đi!",
+"T"
+],
+"gallery": [
+"May I visit an art gallery?",
+"",
+"E"
+],
+"god": [
+"By God, I never knew that.",
+"Thề có Chúa, tôi chưa bao giờ biết điều đó.",
+"T"
+],
+"golf": [
+"Tom doesn't know how to play golf.",
+"Tom không biết chơi gôn.",
+"T"
+],
+"government": [
+"The government is trying to find a solution.",
+"Chính phủ đang cố gắng tìm ra giải pháp.",
+"T"
+],
+"guide": [
+"I'm working as a tour guide.",
+"Tôi đang làm hướng dẫn viên du lịch.",
+"T"
+],
+"gun": [
+"He leveled his gun at me.",
+"Anh ta chĩa súng vào tôi.",
+"T"
+],
+"hit": [
+"Who did Tom say hit Mary?",
+"Tom nói rằng người nào đã đánh Mary?",
+"T"
+],
+"hockey": [
+"Ice hockey is an exciting sport.",
+"",
+"E"
+],
+"hold": [
+"She couldn't hold back her laughter.",
+"Cô ấy không thể nhịn được cười.",
+"T"
+],
+"instructor": [
+"Is your brother a ski instructor?",
+"",
+"E"
+],
+"instrument": [
+"Do you play a musical instrument?",
+"",
+"E"
+],
+"introduction": [
+"A proposal has always an introduction.",
+"",
+"E"
+],
+"invention": [
+"Language as we know is a human invention.",
+"Như chúng ta biết, ngôn ngữ là phát minh của nhân loại.",
+"T"
+],
+"invitation": [
+"I declined his invitation to dinner.",
+"",
+"E"
+],
+"jam": [
+"The accident caused a traffic jam.",
+"",
+"E"
+],
+"jazz": [
+"Does jazz hold any appeal for you?",
+"Nhạc jazz có hấp dẫn anh chút nào không?",
+"T"
+],
+"king": [
+"He was more than a king.",
+"Anh ấy còn hơn cả vua.",
+"T"
+],
+"knock": [
+"Would you two knock it off with the loud noise? I'm trying to sleep.",
+"Hai người có ngưng ngay tiếng ồn ầm ĩ đó không? Tôi đang cố ngủ.",
+"T"
+],
+"lab": [
+"May we use the language lab?",
+"",
+"E"
+],
+"laptop": [
+"It's practical to have a laptop.",
+"",
+"E"
+],
+"laughter": [
+"The whole audience erupted in laughter.",
+"",
+"E"
+],
+"law": [
+"My mother-in-law is kind.",
+"Mẹ vợ tôi tốt bụng lắm đấy.",
+"T"
+],
+"lead": [
+"Which is heavier, lead or gold?",
+"",
+"E"
+],
+"leader": [
+"We want to put you up for team leader.",
+"Chúng tôi muốn đưa bạn lên làm trưởng nhóm.",
+"T"
+],
+"learning": [
+"The baby is learning how to walk.",
+"Em bé đang học cách đi.",
+"T"
+],
+"lemon": [
+"This is a lemon tree.",
+"Đây là một cây chanh.",
+"T"
+],
+"lifestyle": [
+"Their lifestyle is different to ours.",
+"",
+"E"
+],
+"lift": [
+"My shoulder hurts when I lift my arm.",
+"Vai tôi đau khi tôi nhấc cánh tay của mình lên.",
+"T"
+],
+"link": [
+"Hell! My network link is down.",
+"",
+"E"
+],
+"listener": [
+"I want to become a good listener.",
+"",
+"E"
+],
+"lorry": [
+"Look out! There's a lorry coming!",
+"",
+"E"
+],
+"mail": [
+"Please remember to mail the letter.",
+"",
+"E"
+],
+"manner": [
+"Sometimes her free manner seems rude.",
+"",
+"E"
+],
+"mathematics": [
+"Today's pure mathematics is tomorrow's applied mathematics.",
+"Toán học thuần tuý của hôm nay là toán học ứng dụng của ngày mai.",
+"T"
+],
+"maths": [
+"We have a maths test tomorrow.",
+"Ngày mai chúng ta có bài kiểm tra toán.",
+"T"
+],
+"media": [
+"The news can be found on all media.",
+"Tin tức có thể được tìm thấy trên tất cả các phương tiện truyền thông.",
+"T"
+],
+"memory": [
+"My brother has a good memory.",
+"Anh trai tôi có trí nhớ tốt.",
+"T"
+],
+"metal": [
+"Is it made of wood or metal?",
+"Cái này là làm từ gỗ hay là làm từ sắt?",
+"T"
+],
+"method": [
+"Her method is far in advance of ours.",
+"Phương pháp của cô ấy tiến bộ hơn của chúng tôi nhiều.",
+"T"
+],
+"moon": [
+"Man first visited the moon in 1969.",
+"Con người lần đầu tiên đến thăm mặt trăng vào năm 1969.",
+"T"
+],
+"motorcycle": [
+"Where can I ride a motorcycle?",
+"Tôi có thể chạy xe máy ở đâu?",
+"T"
+],
+"movement": [
+"The movement is rapidly gaining ground.",
+"",
+"E"
+],
+"musician": [
+"He is proud of being a musician.",
+"Cậu ấy tự hào là một nhạc sĩ.",
+"T"
+],
+"network": [
+"I couldn't connect to the network.",
+"",
+"E"
+],
+"noise": [
+"We can't sleep because of the noise.",
+"Chúng tôi không ngủ được vì ồn quá.",
+"T"
+],
+"notice": [
+"I didn't notice her go out.",
+"Tôi không để ý là cô ấy ra ngoài.",
+"T"
+],
+"novel": [
+"She encouraged him to write a novel.",
+"Cô ấy khuyến khích anh ấy viết một cuốn tiểu thuyết.",
+"T"
+]
+}

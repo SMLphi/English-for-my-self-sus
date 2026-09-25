@@ -418,11 +418,11 @@ TOPICS.forEach(tp=>{
   });
 });
 const TOPIC_BY_ID=new Map(TOPICS.map(t=>[t.id,t]));
-// Nhóm chủ đề: 27 chủ đề trong Topic Lists của Cambridge English (A2 Key, B1 Preliminary)
-// + nhóm từ thông dụng theo cấp độ Oxford 3000 cho từ không thuộc chủ đề nào
+// Chủ đề lớn (40) chia thành chủ đề con nhỏ theo nghĩa để dễ học, dễ tập trung.
+// kind: 'theme' = chủ đề đời sống (t01–t18), 'level' = từ loại & cấp độ (t19–t40)
 const GROUPS=DATA.groups||[];
 const GROUP_BY_ID=new Map(GROUPS.map(g=>[g.id,g]));
-const lessonTitle=tp=>{ const g=GROUP_BY_ID.get(tp.group); return g&&g.kind==='oxford'?g.name+' · '+tp.name:tp.name; };
+const lessonTitle=tp=>{ const g=GROUP_BY_ID.get(tp.group); return g&&g.kind==='level'?g.name+' · '+tp.name:tp.name; };
 const PHOTOS=DATA.photos||{};
 const GRAMMAR=DATA.grammar||[];
 const GPOINTS=[]; GRAMMAR.forEach(g=>g.points.forEach(p=>{p.group=g.group;p.gicon=g.icon;GPOINTS.push(p);}));
@@ -820,7 +820,7 @@ function viewHome(root){
     <div>
       <div class="eyebrow">${hello}</div>
       <h2>${c.due?`${c.due} từ chờ ôn hôm nay`:c.nw?'Sẵn sàng học từ mới':'Xong hết rồi — nghỉ thôi'}</h2>
-      <p>${c.due?'Ôn đúng hạn là cách rẻ nhất để không quên.':c.nw?`Còn ${c.nw} từ chưa chạm tới trong ${TOPICS.length} bài.`:'Quay lại vào ngày mai khi có từ tới hạn.'}</p>
+      <p>${c.due?'Ôn đúng hạn là cách rẻ nhất để không quên.':c.nw?`Còn ${c.nw} từ chưa chạm tới trong ${TOPICS.length} chủ đề con.`:'Quay lại vào ngày mai khi có từ tới hạn.'}</p>
       <div class="hero-actions">
         <button class="btn btn-primary btn-lg" id="btnStudy">${c.due?'Ôn ngay':'Học từ mới'}</button>
         <button class="btn btn-lg" data-nav="topics">Chọn chủ đề</button>
@@ -914,7 +914,7 @@ function groupSection(g){
   const nd=(DIALOGS[g.id]||[]).length;
   sec.innerHTML=`<div class="tgroup-h"><span class="tgroup-ico">${g.icon}</span>
       <div style="min-width:0;flex:1"><h2>${esc(g.name)}</h2>
-        <div class="tgroup-meta">${esc(g.en)} · ${total} từ · ${ls.length} bài · ${known} thuộc</div></div>
+        <div class="tgroup-meta">${total} từ · ${ls.length} chủ đề con · ${known} thuộc</div></div>
       ${nd?`<button class="topic-dlg" data-g="${g.id}">💬 ${nd} hội thoại</button>`:''}</div>
     <div class="topics"></div>`;
   const grid=sec.querySelector('.topics');
@@ -923,14 +923,13 @@ function groupSection(g){
   return sec;
 }
 function viewTopics(root){
-  const tab=PAGES.topicsTab||'cambridge';
-  const nCam=GROUPS.filter(g=>g.kind==='cambridge').length;
+  const tab=PAGES.topicsTab||'theme';
   root.innerHTML=`<div class="page-h"><div><h1>Chủ đề</h1>
-    <p>${WORDS.length} từ, ${TOPICS.length} bài, mỗi bài tối đa 30 từ. ${nCam} chủ đề theo danh sách chính thức của
-      <b>Cambridge English</b> (A2 Key, B1 Preliminary); từ không thuộc chủ đề nào xếp theo cấp độ <b>Oxford 3000</b>.</p></div></div>
+    <p>${GROUPS.length} chủ đề · ${WORDS.length} từ, chia nhỏ thành ${TOPICS.length} chủ đề con theo nghĩa để dễ học và tập trung.
+      Chạm vào một chủ đề con để bắt đầu.</p></div></div>
     <div class="seg" id="tTabs" style="margin-bottom:14px">
-      <button data-tab="cambridge" aria-pressed="${tab==='cambridge'}">Theo chủ đề</button>
-      <button data-tab="oxford" aria-pressed="${tab==='oxford'}">Theo cấp độ</button></div>
+      <button data-tab="theme" aria-pressed="${tab==='theme'}">Chủ đề đời sống</button>
+      <button data-tab="level" aria-pressed="${tab==='level'}">Từ loại & cấp độ</button></div>
     <div class="legend" style="margin-bottom:14px">
       <span><i style="background:var(--accent)"></i>Đã thuộc</span>
       <span><i style="background:var(--chalk)"></i>Đang học</span>
@@ -938,7 +937,7 @@ function viewTopics(root){
     </div>`;
   $('#tTabs').querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{ PAGES.topicsTab=b.dataset.tab; render(); });
   const gs=GROUPS.filter(g=>g.kind===tab);
-  paginate(root,'topics:'+tab,gs,tab==='cambridge'?5:1,groupSection,{unit:tab==='cambridge'?'chủ đề':'cấp độ'});
+  paginate(root,'topics:'+tab,gs,5,groupSection,{unit:'chủ đề'});
 }
 
 /* ---------- Tra từ ---------- */
@@ -1015,7 +1014,7 @@ async function openDetail(w){
       ${w.forms&&w.forms!=='—'?`<div class="kv"><b>Dạng khác:</b> ${esc(w.forms)}</div>`:''}
       ${w.syn?`<div class="kv"><b>Đi kèm:</b> ${esc(w.syn)}</div>`:''}
       ${w.hook?`<div class="hook"><b>Mẹo nhớ</b>${esc(w.hook)}</div>`:''}
-      <div class="kv"><b>Chủ đề:</b> ${esc(lessonTitle(TOPIC_BY_ID.get(w.t)))}</div>
+      <div class="kv"><b>Chủ đề:</b> ${esc((GROUP_BY_ID.get(w.g)||{}).name||'')} — ${esc(TOPIC_BY_ID.get(w.t).name)}</div>
       <div class="kv"><b>Trạng thái:</b> ${p?`ôn ${p.n} lần · đúng ${p.n?Math.round(p.c/p.n*100):0}% · hạn sau ${p.i} ngày`:'chưa học'}</div>
       <div style="display:flex;gap:9px;flex-wrap:wrap;margin-top:4px">
         <label class="btn btn-sm">${img?'Đổi ảnh':'＋ Thêm ảnh'}<input type="file" accept="image/*" id="dImg" hidden></label>
@@ -1652,7 +1651,7 @@ function planSetup(root){
   if(setupCfg.target==null) setupCfg.target=X.defaultTarget;
   root.innerHTML=`<div class="page-h"><div><h1>Lộ trình luyện thi</h1>
     <p>Trả lời bốn câu hỏi, app sẽ xếp lịch từng tuần: học chủ đề từ vựng nào, chuyên đề ngữ pháp nào, và luyện kỹ năng gì cho từng phần thi.</p></div></div>
-  ${PLAN_RESET?`<div class="voice-warn"><div><b>Cần tạo lại lộ trình</b> — chủ đề từ vựng đã được chia lại theo chuẩn Cambridge,
+  ${PLAN_RESET?`<div class="voice-warn"><div><b>Cần tạo lại lộ trình</b> — chủ đề từ vựng vừa được chia nhỏ thành chủ đề con,
     nên lộ trình cũ không còn khớp. Tiến độ học từ của bạn vẫn giữ nguyên.</div></div>`:''}
   <div class="card" style="padding:6px 20px;margin-bottom:16px">
     <div class="set-row"><div><div class="lbl">1. Bạn thi kỳ thi nào?</div>

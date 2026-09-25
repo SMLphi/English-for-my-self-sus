@@ -1,0 +1,422 @@
+{
+"it": [
+"Do you know who made it?",
+"Bạn có biết ai làm cái này không?",
+"T"
+],
+"access": [
+"Students must have access to a good library.",
+"Sinh viên phải được quyền vào đọc sách ở một thư viện tốt.",
+"T"
+],
+"accommodation": [
+"He doesn't have an accommodation problem.",
+"",
+"E"
+],
+"ad": [
+"My sales ad wasn't responded to.",
+"",
+"E"
+],
+"addition": [
+"I paid five dollars in addition.",
+"",
+"E"
+],
+"agent": [
+"Education is the agent of progress.",
+"",
+"E"
+],
+"aim": [
+"Take steady aim at the tiger.",
+"",
+"E"
+],
+"alarm": [
+"My alarm goes off at 7:20.",
+"Báo thức của tôi kêu lên lúc 7:20.",
+"T"
+],
+"album": [
+"You should stick those pictures in your album.",
+"Bạn nên dán những bức hình đó vào album của bạn.",
+"T"
+],
+"ambition": [
+"He was a man of great ambition.",
+"Anh ấy là một người đàn ông có hoài bão lớn.",
+"T"
+],
+"analysis": [
+"The analysis gives the following results.",
+"",
+"E"
+],
+"arrest": [
+"I had to arrest Tom.",
+"Tôi đã phải bắt giữ Tom.",
+"T"
+],
+"arrival": [
+"I informed him of her arrival.",
+"Tôi đã thông báo cho anh ấy là cô ấy sẽ đến.",
+"T"
+],
+"attraction": [
+"This museum is a popular tourist attraction.",
+"",
+"E"
+],
+"authority": [
+"I heard it on good authority.",
+"",
+"E"
+],
+"balance": [
+"I lost my balance and fell down the stairs.",
+"Tôi bị mất thăng bằng và ngã xuống thang.",
+"T"
+],
+"ban": [
+"This is not a travel ban.",
+"",
+"E"
+],
+"base": [
+"Base jumping is an extreme sport.",
+"",
+"E"
+],
+"basis": [
+"Your theory has no scientific basis.",
+"",
+"E"
+],
+"battery": [
+"I guess the battery must be dead.",
+"Tôi đoán cái pin phải bị hỏng.",
+"T"
+],
+"battle": [
+"He was wounded in the battle.",
+"",
+"E"
+],
+"beauty": [
+"This beauty can't be described in words.",
+"Vẻ đẹp này không thể diễn tả bằng lời.",
+"T"
+],
+"belief": [
+"His belief is rooted in experience.",
+"",
+"E"
+],
+"bell": [
+"His house doesn't have a bell, so I knocked on the door.",
+"Nhà anh ấy không có chuông, vì vậy tôi đã gõ cửa.",
+"T"
+],
+"bend": [
+"I can't bend my right arm.",
+"",
+"E"
+],
+"block": [
+"What do you do when you get writer's block while writing a script?",
+"Bạn sẽ làm gì khi bạn bị bế tắc trong lúc viết một kịch bản?",
+"T"
+],
+"bomb": [
+"This bomb can kill many people.",
+"",
+"E"
+],
+"border": [
+"The tourist bus crossed the border.",
+"",
+"E"
+],
+"breathing": [
+"I think Tom is still breathing.",
+"",
+"E"
+],
+"bride": [
+"The bride is wearing a white wedding dress.",
+"Cô dâu đang mặc một chiếc váy cưới màu trắng.",
+"T"
+],
+"bubble": [
+"Life is like a soap bubble.",
+"",
+"E"
+],
+"campus": [
+"Tom walked around campus looking for his notebook.",
+"Tom đi vòng quanh khuôn viên trường để tìm quyển vở của cậu ta.",
+"T"
+],
+"candidate": [
+"That candidate stands for free trade.",
+"",
+"E"
+],
+"captain": [
+"The captain wants you back on the ship.",
+"Thuyền trưởng muốn bạn trở về tàu.",
+"T"
+],
+"category": [
+"They don't belong under that category.",
+"",
+"E"
+],
+"celebration": [
+"I arrived late for the celebration.",
+"",
+"E"
+],
+"ceremony": [
+"The ceremony began with his speech.",
+"",
+"E"
+],
+"chain": [
+"I saw a chain of mountains.",
+"",
+"E"
+],
+"challenge": [
+"Each new challenge I encounter contributes to the person I am every day.",
+"Mỗi thử thách tôi phải đối mặt góp phần làm nên con người tôi của mọi khi.",
+"T"
+],
+"champion": [
+"He is a potential world champion.",
+"",
+"E"
+],
+"channel": [
+"I will not watch this channel.",
+"Tôi sẽ không xem kênh này.",
+"T"
+],
+"chapter": [
+"Let's begin with the first chapter.",
+"",
+"E"
+],
+"claim": [
+"You have no claim on me.",
+"",
+"E"
+],
+"clause": [
+"That's a phrase, not a clause.",
+"",
+"E"
+],
+"click": [
+"To see the answer to the question, simply click on the question.",
+"Để xem câu trả lời của câu hỏi, hãy nhấp vào câu hỏi.",
+"T"
+],
+"cloth": [
+"I bought many types of cloth.",
+"Tôi đã mua nhiều loại vải.",
+"T"
+],
+"clue": [
+"Tom and Mary are playing Clue with their friends.",
+"Tom và Mary đang chơi Clue với bạn bè.",
+"T"
+],
+"collection": [
+"Language is not a collection of words.",
+"Ngôn ngữ không phải là một tập hợp các từ.",
+"T"
+],
+"comparison": [
+"Comparison is the mother of violence.",
+"",
+"E"
+],
+"conclusion": [
+"Let's forget everything about that conclusion.",
+"",
+"E"
+],
+"connection": [
+"There is no connection between them.",
+"",
+"E"
+],
+"consequence": [
+"This fact is of little consequence.",
+"",
+"E"
+],
+"consumer": [
+"This company focuses on fast moving consumer goods.",
+"",
+"E"
+],
+"contact": [
+"Who told you to contact me?",
+"Ai bảo cậu liên lạc với tôi?",
+"T"
+],
+"container": [
+"The tools are in the container.",
+"",
+"E"
+],
+"content": [
+"Oranges have a high vitamin content.",
+"",
+"E"
+],
+"contrast": [
+"The contrast immediately jumps out at one.",
+"",
+"E"
+],
+"costume": [
+"Where can I rent a costume?",
+"",
+"E"
+],
+"cottage": [
+"The farmer lives in a cottage in the countryside.",
+"Người nông dân sống trong một ngôi nhà tranh ở miền quê.",
+"T"
+],
+"court": [
+"The matter was brought into court.",
+"",
+"E"
+],
+"custom": [
+"This custom dates from ancient times.",
+"",
+"E"
+],
+"departure": [
+"Have you arranged things for our departure?",
+"Bạn đã sắp xếp mọi thứ để chúng ta xuất phát chưa?",
+"T"
+],
+"destination": [
+"At last, we reached our destination.",
+"",
+"E"
+],
+"development": [
+"The baby showed a normal development.",
+"",
+"E"
+],
+"diagram": [
+"There are errors in your diagram.",
+"",
+"E"
+],
+"diamond": [
+"Nothing is as hard as a diamond.",
+"Không có gì cứng bằng kim cương.",
+"T"
+],
+"difficulty": [
+"I have difficulty believing that.",
+"Tôi thấy điều này khó tin quá.",
+"T"
+],
+"dirt": [
+"He will make you eat dirt.",
+"",
+"E"
+],
+"disadvantage": [
+"Not being tall isn't a disadvantage.",
+"",
+"E"
+],
+"divide": [
+"Divide the cake among you three.",
+"",
+"E"
+],
+"documentary": [
+"I have to watch this documentary.",
+"",
+"E"
+],
+"doubt": [
+"No doubt, it will rain soon.",
+"Có lẽ, chẳng mấy chốc nữa trời sẽ mưa.",
+"T"
+],
+"drum": [
+"A boy was beating the drum.",
+"",
+"E"
+],
+"edge": [
+"We have the edge on them.",
+"",
+"E"
+],
+"editor": [
+"Which text editor do you prefer?",
+"",
+"E"
+],
+"effort": [
+"He made an effort to arrive on time.",
+"Anh ấy đã cố gang đến đúng giờ.",
+"T"
+],
+"election": [
+"Tom didn't win the 2013 election.",
+"Tom đã không giành chiến thắng trong cuộc bầu cử năm 2013.",
+"T"
+],
+"element": [
+"Education is a critical element.",
+"Giáo dục là một nhân tố trọng yếu.",
+"T"
+],
+"employment": [
+"The employment policy is a failure.",
+"",
+"E"
+],
+"engineering": [
+"That college student is studying engineering.",
+"",
+"E"
+],
+"entertainment": [
+"I play sports for entertainment.",
+"Tôi chơi thể thao để giải trí.",
+"T"
+],
+"entrance": [
+"Text him that we're waiting for him near the entrance.",
+"Hãy nhắn tin cho anh ấy là chúng tôi đang đợi anh ấy ở cổng vào.",
+"T"
+],
+"entry": [
+"The entry tests were back on.",
+"",
+"E"
+],
+"episode": [
+"I didn't watch Star Wars episode 1.",
+"",
+"E"
+]
+}

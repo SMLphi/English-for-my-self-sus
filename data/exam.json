@@ -1,501 +1,88 @@
 {
- "toeic": {
-  "name": "TOEIC Listening & Reading",
-  "short": "TOEIC",
-  "icon": "🏢",
-  "max": 990,
-  "unit": "điểm",
-  "targets": [
-   450,
-   600,
-   700,
-   800,
-   900
-  ],
-  "defaultTarget": 700,
-  "bands": [
-   {
-    "min": 10,
-    "max": 250,
-    "cefr": "A1",
-    "label": "Mới bắt đầu",
-    "desc": "Hiểu câu ngắn, từ quen thuộc. Cần xây nền từ vựng và ngữ pháp cơ bản."
-   },
-   {
-    "min": 255,
-    "max": 400,
-    "cefr": "A2",
-    "label": "Sơ cấp",
-    "desc": "Nghe hiểu hội thoại chậm, đọc được thông báo ngắn. Yếu ở Part 3, 4, 7."
-   },
-   {
-    "min": 405,
-    "max": 600,
-    "cefr": "B1",
-    "label": "Trung cấp",
-    "desc": "Làm tốt Part 1, 2, 5. Mất điểm nhiều ở Part 3, 4 và bài đọc dài."
-   },
-   {
-    "min": 605,
-    "max": 780,
-    "cefr": "B2",
-    "label": "Trung cao",
-    "desc": "Nghe hiểu hội thoại tự nhiên. Cần tốc độ đọc và từ vựng chuyên ngành để vượt 800."
-   },
-   {
-    "min": 785,
-    "max": 990,
-    "cefr": "C1",
-    "label": "Cao cấp",
-    "desc": "Xử lý được mọi dạng bài. Điểm rơi ở bẫy từ đồng âm và câu hỏi suy luận."
-   }
-  ],
-  "parts": [
-   {
-    "id": "p1",
-    "sec": "Nghe",
-    "name": "Part 1 — Mô tả tranh",
-    "n": 6,
-    "tips": [
-     "Nhìn tranh trước khi nghe, đoán trước động từ và giới từ có thể xuất hiện.",
-     "Bẫy hay gặp: từ nghe giống nhưng sai nghĩa (copy/coffee, walking/working).",
-     "Chú ý thì: is being done (đang được làm) khác has been done (đã làm xong)."
-    ]
-   },
-   {
-    "id": "p2",
-    "sec": "Nghe",
-    "name": "Part 2 — Hỏi đáp",
-    "n": 25,
-    "tips": [
-     "Bắt cho được từ để hỏi ở đầu câu — đó là chìa khoá của cả câu.",
-     "Câu trả lời lặp lại âm giống câu hỏi thường là bẫy.",
-     "Câu hỏi Wh- không bao giờ trả lời bằng Yes/No."
-    ]
-   },
-   {
-    "id": "p3",
-    "sec": "Nghe",
-    "name": "Part 3 — Hội thoại",
-    "n": 39,
-    "tips": [
-     "Đọc trước ba câu hỏi trong lúc nghe hướng dẫn.",
-     "Câu hỏi bám theo thứ tự lời thoại: câu 1 đầu, câu 2 giữa, câu 3 cuối.",
-     "Chú ý câu hỏi về ngụ ý (What does the man mean?) — phải hiểu ngữ cảnh chứ không nghe từ khoá."
-    ]
-   },
-   {
-    "id": "p4",
-    "sec": "Nghe",
-    "name": "Part 4 — Bài nói ngắn",
-    "n": 30,
-    "tips": [
-     "Nhận dạng loại bài ngay câu đầu: thông báo, quảng cáo, tin nhắn thoại, bản tin.",
-     "Câu hỏi về mục đích thường nằm ở câu đầu bài nói.",
-     "Bài có bảng biểu thì phải kết hợp nghe và nhìn."
-    ]
-   },
-   {
-    "id": "p5",
-    "sec": "Đọc",
-    "name": "Part 5 — Điền từ vào câu",
-    "n": 30,
-    "tips": [
-     "Nhìn đáp án trước: nếu bốn đáp án cùng gốc khác đuôi thì là câu hỏi từ loại, không cần đọc cả câu.",
-     "Câu hỏi ngữ pháp làm trong 10 giây, câu hỏi từ vựng cho phép 20 giây.",
-     "Bẫy thường gặp nhất: từ loại, thì động từ, giới từ đi kèm."
-    ]
-   },
-   {
-    "id": "p6",
-    "sec": "Đọc",
-    "name": "Part 6 — Điền từ vào đoạn",
-    "n": 16,
-    "tips": [
-     "Khác Part 5 ở chỗ phải đọc cả đoạn — nhất là câu hỏi điền nguyên một câu.",
-     "Từ nối (however, therefore, in addition) là dạng ra nhiều nhất.",
-     "Thì động từ phải khớp với mốc thời gian nêu ở câu khác trong đoạn."
-    ]
-   },
-   {
-    "id": "p7",
-    "sec": "Đọc",
-    "name": "Part 7 — Đọc hiểu",
-    "n": 54,
-    "tips": [
-     "Đọc câu hỏi trước, rồi quét bài tìm thông tin — đừng đọc tuần tự từ đầu.",
-     "Bài nhiều văn bản: câu hỏi khó nhất luôn cần ghép thông tin từ hai văn bản.",
-     "Quản lý thời gian: 54 câu trong 55 phút, không sa lầy vào một bài."
-    ]
-   }
-  ],
-  "topicOrder": [
-   "g28",
-   "g29",
-   "g13",
-   "g26",
-   "g14",
-   "g25",
-   "g21",
-   "g15",
-   "g04",
-   "g16",
-   "g30",
-   "g06",
-   "g05",
-   "g03",
-   "g10",
-   "g07",
-   "g11",
-   "g24",
-   "g27",
-   "g31",
-   "g01",
-   "g02",
-   "g08",
-   "g09",
-   "g12",
-   "g17",
-   "g18",
-   "g19",
-   "g20",
-   "g22",
-   "g23"
-  ],
-  "topicWhy": {
-   "g13": "Việc làm, tuyển dụng, chức vụ là bối cảnh quen thuộc nhất của Part 3, 4, 7.",
-   "g26": "Email, hoá đơn, biểu mẫu, thông báo là dạng văn bản chính của Part 6, 7.",
-   "g14": "Mua bán, giá cả, thanh toán, đổi trả xuất hiện dày ở Part 3 và Part 7.",
-   "g25": "Điện thoại, email, máy tính, trang web gặp ở mọi phần của đề.",
-   "g21": "Công tác, đặt vé, chuyến bay bị hoãn là tình huống kinh điển của Part 2, 3.",
-   "g15": "Ngân hàng, bưu điện, khách sạn — các dịch vụ hay được nhắc trong thông báo Part 4.",
-   "g04": "Nhà hàng, đặt bàn, tiệc công ty là tình huống phổ biến.",
-   "g16": "Mô tả toà nhà, văn phòng, nhà máy trong tranh Part 1.",
-   "g06": "Thiết bị văn phòng, máy móc hỏng hóc hay gặp ở Part 1 và Part 3.",
-   "g05": "Nội thất, bảo trì, sửa chữa xuất hiện ở Part 1 và thông báo.",
-   "g03": "Mô tả trang phục người trong tranh Part 1, đơn hàng quần áo.",
-   "g10": "Nghỉ ốm, lịch hẹn khám, bảo hiểm y tế.",
-   "g07": "Lịch họp, hạn chót, giờ giấc — nghe đúng thời gian là chìa khoá Part 2, 3.",
-   "g11": "Đào tạo nội bộ, khoá học, hội thảo hay gặp ở Part 4.",
-   "g24": "Sự kiện, quảng cáo, báo chí trong đọc hiểu Part 7.",
-   "g27": "Sắc thái thái độ giúp làm câu hỏi ngụ ý ở Part 3.",
-   "g28": "Từ nền tảng xuất hiện trong mọi câu — cần chắc trước khi luyện đề.",
-   "g29": "Từ thông dụng giúp nghe, đọc trôi chảy ở mức cơ bản.",
-   "g30": "Từ cấp B1 là ngưỡng để hiểu trọn ý các bài đọc và bài nghe.",
-   "g31": "Từ cấp B2 giúp đạt điểm cao và diễn đạt chính xác hơn."
-  },
-  "skills": [
-   {
-    "part": "p5",
-    "phase": 0,
-    "task": "Luyện 30 câu Part 5 tính giờ",
-    "detail": "Đặt đồng hồ 10 phút cho 30 câu. Ghi lại mọi câu sai vào một cuốn sổ, phân loại theo: từ loại, thì, giới từ, từ vựng. Cuối tuần xem lại nhóm nào sai nhiều nhất."
-   },
-   {
-    "part": "p2",
-    "phase": 0,
-    "task": "Nghe 25 câu Part 2, chép từ để hỏi",
-    "detail": "Không cần chọn đáp án ngay. Nghe và chỉ viết ra từ đầu tiên của câu hỏi (What / Where / When / Who / Why / How / Do / Did / Have). Nghe được đúng từ này là làm đúng quá nửa Part 2."
-   },
-   {
-    "part": "p1",
-    "phase": 0,
-    "task": "Mô tả 10 bức tranh bằng tiếng Anh",
-    "detail": "Nhìn tranh và tự nói 3 câu: ai, đang làm gì, ở đâu. Dùng thì hiện tại tiếp diễn. Đây là cách nhanh nhất để quen cấu trúc câu của Part 1."
-   },
-   {
-    "part": "p3",
-    "phase": 1,
-    "task": "Nghe 3 hội thoại Part 3 và chép chính tả",
-    "detail": "Nghe từng câu, dừng lại và chép nguyên văn. Chép chính tả là bài tập hiệu quả nhất để sửa lỗi nghe sót đuôi -s, -ed và từ nối."
-   },
-   {
-    "part": "p4",
-    "phase": 1,
-    "task": "Nghe 3 bài Part 4, tóm tắt bằng một câu",
-    "detail": "Sau mỗi bài, viết một câu tiếng Anh tóm tắt mục đích của bài nói. Rèn khả năng nắm ý chính thay vì bắt từ khoá rời rạc."
-   },
-   {
-    "part": "p7",
-    "phase": 1,
-    "task": "Đọc 2 bài Part 7 đơn văn bản, tính giờ",
-    "detail": "Mỗi bài 3 phút. Đọc câu hỏi trước, quét tìm thông tin. Gạch chân câu chứa đáp án để đối chiếu khi kiểm tra lại."
-   },
-   {
-    "part": "p6",
-    "phase": 1,
-    "task": "Luyện 4 đoạn Part 6",
-    "detail": "Chú ý riêng câu hỏi điền cả câu — đọc câu trước và câu sau chỗ trống, xác định quan hệ ý (bổ sung, đối lập, kết quả) rồi mới chọn."
-   },
-   {
-    "part": "p7",
-    "phase": 2,
-    "task": "Đọc 1 bài Part 7 nhiều văn bản",
-    "detail": "Dạng hai đến ba văn bản. Làm chậm, xác định câu nào buộc phải ghép thông tin giữa các văn bản — đây là câu quyết định mốc 800."
-   },
-   {
-    "part": "p3",
-    "phase": 2,
-    "task": "Nghe Part 3 ở tốc độ 1.2x",
-    "detail": "Nghe nhanh hơn bình thường để khi vào phòng thi tốc độ thật thấy dễ. Chỉ làm khi đã nghe tốt ở tốc độ chuẩn."
-   },
-   {
-    "part": "p5",
-    "phase": 2,
-    "task": "Ôn lại sổ lỗi Part 5",
-    "detail": "Làm lại toàn bộ câu từng sai trong các tuần trước. Câu nào vẫn sai lần hai thì tra lại chuyên đề ngữ pháp tương ứng trong app."
-   },
-   {
-    "part": "all",
-    "phase": 3,
-    "task": "Thi thử trọn đề 2 tiếng",
-    "detail": "Làm liền mạch 200 câu trong 120 phút, đúng điều kiện phòng thi: không dừng, không tra từ. Chấm điểm và so với mục tiêu."
-   },
-   {
-    "part": "all",
-    "phase": 3,
-    "task": "Phân tích đề thi thử",
-    "detail": "Với mỗi câu sai, ghi rõ lý do: không biết từ, nghe sót, hiểu sai câu hỏi, hay hết giờ. Tỉ lệ từng loại cho biết tuần cuối nên tập trung vào đâu."
-   }
-  ]
- },
- "ielts": {
-  "name": "IELTS Academic",
-  "short": "IELTS",
-  "icon": "🎓",
-  "max": 9,
-  "unit": "band",
-  "targets": [
-   5.0,
-   5.5,
-   6.0,
-   6.5,
-   7.0,
-   7.5
-  ],
-  "defaultTarget": 6.5,
-  "bands": [
-   {
-    "min": 0,
-    "max": 4.0,
-    "cefr": "A1",
-    "label": "Chưa đủ nền",
-    "desc": "Cần xây vốn từ và ngữ pháp cơ bản trước khi luyện đề."
-   },
-   {
-    "min": 4.5,
-    "max": 5.0,
-    "cefr": "A2",
-    "label": "Hạn chế",
-    "desc": "Hiểu ý chính trong tình huống quen. Writing và Speaking còn lỗi ngữ pháp cơ bản."
-   },
-   {
-    "min": 5.5,
-    "max": 6.0,
-    "cefr": "B1",
-    "label": "Trung bình",
-    "desc": "Giao tiếp được nhưng thiếu chính xác. Reading thường không kịp giờ."
-   },
-   {
-    "min": 6.5,
-    "max": 7.0,
-    "cefr": "B2",
-    "label": "Khá",
-    "desc": "Diễn đạt khá trôi chảy. Cần từ vựng học thuật và cấu trúc phức để lên 7.5."
-   },
-   {
-    "min": 7.5,
-    "max": 9.0,
-    "cefr": "C1",
-    "label": "Giỏi",
-    "desc": "Dùng ngôn ngữ linh hoạt, chính xác. Điểm rơi ở Task 2 và Speaking Part 3."
-   }
-  ],
-  "parts": [
-   {
-    "id": "ls",
-    "sec": "Nghe",
-    "name": "Listening — 4 phần, 40 câu",
-    "n": 40,
-    "tips": [
-     "Đọc trước câu hỏi trong thời gian cho sẵn, gạch chân từ khoá và dự đoán loại thông tin cần điền (số, tên, danh từ).",
-     "Bẫy lớn nhất là người nói tự sửa lời: 'It's on Tuesday — sorry, Wednesday.'",
-     "Section 1 và 2 là điểm dễ, phải lấy trọn; Section 3 và 4 mới phân loại band."
-    ]
-   },
-   {
-    "id": "rd",
-    "sec": "Đọc",
-    "name": "Reading — 3 bài, 40 câu",
-    "n": 40,
-    "tips": [
-     "20 phút cho mỗi bài, không hơn. Bài 3 khó nhất nên đừng để thiếu giờ.",
-     "True/False/Not Given: Not Given nghĩa là bài không nhắc tới, đừng suy luận thêm.",
-     "Matching Headings làm sau cùng vì tốn thời gian nhất."
-    ]
-   },
-   {
-    "id": "w1",
-    "sec": "Viết",
-    "name": "Writing Task 1 — 150 từ",
-    "n": 1,
-    "tips": [
-     "Cấu trúc bốn đoạn: paraphrase đề → overview hai xu hướng chính → hai đoạn số liệu.",
-     "Bắt buộc có câu overview, thiếu là khó vượt band 6.",
-     "Không nêu ý kiến cá nhân, chỉ mô tả số liệu."
-    ]
-   },
-   {
-    "id": "w2",
-    "sec": "Viết",
-    "name": "Writing Task 2 — 250 từ",
-    "n": 1,
-    "tips": [
-     "Task 2 chiếm hai phần ba điểm Writing, làm trước nếu bạn hay thiếu giờ.",
-     "Mỗi đoạn thân bài: câu chủ đề → giải thích → ví dụ cụ thể.",
-     "Xác định đúng dạng đề (opinion, discussion, problem–solution) trước khi viết một chữ nào."
-    ]
-   },
-   {
-    "id": "sp",
-    "sec": "Nói",
-    "name": "Speaking — 3 phần",
-    "n": 3,
-    "tips": [
-     "Part 1: trả lời 2–3 câu, đừng trả lời cụt lủn một từ.",
-     "Part 2: dùng 1 phút chuẩn bị để gạch ý theo bốn gạch đầu dòng của đề, nói đủ 2 phút.",
-     "Part 3: đây là phần quyết định band — phải đưa lý do và ví dụ, không chỉ nêu ý kiến."
-    ]
-   }
-  ],
-  "topicOrder": [
-   "g28",
-   "g29",
-   "g11",
-   "g20",
-   "g19",
-   "g10",
-   "g13",
-   "g25",
-   "g12",
-   "g27",
-   "g30",
-   "g01",
-   "g21",
-   "g17",
-   "g24",
-   "g04",
-   "g23",
-   "g05",
-   "g14",
-   "g31",
-   "g02",
-   "g03",
-   "g06",
-   "g07",
-   "g08",
-   "g09",
-   "g15",
-   "g16",
-   "g18",
-   "g22",
-   "g26"
-  ],
-  "topicWhy": {
-   "g11": "Giáo dục là chủ đề ra nhiều nhất ở cả Writing Task 2 và Speaking.",
-   "g20": "Môi trường, biến đổi khí hậu là đề Task 2 và Reading học thuật rất thường gặp.",
-   "g19": "Thiên nhiên, động thực vật chiếm nhiều bài đọc học thuật.",
-   "g10": "Sức khoẻ là chủ đề quen thuộc của Task 2 và Section 4 phần nghe.",
-   "g13": "Việc làm và sự nghiệp là chủ đề lớn của Task 2 và Speaking Part 3.",
-   "g25": "Công nghệ và mạng xã hội ra thường xuyên ở Task 2.",
-   "g12": "Ngôn ngữ và học ngoại ngữ giúp diễn đạt ý trong Speaking Part 3.",
-   "g27": "Từ chỉ cảm xúc, đánh giá là vốn cốt lõi cho Speaking Part 1, 2.",
-   "g01": "Gia đình và quan hệ xã hội ra thường xuyên ở Speaking Part 1.",
-   "g21": "Du lịch, giao thông đô thị là đề Task 1 (bản đồ, biểu đồ) và Task 2.",
-   "g17": "Mô tả thành phố, quy hoạch đô thị trong Task 1 bản đồ.",
-   "g24": "Truyền thông, quảng cáo, nghệ thuật trong Task 2.",
-   "g04": "Ăn uống và lối sống ra nhiều ở Speaking Part 1.",
-   "g23": "Sở thích là câu hỏi mở đầu quen thuộc của Speaking Part 1.",
-   "g05": "Nhà ở là chủ đề Speaking Part 1 và Task 2 thường gặp.",
-   "g14": "Tiêu dùng và kinh tế hay xuất hiện ở Reading.",
-   "g28": "Từ nền tảng xuất hiện trong mọi câu — cần chắc trước khi luyện đề.",
-   "g29": "Từ thông dụng giúp nghe, đọc trôi chảy ở mức cơ bản.",
-   "g30": "Từ cấp B1 là ngưỡng để hiểu trọn ý các bài đọc và bài nghe.",
-   "g31": "Từ cấp B2 giúp đạt điểm cao và diễn đạt chính xác hơn."
-  },
-  "skills": [
-   {
-    "part": "sp",
-    "phase": 0,
-    "task": "Nói 5 câu trả lời Speaking Part 1 mỗi ngày",
-    "detail": "Chọn một chủ đề quen (quê nhà, công việc, sở thích). Tự ghi âm, nghe lại và đếm số lần dừng lâu. Mục tiêu là trả lời 2–3 câu liền mạch, không cụt lủn."
-   },
-   {
-    "part": "ls",
-    "phase": 0,
-    "task": "Nghe Section 1 và 2, luyện điền form",
-    "detail": "Dạng điền thông tin cá nhân, số điện thoại, địa chỉ. Chú ý chính tả và giới hạn số từ — sai chính tả là mất điểm dù nghe đúng."
-   },
-   {
-    "part": "rd",
-    "phase": 0,
-    "task": "Luyện 1 bài Reading dạng True/False/Not Given",
-    "detail": "Làm chậm, với mỗi câu ghi rõ căn cứ nằm ở dòng nào. Phân biệt False (bài nói ngược lại) và Not Given (bài không đề cập)."
-   },
-   {
-    "part": "w1",
-    "phase": 1,
-    "task": "Viết 1 bài Task 1 trong 20 phút",
-    "detail": "Bắt buộc có câu overview. Viết xong tự chấm theo bốn tiêu chí: trả lời đủ đề, mạch lạc, từ vựng, ngữ pháp. Đếm đủ 150 từ."
-   },
-   {
-    "part": "ls",
-    "phase": 1,
-    "task": "Nghe Section 3 và 4, chép chính tả 5 phút",
-    "detail": "Section 4 là bài giảng học thuật liền mạch, không có nghỉ. Chép chính tả 5 phút mỗi ngày là cách nhanh nhất cải thiện phần này."
-   },
-   {
-    "part": "rd",
-    "phase": 1,
-    "task": "Luyện Matching Headings và tính giờ 20 phút",
-    "detail": "Đọc câu đầu và câu cuối mỗi đoạn trước, vì ý chính thường nằm ở đó. Không đọc kỹ toàn đoạn."
-   },
-   {
-    "part": "sp",
-    "phase": 1,
-    "task": "Luyện Speaking Part 2 — nói đủ 2 phút",
-    "detail": "Bốc một đề bất kỳ, chuẩn bị 1 phút bằng cách gạch bốn ý theo bốn gạch đầu dòng, rồi nói liền 2 phút. Ghi âm và nghe lại."
-   },
-   {
-    "part": "w2",
-    "phase": 2,
-    "task": "Viết 1 bài Task 2 trong 40 phút",
-    "detail": "Xác định dạng đề trước. Dàn ý 5 phút, viết 30 phút, soát 5 phút. Soát riêng lỗi thì động từ, mạo từ và số ít/số nhiều."
-   },
-   {
-    "part": "w2",
-    "phase": 2,
-    "task": "Học 10 cụm từ học thuật và đặt câu",
-    "detail": "Ví dụ: a growing body of evidence, play a crucial role in, be attributed to. Mỗi cụm đặt một câu gắn với chủ đề đang học trong app."
-   },
-   {
-    "part": "sp",
-    "phase": 2,
-    "task": "Luyện Speaking Part 3 — trả lời có lý do và ví dụ",
-    "detail": "Mỗi câu trả lời theo cấu trúc: nêu ý kiến → vì sao → ví dụ cụ thể. Đây là điểm phân biệt band 6 và band 7."
-   },
-   {
-    "part": "all",
-    "phase": 3,
-    "task": "Thi thử Listening + Reading liền mạch",
-    "detail": "Nghe 30 phút rồi đọc 60 phút, không nghỉ giữa chừng. Chấm điểm quy đổi ra band và so với mục tiêu."
-   },
-   {
-    "part": "all",
-    "phase": 3,
-    "task": "Viết trọn bộ Writing trong 60 phút",
-    "detail": "Task 1 hai mươi phút, Task 2 bốn mươi phút, viết tay nếu bạn thi trên giấy. Nhờ người có kinh nghiệm chấm hoặc so với bài mẫu band 7."
-   }
-  ]
- }
-}
+"toeic":{
+ "name":"TOEIC Listening & Reading",
+ "short":"TOEIC",
+ "icon":"🏢",
+ "max":990,
+ "unit":"điểm",
+ "targets":[450,600,700,800,900],
+ "defaultTarget":700,
+ "bands":[
+  {"min":10,"max":250,"cefr":"A1","label":"Mới bắt đầu","desc":"Hiểu câu ngắn, từ quen thuộc. Cần xây nền từ vựng và ngữ pháp cơ bản."},
+  {"min":255,"max":400,"cefr":"A2","label":"Sơ cấp","desc":"Nghe hiểu hội thoại chậm, đọc được thông báo ngắn. Yếu ở Part 3, 4, 7."},
+  {"min":405,"max":600,"cefr":"B1","label":"Trung cấp","desc":"Làm tốt Part 1, 2, 5. Mất điểm nhiều ở Part 3, 4 và bài đọc dài."},
+  {"min":605,"max":780,"cefr":"B2","label":"Trung cao","desc":"Nghe hiểu hội thoại tự nhiên. Cần tốc độ đọc và từ vựng chuyên ngành để vượt 800."},
+  {"min":785,"max":990,"cefr":"C1","label":"Cao cấp","desc":"Xử lý được mọi dạng bài. Điểm rơi ở bẫy từ đồng âm và câu hỏi suy luận."}],
+ "parts":[
+  {"id":"p1","sec":"Nghe","name":"Part 1 — Mô tả tranh","n":6,
+   "tips":["Nhìn tranh trước khi nghe, đoán trước động từ và giới từ có thể xuất hiện.","Bẫy hay gặp: từ nghe giống nhưng sai nghĩa (copy/coffee, walking/working).","Chú ý thì: is being done (đang được làm) khác has been done (đã làm xong)."]},
+  {"id":"p2","sec":"Nghe","name":"Part 2 — Hỏi đáp","n":25,
+   "tips":["Bắt cho được từ để hỏi ở đầu câu — đó là chìa khoá của cả câu.","Câu trả lời lặp lại âm giống câu hỏi thường là bẫy.","Câu hỏi Wh- không bao giờ trả lời bằng Yes/No."]},
+  {"id":"p3","sec":"Nghe","name":"Part 3 — Hội thoại","n":39,
+   "tips":["Đọc trước ba câu hỏi trong lúc nghe hướng dẫn.","Câu hỏi bám theo thứ tự lời thoại: câu 1 đầu, câu 2 giữa, câu 3 cuối.","Chú ý câu hỏi về ngụ ý (What does the man mean?) — phải hiểu ngữ cảnh chứ không nghe từ khoá."]},
+  {"id":"p4","sec":"Nghe","name":"Part 4 — Bài nói ngắn","n":30,
+   "tips":["Nhận dạng loại bài ngay câu đầu: thông báo, quảng cáo, tin nhắn thoại, bản tin.","Câu hỏi về mục đích thường nằm ở câu đầu bài nói.","Bài có bảng biểu thì phải kết hợp nghe và nhìn."]},
+  {"id":"p5","sec":"Đọc","name":"Part 5 — Điền từ vào câu","n":30,
+   "tips":["Nhìn đáp án trước: nếu bốn đáp án cùng gốc khác đuôi thì là câu hỏi từ loại, không cần đọc cả câu.","Câu hỏi ngữ pháp làm trong 10 giây, câu hỏi từ vựng cho phép 20 giây.","Bẫy thường gặp nhất: từ loại, thì động từ, giới từ đi kèm."]},
+  {"id":"p6","sec":"Đọc","name":"Part 6 — Điền từ vào đoạn","n":16,
+   "tips":["Khác Part 5 ở chỗ phải đọc cả đoạn — nhất là câu hỏi điền nguyên một câu.","Từ nối (however, therefore, in addition) là dạng ra nhiều nhất.","Thì động từ phải khớp với mốc thời gian nêu ở câu khác trong đoạn."]},
+  {"id":"p7","sec":"Đọc","name":"Part 7 — Đọc hiểu","n":54,
+   "tips":["Đọc câu hỏi trước, rồi quét bài tìm thông tin — đừng đọc tuần tự từ đầu.","Bài nhiều văn bản: câu hỏi khó nhất luôn cần ghép thông tin từ hai văn bản.","Quản lý thời gian: 54 câu trong 55 phút, không sa lầy vào một bài."]}],
+ "topicOrder":["t10","t09","t08","t12","t11","t05","t06","t07","t02","t04","t01","t03"],
+ "topicWhy":{"t10":"Từ vựng văn phòng và kinh doanh chiếm tỉ trọng lớn nhất trong đề.","t09":"Nghề nghiệp, tuyển dụng, hợp đồng là bối cảnh quen thuộc của Part 3, 4, 7.","t08":"Mua bán, hoá đơn, thanh toán xuất hiện dày ở Part 7.","t12":"Giao tiếp, email, thông báo là dạng văn bản chính của Part 6, 7.","t11":"Đào tạo nội bộ và hội thảo hay gặp ở Part 4.","t05":"Bối cảnh toà nhà, thiết bị, bảo trì hay gặp ở Part 1 và thông báo.","t06":"Nhà hàng, đặt bàn, tiệc công ty là tình huống phổ biến.","t07":"Mô tả trang phục, hàng hoá xuất hiện ở Part 1 và đơn hàng.","t02":"Quan hệ đồng nghiệp, mời mọc, lời cảm ơn.","t04":"Nghỉ ốm, bảo hiểm y tế, phòng khám công ty.","t01":"Mô tả người trong tranh ở Part 1.","t03":"Sắc thái thái độ giúp làm câu hỏi ngụ ý ở Part 3."},
+ "skills":[
+  {"part":"p5","phase":0,"task":"Luyện 30 câu Part 5 tính giờ","detail":"Đặt đồng hồ 10 phút cho 30 câu. Ghi lại mọi câu sai vào một cuốn sổ, phân loại theo: từ loại, thì, giới từ, từ vựng. Cuối tuần xem lại nhóm nào sai nhiều nhất."},
+  {"part":"p2","phase":0,"task":"Nghe 25 câu Part 2, chép từ để hỏi","detail":"Không cần chọn đáp án ngay. Nghe và chỉ viết ra từ đầu tiên của câu hỏi (What / Where / When / Who / Why / How / Do / Did / Have). Nghe được đúng từ này là làm đúng quá nửa Part 2."},
+  {"part":"p1","phase":0,"task":"Mô tả 10 bức tranh bằng tiếng Anh","detail":"Nhìn tranh và tự nói 3 câu: ai, đang làm gì, ở đâu. Dùng thì hiện tại tiếp diễn. Đây là cách nhanh nhất để quen cấu trúc câu của Part 1."},
+  {"part":"p3","phase":1,"task":"Nghe 3 hội thoại Part 3 và chép chính tả","detail":"Nghe từng câu, dừng lại và chép nguyên văn. Chép chính tả là bài tập hiệu quả nhất để sửa lỗi nghe sót đuôi -s, -ed và từ nối."},
+  {"part":"p4","phase":1,"task":"Nghe 3 bài Part 4, tóm tắt bằng một câu","detail":"Sau mỗi bài, viết một câu tiếng Anh tóm tắt mục đích của bài nói. Rèn khả năng nắm ý chính thay vì bắt từ khoá rời rạc."},
+  {"part":"p7","phase":1,"task":"Đọc 2 bài Part 7 đơn văn bản, tính giờ","detail":"Mỗi bài 3 phút. Đọc câu hỏi trước, quét tìm thông tin. Gạch chân câu chứa đáp án để đối chiếu khi kiểm tra lại."},
+  {"part":"p6","phase":1,"task":"Luyện 4 đoạn Part 6","detail":"Chú ý riêng câu hỏi điền cả câu — đọc câu trước và câu sau chỗ trống, xác định quan hệ ý (bổ sung, đối lập, kết quả) rồi mới chọn."},
+  {"part":"p7","phase":2,"task":"Đọc 1 bài Part 7 nhiều văn bản","detail":"Dạng hai đến ba văn bản. Làm chậm, xác định câu nào buộc phải ghép thông tin giữa các văn bản — đây là câu quyết định mốc 800."},
+  {"part":"p3","phase":2,"task":"Nghe Part 3 ở tốc độ 1.2x","detail":"Nghe nhanh hơn bình thường để khi vào phòng thi tốc độ thật thấy dễ. Chỉ làm khi đã nghe tốt ở tốc độ chuẩn."},
+  {"part":"p5","phase":2,"task":"Ôn lại sổ lỗi Part 5","detail":"Làm lại toàn bộ câu từng sai trong các tuần trước. Câu nào vẫn sai lần hai thì tra lại chuyên đề ngữ pháp tương ứng trong app."},
+  {"part":"all","phase":3,"task":"Thi thử trọn đề 2 tiếng","detail":"Làm liền mạch 200 câu trong 120 phút, đúng điều kiện phòng thi: không dừng, không tra từ. Chấm điểm và so với mục tiêu."},
+  {"part":"all","phase":3,"task":"Phân tích đề thi thử","detail":"Với mỗi câu sai, ghi rõ lý do: không biết từ, nghe sót, hiểu sai câu hỏi, hay hết giờ. Tỉ lệ từng loại cho biết tuần cuối nên tập trung vào đâu."}]
+},
+
+"ielts":{
+ "name":"IELTS Academic",
+ "short":"IELTS",
+ "icon":"🎓",
+ "max":9,
+ "unit":"band",
+ "targets":[5.0,5.5,6.0,6.5,7.0,7.5],
+ "defaultTarget":6.5,
+ "bands":[
+  {"min":0,"max":4.0,"cefr":"A1","label":"Chưa đủ nền","desc":"Cần xây vốn từ và ngữ pháp cơ bản trước khi luyện đề."},
+  {"min":4.5,"max":5.0,"cefr":"A2","label":"Hạn chế","desc":"Hiểu ý chính trong tình huống quen. Writing và Speaking còn lỗi ngữ pháp cơ bản."},
+  {"min":5.5,"max":6.0,"cefr":"B1","label":"Trung bình","desc":"Giao tiếp được nhưng thiếu chính xác. Reading thường không kịp giờ."},
+  {"min":6.5,"max":7.0,"cefr":"B2","label":"Khá","desc":"Diễn đạt khá trôi chảy. Cần từ vựng học thuật và cấu trúc phức để lên 7.5."},
+  {"min":7.5,"max":9.0,"cefr":"C1","label":"Giỏi","desc":"Dùng ngôn ngữ linh hoạt, chính xác. Điểm rơi ở Task 2 và Speaking Part 3."}],
+ "parts":[
+  {"id":"ls","sec":"Nghe","name":"Listening — 4 phần, 40 câu","n":40,
+   "tips":["Đọc trước câu hỏi trong thời gian cho sẵn, gạch chân từ khoá và dự đoán loại thông tin cần điền (số, tên, danh từ).","Bẫy lớn nhất là người nói tự sửa lời: 'It's on Tuesday — sorry, Wednesday.'","Section 1 và 2 là điểm dễ, phải lấy trọn; Section 3 và 4 mới phân loại band."]},
+  {"id":"rd","sec":"Đọc","name":"Reading — 3 bài, 40 câu","n":40,
+   "tips":["20 phút cho mỗi bài, không hơn. Bài 3 khó nhất nên đừng để thiếu giờ.","True/False/Not Given: Not Given nghĩa là bài không nhắc tới, đừng suy luận thêm.","Matching Headings làm sau cùng vì tốn thời gian nhất."]},
+  {"id":"w1","sec":"Viết","name":"Writing Task 1 — 150 từ","n":1,
+   "tips":["Cấu trúc bốn đoạn: paraphrase đề → overview hai xu hướng chính → hai đoạn số liệu.","Bắt buộc có câu overview, thiếu là khó vượt band 6.","Không nêu ý kiến cá nhân, chỉ mô tả số liệu."]},
+  {"id":"w2","sec":"Viết","name":"Writing Task 2 — 250 từ","n":1,
+   "tips":["Task 2 chiếm hai phần ba điểm Writing, làm trước nếu bạn hay thiếu giờ.","Mỗi đoạn thân bài: câu chủ đề → giải thích → ví dụ cụ thể.","Xác định đúng dạng đề (opinion, discussion, problem–solution) trước khi viết một chữ nào."]},
+  {"id":"sp","sec":"Nói","name":"Speaking — 3 phần","n":3,
+   "tips":["Part 1: trả lời 2–3 câu, đừng trả lời cụt lủn một từ.","Part 2: dùng 1 phút chuẩn bị để gạch ý theo bốn gạch đầu dòng của đề, nói đủ 2 phút.","Part 3: đây là phần quyết định band — phải đưa lý do và ví dụ, không chỉ nêu ý kiến."]}],
+ "topicOrder":["t11","t12","t03","t04","t02","t01","t09","t10","t06","t05","t08","t07"],
+ "topicWhy":{"t11":"Giáo dục là chủ đề ra nhiều nhất ở cả Writing Task 2 và Speaking.","t12":"Ngôn ngữ và giao tiếp giúp diễn đạt ý trong Speaking Part 3.","t03":"Từ chỉ cảm xúc và tính cách là vốn cốt lõi cho Speaking Part 1 và 2.","t04":"Sức khoẻ là chủ đề quen thuộc của Task 2 và Section 4 phần nghe.","t02":"Gia đình và quan hệ xã hội ra thường xuyên ở Speaking Part 1.","t01":"Mô tả người là dạng đề kinh điển của Speaking Part 2.","t09":"Việc làm và sự nghiệp là chủ đề lớn của Task 2.","t10":"Kinh doanh và công nghệ hay gặp ở Reading học thuật.","t06":"Ăn uống và lối sống ra nhiều ở Speaking Part 1.","t05":"Nhà ở và đô thị hoá là chủ đề Task 2 thường gặp.","t08":"Tiêu dùng và kinh tế hay xuất hiện ở Reading.","t07":"Thời trang và tiêu dùng là chủ đề phụ của Speaking."},
+ "skills":[
+  {"part":"sp","phase":0,"task":"Nói 5 câu trả lời Speaking Part 1 mỗi ngày","detail":"Chọn một chủ đề quen (quê nhà, công việc, sở thích). Tự ghi âm, nghe lại và đếm số lần dừng lâu. Mục tiêu là trả lời 2–3 câu liền mạch, không cụt lủn."},
+  {"part":"ls","phase":0,"task":"Nghe Section 1 và 2, luyện điền form","detail":"Dạng điền thông tin cá nhân, số điện thoại, địa chỉ. Chú ý chính tả và giới hạn số từ — sai chính tả là mất điểm dù nghe đúng."},
+  {"part":"rd","phase":0,"task":"Luyện 1 bài Reading dạng True/False/Not Given","detail":"Làm chậm, với mỗi câu ghi rõ căn cứ nằm ở dòng nào. Phân biệt False (bài nói ngược lại) và Not Given (bài không đề cập)."},
+  {"part":"w1","phase":1,"task":"Viết 1 bài Task 1 trong 20 phút","detail":"Bắt buộc có câu overview. Viết xong tự chấm theo bốn tiêu chí: trả lời đủ đề, mạch lạc, từ vựng, ngữ pháp. Đếm đủ 150 từ."},
+  {"part":"ls","phase":1,"task":"Nghe Section 3 và 4, chép chính tả 5 phút","detail":"Section 4 là bài giảng học thuật liền mạch, không có nghỉ. Chép chính tả 5 phút mỗi ngày là cách nhanh nhất cải thiện phần này."},
+  {"part":"rd","phase":1,"task":"Luyện Matching Headings và tính giờ 20 phút","detail":"Đọc câu đầu và câu cuối mỗi đoạn trước, vì ý chính thường nằm ở đó. Không đọc kỹ toàn đoạn."},
+  {"part":"sp","phase":1,"task":"Luyện Speaking Part 2 — nói đủ 2 phút","detail":"Bốc một đề bất kỳ, chuẩn bị 1 phút bằng cách gạch bốn ý theo bốn gạch đầu dòng, rồi nói liền 2 phút. Ghi âm và nghe lại."},
+  {"part":"w2","phase":2,"task":"Viết 1 bài Task 2 trong 40 phút","detail":"Xác định dạng đề trước. Dàn ý 5 phút, viết 30 phút, soát 5 phút. Soát riêng lỗi thì động từ, mạo từ và số ít/số nhiều."},
+  {"part":"w2","phase":2,"task":"Học 10 cụm từ học thuật và đặt câu","detail":"Ví dụ: a growing body of evidence, play a crucial role in, be attributed to. Mỗi cụm đặt một câu gắn với chủ đề đang học trong app."},
+  {"part":"sp","phase":2,"task":"Luyện Speaking Part 3 — trả lời có lý do và ví dụ","detail":"Mỗi câu trả lời theo cấu trúc: nêu ý kiến → vì sao → ví dụ cụ thể. Đây là điểm phân biệt band 6 và band 7."},
+  {"part":"all","phase":3,"task":"Thi thử Listening + Reading liền mạch","detail":"Nghe 30 phút rồi đọc 60 phút, không nghỉ giữa chừng. Chấm điểm quy đổi ra band và so với mục tiêu."},
+  {"part":"all","phase":3,"task":"Viết trọn bộ Writing trong 60 phút","detail":"Task 1 hai mươi phút, Task 2 bốn mươi phút, viết tay nếu bạn thi trên giấy. Nhờ người có kinh nghiệm chấm hoặc so với bài mẫu band 7."}]
+}}

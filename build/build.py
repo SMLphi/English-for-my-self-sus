@@ -6,41 +6,43 @@ ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 from pics import PICS, TOPIC_DEFAULT
 
+from lessons import load_lessons
+
+
 def load_ex2(tid):
+    """Cau vi du thu hai cua mot chu de lon (mot tu co the o nhieu chu de voi cau khac nhau)."""
     p = os.path.join(ROOT, 'data', 'ex2', tid + '.json')
     return json.load(io.open(p, encoding='utf-8')) if os.path.exists(p) else {}
 
+
 def load_topics():
+    """Chu de con (bai hoc) + nhom = chu de lon. Xem build/lessons.py."""
+    groups, lessons = load_lessons()
+    ex2s = {}
     topics = []
-    for f in sorted(glob.glob(os.path.join(ROOT, 'data', 't*.json'))):
-        d = json.load(io.open(f, encoding='utf-8'))
-        tid = d['id']
-        icon = d.get('icon') or TOPIC_DEFAULT.get(tid, '📘')
-        ex2 = load_ex2(tid)
-        seen, words = set(), []
-        for a in d['words']:
+    for L in lessons:
+        icon = TOPIC_DEFAULT.get(L['group'], '📘')
+        ex2 = ex2s.setdefault(L['group'], load_ex2(L['group']))
+        words = []
+        for a in L['rows']:
             w = a[0]
-            if w in seen:                       # trung trong cung chu de
-                continue
-            if len(a) > 5 and str(a[5]).startswith('(xem '):   # muc tro rong
-                continue
-            seen.add(w)
             row = list(a[:8]) + [''] * max(0, 8 - len(a))
             pic = PICS.get(w) or PICS.get(w.lower()) or icon
             hook = a[9] if len(a) > 9 else ''
             second = (ex2.get(w) or ['', '', ''])
             second = list(second) + [''] * (3 - len(second))
             row = row + [pic, hook, second[0], second[1], second[2]]
-            # bo truong rong o cuoi de file nho hon
-            while row and row[-1] == '':
+            while row and row[-1] == '':            # bo truong rong o cuoi de file nho hon
                 row.pop()
             words.append(row)
-        topics.append({'id': tid, 'name': d['name'], 'icon': icon, 'group': d.get('group', ''),
-                       'level': d.get('level', ''), 'words': words})
-    return topics
+        topics.append({'id': L['id'], 'name': L['name'], 'icon': icon, 'group': L['group'], 'words': words})
+    for g in groups:
+        g['icon'] = TOPIC_DEFAULT.get(g['id'], '📘')
+    return topics, groups
+
 
 def main():
-    topics = load_topics()
+    topics, groups = load_topics()
     total = sum(len(t['words']) for t in topics)
     grammar = []
     for gf in sorted(glob.glob(os.path.join(ROOT, 'data', 'grammar', 'g*.json'))):
@@ -69,8 +71,6 @@ def main():
             {'id': d['id'], 'title': d['title'], 'words': d.get('words', []), 'en': d['en'], 'vi': d['vi']}
             for d in doc['items']]
     # nhom chu de (Cambridge Topic Lists + nhom theo cap do Oxford)
-    gp = os.path.join(ROOT, 'data', 'groups.json')
-    groups = json.load(io.open(gp, encoding='utf-8')) if os.path.exists(gp) else []
     payload = json.dumps({'topics': topics, 'groups': groups, 'photos': photos, 'grammar': grammar, 'exam': exam,
                           'ox': ox, 'dialogs': dialogs},
                          ensure_ascii=False, separators=(',', ':'))
@@ -85,7 +85,7 @@ def main():
     io.open(dst, 'w', encoding='utf-8', newline='').write(out)
 
     kb = len(out.encode('utf-8')) / 1024
-    print(f'{len(groups)} nhom · {len(topics)} bai · {total} tu · dist/index.html {kb:.0f} KB')
+    print(f'{len(groups)} chu de lon · {len(topics)} chu de con · {total} tu · dist/index.html {kb:.0f} KB')
     n2 = sum(1 for tp in topics for w in tp['words'] if len(w) > 10 and w[10])
     nvi = sum(1 for tp in topics for w in tp['words'] if len(w) > 11 and w[11])
     print(f'cau vi du thu hai: {n2}/{total} tu (co ban dich: {nvi})')
