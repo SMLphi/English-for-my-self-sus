@@ -660,13 +660,21 @@ function loadVoices(){
 if('speechSynthesis' in window){ loadVoices(); speechSynthesis.onvoiceschanged=()=>{loadVoices();}; }
 // Xep hang giong: uu tien giong tong hop the he moi (Natural/Neural/Google)
 // vi chung nghe gan nguoi that hon han giong co ban cua Windows.
+// iPhone/Mac: Safari đưa ra cả giọng "vui nhộn" và giọng máy kiểu cũ (Albert, Bad News, Zarvox,
+// Eddy, Flo, Grandma...) cũng gắn nhãn en-US -> loại hẳn, kẻo app chọn nhầm vì đứng đầu vần.
+const NOVELTY=/\b(albert|bad news|bahh|bells|boing|bubbles|cellos|deranged|good news|hysterical|jester|junior|kathy|organ|superstar|trinoids|whisper|wobble|zarvox|ralph|fred|eddy|flo|grandma|grandpa|reed|rocko|sandy|shelley)\b/i;
+// giọng người thật của Apple (bản thường đã khá rõ; bản Nâng cao / Cao cấp tốt hơn nhiều)
+const APPLE_GOOD=/\b(samantha|ava|allison|susan|tom|alex|evan|nathan|zoe|nicky|joelle|noelle|aaron|daniel|kate|serena|arthur|martha|karen|moira|tessa|fiona|rishi|veena|catherine|gordon|lee|oliver|jamie|matilda)\b/i;
 function voiceScore(v){
   const n=(v.name||'')+' '+(v.voiceURI||'');
   let s=0;
+  if(NOVELTY.test(v.name||''))             return -100;
   if(/natural|neural/i.test(n))            s+=60;
+  else if(/premium/i.test(n))              s+=55;
   else if(/google/i.test(n))               s+=50;
-  else if(/premium|enhanced|siri/i.test(n))s+=40;
+  else if(/enhanced|siri/i.test(n))        s+=45;
   else if(/online/i.test(n))               s+=20;
+  if(APPLE_GOOD.test(v.name||''))          s+=25;
   if(v.localService===false)               s+=10;
   const want=S.dialect==='en-GB'?/en[-_]GB/i:/en[-_]US/i;
   if(want.test(v.lang)) s+=30; else if(/^en/i.test(v.lang)) s+=10;
@@ -676,7 +684,11 @@ function voiceTag(v){
   const n=(v.name||'');
   if(/natural|neural/i.test(n)) return 'tự nhiên nhất';
   if(/google/i.test(n))         return 'rất tự nhiên';
-  if(/premium|enhanced/i.test(n)) return 'chất lượng cao';
+  const u=n+' '+(v.voiceURI||'');
+  if(/premium/i.test(u))  return 'cao cấp';
+  if(/enhanced/i.test(u)) return 'nâng cao';
+  if(NOVELTY.test(n))     return 'giọng vui nhộn — không nên dùng';
+  if(APPLE_GOOD.test(n))  return 'giọng chuẩn';
   return 'giọng cơ bản';
 }
 function rankedVoices(){ return [...TTS.voices].sort((a,b)=>voiceScore(b)-voiceScore(a)); }
@@ -1098,7 +1110,7 @@ function viewSettings(root){
       <div class="hint">App không tải giọng từ mạng — nó dùng kho giọng đọc <b>cài sẵn trong trình duyệt và Windows của bạn</b>. Giọng có chữ <b>Natural</b>, <b>Neural</b> hoặc <b>Google</b> nghe gần người thật nhất; giọng Microsoft David/Zira là giọng máy đời cũ, nghe khô hơn.</div>
       <div class="hint" style="margin-top:6px">${vs.length?`Đang dùng: <b>${esc(cur?cur.name:'—')}</b> · ${esc(cur?cur.lang:'')} · ${cur?esc(voiceTag(cur)):''}`:'<b style="color:var(--again)">Trình duyệt chưa nạp được giọng tiếng Anh nào.</b> Thử tải lại trang.'}
         ${voiceProblem()?`<br><span style="color:var(--hard)">${esc(voiceHelp())}</span>`:''}</div></div>
-      <select id="sVoice"><option value="">Tự động (chọn giọng tốt nhất)</option>${vs.map(v=>`<option value="${esc(v.voiceURI)}"${S.voice===v.voiceURI?' selected':''}>${esc(v.name)} — ${esc(voiceTag(v))}</option>`).join('')}</select></div>
+      <select id="sVoice"><option value="">Tự động (chọn giọng tốt nhất)</option>${vs.filter(v=>voiceScore(v)>0).map(v=>`<option value="${esc(v.voiceURI)}"${S.voice===v.voiceURI?' selected':''}>${esc(v.name)} — ${esc(voiceTag(v))}</option>`).join('')}</select></div>
     <div class="set-row"><div><div class="lbl">Giọng người B trong hội thoại</div><div class="hint">Tự động: chọn giọng tốt khác giới với giọng A.</div></div>
       <select id="sVoiceB"><option value="">Tự động</option>${vs.filter(v=>voiceScore(v)>=40).map(v=>`<option value="${esc(v.voiceURI)}"${S.voiceB===v.voiceURI?' selected':''}>${esc(v.name)} — ${esc(voiceTag(v))}</option>`).join('')}</select></div>
     <div class="set-row"><div><div class="lbl">Chất giọng ưu tiên</div><div class="hint">Dùng khi để giọng đọc ở chế độ tự động.</div></div>
@@ -2198,7 +2210,7 @@ function dlgTopicCover(tid){
 /* ---- giọng đọc: hai người nói dùng hai giọng khác nhau ---- */
 // Đoán giới tính giọng qua tên (để hai người nói dễ phân biệt)
 const FEMALE=/female|woman|aria|jenny|zira|samantha|libby|sonia|ava|emma|michelle|ana|susan|hazel|karen|moira|tessa|fiona|victoria|allison|serena|kate|salli|joanna|ivy|kimberly|clara|natasha|maisie|sara|jane|nancy/i;
-const MALE=/male|man|guy|david|mark|ryan|christopher|eric|daniel|alex|tom|fred|george|james|brian|roger|steffan|andrew|brandon|davis|jason|tony|thomas|william|oliver|arthur|matthew|justin|joey|liam/i;
+const MALE=/\bmale|\bman\b|guy|david|mark|ryan|christopher|eric|daniel|alex|tom|fred|george|james|brian|roger|steffan|andrew|brandon|davis|jason|tony|thomas|william|oliver|arthur|matthew|justin|joey|liam/i;
 const voiceSex=v=>{ const n=v.name||''; return FEMALE.test(n)?'f':MALE.test(n)?'m':''; };
 // Giọng B: chỉ lấy giọng chất lượng cao (Natural/Google...), ưu tiên khác giới với A.
 // Không có giọng tốt thứ hai -> dùng lại giọng A ở tông bình thường (không hạ tông làm méo tiếng).
@@ -2206,7 +2218,9 @@ function dlgVoices(){
   const a=pickVoice(); if(!a) return [null,null];
   if(S.voiceB){ const v=TTS.voices.find(x=>x.voiceURI===S.voiceB); if(v) return [a,v]; }
   const sa=voiceSex(a);
-  const good=rankedVoices().filter(v=>v!==a&&voiceScore(v)>=50);
+  // giọng tốt (Natural/Google, hoặc giọng người thật của Apple), khác người với giọng A (Samantha ≠ Samantha Nâng cao)
+  const base=v=>String(v.name).replace(/\s*\(.*\)\s*$/,'').toLowerCase();
+  const good=rankedVoices().filter(v=>v!==a&&base(v)!==base(a)&&(voiceScore(v)>=50||(voiceScore(v)>0&&APPLE_GOOD.test(v.name||''))));
   const pick=good.find(v=>sa&&voiceSex(v)&&voiceSex(v)!==sa)||good[0];
   return [a,pick||a];
 }

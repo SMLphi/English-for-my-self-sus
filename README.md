@@ -180,7 +180,7 @@ data/grammar/         50 chuyên đề ngữ pháp, 300 bài tập
 data/exam.json        Cấu trúc TOEIC / IELTS, mẹo từng phần, thư viện nhiệm vụ
 data/dialogues/       Hội thoại theo chủ đề (DailyDialog) + bản dịch + từ đúng nghĩa từng đoạn
 build/*.py            Script dựng, tải ảnh, đối chiếu Oxford, chọn câu ví dụ
-build/smoke*.js       Kiểm thử tự động (95 mục)
+build/smoke*.js       Kiểm thử tự động (97 mục)
 pwa/                  ★ Bản deploy — đây là thứ đưa lên server
 ```
 
@@ -191,7 +191,7 @@ npm install            # chỉ cần jsdom
 node build/smoke.js            # 43 mục: từ vựng, lặp lại ngắt quãng, đọc chậm, 4 kỹ năng, tra từ
 node build/smoke_grammar.js    # 10 mục: ngữ pháp, 4 dạng bài, chấm điểm
 node build/smoke_plan.js       # 13 mục: lộ trình, kiểm tra trình độ
-node build/smoke_dialog.js     # 29 mục: hội thoại, chọn giọng A/B, từ mới không lặp, đóng vai, điền từ
+node build/smoke_dialog.js     # 31 mục: hội thoại, chọn giọng A/B, từ mới không lặp, đóng vai, điền từ
 ```
 
 ### Tải lại dữ liệu nguồn (đã loại khỏi git vì nặng)

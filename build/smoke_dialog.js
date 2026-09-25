@@ -69,6 +69,12 @@ const $ = s => d.querySelector(s), $$ = s => [...d.querySelectorAll(s)];
       ['Edge tren Windows', [V('Microsoft Aria Online (Natural) - English (United States)', 'en-US', false),
         V('Microsoft Guy Online (Natural) - English (United States)', 'en-US', false), V('Microsoft Jenny Online (Natural) - English (United States)', 'en-US', false),
         V('Microsoft David - English (United States)', 'en-US')], /Aria|Jenny/, /Guy/],
+      // iPhone: danh sach xep theo van, co ca giong vui nhon (Albert, Bad News, Eddy...) gan nhan en-US
+      ['iPhone (co giong Nang cao)', [V('Albert', 'en-US'), V('Bad News', 'en-US'), V('Bubbles', 'en-US'), V('Eddy (English (US))', 'en-US'),
+        V('Samantha', 'en-US'), { name: 'Samantha (Enhanced)', lang: 'en-US', voiceURI: 'com.apple.voice.enhanced.en-US.Samantha', localService: true },
+        V('Daniel', 'en-GB'), V('Zarvox', 'en-US')], /Samantha \(Enhanced\)/, /^Daniel$/],
+      ['iPhone (chua tai giong Nang cao)', [V('Albert', 'en-US'), V('Bad News', 'en-US'), V('Aaron', 'en-US'), V('Eddy (English (US))', 'en-US'),
+        V('Grandma (English (US))', 'en-US'), V('Samantha', 'en-US'), V('Daniel', 'en-GB')], /^(Samantha|Aaron)$/, /Daniel|Samantha|Aaron/],
       ['may chi co giong co ban', [V('Microsoft David - English (United States)', 'en-US'), V('Microsoft Zira - English (United States)', 'en-US')],
         /David|Zira/, 'SAME'],
     ];
@@ -76,7 +82,8 @@ const $ = s => d.querySelector(s), $$ = s => [...d.querySelectorAll(s)];
       E('TTS').voices = list;
       const [a, b] = E('dlgVoices')();
       const okA = typeof wantA === 'string' ? a.name === wantA : wantA.test(a.name);
-      const okB = wantB === 'SAME' ? b === a : wantB.test(b.name) && E('voiceScore')(b) >= 50;
+      const okB = wantB === 'SAME' ? b === a : wantB.test(b.name) && E('voiceScore')(b) > 0 && b !== a;
+      if (E('voiceScore')(a) < 0 || E('voiceScore')(b) < 0) { fail(label + ': chon phai giong vui nhon ' + a.name + '/' + b.name); continue; }
       okA && okB ? okc('giong hoi thoai (' + label + '): A = ' + a.name.split(' - ')[0] + ', B = ' + b.name.split(' - ')[0])
                  : fail(label + ': A=' + a.name + ' B=' + b.name);
     }
