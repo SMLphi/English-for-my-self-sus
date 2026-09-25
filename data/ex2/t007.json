@@ -1,0 +1,127 @@
+{
+"diet": [
+"My mother is on a banana diet.",
+"Mẹ tôi đang giảm cân bằng chuối.",
+"V"
+],
+"kitchen": [
+"I'm all thumbs in the kitchen.",
+"Tôi không biết gì chuyện bếp núc.",
+"V"
+],
+"food": [
+"The food here is too expensive.",
+"Đồ ăn ở đây quá đắt.",
+"V"
+],
+"meal": [
+"He washed her dirty hands before the meal.",
+"Anh ấy rửa đôi tay bẩn của con bé trước khi ăn.",
+"V"
+],
+"breakfast": [
+"She took a walk before breakfast.",
+"Cô ấy đã đi dạo trước bữa sáng.",
+"V"
+],
+"lunch": [
+"Do you remember buying me lunch?",
+"Bạn còn nhớ là bạn đã bao tôi bữa trưa không?",
+"T"
+],
+"dinner": [
+"I didn't eat dinner last night.",
+"Tối qua tôi không ăn bữa tối.",
+"T"
+],
+"rice": [
+"Do you eat rice every day?",
+"Bạn có ăn cơm hằng ngày không?",
+"T"
+],
+"bread": [
+"Do not eat rice with bread.",
+"Đừng ăn cơm với bánh mì.",
+"T"
+],
+"meat": [
+"They sell meat at this store.",
+"Cửa hàng này có bán thịt.",
+"T"
+],
+"chicken": [
+"Your chicken may need to be cooked a bit longer.",
+"Gà của bạn có lẽ cần được nấu lâu hơn một chút nữa.",
+"T"
+],
+"fish": [
+"I like to fish in the river.",
+"Tôi thích câu cá ở sông.",
+"T"
+],
+"egg": [
+"He is a hard boiled egg.",
+"",
+"E"
+],
+"milk": [
+"She gave milk to the cat.",
+"Cô ta cho con mèo uống sữa.",
+"T"
+],
+"cheese": [
+"Mother made us cheese sandwiches for lunch.",
+"Mẹ làm bánh mỳ kẹp phô mai cho bọn tôi ăn trưa.",
+"T"
+],
+"butter": [
+"Did you remember to buy butter?",
+"Bạn có nhớ mua bơ không đấy?",
+"T"
+],
+"vegetable": [
+"Are tomatoes a fruit or a vegetable?",
+"Cà chua là hoa quả hay rau củ?",
+"T"
+],
+"fruit": [
+"This fruit has an unpleasant smell.",
+"Loại trái cây này có mùi khó ngửi.",
+"T"
+],
+"apple": [
+"The apple is not yet ripe.",
+"Trái táo vẫn chưa chín.",
+"T"
+],
+"banana": [
+"He used the banana leaf as a cover from the heat of the sun.",
+"Anh ấy đã dùng lá chuối để che đi cái nóng của mặt trời.",
+"T"
+],
+"tomato": [
+"He raised tomato plants from seed.",
+"Ông ấy trồng cây cà chua từ hạt.",
+"C"
+],
+"potato": [
+"Help yourself to more potato chips.",
+"Bạn cứ tự nhiên lấy thêm khoai tây chiên.",
+"C"
+],
+"onion": [
+"I borrowed an onion from Tom.",
+"Tôi mượn Tom một củ hành.",
+"C"
+],
+"carrot": [
+"She cut off the carrot tops.",
+"Cô ấy cắt bỏ phần cuống lá của củ cà rốt.",
+"C"
+],
+"salad": [
+"I bought a bottle of salad oil.",
+"Tôi đã mua một chai dầu sa-lát.",
+"T"
+]
+}

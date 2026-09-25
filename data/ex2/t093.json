@@ -1,0 +1,152 @@
+{
+"vet": [
+"He wanted to be a vet.",
+"",
+"E"
+],
+"seed": [
+"Bad seed must produce bad corn.",
+"",
+"E"
+],
+"rose": [
+"Every rose has its thorns.",
+"Hoa hồng nào mà chẳng có gai.",
+"T"
+],
+"grain": [
+"They export grain to many countries.",
+"",
+"E"
+],
+"fence": [
+"A fence runs around the house.",
+"",
+"E"
+],
+"pedestrian": [
+"The ambulance went out of control and came close to running over a pedestrian.",
+"Xe cứu thương mất lái và suýt nữa cán phải một người đi bộ.",
+"T"
+],
+"seat belt": [
+"Drivers should wear seat belts.",
+"Những người lái xe phải thắt dây an toàn.",
+"T"
+],
+"brake": [
+"My car needs a brake job.",
+"",
+"E"
+],
+"addition": [
+"I paid five dollars in addition.",
+"",
+"E"
+],
+"agent": [
+"Education is the agent of progress.",
+"",
+"E"
+],
+"aim": [
+"Take steady aim at the tiger.",
+"",
+"E"
+],
+"alarm": [
+"My alarm goes off at 7:20.",
+"Báo thức của tôi kêu lên lúc 7:20.",
+"T"
+],
+"album": [
+"You should stick those pictures in your album.",
+"Bạn nên dán những bức hình đó vào album của bạn.",
+"T"
+],
+"ambition": [
+"He was a man of great ambition.",
+"Anh ấy là một người đàn ông có hoài bão lớn.",
+"T"
+],
+"analysis": [
+"The analysis gives the following results.",
+"",
+"E"
+],
+"arrest": [
+"I had to arrest Tom.",
+"Tôi đã phải bắt giữ Tom.",
+"T"
+],
+"attraction": [
+"This museum is a popular tourist attraction.",
+"",
+"E"
+],
+"authority": [
+"I heard it on good authority.",
+"",
+"E"
+],
+"balance": [
+"I lost my balance and fell down the stairs.",
+"Tôi bị mất thăng bằng và ngã xuống thang.",
+"T"
+],
+"ban": [
+"This is not a travel ban.",
+"",
+"E"
+],
+"base": [
+"Base jumping is an extreme sport.",
+"",
+"E"
+],
+"basis": [
+"Your theory has no scientific basis.",
+"",
+"E"
+],
+"battery": [
+"I guess the battery must be dead.",
+"Tôi đoán cái pin phải bị hỏng.",
+"T"
+],
+"battle": [
+"He was wounded in the battle.",
+"",
+"E"
+],
+"beauty": [
+"This beauty can't be described in words.",
+"Vẻ đẹp này không thể diễn tả bằng lời.",
+"T"
+],
+"belief": [
+"His belief is rooted in experience.",
+"",
+"E"
+],
+"bend": [
+"I can't bend my right arm.",
+"",
+"E"
+],
+"bomb": [
+"This bomb can kill many people.",
+"",
+"E"
+],
+"breathing": [
+"I think Tom is still breathing.",
+"",
+"E"
+],
+"bride": [
+"The bride is wearing a white wedding dress.",
+"Cô dâu đang mặc một chiếc váy cưới màu trắng.",
+"T"
+]
+}

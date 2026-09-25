@@ -1,0 +1,102 @@
+{
+"shopping": [
+"I might not go shopping today.",
+"Tôi có lẽ sẽ không đi mua sắm hôm nay.",
+"T"
+],
+"complain": [
+"People often complain about the weather.",
+"Mọi người thường phàn nàn về thời tiết.",
+"V"
+],
+"store": [
+"What time does the store close?",
+"Khi nào cửa hàng đóng cửa?",
+"T"
+],
+"cash": [
+"I usually use a credit card instead of cash.",
+"Bình thường tôi không dùng tiền mặt mà tôi dùng thẻ tín dụng.",
+"T"
+],
+"credit card": [
+"I'd like to pay with a credit card.",
+"Tôi muốn thanh toán bằng thẻ tín dụng.",
+"T"
+],
+"save": [
+"I'm going to save more money.",
+"Tôi sẽ tiết kiệm thêm tiền.",
+"T"
+],
+"advertise": [
+"We need to advertise on television.",
+"",
+"E"
+],
+"reduce": [
+"If we place an order for more than 20 units, would you reduce the price?",
+"Nếu chúng tôi đặt hàng với số lượng lớn hơn 20, bạn sẽ giảm giá chứ?",
+"T"
+],
+"collect": [
+"I decided to collect stamps.",
+"Tôi đã quyết định sưu tầm tem.",
+"T"
+],
+"closed": [
+"She closed all the windows in the room.",
+"Cô ấy đã đóng hết cửa sổ trong phòng.",
+"T"
+],
+"penny": [
+"She has to count every penny.",
+"",
+"E"
+],
+"mall": [
+"Should we go to the mall?",
+"",
+"E"
+],
+"bargain": [
+"This dress is a good bargain.",
+"",
+"E"
+],
+"receipt": [
+"Make sure you save the receipt.",
+"",
+"E"
+],
+"exchange": [
+"Can you exchange it for another one?",
+"Bạn có thể đổi cho tôi cái khác dược không?",
+"T"
+],
+"deposit": [
+"Deposit your money in the bank.",
+"",
+"E"
+],
+"hire": [
+"The company wants to hire 20 people.",
+"Công ty muốn thuê 20 người.",
+"T"
+],
+"luxury": [
+"The market for luxury goods is growing fast.",
+"Thị trường sản phẩm cao cấp đang phát triển một cách nhanh chóng.",
+"T"
+],
+"reasonable": [
+"I think Tom would be reasonable.",
+"Tôi nghĩ Tom sẽ hợp lý.",
+"T"
+],
+"reserve": [
+"I'd like to reserve a single room on June 3.",
+"Tôi muốn đặt một phòng đơn vào ngày mùng 3 tháng 6.",
+"T"
+]
+}

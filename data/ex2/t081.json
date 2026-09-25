@@ -1,0 +1,112 @@
+{
+"recognize": [
+"Do you think you might recognize Tom?",
+"Cậu có nghĩ cậu nhận ra Tom không?",
+"T"
+],
+"recommend": [
+"What would you recommend that I do?",
+"Cậu khuyên tớ nên làm gì?",
+"T"
+],
+"refer": [
+"Which dictionary did you refer to?",
+"",
+"E"
+],
+"refuse": [
+"I refuse to answer the question.",
+"Tôi từ chối trả lời câu hỏi đó.",
+"T"
+],
+"remove": [
+"Remove your hat when you go inside.",
+"Hãy bỏ mũ của mình ra khi bạn đi vào bên trong.",
+"T"
+],
+"replace": [
+"You must replace it every 4 months.",
+"",
+"E"
+],
+"seem": [
+"You seem more busy than usual.",
+"Trông bạn bận rộn hơn mọi khi.",
+"T"
+],
+"solve": [
+"Let's help them solve their problems.",
+"Chúng ta hãy giúp họ giải quyết vấn đề.",
+"T"
+],
+"steal": [
+"It is wrong to steal money.",
+"",
+"E"
+],
+"suppose": [
+"I suppose he's gone home.",
+"Tôi nghĩ là anh ấy đã về nhà.",
+"T"
+],
+"count": [
+"The intelligent baby can speak and count.",
+"Em bé thông minh có thể nói và đếm.",
+"T"
+],
+"drop": [
+"There's not a drop of water left.",
+"Chẳng còn giọt nước nào còn sót lại.",
+"T"
+],
+"beat": [
+"Don't beat around the bush.",
+"Đừng đánh trống lảng.",
+"T"
+],
+"burn": [
+"Burn this rubbish on the fire.",
+"",
+"E"
+],
+"hold": [
+"She couldn't hold back her laughter.",
+"Cô ấy không thể nhịn được cười.",
+"T"
+],
+"knock": [
+"Would you two knock it off with the loud noise? I'm trying to sleep.",
+"Hai người có ngưng ngay tiếng ồn ầm ĩ đó không? Tôi đang cố ngủ.",
+"T"
+],
+"lead": [
+"Which is heavier, lead or gold?",
+"",
+"E"
+],
+"pull": [
+"Pull into shape after washing.",
+"Xếp gọn gàng sau khi giặt xong.",
+"T"
+],
+"push": [
+"Push the green button, and the light goes on.",
+"Hãy bấm nút màu xanh lá cây. Nếu bạn làm vậy, đèn sẽ được bật sáng.",
+"T"
+],
+"reach": [
+"The boy was too short to reach the shelf.",
+"Cậu bé quá thấp để với tới cái kệ.",
+"T"
+],
+"shake": [
+"We felt the house shake.",
+"Chúng tôi thấy ngồi nhà rung lắc.",
+"T"
+],
+"touch": [
+"You can touch it if you want.",
+"Nếu bạn muốn, bạn có thể chạm vào nó.",
+"T"
+]
+}

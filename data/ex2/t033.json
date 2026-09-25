@@ -1,0 +1,97 @@
+{
+"market": [
+"These dictionaries are on the market.",
+"Mấy cuốn từ điển này đang bán (trên thị trường).",
+"T"
+],
+"road": [
+"A new road is under construction.",
+"Người ta đang thi công một con đường mới.",
+"T"
+],
+"street": [
+"We're still living on Park Street.",
+"Chúng tôi vẫn đang sống ở phố Park.",
+"T"
+],
+"station": [
+"I'm sitting in the railway station.",
+"Tôi đang ngồi trong nhà ga.",
+"T"
+],
+"airport": [
+"How far away is the airport?",
+"Sân bay cách đây bao xa?",
+"T"
+],
+"park": [
+"Her house is near the park.",
+"Nhà cô ấy gần công viên.",
+"T"
+],
+"town": [
+"Not everyone in town likes Tom.",
+"Không phải tất cả mọi người trong thị trấn đều thích Tom.",
+"T"
+],
+"playground": [
+"Let's get out of this playground.",
+"",
+"E"
+],
+"zoo": [
+"I love going to the zoo to see lions.",
+"Tôi rất thích đi sở thú để xem sư tử.",
+"T"
+],
+"motorway": [
+"There are no traffic lights on the motorway.",
+"Không có đèn giao thông ở trên đường cao tốc.",
+"T"
+],
+"bridge": [
+"The bridge was finished on time.",
+"Cây cầu được hoàn thành đúng tiến độ.",
+"T"
+],
+"roundabout": [
+"Don't say it in a roundabout way.",
+"",
+"E"
+],
+"car park": [
+"You should park your car in a car park.",
+"Bạn nên đỗ xe hơi của bạn trong một bãi đỗ xe.",
+"T"
+],
+"route": [
+"This is the shortest route.",
+"Đây là tuyến đường ngắn nhất.",
+"T"
+],
+"square": [
+"A square has four right angles.",
+"Hình vuông có bốn góc vuông.",
+"T"
+],
+"underground": [
+"There is a shopping district underground.",
+"",
+"E"
+],
+"corner": [
+"It's just around the corner.",
+"Ngay quanh góc phố.",
+"T"
+],
+"crossroads": [
+"The accident happened at a crossroads.",
+"",
+"E"
+],
+"tunnel": [
+"The accident occurred at the mouth of the tunnel.",
+"Tai nạn xảy ra ở cửa của đường hầm.",
+"T"
+]
+}

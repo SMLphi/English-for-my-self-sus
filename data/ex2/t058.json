@@ -1,0 +1,117 @@
+{
+"hate": [
+"Do good to those who hate you.",
+"Hãy đối tốt với những người ghét bạn.",
+"C"
+],
+"help": [
+"Let me help you, if necessary.",
+"Hãy để tôi giúp bạn, nếu cần.",
+"V"
+],
+"introduce": [
+"May I introduce myself to you?",
+"",
+"E"
+],
+"meet": [
+"I would like to meet him.",
+"Tôi muốn gặp anh ấy.",
+"V"
+],
+"enjoy": [
+"I enjoy watching soccer on TV.",
+"Tôi thích xem đá bóng trên ti vi.",
+"V"
+],
+"prefer": [
+"Do you prefer tea or coffee?",
+"Bạn thích trà hay cà phê hơn?",
+"V"
+],
+"relax": [
+"Before going home, I have a few drinks to relax.",
+"Trước khi về nhà, tôi uống một vài ly để thư giãn.",
+"V"
+],
+"sleep": [
+"I have to go to sleep.",
+"Tôi phải đi ngủ.",
+"V"
+],
+"wash": [
+"I wash my hair every day.",
+"Mỗi ngày tôi đều gội đầu.",
+"V"
+],
+"own": [
+"Does somebody here own this watch?",
+"Cái đồng hồ này có thuộc về ai ở đây không?",
+"V"
+],
+"discuss": [
+"Don't you want to discuss it?",
+"Bạn không muốn bàn về điều đó sao?",
+"T"
+],
+"explain": [
+"Please explain it to me later.",
+"Xin hãy giải thích cho tôi sau.",
+"T"
+],
+"understand": [
+"I don't expect you to understand.",
+"Mình không nghĩ là bạn sẽ hiểu đâu.",
+"T"
+],
+"forget": [
+"Did he forget his money again?",
+"Nó lại quên tiền nữa à?",
+"T"
+],
+"improve": [
+"In order to improve the environment.",
+"",
+"E"
+],
+"describe": [
+"Some feelings are difficult to describe.",
+"",
+"E"
+],
+"agree": [
+"She did not agree with him.",
+"Cô ta không đồng ý với nó.",
+"T"
+],
+"repeat": [
+"Could you please repeat what you just said?",
+"Bạn có thể nhắc lại lời bạn vừa nói được không?",
+"T"
+],
+"begin": [
+"Class doesn't begin until eight-thirty.",
+"Lớp không bắt đầu cho đến 8 rưỡi.",
+"T"
+],
+"start": [
+"We start here in two hours.",
+"Chúng ta bắt đầu trong 2 giờ nữa.",
+"T"
+],
+"finish": [
+"You can finish it at home.",
+"Bạn có thể hoàn thành nó ở nhà.",
+"T"
+],
+"last": [
+"I didn't catch your last name.",
+"Tôi không nghe được tên cuối của bạn.",
+"T"
+],
+"wait": [
+"Everything comes to those who wait.",
+"Mọi đều tốt đẹp sẽ đến với người biết đợi chờ.",
+"T"
+]
+}

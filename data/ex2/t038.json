@@ -1,0 +1,117 @@
+{
+"visitor": [
+"The visitor sat across from me.",
+"Vị khách ngồi đối diện tôi.",
+"C"
+],
+"train": [
+"The train is always on time.",
+"Chiếc xe lửa này luôn luôn đúng giờ.",
+"T"
+],
+"leave": [
+"Why don't you leave Tom alone?",
+"Sao bạn không để Tom được yên?",
+"T"
+],
+"fly": [
+"Some kinds of birds can't fly.",
+"Có một số loài chim không biết bay.",
+"T"
+],
+"car": [
+"He showed off his new car.",
+"Anh ấy đã khoe cái ô tô mới của mình.",
+"T"
+],
+"bus": [
+"Where do I get the bus?",
+"Tôi có thể đón xe buýt ở đâu?",
+"T"
+],
+"plane": [
+"We watched the plane fly over.",
+"Chúng tôi đã ngắm máy bay bay qua.",
+"T"
+],
+"boat": [
+"We named the boat the Half Moon.",
+"Chúng tôi đặt tên con thuyền là Nửa Vầng Trăng.",
+"T"
+],
+"bicycle": [
+"I go to school by bicycle.",
+"Tôi đi học bằng xe đạp.",
+"T"
+],
+"taxi": [
+"I had trouble getting a taxi.",
+"Tôi đã gặp khố khăn để kiếm một xe tắc xi.",
+"T"
+],
+"stop": [
+"If only it would stop raining!",
+"Ước gì trời tạnh mưa!",
+"T"
+],
+"drive": [
+"I advised him not to drive.",
+"Tôi đã khuyên anh ấy không lái xe.",
+"T"
+],
+"ride": [
+"I ride my bike to work.",
+"Tôi đi làm bằng xe đạp.",
+"T"
+],
+"travel": [
+"I want to travel around the world.",
+"Tôi muốn đi vòng quanh thế giới.",
+"T"
+],
+"arrive": [
+"How much longer before you arrive?",
+"Còn mấy tiếng nữa thì bạn đến vậy?",
+"T"
+],
+"map": [
+"The map is on the wall.",
+"Bản đồ ở trên tường.",
+"T"
+],
+"journey": [
+"Is she equal to a long journey?",
+"Cô ấy có chịu được một chuyến đi dài không?",
+"T"
+],
+"trip": [
+"How are you? Did you have a good trip?",
+"Bạn khỏe không? Bạn có 1 chuyến đi tốt chứ?",
+"T"
+],
+"far": [
+"I don't live far from here.",
+"Tôi không sống xa nơi đây].",
+"T"
+],
+"left": [
+"He left soon after our arrival.",
+"Nó về sớm sau khi chúng tôi tới.",
+"T"
+],
+"right": [
+"Winter is right around the corner.",
+"Mùa đông đang đến.",
+"T"
+],
+"way": [
+"I met Tom on the way.",
+"Tôi đã gặp Tom ở trên đường.",
+"T"
+],
+"bike": [
+"I ride a bike to work.",
+"Tôi đi làm bằng xe đạp.",
+"T"
+]
+}

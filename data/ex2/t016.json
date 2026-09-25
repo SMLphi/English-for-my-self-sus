@@ -1,0 +1,82 @@
+{
+"tonight": [
+"I'm going to sleep here tonight.",
+"Tôi sẽ ngủ ở đây tối nay.",
+"T"
+],
+"weekend": [
+"I have to work this weekend.",
+"Tôi phải làm việc vào tuần này.",
+"T"
+],
+"December": [
+"December is the last month of a year.",
+"Tháng mười hai là tháng cuối cùng của một năm.",
+"T"
+],
+"spring": [
+"Many plants bloom in the spring.",
+"Rất nhiều loài cây nở hoa vào mùa xuân.",
+"T"
+],
+"summer": [
+"Summer begins early in my country.",
+"Mùa hè bắt đầu sớm hơn ở đất nước tôi.",
+"T"
+],
+"autumn": [
+"I like to wear a sweater in autumn.",
+"Tôi thích mặc áo len vào mùa thu.",
+"T"
+],
+"winter": [
+"My family goes skiing every winter.",
+"Mùa đông nào gia đình tôi cũng đi trượt tuyết.",
+"T"
+],
+"past": [
+"But it's almost half past eleven.",
+"Nhưng mà bây giờ đã gần 11 giờ rưỡi rồi.",
+"T"
+],
+"o'clock": [
+"It's eight o'clock in the morning.",
+"Bây giờ là 8 giờ sáng.",
+"T"
+],
+"calendar": [
+"There is no fixed calendar.",
+"Không có lịch trình cố định.",
+"T"
+],
+"noon": [
+"I almost never drink beer before noon.",
+"Tôi hầu như không bao giờ uống bia trước buổi trưa.",
+"T"
+],
+"weekday": [
+"What is you typical weekday like?",
+"",
+"E"
+],
+"daily": [
+"These things happen on a daily basis.",
+"Những việc này xảy ra hằng ngày.",
+"T"
+],
+"diary": [
+"I used to keep a diary.",
+"",
+"E"
+],
+"appointment": [
+"I have an appointment at three.",
+"Tôi có một cuộc hẹn lúc ba giờ.",
+"T"
+],
+"approximately": [
+"Dogs breathe approximately 30 times a minute.",
+"",
+"E"
+]
+}

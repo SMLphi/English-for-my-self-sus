@@ -37,10 +37,9 @@ const $ = s => d.querySelector(s), $$ = s => [...d.querySelectorAll(s)];
 
   const tid = tids[0];
   // nhan dien dang tu: so nhieu, qua khu, so sanh, gach noi
-  const tk = s => E('dlgTokens')(s, 't01').filter(x => x.w).map(x => x.s + '>' + x.w.w).join(',');
-  const cases = [['She has blue eyes.', 'eyes>eye'], ['He is taller than me.', 'taller>tall'], ['She looks more beautiful.', 'looks>look,beautiful>beautiful'],
-                 ['He is tall and slim, fair-haired.', 'tall>tall,slim>slim,fair>fair,haired>hair'],
-                 ["That girl's boyfriend", 'girl>girl']];
+  const tk = s => E('dlgTokens')(s, tid).filter(x => x.w).map(x => x.s + '>' + x.w.w).join(',');
+  const cases = [['She has two brothers.', 'brothers>brother'], ["It is my grandmother's house.", 'grandmother>grandmother'],
+                 ['He came with his step-son.', 'son>son'], ['Their children are married.', 'children>child,married>married']];
   const wrong = cases.filter(([s, want]) => tk(s) !== want).map(([s, want]) => s + ' => ' + tk(s) + ' (can ' + want + ')');
   wrong.length ? fail('nhan dien tu: ' + wrong.join(' | ')) : okc('nhan dien dang tu: so nhieu, so sanh, gach noi, so huu');
 

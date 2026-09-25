@@ -12,6 +12,8 @@ CELL, COLS = 200, 10
 def main():
     meta = json.load(io.open(META, encoding='utf-8')) if os.path.exists(META) else {}
     os.makedirs(OUT, exist_ok=True)
+    for old in glob.glob(os.path.join(OUT, '*.jpg')):   # xoa sprite cua bo chu de cu
+        os.remove(old)
     book = {}
     for f in sorted(glob.glob(os.path.join(ROOT, 'data', 't*.json'))):
         d = json.load(io.open(f, encoding='utf-8'))

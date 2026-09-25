@@ -1,0 +1,67 @@
+{
+"moment": [
+"You're coming at the wrong moment.",
+"Cậu đến không đúng lúc rồi.",
+"T"
+],
+"second": [
+"Turn left at the second traffic light.",
+"Rẽ trái ở đèn giao thông thứ hai.",
+"T"
+],
+"minute": [
+"That clock is one minute fast.",
+"Cái đồng hồ đó chạy nhanh hơn một phút.",
+"T"
+],
+"hour": [
+"He turned up an hour later.",
+"Ông ấy quay lại một giờ sau đó.",
+"T"
+],
+"day": [
+"They must work 8 hours a day.",
+"Họ phải làm việc 8 giờ một ngày.",
+"T"
+],
+"week": [
+"I've been very busy this week.",
+"Tuần này tôi rất bận.",
+"T"
+],
+"year": [
+"We had much rain last year.",
+"Năm ngoái chúng tôi có nhiều mưa.",
+"T"
+],
+"half": [
+"You arrived half an hour early.",
+"Bạn đến sớm nửa tiếng.",
+"T"
+],
+"kilometre": [
+"A thousand metres is a kilometre.",
+"",
+"E"
+],
+"metre": [
+"It's a thirty-metre-long boat.",
+"",
+"E"
+],
+"quarter": [
+"A loss in third-quarter revenues was predicted.",
+"Sự sụt giảm 3/4 doanh thu đã được dữ báo trước.",
+"T"
+],
+"degree": [
+"I took my degree in biology.",
+"",
+"E"
+],
+"temperature": [
+"The temperature has suddenly dropped.",
+"Nhiệt độ đột nhiên giảm.",
+"T"
+]
+}

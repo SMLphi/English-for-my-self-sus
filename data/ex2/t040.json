@@ -1,0 +1,107 @@
+{
+"sail": [
+"Was he quick with the sail?",
+"",
+"E"
+],
+"sailing": [
+"Bad weather prevented them from sailing.",
+"",
+"E"
+],
+"tour": [
+"I'm going to take you on a tour.",
+"Tôi sẽ đưa bạn đi tham quan.",
+"T"
+],
+"currency": [
+"The exchange rates for foreign currency change daily.",
+"Tỷ giá hối đoái của ngoại tệ thay đổi mỗi ngày.",
+"T"
+],
+"deliver": [
+"We can deliver it this evening.",
+"",
+"E"
+],
+"confirm": [
+"I asked Tom to confirm my findings.",
+"Tôi đã yêu cầu Tom xác nhận những phát hiện của tôi.",
+"T"
+],
+"announcement": [
+"What did the announcement just say?",
+"",
+"E"
+],
+"fuel": [
+"The fuel level is below empty.",
+"",
+"E"
+],
+"ferry": [
+"The ferry has come into port.",
+"",
+"E"
+],
+"helicopter": [
+"The helicopter is flying very low.",
+"",
+"E"
+],
+"fare": [
+"Do you have a student fare?",
+"",
+"E"
+],
+"tyre": [
+"Could you check the tyre pressure?",
+"",
+"E"
+],
+"depart": [
+"What time does your plane depart?",
+"",
+"E"
+],
+"on foot": [
+"He goes to school on foot.",
+"Anh ấy đi bộ đến trường.",
+"T"
+],
+"due": [
+"His success was largely due to hard work.",
+"Sự thành công của anh ấy phần lớn là do làm việc chăm chỉ.",
+"T"
+],
+"arrival": [
+"I informed him of her arrival.",
+"Tôi đã thông báo cho anh ấy là cô ấy sẽ đến.",
+"T"
+],
+"border": [
+"The tourist bus crossed the border.",
+"",
+"E"
+],
+"departure": [
+"Have you arranged things for our departure?",
+"Bạn đã sắp xếp mọi thứ để chúng ta xuất phát chưa?",
+"T"
+],
+"destination": [
+"At last, we reached our destination.",
+"",
+"E"
+],
+"reservation": [
+"I would like to make a reservation for tonight.",
+"Tôi muốn đặt chỗ trước cho tối nay.",
+"T"
+],
+"delay": [
+"I must apologize for the delay.",
+"",
+"E"
+]
+}

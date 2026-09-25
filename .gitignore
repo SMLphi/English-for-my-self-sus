@@ -36,3 +36,5 @@ Thumbs.db
 desktop.ini
 # ban in doc duyet cua pick_dialogs.py, sinh lai duoc
 build/dlg_review/*.txt
+# PDF danh sach tu vung Cambridge (co ban quyen), tai lai bang: python build/parse_cambridge.py
+build/cambridge_raw/

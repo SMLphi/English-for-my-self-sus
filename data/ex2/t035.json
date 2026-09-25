@@ -1,0 +1,147 @@
+{
+"water": [
+"The water has been cut off.",
+"Nước bị cắt rồi.",
+"T"
+],
+"fire": [
+"She warmed herself by the fire.",
+"Cô ấy tự sưởi ấm bằng lửa.",
+"T"
+],
+"air": [
+"I would like an air-conditioned room.",
+"Tôi muốn một phòng có điều hoà không khí.",
+"T"
+],
+"north": [
+"The wind is coming from the north.",
+"Gió thổi từ hướng Bắc.",
+"T"
+],
+"south": [
+"Birds fly south in the winter.",
+"Chim bay về phía nam vào mùa đông.",
+"T"
+],
+"east": [
+"The sun rises in the east.",
+"Mặt trời mọc đằng đông.",
+"T"
+],
+"west": [
+"The wind is coming from the west.",
+"Gió thổi từ hướng Tây.",
+"T"
+],
+"world": [
+"In today's world, information spreads rapidly.",
+"Trong thế giới ngày nay, thông tin được lan truyền nhanh chóng.",
+"T"
+],
+"grow": [
+"When I grow up, I want to be a king.",
+"Khi tôi lớn, tôi muốn trở thành một ông vua.",
+"T"
+],
+"animal": [
+"An elephant is an enormous animal.",
+"Voi là một loài động vật to khổng lồ.",
+"T"
+],
+"bird": [
+"What a beautiful bird it is!",
+"Thật là một chú chim xinh đẹp!",
+"T"
+],
+"mouse": [
+"The mouse is eating the cat.",
+"Con chuột đang ăn con mèo.",
+"T"
+],
+"lion": [
+"I was surprised to see a lion on the street.",
+"Tôi đã rất ngạc nhiên khi thấy một con sư tử trên đường phố.",
+"T"
+],
+"elephant": [
+"The elephant won't move an inch.",
+"",
+"E"
+],
+"tree": [
+"The old tree has many branches.",
+"Cây cổ thụ có nhiều cành.",
+"T"
+],
+"flower": [
+"If I were a flower, I would be a sunflower.",
+"Nếu là hoa, tôi sẽ là hoa hướng dương.",
+"T"
+],
+"country": [
+"This is unknown country to me.",
+"Đó là một vùng mà tôi chưa đi qua.",
+"T"
+],
+"space": [
+"I cleared the room to make space.",
+"Tôi đã dọn dẹp căn phòng để tạo thêm không gian.",
+"T"
+],
+"star": [
+"The sun is a star.",
+"Mặt trời là một ngôi sao.",
+"T"
+],
+"climate": [
+"Climate change is largely caused by human activity.",
+"Biến đổi khí hậu phần nhiều là do hoạt động của con người.",
+"T"
+],
+"pollution": [
+"The teacher puts up an argument about pollution for the students.",
+"Cô giáo đưa ra một cuộc tranh luận về sự ô nhiễm cho các học sinh.",
+"T"
+],
+"nature": [
+"Beauty is a gift from nature.",
+"Vẻ đẹp là quà tặng từ thiên nhiên.",
+"T"
+],
+"environment": [
+"It's our responsibility to protect the environment.",
+"Chúng ta có trách nhiệm bảo vệ môi trường.",
+"T"
+],
+"stone": [
+"He cast a stone into the pond.",
+"Nó ném hòn đá xuống hồ.",
+"T"
+],
+"coast": [
+"I'm from the West Coast.",
+"Tôi đến từ bờ biển phía tây.",
+"T"
+],
+"wave": [
+"A cold wave hit this district.",
+"",
+"E"
+],
+"grass": [
+"People are sitting about on the grass.",
+"Người ngồi la liệt trên bãi cỏ.",
+"T"
+],
+"wild": [
+"It is wrong to catch wild animals.",
+"Việc bắt động vật hoang dã là sai trái.",
+"T"
+],
+"rabbit": [
+"The rabbit gets up on the chair.",
+"Con thỏ trèo lên ghế.",
+"T"
+]
+}

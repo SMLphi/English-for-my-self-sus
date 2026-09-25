@@ -63,10 +63,12 @@ def main():
         ids = [int(p['id'][2:]) for p in pick]
         words = {p['id']: p['words'] for p in pick}
     out = os.path.join(ROOT, 'data', 'dialogues', tid + '.json')
+    # dung lai ban dich da co o bat ky tep hoi thoai nao (ke ca bo chu de cu), uu tien tep dang ghi
     old = {}
-    if os.path.exists(out):
-        for d in json.load(io.open(out, encoding='utf-8'))['items']:
-            old[d['id']] = d
+    import glob as _g
+    for f in sorted(_g.glob(os.path.join(ROOT, 'data', 'dialogues', '*.json')), key=lambda f: f == out):
+        for d in json.load(io.open(f, encoding='utf-8'))['items']:
+            if d.get('vi') and all(d['vi']): old[d['id']] = d
     dias = get_dialogs()
     items = []
     for i in ids:
@@ -74,7 +76,7 @@ def main():
         en = [clean(u) for u in dias[i]]
         prev = old.get(key, {})
         vi = prev.get('vi') if prev.get('vi') and len(prev['vi']) == len(en) else [''] * len(en)
-        items.append({'id': key, 'title': prev.get('title', ''), 'words': words.get(key, prev.get('words', [])),
+        items.append({'id': key, 'title': prev.get('title', ''), 'words': words.get(key, []),
                       'en': en, 'vi': vi})
     if words:
         # de truoc kho sau: doan ngan, cau ngan len dau

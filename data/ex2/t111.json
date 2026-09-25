@@ -1,0 +1,152 @@
+{
+"household": [
+"My wife keeps the household accounts.",
+"Vợ tôi giữ sổ chi tiêu gia đình.",
+"C"
+],
+"anniversary": [
+"She forgot her first wedding anniversary!",
+"",
+"E"
+],
+"joy": [
+"This music brings me pure joy.",
+"Âm nhạc này mang đến cho tôi niềm vui thuần tuý.",
+"V"
+],
+"comfort": [
+"He worked hard in order that his family might live in comfort.",
+"Anh ta làm việc cực khổ để gia đình của anh ta có thể sống thoải mái.",
+"V"
+],
+"courage": [
+"You must build up your courage.",
+"Bạn phải bồi đắp lòng can đảm của mình.",
+"C"
+],
+"confidence": [
+"He has great confidence in himself.",
+"Anh ấy rất tự tin.",
+"V"
+],
+"sympathy": [
+"We felt sympathy for her.",
+"Chúng tôi đồng cảm với cô ấy.",
+"V"
+],
+"desire": [
+"We soon believe what we desire.",
+"Ta thường sớm tin vào điều ta mong muốn.",
+"C"
+],
+"lung": [
+"My uncle died of lung cancer.",
+"Chú tôi mất vì ung thư phổi.",
+"C"
+],
+"nerve": [
+"You must have some nerve to ignore me.",
+"Bạn cũng gan thật, dám phớt lờ tôi.",
+"C"
+],
+"wound": [
+"Words wound more easily than they heal.",
+"Lời nói gây tổn thương dễ dàng hơn là hàn gắn.",
+"V"
+],
+"infection": [
+"You seem to have an infection.",
+"Có vẻ bạn bị nhiễm trùng.",
+"C"
+],
+"cancer": [
+"Cancer kills thousands of people every year.",
+"Ung thư giết chết hàng ngàn người mỗi năm.",
+"V"
+],
+"surgery": [
+"Tom is recovering from a surgery.",
+"Tom đang hồi phục từ cuộc phẫu thuật.",
+"V"
+],
+"vitamin": [
+"Tom takes vitamin and mineral pills every day.",
+"Tom uống thuốc vitamin và khoáng chất mỗi ngày.",
+"V"
+],
+"debt": [
+"He needs money because he has debt.",
+"Anh ấy cần tiền vì đang nợ nần.",
+"T"
+],
+"loan": [
+"I want you to give me a loan.",
+"Tôi muốn bạn cho tôi vay tiền.",
+"T"
+],
+"income": [
+"I'm satisfied with my current income.",
+"Tôi thỏa mãn với thu nhập hiện tại của tôi.",
+"T"
+],
+"budget": [
+"We're facing a budget crisis.",
+"Chúng ta đang đối mặt với khủng hoảng ngân sách.",
+"T"
+],
+"investment": [
+"She benefited from the sound investment.",
+"",
+"E"
+],
+"stock": [
+"There was a rapid decline in stock prices.",
+"Đã có một sự sụt giảm nhanh chóng trong giá cổ phiếu.",
+"T"
+],
+"delivery": [
+"Please send this by special delivery.",
+"",
+"E"
+],
+"guarantee": [
+"I want a money back guarantee.",
+"",
+"E"
+],
+"expense": [
+"I'm sorry to put you to such great expense.",
+"Tôi rất tiếc vì đã để bạn tốn nhiều tiền.",
+"T"
+],
+"fee": [
+"The lawyer's fee was very high.",
+"",
+"E"
+],
+"pension": [
+"It was hard for him to live on his small pension.",
+"Việc sống bằng số tiền lương hưu ít ỏi đối với ông ấy là một việc khó khăn.",
+"T"
+],
+"strike": [
+"The workers are considering going on strike.",
+"Các công nhân đang cân nhắc việc đình công.",
+"T"
+],
+"firm": [
+"He worked day and night in the interest of his firm.",
+"Anh ấy làm việc ngày đêm vì lợi ích của xí nghiệp mình.",
+"T"
+],
+"sector": [
+"The public sector dominates economic activity.",
+"",
+"E"
+],
+"agenda": [
+"Those agenda items were discussed together.",
+"",
+"E"
+]
+}

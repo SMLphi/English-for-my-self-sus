@@ -1,0 +1,142 @@
+{
+"home": [
+"There is no place like home.",
+"Không đâu bằng nhà mình.",
+"C"
+],
+"house": [
+"Yesterday, a thief entered the house.",
+"Hôm qua, một tên trộm đã đột nhập vào nhà.",
+"V"
+],
+"flat": [
+"I just bought a 40 inch flat screen television.",
+"Tôi mới mua một cái ti vi màn hình phẳng bốn mươi in.",
+"T"
+],
+"apartment": [
+"I wasn't allowed to leave my apartment.",
+"Tôi không được phép rời khỏi căn hộ của tôi.",
+"V"
+],
+"room": [
+"Can I eat in my room?",
+"Tôi ăn trong phòng mình có được không?",
+"V"
+],
+"bedroom": [
+"My bedroom is quiet and comfortable.",
+"Phòng ngủ của tôi yên tĩnh và thoải mái.",
+"V"
+],
+"bathroom": [
+"I use the internet in the bathroom.",
+"Tôi dùng internet trong phòng tắm.",
+"V"
+],
+"floor": [
+"They really slept on the floor.",
+"Họ thật sự đã ngủ trên sàn nhà.",
+"C"
+],
+"wall": [
+"The car crashed into the wall.",
+"Chiếc xe đâm vào tường.",
+"C"
+],
+"door": [
+"Will you please shut the door?",
+"Bạn đóng cửa giúp tôi được không?",
+"V"
+],
+"window": [
+"He came in through the window.",
+"Anh ấy đã vào bằng cửa sổ.",
+"V"
+],
+"garden": [
+"In the garden, onions are growing.",
+"Trong vườn, hành tây đang phát triển.",
+"T"
+],
+"table": [
+"The silver is on the table.",
+"Bộ đồ bạc ở trên bàn.",
+"C"
+],
+"chair": [
+"The cat is on the chair.",
+"Con mèo ở trên ghế.",
+"V"
+],
+"bed": [
+"I have to go to bed.",
+"Tôi phải đi ngủ.",
+"V"
+],
+"desk": [
+"What a heavy desk this is!",
+"Cái bàn này nặng thế!",
+"V"
+],
+"toilet": [
+"Where can I get toilet paper?",
+"Tôi có thể lấy giấy vệ sinh ở đâu?",
+"V"
+],
+"address": [
+"Write your name and address, please.",
+"Xin hãy viết tên và địa chỉ của bạn.",
+"V"
+],
+"key": [
+"Where did I leave the key?",
+"Mình để chìa khoá ở đâu nhỉ?",
+"V"
+],
+"upstairs": [
+"I could hear people moving about upstairs.",
+"Tôi có thể nghe thấy tiếng mọi người đi lại trên lầu.",
+"V"
+],
+"downstairs": [
+"Go downstairs and have a wash.",
+"Xuống nhà rửa mặt đi.",
+"C"
+],
+"plant": [
+"What kind of oranges do you plant here?",
+"Anh đang trồng loại cam nào vậy?",
+"T"
+],
+"live": [
+"She used to live with him.",
+"Cô ấy đã từng sống với hắn.",
+"T"
+],
+"bath": [
+"I feel clean after taking a bath.",
+"Tôi cảm thấy sạch sẽ sau khi tắm xong.",
+"T"
+],
+"line": [
+"Let's start at the second-to-last line.",
+"Hãy bắt đầu ở dòng kế cuối.",
+"T"
+],
+"machine": [
+"Do you know how this machine operates?",
+"Cậu có biết cái máy này vận hành như thế nào không?",
+"T"
+],
+"stay": [
+"I'll stay in the house today.",
+"Hôm nay tôi sẽ ở nhà.",
+"T"
+],
+"mirror": [
+"She looked at herself in the mirror.",
+"Cô ấy đã ngắm nhìn mình trong gương.",
+"V"
+]
+}

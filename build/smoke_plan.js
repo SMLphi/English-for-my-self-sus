@@ -59,8 +59,10 @@ const okc = m => { passed++; console.log('  ok  ' + m); };
           : fail('so chuyen de khong tang theo muc tieu');
 
   // thu tu chu de phai khac nhau giua hai ky thi
-  (X.toeic.topicOrder[0] !== X.ielts.topicOrder[0])
-    ? okc('thu tu chu de khac nhau theo ky thi (TOEIC bat dau ' + X.toeic.topicOrder[0] + ', IELTS ' + X.ielts.topicOrder[0] + ')')
+  // hai ky thi deu mo dau bang tu nen tang A1, A2; chu de chinh sau do phai khac nhau
+  const G = E('GROUP_BY_ID'), firstCam = o => o.find(id => G.get(id).kind === 'cambridge');
+  (firstCam(X.toeic.topicOrder) !== firstCam(X.ielts.topicOrder) && X.toeic.topicOrder.every(id => G.has(id)) && X.ielts.topicOrder.every(id => G.has(id)))
+    ? okc('thu tu chu de khac nhau theo ky thi (TOEIC uu tien ' + G.get(firstCam(X.toeic.topicOrder)).name + ', IELTS ' + G.get(firstCam(X.ielts.topicOrder)).name + ')')
     : fail('hai ky thi dung chung thu tu chu de');
 
   // luu va hien thi lo trinh

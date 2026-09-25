@@ -15,7 +15,7 @@ def load_topics():
     for f in sorted(glob.glob(os.path.join(ROOT, 'data', 't*.json'))):
         d = json.load(io.open(f, encoding='utf-8'))
         tid = d['id']
-        icon = TOPIC_DEFAULT.get(tid, '📘')
+        icon = d.get('icon') or TOPIC_DEFAULT.get(tid, '📘')
         ex2 = load_ex2(tid)
         seen, words = set(), []
         for a in d['words']:
@@ -35,7 +35,8 @@ def load_topics():
             while row and row[-1] == '':
                 row.pop()
             words.append(row)
-        topics.append({'id': tid, 'name': d['name'], 'icon': icon, 'words': words})
+        topics.append({'id': tid, 'name': d['name'], 'icon': icon, 'group': d.get('group', ''),
+                       'level': d.get('level', ''), 'words': words})
     return topics
 
 def main():
@@ -62,13 +63,16 @@ def main():
     photos = json.load(io.open(pf, encoding='utf-8')) if os.path.exists(pf) else {}
     # hoi thoai theo chu de (DailyDialog, CC BY-NC-SA 4.0): {tid: [{id,title,en[],vi[]}]}
     dialogs = {}
-    for df in sorted(glob.glob(os.path.join(ROOT, 'data', 'dialogues', 't*.json'))):
+    for df in sorted(glob.glob(os.path.join(ROOT, 'data', 'dialogues', '[gt]*.json'))):
         doc = json.load(io.open(df, encoding='utf-8'))
         dialogs[os.path.basename(df)[:-5]] = [
             {'id': d['id'], 'title': d['title'], 'words': d.get('words', []), 'en': d['en'], 'vi': d['vi']}
             for d in doc['items']]
-    payload = json.dumps({'topics': topics, 'photos': photos, 'grammar': grammar, 'exam': exam, 'ox': ox,
-                          'dialogs': dialogs},
+    # nhom chu de (Cambridge Topic Lists + nhom theo cap do Oxford)
+    gp = os.path.join(ROOT, 'data', 'groups.json')
+    groups = json.load(io.open(gp, encoding='utf-8')) if os.path.exists(gp) else []
+    payload = json.dumps({'topics': topics, 'groups': groups, 'photos': photos, 'grammar': grammar, 'exam': exam,
+                          'ox': ox, 'dialogs': dialogs},
                          ensure_ascii=False, separators=(',', ':'))
 
     shell = io.open(os.path.join(ROOT, 'app', 'shell.html'), encoding='utf-8').read()
@@ -81,7 +85,7 @@ def main():
     io.open(dst, 'w', encoding='utf-8', newline='').write(out)
 
     kb = len(out.encode('utf-8')) / 1024
-    print(f'{len(topics)} chu de · {total} tu · dist/index.html {kb:.0f} KB')
+    print(f'{len(groups)} nhom · {len(topics)} bai · {total} tu · dist/index.html {kb:.0f} KB')
     n2 = sum(1 for tp in topics for w in tp['words'] if len(w) > 10 and w[10])
     nvi = sum(1 for tp in topics for w in tp['words'] if len(w) > 11 and w[11])
     print(f'cau vi du thu hai: {n2}/{total} tu (co ban dich: {nvi})')

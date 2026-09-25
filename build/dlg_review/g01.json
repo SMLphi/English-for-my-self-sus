@@ -1,0 +1,22 @@
+{
+ "reject": [
+  "dd3015",
+  "dd127",
+  "dd2109",
+  "dd154",
+  "dd2365",
+  "dd2496",
+  "dd1278"
+ ],
+ "skip": {},
+ "pick": [],
+ "sense": {
+  "baby": "\\bbab(y|ies)\\b(?!-smooth)",
+  "man": "\\bm[ae]n\\b(?!!)",
+  "miss": "\\bmiss(es|ed|ing)? (you|him|her|them|my|your|his|our|home|each other)",
+  "love": "\\b(i|we|you|they|he|she) love\\b|\\bin love\\b|\\blove (you|him|her)\\b|\\bmy love\\b",
+  "group": "\\b(a|our|the) group of (friends|people|students)|\\bfriends? group",
+  "guest": "\\bguests?\\b",
+  "friendly": "\\bfriendly\\b"
+ }
+}

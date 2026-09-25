@@ -1,0 +1,142 @@
+{
+"land": [
+"We are from a far away land.",
+"Chúng tôi tới từ một hòn đảo rất xa.",
+"T"
+],
+"mountain": [
+"We climbed up the steep mountain.",
+"Chúng tôi trèo lên ngọn nói dốc đứng.",
+"T"
+],
+"island": [
+"Our boat approached the small island.",
+"",
+"E"
+],
+"beach": [
+"Guess what I found on the beach.",
+"Coi tôi tìm được gì ở bãi biển nè.",
+"T"
+],
+"sea": [
+"He went to sea to swim.",
+"Nó ra biển bơi.",
+"T"
+],
+"river": [
+"The river flows under the bridge.",
+"Dòng sông chảy qua cây cầu này.",
+"T"
+],
+"area": [
+"You're not supposed to be in this area.",
+"Khu vực này không dành cho bạn.",
+"T"
+],
+"village": [
+"Our school is in this village.",
+"Trường của chúng tôi ở trong làng này.",
+"T"
+],
+"sky": [
+"The bird is in the sky.",
+"Chú chim lượn trên bầu trời.",
+"T"
+],
+"earth": [
+"It was believed that the earth was flat.",
+"Trái đất từng được tin rằng nó là một mặt phẳng.",
+"T"
+],
+"rock": [
+"Rock is the music of the young.",
+"Rock là loại nhạc của giới trẻ.",
+"T"
+],
+"hill": [
+"They admired the fine view from the hill.",
+"Họ chiêm ngưỡng cảnh đẹp từ ngọn đồi.",
+"T"
+],
+"valley": [
+"We went down to the valley where the village is.",
+"Chúng tôi đi xuống thung lũng nơi có ngôi làng.",
+"T"
+],
+"ocean": [
+"I would also like to see the ocean.",
+"Tôi cũng muốn nhìn thấy đại dương.",
+"T"
+],
+"lake": [
+"There were some boats on the lake.",
+"Có vài chiếc thuyền trên hồ.",
+"T"
+],
+"forest": [
+"The forest was covered with snow.",
+"Khu rừng bị tuyết che phủ.",
+"T"
+],
+"desert": [
+"A vast desert lay before us.",
+"",
+"E"
+],
+"field": [
+"That is not my field of work.",
+"Đó không phải lĩnh vực công việc của tôi.",
+"T"
+],
+"wood": [
+"The box is made of wood.",
+"Cái hộp đó được làm từ gỗ.",
+"T"
+],
+"railway": [
+"From here to the railway station is half an hour's walk.",
+"Đi bộ từ đây đến nhà ga mất nửa tiếng.",
+"T"
+],
+"region": [
+"Do you live in this region?",
+"Bạn có sống ở khu vực này không?",
+"T"
+],
+"sand": [
+"I got some sand in my eye.",
+"Có ít cát trong mắt tôi.",
+"T"
+],
+"cliff": [
+"The cliff hangs over the road.",
+"",
+"E"
+],
+"waterfall": [
+"I saw a beautiful waterfall there.",
+"",
+"E"
+],
+"scenery": [
+"The scenery was beautiful beyond description.",
+"Phong cảnh đẹp hơn cả sự mô tả.",
+"T"
+],
+"canal": [
+"Do I need a root canal?",
+"",
+"E"
+],
+"port": [
+"We began to sail in the direction of the port.",
+"Chúng tôi bắt đầu lái thuyền về hướng cảng.",
+"T"
+],
+"stream": [
+"The ball rolled into the stream.",
+"",
+"E"
+]
+}

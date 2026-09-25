@@ -1,0 +1,127 @@
+{
+"small": [
+"He brought her a small gift.",
+"Nó đã mua cho cô ấy một món quà nhỏ.",
+"T"
+],
+"special": [
+"I have nothing special to say.",
+"Tôi không có gì đặc biệt để nói.",
+"T"
+],
+"sure": [
+"I'm sure Tom agrees with me.",
+"Tôi chắc chắn là Tom đồng tình với tôi.",
+"T"
+],
+"terrible": [
+"Something terrible is going to happen.",
+"Cái gì đó rất kinh khủng sắp xảy ra.",
+"T"
+],
+"true": [
+"What you told me wasn't true.",
+"Những gì mày đã nói với tao không phải là sự thật.",
+"T"
+],
+"useful": [
+"How are cows and chickens useful to us?",
+"Bò và gà có hữu ích gì đối với chúng ta?",
+"T"
+],
+"wonderful": [
+"My mother was a wonderful person.",
+"Mẹ tôi là một người tuyệt vời.",
+"T"
+],
+"wrong": [
+"It is me that is wrong.",
+"Tại vì tôi nhầm hay là điều đó sai vậy?",
+"T"
+],
+"slim": [
+"He was tall, slim and strong.",
+"Anh ấy cao, mảnh khảnh và khoẻ mạnh.",
+"C"
+],
+"alone": [
+"I don't like to be alone.",
+"Tôi không thích ở một mình đâu.",
+"V"
+],
+"nervous": [
+"Do insects have a nervous system?",
+"Côn trùng có hệ thần kinh không?",
+"V"
+],
+"worried": [
+"I wonder why she is so worried.",
+"Tôi tự hỏi vì sao cô ấy lại lo lắng đến vậy.",
+"V"
+],
+"surprised": [
+"I was too surprised to speak.",
+"Tôi đã không thể nói nên lời vì quá ngạc nhiên.",
+"V"
+],
+"serious": [
+"Getting married is a serious matter.",
+"Kết hôn là một vấn đề quan trọng.",
+"V"
+],
+"rude": [
+"It is rude to point at people.",
+"Chỉ vào người khác là bất lịch sự.",
+"V"
+],
+"lazy": [
+"I'm too lazy to do my homework.",
+"Tôi lười làm bài quá.",
+"V"
+],
+"heavy": [
+"Light is the opposite of heavy.",
+"Nhẹ là sự trái lại của nặng.",
+"T"
+],
+"clear": [
+"Now it's all clear to me.",
+"Bây giờ nó làm sạch tất cả cho tôi.",
+"T"
+],
+"able": [
+"Were you able to find her?",
+"Bạn đã tìm được cô ấy chưa?",
+"T"
+],
+"awful": [
+"I met with an awful accident.",
+"",
+"E"
+],
+"brilliant": [
+"A brilliant future lay before him.",
+"",
+"E"
+],
+"careful": [
+"She should have been more careful.",
+"Cô ấy đáng lẽ phải cẩn thận hơn.",
+"T"
+],
+"crazy": [
+"The people here are crazy for football.",
+"Mọi người đây phát điên vì bóng đá.",
+"T"
+],
+"excellent": [
+"The tea we had there was excellent.",
+"Trà mà chúng tôi đã uống ở đó rất tuyệt vời.",
+"T"
+],
+"intelligent": [
+"Is there intelligent life on other planets?",
+"Trên hành tinh khác có sinh vật có trí tuệ không?",
+"T"
+]
+}

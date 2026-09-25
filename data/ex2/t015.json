@@ -1,0 +1,87 @@
+{
+"age": [
+"As people age, they develop wrinkles.",
+"Khi người ta có tuổi, các nếp nhăn xuất hiện.",
+"C"
+],
+"date": [
+"Are you ready for your big date?",
+"Bạn đã sẵn sàng cho ngày hẹn hò quan trọng của mình chưa?",
+"T"
+],
+"birthday": [
+"Perhaps she doesn't remember my birthday.",
+"Có lẽ cô ấy không nhớ sinh nhật tôi.",
+"V"
+],
+"holiday": [
+"It was a great holiday, but too short.",
+"Đó là một kỳ nghỉ tuyệt vời, nhưng quá ngắn.",
+"T"
+],
+"meeting": [
+"Our meeting was just an accident.",
+"Cuộc gặp của chúng tôi chỉ là tình cờ.",
+"T"
+],
+"time": [
+"I was trying to kill time.",
+"Tôi đang cố gắng giết thời gian.",
+"T"
+],
+"month": [
+"I changed my address last month.",
+"Tôi đã thay đổi địa chỉ của tôi vào tháng trước.",
+"T"
+],
+"century": [
+"The species will be made extinct by the end of this century.",
+"Nhiều loài sẽ bị tuyệt chủng vào cuối thế kỷ này.",
+"T"
+],
+"clock": [
+"The clock is five minutes fast.",
+"Đồng hồ chạy nhanh năm phút.",
+"T"
+],
+"morning": [
+"Yesterday morning I saw many birds.",
+"Hôm qua tôi đã trông thấy rất nhiều chim.",
+"T"
+],
+"afternoon": [
+"It's two o'clock in the afternoon.",
+"Bây giờ là hai giờ chiều.",
+"T"
+],
+"evening": [
+"What did you do yesterday evening?",
+"Tối hôm qua bạn làm gì?",
+"T"
+],
+"night": [
+"She kept crying all night long.",
+"Cô ấy đã khóc suốt đêm.",
+"T"
+],
+"midnight": [
+"The bar is open till midnight.",
+"Quán bar mở cửa đến nửa đêm.",
+"T"
+],
+"today": [
+"Today I went to the dentist's.",
+"Hôm nay tôi đã đi đến gặp nha sỹ.",
+"T"
+],
+"tomorrow": [
+"It is likely to rain tomorrow.",
+"Trời gần như là sẽ mưa vào ngày mai.",
+"T"
+],
+"yesterday": [
+"I went to the zoo yesterday.",
+"Tôi đã đi sở thú hôm qua.",
+"T"
+]
+}

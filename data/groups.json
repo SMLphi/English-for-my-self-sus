@@ -1,0 +1,442 @@
+[
+ {
+  "id": "g01",
+  "kind": "cambridge",
+  "name": "Gia đình & bạn bè",
+  "en": "Family and Friends",
+  "icon": "👨‍👩‍👧",
+  "lessons": [
+   "t001",
+   "t002"
+  ],
+  "count": 32
+ },
+ {
+  "id": "g02",
+  "kind": "cambridge",
+  "name": "Màu sắc",
+  "en": "Colours",
+  "icon": "🎨",
+  "lessons": [
+   "t003"
+  ],
+  "count": 16
+ },
+ {
+  "id": "g03",
+  "kind": "cambridge",
+  "name": "Quần áo & phụ kiện",
+  "en": "Clothes and Accessories",
+  "icon": "👕",
+  "lessons": [
+   "t004",
+   "t005",
+   "t006"
+  ],
+  "count": 73
+ },
+ {
+  "id": "g04",
+  "kind": "cambridge",
+  "name": "Đồ ăn & đồ uống",
+  "en": "Food and Drink",
+  "icon": "🍜",
+  "lessons": [
+   "t007",
+   "t008",
+   "t009",
+   "t010"
+  ],
+  "count": 97
+ },
+ {
+  "id": "g05",
+  "kind": "cambridge",
+  "name": "Nhà cửa",
+  "en": "House and Home",
+  "icon": "🏠",
+  "lessons": [
+   "t011",
+   "t012",
+   "t013"
+  ],
+  "count": 83
+ },
+ {
+  "id": "g06",
+  "kind": "cambridge",
+  "name": "Thiết bị điện",
+  "en": "Appliances",
+  "icon": "🔌",
+  "lessons": [
+   "t014"
+  ],
+  "count": 19
+ },
+ {
+  "id": "g07",
+  "kind": "cambridge",
+  "name": "Thời gian",
+  "en": "Time",
+  "icon": "⏰",
+  "lessons": [
+   "t015",
+   "t016"
+  ],
+  "count": 33
+ },
+ {
+  "id": "g08",
+  "kind": "cambridge",
+  "name": "Thời tiết",
+  "en": "Weather",
+  "icon": "🌦️",
+  "lessons": [
+   "t017"
+  ],
+  "count": 29
+ },
+ {
+  "id": "g09",
+  "kind": "cambridge",
+  "name": "Đo lường",
+  "en": "Measurements",
+  "icon": "📏",
+  "lessons": [
+   "t018"
+  ],
+  "count": 13
+ },
+ {
+  "id": "g10",
+  "kind": "cambridge",
+  "name": "Sức khoẻ, y tế & tập luyện",
+  "en": "Health, Medicine and Exercise",
+  "icon": "🩺",
+  "lessons": [
+   "t019",
+   "t020",
+   "t021"
+  ],
+  "count": 82
+ },
+ {
+  "id": "g11",
+  "kind": "cambridge",
+  "name": "Giáo dục",
+  "en": "Education",
+  "icon": "🎓",
+  "lessons": [
+   "t022",
+   "t023",
+   "t024"
+  ],
+  "count": 66
+ },
+ {
+  "id": "g12",
+  "kind": "cambridge",
+  "name": "Ngôn ngữ",
+  "en": "Language",
+  "icon": "🗣️",
+  "lessons": [
+   "t025"
+  ],
+  "count": 24
+ },
+ {
+  "id": "g13",
+  "kind": "cambridge",
+  "name": "Công việc & nghề nghiệp",
+  "en": "Work and Jobs",
+  "icon": "💼",
+  "lessons": [
+   "t026",
+   "t027",
+   "t028"
+  ],
+  "count": 85
+ },
+ {
+  "id": "g14",
+  "kind": "cambridge",
+  "name": "Mua sắm",
+  "en": "Shopping",
+  "icon": "🛒",
+  "lessons": [
+   "t029",
+   "t030"
+  ],
+  "count": 43
+ },
+ {
+  "id": "g15",
+  "kind": "cambridge",
+  "name": "Dịch vụ",
+  "en": "Services",
+  "icon": "🛎️",
+  "lessons": [
+   "t031"
+  ],
+  "count": 10
+ },
+ {
+  "id": "g16",
+  "kind": "cambridge",
+  "name": "Địa điểm: toà nhà",
+  "en": "Places: Buildings",
+  "icon": "🏢",
+  "lessons": [
+   "t032"
+  ],
+  "count": 7
+ },
+ {
+  "id": "g17",
+  "kind": "cambridge",
+  "name": "Địa điểm: thành phố",
+  "en": "Places: Town and City",
+  "icon": "🏙️",
+  "lessons": [
+   "t033"
+  ],
+  "count": 19
+ },
+ {
+  "id": "g18",
+  "kind": "cambridge",
+  "name": "Địa điểm: nông thôn",
+  "en": "Places: Countryside",
+  "icon": "🌄",
+  "lessons": [
+   "t034"
+  ],
+  "count": 28
+ },
+ {
+  "id": "g19",
+  "kind": "cambridge",
+  "name": "Thế giới tự nhiên",
+  "en": "The Natural World",
+  "icon": "🌍",
+  "lessons": [
+   "t035",
+   "t036"
+  ],
+  "count": 57
+ },
+ {
+  "id": "g20",
+  "kind": "cambridge",
+  "name": "Môi trường",
+  "en": "Environment",
+  "icon": "🌱",
+  "lessons": [
+   "t037"
+  ],
+  "count": 7
+ },
+ {
+  "id": "g21",
+  "kind": "cambridge",
+  "name": "Du lịch & giao thông",
+  "en": "Travel and Transport",
+  "icon": "✈️",
+  "lessons": [
+   "t038",
+   "t039",
+   "t040"
+  ],
+  "count": 67
+ },
+ {
+  "id": "g22",
+  "kind": "cambridge",
+  "name": "Thể thao",
+  "en": "Sport",
+  "icon": "⚽",
+  "lessons": [
+   "t041",
+   "t042"
+  ],
+  "count": 51
+ },
+ {
+  "id": "g23",
+  "kind": "cambridge",
+  "name": "Sở thích & thời gian rảnh",
+  "en": "Hobbies and Leisure",
+  "icon": "🎲",
+  "lessons": [
+   "t043"
+  ],
+  "count": 22
+ },
+ {
+  "id": "g24",
+  "kind": "cambridge",
+  "name": "Giải trí & truyền thông",
+  "en": "Entertainment and Media",
+  "icon": "🎬",
+  "lessons": [
+   "t044",
+   "t045"
+  ],
+  "count": 51
+ },
+ {
+  "id": "g25",
+  "kind": "cambridge",
+  "name": "Giao tiếp & công nghệ",
+  "en": "Communication and Technology",
+  "icon": "💻",
+  "lessons": [
+   "t046",
+   "t047"
+  ],
+  "count": 36
+ },
+ {
+  "id": "g26",
+  "kind": "cambridge",
+  "name": "Giấy tờ & văn bản",
+  "en": "Documents and Texts",
+  "icon": "📄",
+  "lessons": [
+   "t048"
+  ],
+  "count": 21
+ },
+ {
+  "id": "g27",
+  "kind": "cambridge",
+  "name": "Cảm xúc, ý kiến & trải nghiệm",
+  "en": "Personal Feelings, Opinions and Experiences",
+  "icon": "💭",
+  "lessons": [
+   "t049",
+   "t050",
+   "t051",
+   "t052",
+   "t053"
+  ],
+  "count": 124
+ },
+ {
+  "id": "g28",
+  "kind": "oxford",
+  "name": "Từ thông dụng A1",
+  "en": "Oxford 3000 / Cambridge A1",
+  "icon": "🔤",
+  "lessons": [
+   "t054",
+   "t055",
+   "t056",
+   "t057",
+   "t058",
+   "t059",
+   "t060",
+   "t061",
+   "t062",
+   "t063",
+   "t064",
+   "t065",
+   "t066",
+   "t067",
+   "t068",
+   "t069"
+  ],
+  "count": 389
+ },
+ {
+  "id": "g29",
+  "kind": "oxford",
+  "name": "Từ thông dụng A2",
+  "en": "Oxford 3000 / Cambridge A2",
+  "icon": "📗",
+  "lessons": [
+   "t070",
+   "t071",
+   "t072",
+   "t073",
+   "t074",
+   "t075",
+   "t076",
+   "t077",
+   "t078",
+   "t079",
+   "t080",
+   "t081",
+   "t082",
+   "t083",
+   "t084",
+   "t085",
+   "t086",
+   "t087",
+   "t088",
+   "t089"
+  ],
+  "count": 483
+ },
+ {
+  "id": "g30",
+  "kind": "oxford",
+  "name": "Từ thông dụng B1",
+  "en": "Oxford 3000 / Cambridge B1",
+  "icon": "📘",
+  "lessons": [
+   "t090",
+   "t091",
+   "t092",
+   "t093",
+   "t094",
+   "t095",
+   "t096",
+   "t097",
+   "t098",
+   "t099",
+   "t100",
+   "t101",
+   "t102",
+   "t103",
+   "t104",
+   "t105",
+   "t106",
+   "t107",
+   "t108",
+   "t109",
+   "t110"
+  ],
+  "count": 573
+ },
+ {
+  "id": "g31",
+  "kind": "oxford",
+  "name": "Từ thông dụng B2",
+  "en": "Oxford 3000 / Cambridge B2",
+  "icon": "📙",
+  "lessons": [
+   "t111",
+   "t112",
+   "t113",
+   "t114",
+   "t115",
+   "t116",
+   "t117",
+   "t118",
+   "t119",
+   "t120",
+   "t121",
+   "t122",
+   "t123",
+   "t124",
+   "t125",
+   "t126",
+   "t127",
+   "t128",
+   "t129",
+   "t130"
+  ],
+  "count": 555
+ }
+]

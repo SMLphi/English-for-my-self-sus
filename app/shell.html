@@ -347,6 +347,13 @@ h3 .dw{pointer-events:none}
 .voice-warn .btn{flex:none;margin-left:auto}
 .dlg-voices{font-size:12.5px;color:var(--muted);margin:-6px 0 14px}
 .dlg-voices a{color:var(--accent-ink)}
+.tgroup{margin-bottom:26px}
+.tgroup-h{display:flex;align-items:center;gap:12px;margin-bottom:11px}
+.tgroup-ico{font-size:28px;line-height:1;flex:none}
+.tgroup-h h2{font-size:19px}
+.tgroup-meta{font-size:12.5px;color:var(--muted)}
+.tgroup .topic-dlg{flex:none}
+.lvl-r{font-weight:600;color:var(--accent-ink)}
 .early-note{font-size:12.5px;color:var(--muted);text-align:center;margin:-4px 0 10px}
 .pager{display:flex;align-items:center;justify-content:center;gap:5px;flex-wrap:wrap;margin:22px 0 4px}
 .pg{min-width:38px;height:38px;padding:0 9px;border-radius:10px;font-family:var(--mono);font-weight:500;font-size:14px;color:var(--ink-2);background:var(--surface);border:1px solid var(--line)}
@@ -404,13 +411,18 @@ const BY_ID=new Map();
 const TOPICS=DATA.topics;
 TOPICS.forEach(tp=>{
   tp.words.forEach((a,i)=>{
-    const o={id:tp.id+':'+a[0],t:tp.id,w:a[0],pos:a[1],ipa:a[2],vi:a[3],forms:a[4],
+    const o={id:tp.id+':'+a[0],t:tp.id,g:tp.group,w:a[0],pos:a[1],ipa:a[2],vi:a[3],forms:a[4],
              ex:a[5],exvi:a[6],syn:a[7],pic:a[8]||tp.icon,hook:a[9]||'',
              ex2:a[10]||'',ex2vi:a[11]||'',ex2src:a[12]||'',cefr:OX[a[0].toLowerCase().replace(/[‘’]/g,"'").replace(/\s+/g,' ')]||''};
     WORDS.push(o);BY_ID.set(o.id,o);
   });
 });
 const TOPIC_BY_ID=new Map(TOPICS.map(t=>[t.id,t]));
+// Nhóm chủ đề: 27 chủ đề trong Topic Lists của Cambridge English (A2 Key, B1 Preliminary)
+// + nhóm từ thông dụng theo cấp độ Oxford 3000 cho từ không thuộc chủ đề nào
+const GROUPS=DATA.groups||[];
+const GROUP_BY_ID=new Map(GROUPS.map(g=>[g.id,g]));
+const lessonTitle=tp=>{ const g=GROUP_BY_ID.get(tp.group); return g&&g.kind==='oxford'?g.name+' · '+tp.name:tp.name; };
 const PHOTOS=DATA.photos||{};
 const GRAMMAR=DATA.grammar||[];
 const GPOINTS=[]; GRAMMAR.forEach(g=>g.points.forEach(p=>{p.group=g.group;p.gicon=g.icon;GPOINTS.push(p);}));
@@ -457,6 +469,22 @@ function saveS(){lsSet(LS_S,S);}
 /* P[id] = {r:reps, i:interval, e:ease, d:dueDay, l:lapses, n:attempts, c:correct, t:lastTs,
             k:{read,listen,speak,write} số lần đúng theo kỹ năng} */
 let P = lsGet(LS_P,{});
+// Tiến độ lưu theo "mã chủ đề:từ". Khi chia lại chủ đề, đổi khoá sang bài mới chứa đúng từ đó.
+const W2ID=new Map(WORDS.map(w=>[w.w.toLowerCase(),w.id]));
+function migrateProgress(src){
+  let moved=0;
+  for(const k of Object.keys(src)){
+    if(k.startsWith('G:')||BY_ID.has(k)) continue;
+    const i=k.indexOf(':'); if(i<0) continue;
+    const w=k.slice(i+1).toLowerCase();
+    const nid=W2ID.get(w)||W2ID.get(w.replace(/s$/,''));
+    if(!nid) continue;
+    if(!src[nid]||(src[k].t||0)>(src[nid].t||0)) src[nid]=src[k];
+    delete src[k]; moved++;
+  }
+  return moved;
+}
+if(migrateProgress(P)) lsSet(LS_P,P);
 let LOG = lsGet(LS_L,{});     // {dayNum:{n:newCount, r:reviewCount, c:correct, a:attempts}}
 const dirty=new Set();
 let saveTimer=null;
@@ -477,6 +505,7 @@ let DB=null, cloudState='off';
     const rem = doc && doc.data ? doc.data : null;
     if(rem && rem.P){
       let merged=0;
+      migrateProgress(rem.P);
       for(const [k,v] of Object.entries(rem.P)){
         if(!P[k] || (v.t||0) > (P[k].t||0)){P[k]=v;merged++;}
       }
@@ -791,7 +820,7 @@ function viewHome(root){
     <div>
       <div class="eyebrow">${hello}</div>
       <h2>${c.due?`${c.due} từ chờ ôn hôm nay`:c.nw?'Sẵn sàng học từ mới':'Xong hết rồi — nghỉ thôi'}</h2>
-      <p>${c.due?'Ôn đúng hạn là cách rẻ nhất để không quên.':c.nw?`Còn ${c.nw} từ chưa chạm tới trong ${TOPICS.length} chủ đề.`:'Quay lại vào ngày mai khi có từ tới hạn.'}</p>
+      <p>${c.due?'Ôn đúng hạn là cách rẻ nhất để không quên.':c.nw?`Còn ${c.nw} từ chưa chạm tới trong ${TOPICS.length} bài.`:'Quay lại vào ngày mai khi có từ tới hạn.'}</p>
       <div class="hero-actions">
         <button class="btn btn-primary btn-lg" id="btnStudy">${c.due?'Ôn ngay':'Học từ mới'}</button>
         <button class="btn btn-lg" data-nav="topics">Chọn chủ đề</button>
@@ -863,31 +892,53 @@ function topicStat(tp){
   }
   return {tp,nw,learn,known,due,total:tp.words.length,seen:tp.words.length-nw};
 }
-function topicCard(ts){
-  const {tp}=ts, nd=(DIALOGS[tp.id]||[]).length;
+function topicCard(ts,short){
+  const {tp}=ts;
   const b=el('div','topic'); b.tabIndex=0; b.setAttribute('role','button');
   b.innerHTML=`
     <div class="topic-top"><span class="topic-ico">${tp.icon}</span>
-      <div style="min-width:0"><h3>${esc(tp.name)}</h3>
-        <div class="topic-meta">${ts.known}/${ts.total} thuộc${ts.due?` · <span style="color:var(--chalk)">${ts.due} tới hạn</span>`:''}</div>
+      <div style="min-width:0"><h3>${esc(short?tp.name:lessonTitle(tp))}</h3>
+        <div class="topic-meta">${tp.level?`<span class="lvl-r">${esc(tp.level)}</span> · `:''}${ts.known}/${ts.total} thuộc${ts.due?` · <span style="color:var(--chalk)">${ts.due} tới hạn</span>`:''}</div>
       </div></div>
-    <div class="bar"><i class="b-known" style="width:${ts.known/ts.total*100}%"></i><i class="b-learn" style="width:${ts.learn/ts.total*100}%"></i></div>
-    ${nd?`<button class="topic-dlg">💬 ${nd} hội thoại</button>`:''}`;
-  b.onclick=e=>{ if(e.target.closest('.topic-dlg')){ go('dialogs',{t:tp.id}); return; } startSession(tp.id); };
+    <div class="bar"><i class="b-known" style="width:${ts.known/ts.total*100}%"></i><i class="b-learn" style="width:${ts.learn/ts.total*100}%"></i></div>`;
+  b.onclick=()=>startSession(tp.id);
   b.onkeydown=e=>{ if((e.key==='Enter'||e.key===' ')&&e.target===b){ e.preventDefault(); startSession(tp.id); } };
   return b;
 }
 
 /* ---------- Chủ đề ---------- */
+function groupSection(g){
+  const sec=el('section','tgroup');
+  const ls=g.lessons.map(id=>TOPIC_BY_ID.get(id)).filter(Boolean);
+  const st=ls.map(topicStat), total=st.reduce((n,x)=>n+x.total,0), known=st.reduce((n,x)=>n+x.known,0);
+  const nd=(DIALOGS[g.id]||[]).length;
+  sec.innerHTML=`<div class="tgroup-h"><span class="tgroup-ico">${g.icon}</span>
+      <div style="min-width:0;flex:1"><h2>${esc(g.name)}</h2>
+        <div class="tgroup-meta">${esc(g.en)} · ${total} từ · ${ls.length} bài · ${known} thuộc</div></div>
+      ${nd?`<button class="topic-dlg" data-g="${g.id}">💬 ${nd} hội thoại</button>`:''}</div>
+    <div class="topics"></div>`;
+  const grid=sec.querySelector('.topics');
+  st.forEach(x=>grid.appendChild(topicCard(x,true)));
+  const db=sec.querySelector('.topic-dlg'); if(db) db.onclick=()=>go('dialogs',{t:g.id});
+  return sec;
+}
 function viewTopics(root){
+  const tab=PAGES.topicsTab||'cambridge';
+  const nCam=GROUPS.filter(g=>g.kind==='cambridge').length;
   root.innerHTML=`<div class="page-h"><div><h1>Chủ đề</h1>
-    <p>${TOPICS.length} chủ đề · ${WORDS.length} từ. Chạm vào một chủ đề để bắt đầu phiên học.</p></div></div>
+    <p>${WORDS.length} từ, ${TOPICS.length} bài, mỗi bài tối đa 30 từ. ${nCam} chủ đề theo danh sách chính thức của
+      <b>Cambridge English</b> (A2 Key, B1 Preliminary); từ không thuộc chủ đề nào xếp theo cấp độ <b>Oxford 3000</b>.</p></div></div>
+    <div class="seg" id="tTabs" style="margin-bottom:14px">
+      <button data-tab="cambridge" aria-pressed="${tab==='cambridge'}">Theo chủ đề</button>
+      <button data-tab="oxford" aria-pressed="${tab==='oxford'}">Theo cấp độ</button></div>
     <div class="legend" style="margin-bottom:14px">
       <span><i style="background:var(--accent)"></i>Đã thuộc</span>
       <span><i style="background:var(--chalk)"></i>Đang học</span>
       <span><i style="background:var(--line-2)"></i>Chưa chạm</span>
     </div>`;
-  paginate(root,'topics',TOPICS,12,tp=>topicCard(topicStat(tp)),{cls:'topics',unit:'chủ đề'});
+  $('#tTabs').querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{ PAGES.topicsTab=b.dataset.tab; render(); });
+  const gs=GROUPS.filter(g=>g.kind===tab);
+  paginate(root,'topics:'+tab,gs,tab==='cambridge'?5:1,groupSection,{unit:tab==='cambridge'?'chủ đề':'cấp độ'});
 }
 
 /* ---------- Tra từ ---------- */
@@ -896,14 +947,14 @@ function viewBrowse(root){
   root.innerHTML=`<div class="page-h"><div><h1>Tra từ</h1><p>Tìm trong ${WORDS.length} từ.</p></div></div>
     <div class="search">
       <input id="q" type="search" placeholder="Gõ từ tiếng Anh hoặc nghĩa tiếng Việt…" value="${esc(browseQ)}">
-      <select id="ft"><option value="all">Mọi chủ đề</option>${TOPICS.map(t=>`<option value="${t.id}"${browseT===t.id?' selected':''}>${esc(t.name)}</option>`).join('')}</select>
+      <select id="ft"><option value="all">Mọi chủ đề</option>${GROUPS.map(g=>`<option value="${g.id}"${browseT===g.id?' selected':''}>${esc(g.name)}</option>`).join('')}</select>
       <select id="fo"><option value="all">Mọi nguồn</option><option value="ox">Chỉ Oxford 3000</option><option value="A1">Oxford A1</option><option value="A2">Oxford A2</option><option value="B1">Oxford B1</option><option value="B2">Oxford B2</option><option value="ext">Từ mở rộng</option></select>
       <select id="fs"><option value="all">Mọi trạng thái</option><option value="new"${browseS==='new'?' selected':''}>Chưa học</option><option value="learn"${browseS==='learn'?' selected':''}>Đang học</option><option value="known"${browseS==='known'?' selected':''}>Đã thuộc</option><option value="due"${browseS==='due'?' selected':''}>Tới hạn</option></select>
     </div><div id="res"></div>`;
   const draw=()=>{
     const q=norm(browseQ);
     const list=WORDS.filter(w=>{
-      if(browseT!=='all'&&w.t!==browseT) return false;
+      if(browseT!=='all'&&w.g!==browseT) return false;
       if(browseO==='ox'&&!w.cefr) return false;
       if(browseO==='ext'&&w.cefr) return false;
       if(['A1','A2','B1','B2'].includes(browseO)&&w.cefr!==browseO) return false;
@@ -964,7 +1015,7 @@ async function openDetail(w){
       ${w.forms&&w.forms!=='—'?`<div class="kv"><b>Dạng khác:</b> ${esc(w.forms)}</div>`:''}
       ${w.syn?`<div class="kv"><b>Đi kèm:</b> ${esc(w.syn)}</div>`:''}
       ${w.hook?`<div class="hook"><b>Mẹo nhớ</b>${esc(w.hook)}</div>`:''}
-      <div class="kv"><b>Chủ đề:</b> ${esc(TOPIC_BY_ID.get(w.t).name)}</div>
+      <div class="kv"><b>Chủ đề:</b> ${esc(lessonTitle(TOPIC_BY_ID.get(w.t)))}</div>
       <div class="kv"><b>Trạng thái:</b> ${p?`ôn ${p.n} lần · đúng ${p.n?Math.round(p.c/p.n*100):0}% · hạn sau ${p.i} ngày`:'chưa học'}</div>
       <div style="display:flex;gap:9px;flex-wrap:wrap;margin-top:4px">
         <label class="btn btn-sm">${img?'Đổi ảnh':'＋ Thêm ảnh'}<input type="file" accept="image/*" id="dImg" hidden></label>
@@ -1139,7 +1190,7 @@ function viewSettings(root){
     const fr=new FileReader();
     fr.onload=()=>{try{
       const d=JSON.parse(fr.result);
-      if(d.P){P=d.P;LOG=d.LOG||{};lsSet(LS_P,P);lsSet(LS_L,LOG);cloudPush();render();toast('Đã khôi phục');}
+      if(d.P){P=d.P;migrateProgress(P);LOG=d.LOG||{};lsSet(LS_P,P);lsSet(LS_L,LOG);cloudPush();render();toast('Đã khôi phục');}
       else toast('Tệp không hợp lệ');
     }catch(err){toast('Tệp không đọc được');}};
     fr.readAsText(f);
@@ -1415,6 +1466,8 @@ function renderDrillDone(root){
 const EXAM=DATA.exam||{};
 const LS_PLAN='bnt.plan.v1';
 let PLAN=lsGet(LS_PLAN,null);
+let PLAN_RESET=false;   // lộ trình tạo theo bộ chủ đề cũ -> phải tạo lại
+if(PLAN&&PLAN.weekList&&PLAN.weekList.some(w=>w.vocab.some(v=>!TOPIC_BY_ID.has(v.t)))){ PLAN=null; PLAN_RESET=true; lsSet(LS_PLAN,null); }
 function savePlan(){ lsSet(LS_PLAN,PLAN); clearTimeout(saveTimer); saveTimer=setTimeout(cloudPush,4000); }
 
 const LEVEL_ORDER=['A1','A2','B1','B2','C1'];
@@ -1437,7 +1490,8 @@ function buildPlan(cfg){
   // 55% thời gian cho từ vựng, 25% ngữ pháp, 20% kỹ năng thi
   const wordsPerWeek=Math.min(150,Math.max(15,Math.round(mins*0.55/3)));
   const gramPerWeek=Math.max(1,Math.round(mins*0.25/25));
-  const topics=X.topicOrder.filter(id=>TOPIC_BY_ID.has(id));
+  // topicOrder liệt kê mã nhóm; mỗi nhóm trải ra các bài của nó
+  const topics=X.topicOrder.flatMap(id=>GROUP_BY_ID.has(id)?GROUP_BY_ID.get(id).lessons:[id]).filter(id=>TOPIC_BY_ID.has(id));
   const gram=grammarForTarget(cfg.exam,cfg.target);
 
   // hàng đợi từ vựng: từng chủ đề cắt thành các lát
@@ -1531,8 +1585,8 @@ function viewPlan(root){
     w.vocab.forEach(v=>{
       const tp=TOPIC_BY_ID.get(v.t);
       rows.push({key:w.week+':'+(idx++),icon:tp.icon,
-        title:`${esc(tp.name)} — từ ${v.from+1} đến ${v.to}`,
-        sub:X.topicWhy[v.t]?esc(X.topicWhy[v.t]):'',
+        title:`${esc(lessonTitle(tp))} — từ ${v.from+1} đến ${v.to}`,
+        sub:X.topicWhy[tp.group]?esc(X.topicWhy[tp.group]):'',
         act:()=>startSession(v.t)});
     });
     w.grammar.forEach(gidv=>{
@@ -1598,6 +1652,8 @@ function planSetup(root){
   if(setupCfg.target==null) setupCfg.target=X.defaultTarget;
   root.innerHTML=`<div class="page-h"><div><h1>Lộ trình luyện thi</h1>
     <p>Trả lời bốn câu hỏi, app sẽ xếp lịch từng tuần: học chủ đề từ vựng nào, chuyên đề ngữ pháp nào, và luyện kỹ năng gì cho từng phần thi.</p></div></div>
+  ${PLAN_RESET?`<div class="voice-warn"><div><b>Cần tạo lại lộ trình</b> — chủ đề từ vựng đã được chia lại theo chuẩn Cambridge,
+    nên lộ trình cũ không còn khớp. Tiến độ học từ của bạn vẫn giữ nguyên.</div></div>`:''}
   <div class="card" style="padding:6px 20px;margin-bottom:16px">
     <div class="set-row"><div><div class="lbl">1. Bạn thi kỳ thi nào?</div>
       <div class="hint">Lộ trình sẽ đổi thứ tự chủ đề và nhiệm vụ kỹ năng theo kỳ thi.</div></div>
@@ -1718,7 +1774,7 @@ let SES=null, STUDY_SEQ=0;
 const SKILLS={flash:'◈ Thẻ',listen:'♪ Nghe',speak:'🎙 Nói',write:'✎ Viết'};
 
 function startSession(topicId,skill){
-  const pool=topicId?WORDS.filter(w=>w.t===topicId):WORDS;
+  const pool=topicId?WORDS.filter(w=>w.t===topicId||w.g===topicId):WORDS;
   const due=pool.filter(w=>!isNew(w.id)&&isDue(w.id));
   const nw =pool.filter(w=> isNew(w.id));
   let items=[...shuffle(due).slice(0,S.goalRev), ...shuffle(nw).slice(0,S.goalNew)].map(w=>({w}));
@@ -2048,10 +2104,10 @@ function renderDone(root){
     </div>
     <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px">
       <button class="btn btn-primary btn-lg" id="more">Học tiếp</button>
-      ${SES.topic&&DIALOGS[SES.topic]?'<button class="btn btn-lg" id="dlgGo">💬 Luyện hội thoại</button>':''}
+      ${dlgGroupOf(SES.topic)?'<button class="btn btn-lg" id="dlgGo">💬 Luyện hội thoại</button>':''}
       <button class="btn btn-lg" id="home">Về trang chính</button>
     </div></div>`;
-  $('#dlgGo')?.addEventListener('click',()=>{const t=SES.topic;SES=null;go('dialogs',{t});});
+  $('#dlgGo')?.addEventListener('click',()=>{const t=dlgGroupOf(SES.topic);SES=null;go('dialogs',{t});});
   $('#more').onclick=()=>startSession(SES.topic);
   $('#home').onclick=()=>{SES=null;go('home');};
 }
@@ -2059,7 +2115,8 @@ function renderDone(root){
 /* ============================================================
    9. Hội thoại theo chủ đề — nguồn DailyDialog (CC BY-NC-SA 4.0)
    ============================================================ */
-const DIALOGS=DATA.dialogs||{};          // {topicId:[{id,title,en[],vi[]}]}
+const DIALOGS=DATA.dialogs||{};          // {groupId:[{id,title,words[],en[],vi[]}]}
+const dlgGroupOf=id=>{ if(!id) return ''; const g=TOPIC_BY_ID.has(id)?TOPIC_BY_ID.get(id).group:id; return DIALOGS[g]&&DIALOGS[g].length?g:''; };
 const LS_D='bnt.dlg.v1';
 let DLGP=lsGet(LS_D,{});                 // {dialogId:{v:1 đã đọc, r:% đóng vai tốt nhất, f:% điền từ tốt nhất}}
 function saveD(){lsSet(LS_D,DLGP);}
@@ -2076,7 +2133,7 @@ function formMap(tid){
   const m=new Map();
   const add=(f,w,strong)=>{f=String(f).toLowerCase().trim(); if(f&&(strong||!m.has(f))) m.set(f,w);};
   for(const w of WORDS){
-    if(w.t!==tid) continue;
+    if(w.g!==tid&&w.t!==tid) continue;
     const b=w.w.toLowerCase();
     add(b,w,true);
     String(w.forms||'').split(/[·,\/;]/).forEach(x=>{
@@ -2168,14 +2225,15 @@ function dlgStop(){
 
 /* ---------- Danh sách hội thoại của một chủ đề ---------- */
 function viewDialogs(root){
-  const tid=route.t, tp=TOPIC_BY_ID.get(tid), list=DIALOGS[tid]||[];
+  const tid=route.t, tp=GROUP_BY_ID.get(tid), list=DIALOGS[tid]||[];
   if(!tp){go('topics');return;}
+  const nWords=WORDS.filter(w=>w.g===tid).length;
   const cover=dlgTopicCover(tid);
   root.innerHTML=`<button class="btn btn-sm" id="dBack">← Chủ đề</button>
     <div class="page-h" style="margin-top:14px"><div>
       <h1>${tp.icon} Hội thoại</h1>
       <p>${esc(tp.name)} · ${list.length} đoạn hội thoại có thật, từ ngắn đến dài.
-        Mỗi đoạn mang thêm từ mới, ít lặp lại — cả bộ dùng ${cover}/${tp.words.length} từ của chủ đề.</p></div>
+        Mỗi đoạn mang thêm từ mới, ít lặp lại — cả bộ dùng ${cover}/${nWords} từ của chủ đề.</p></div>
       <button class="btn btn-primary" id="dStudy">Học thẻ từ chủ đề này</button></div>`;
   paginate(root,'dlg:'+tid,list,10,(d,i)=>{
     const n=dlgNew(tid,d).size, p=DLGP[d.id]||{};

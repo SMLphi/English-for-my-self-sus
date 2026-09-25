@@ -1,0 +1,142 @@
+{
+"check": [
+"I had to check their qualifications.",
+"Tôi đã phải kiểm tra trình độ chuyên môn của họ.",
+"T"
+],
+"feel": [
+"How does that make you feel?",
+"Cái đó làm bạn thấy thế nào?",
+"T"
+],
+"gym": [
+"I go to the gym three times a week.",
+"Tôi đến phòng tập thể dục 3 lần một tuần.",
+"T"
+],
+"problem": [
+"I see no problem with that.",
+"Tôi không có ý kiến gì với việc đó.",
+"T"
+],
+"run": [
+"You must walk before you can run.",
+"Bạn phải đi trước rồi mới chạy.",
+"T"
+],
+"walk": [
+"You should try to walk more.",
+"Bạn nên cố gắng đi bộ nhiều hơn.",
+"T"
+],
+"skin": [
+"Snow White has white skin and black hair.",
+"Bạch Tuyết có làn da trắng và mái tóc đen.",
+"V"
+],
+"stress": [
+"The warm water washed away his stress.",
+"Dòng nước ấm áp gột rửa đi những phiền muộn của anh.",
+"C"
+],
+"patient": [
+"Our patient is in much the same condition as yesterday.",
+"Bệnh nhân của chúng tôi hầu như vẫn trong tình trạng như hôm qua.",
+"V"
+],
+"neck": [
+"She's wearing a necklace on her neck.",
+"Cô ấy đang đeo một sợi dây chuyền trên cổ.",
+"V"
+],
+"shoulder": [
+"I have a pain in the shoulder.",
+"Tôi bị đau vai.",
+"V"
+],
+"finger": [
+"He put a finger to her lips to silence her.",
+"Anh ấy đặt ngón tay lên môi cô ấy để ngăn cô nói.",
+"V"
+],
+"stomach": [
+"I have a pain in my stomach.",
+"Tôi bị đau bụng.",
+"V"
+],
+"knee": [
+"I put bandages on my hurt knee.",
+"Tôi đã băng bó đầu gối bị đau của mình.",
+"V"
+],
+"heart": [
+"My heart was filled with happiness.",
+"Tim tôi tràn ngập hạnh phúc.",
+"V"
+],
+"brain": [
+"You use your brain to think.",
+"Bạn sử dụng bộ não của bạn để suy nghĩ.",
+"V"
+],
+"blood": [
+"We have the same blood type.",
+"Chúng tôi có cùng nhóm máu.",
+"V"
+],
+"bone": [
+"Don't throw the dog a bone.",
+"Đừng ném xương cho chó.",
+"V"
+],
+"ill": [
+"One day, the grandmother fell ill.",
+"Một ngày nọ, bà bị ốm.",
+"V"
+],
+"pain": [
+"I have a mild pain here.",
+"Tôi hơi bị đau ở đây.",
+"V"
+],
+"hurt": [
+"I knew you couldn't hurt me.",
+"Tôi đã biết bạn không thể làm tổn thương tôi được.",
+"V"
+],
+"illness": [
+"Mother's illness kept her at home yesterday.",
+"Mẹ cô ấy bị bệnh nên cô ấy phải ở nhà hôm qua.",
+"V"
+],
+"flu": [
+"There's a lot of flu about.",
+"Quanh đây có nhiều người bị bệnh cúm.",
+"V"
+],
+"headache": [
+"I have a bit of a headache today.",
+"Hôm nay tôi hơi đau đầu.",
+"C"
+],
+"dentist": [
+"I don't want to go to the dentist.",
+"Tôi không muốn đến nha sĩ.",
+"V"
+],
+"medicine": [
+"This medicine will do you good.",
+"Thuốc này sẽ làm bạn dễ chịu.",
+"V"
+],
+"tablet": [
+"The new tablet costs a fortune.",
+"Chiếc máy tính bảng mới đắt kinh khủng.",
+"C"
+],
+"ambulance": [
+"Should I call an ambulance?",
+"Tôi có nên gọi xe cấp cứu không?",
+"V"
+]
+}

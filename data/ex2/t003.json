@@ -1,0 +1,82 @@
+{
+"dark": [
+"I reached the village before dark.",
+"Tôi đã về đến ngôi làng trước khi trời tối.",
+"V"
+],
+"orange": [
+"All orange cats share a single brain cell.",
+"Tất cả những con mèo màu cam đều cùng chia sẻ một tế bào não.",
+"T"
+],
+"green": [
+"When spring comes again, everything turns green again.",
+"Khi mùa xuân lại đến, mọi thứ lại phủ xanh.",
+"T"
+],
+"black": [
+"Not everything is black and white.",
+"Không phải mọi thứ đều trắng và đen.",
+"T"
+],
+"blue": [
+"I like to look at the blue ocean.",
+"Tôi thích ngắm nhìn đại dương xanh.",
+"T"
+],
+"brown": [
+"May I talk to Ms. Brown?",
+"",
+"E"
+],
+"grey": [
+"All cats are grey in the dark.",
+"Tắt đèn nhà ngói cũng như nhà tranh.",
+"T"
+],
+"pink": [
+"Does this look pink to you?",
+"",
+"E"
+],
+"purple": [
+"How much are those lovely purple trousers?",
+"Chiếc quần tây màu tím dễ thương này bao nhiêu tiền?",
+"T"
+],
+"red": [
+"Your eyes are red. What happened?",
+"Sao mắt bạn đỏ thế? Có chuyện gì vậy?",
+"T"
+],
+"white": [
+"Do you guys like white wine?",
+"Các bạn có thích rượu vang trắng không?",
+"T"
+],
+"yellow": [
+"All of the balls are yellow.",
+"Tất cả quả bóng đều có màu vàng.",
+"T"
+],
+"light": [
+"The traffic light changed to red.",
+"Đèn giao thông chuyển sang màu đỏ.",
+"T"
+],
+"gold": [
+"Gold is more expensive than lead.",
+"Vàng đắt hơn chì.",
+"T"
+],
+"silver": [
+"The ring is made of silver.",
+"Chiếc nhẫn được làm bằng bạc.",
+"T"
+],
+"pale": [
+"What's the matter? You look pale.",
+"Có chuyện gì vậy? Trông bạn xanh xao quá.",
+"C"
+]
+}

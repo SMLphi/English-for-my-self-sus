@@ -1,0 +1,142 @@
+{
+"baby": [
+"Keep quiet. The baby is sleeping.",
+"Im lặng. Em bé đang ngủ.",
+"V"
+],
+"hair": [
+"I want to wash my hair.",
+"Tôi muốn gội đầu.",
+"V"
+],
+"face": [
+"Dry your face with a towel.",
+"Hãy dùng khăn lau khô mặt đi.",
+"V"
+],
+"eye": [
+"I'll keep an eye on her.",
+"Tôi sẽ để mắt đến cô ấy.",
+"V"
+],
+"nose": [
+"His nose has been broken twice.",
+"Mũi của anh ấy đã bị gãy hai lần.",
+"V"
+],
+"ear": [
+"Tom is deaf in one ear.",
+"Tom bị điếc một tai.",
+"V"
+],
+"tooth": [
+"My lower left back tooth hurts.",
+"Chiếc răng hàm dưới bên trái của tôi bị đau.",
+"C"
+],
+"tired": [
+"I'm tired of living this life.",
+"Tôi chán sống cuộc sống này rồi.",
+"V"
+],
+"body": [
+"The brain is a crucial body part.",
+"Não là một bộ phận cơ thể rất quan trọng.",
+"V"
+],
+"head": [
+"I chopped off the chicken's head.",
+"Tôi chặt đứt cái đầu của con gà.",
+"V"
+],
+"arm": [
+"He broke his arm when he fell.",
+"Anh ấy bị gãy tay khi ngã.",
+"C"
+],
+"hand": [
+"She got her left hand burned.",
+"Cô ấy đã bị bỏng tay trái.",
+"V"
+],
+"back": [
+"I'll be back within two hours.",
+"Mình sẽ quay lại trong vòng hai tiếng.",
+"C"
+],
+"leg": [
+"Is your left leg still hurting?",
+"Chân trái của bạn có còn đau không?",
+"V"
+],
+"foot": [
+"I go to school on foot.",
+"Tôi đi bộ đến trường.",
+"V"
+],
+"health": [
+"Smoking is bad for your health.",
+"Hút thuốc lá có hại cho sức khỏe của bạn.",
+"V"
+],
+"sick": [
+"You're sick. You have to rest.",
+"Bạn bị ốm rồi. Bạn phải nghỉ ngơi.",
+"C"
+],
+"doctor": [
+"He will be a good doctor.",
+"Anh ta sẽ là một bác sĩ tốt.",
+"V"
+],
+"nurse": [
+"She is not a nurse, but a doctor.",
+"Cô ấy không phải là y tá mà là bác sĩ.",
+"V"
+],
+"hospital": [
+"He's in the hospital right now.",
+"Hiện tại, anh ấy đang ở trong bệnh viện.",
+"V"
+],
+"exercise": [
+"You need to get some exercise.",
+"Bạn cần phải tập thể dục một chút.",
+"V"
+],
+"clean": [
+"We have no access to clean water.",
+"Chúng tôi không tiếp cận được với nước sạch.",
+"T"
+],
+"fall": [
+"Be careful! Don't jump — you'll fall!",
+"Cẩn thận! Đừng nhảy, không là ngã đấy!",
+"T"
+],
+"swim": [
+"Unlike my brother, I cannot swim.",
+"Không giống như anh trai mình, tôi không biết bơi.",
+"T"
+],
+"well": [
+"He plays the piano very well.",
+"Anh ấy chơi piano rất giỏi.",
+"T"
+],
+"dangerous": [
+"It's dangerous to play with fire.",
+"Chơi với lửa rất nguy hiểm.",
+"T"
+],
+"die": [
+"He felt he was going to die.",
+"Lúc đó, anh ấy cảm thấy cái chết đã đến gần.",
+"T"
+],
+"hear": [
+"I'm sorry, I can't hear you.",
+"Tôi xin lỗi, tôi không nghe được bạn nói gì.",
+"T"
+]
+}

@@ -1,0 +1,127 @@
+{
+"relevant": [
+"Your question is not relevant to the subject.",
+"Câu hỏi của bạn không liên quan gì đến chủ đề.",
+"T"
+],
+"representative": [
+"We elected him as our Representative.",
+"",
+"E"
+],
+"secure": [
+"You are secure from danger here.",
+"",
+"E"
+],
+"senior": [
+"John is senior to me by two years.",
+"John lớn hơn tôi hai tuổi.",
+"T"
+],
+"significant": [
+"There are significant differences between those two countries.",
+"Có những khác biệt rõ rệt giữa hai quốc gia.",
+"T"
+],
+"sincere": [
+"I'm being sincere when I say that I love you.",
+"Lời nói thương cậu là lời thật lòng đấy.",
+"T"
+],
+"slight": [
+"You may have a slight fever.",
+"Có thể anh bị cảm nhẹ rồi.",
+"T"
+],
+"spiritual": [
+"Tell us, what are \"spiritual ties\"?",
+"",
+"E"
+],
+"steady": [
+"The gold market is steady.",
+"Thị trường vàng đang ổn định.",
+"T"
+],
+"sticky": [
+"City officials often have sticky fingers.",
+"",
+"E"
+],
+"stiff": [
+"I have a bad stiff neck.",
+"",
+"E"
+],
+"surrounding": [
+"The surrounding hills protected the town.",
+"",
+"E"
+],
+"temporary": [
+"It's only a temporary solution.",
+"Đó là giải pháp tạm thời.",
+"T"
+],
+"tough": [
+"It must be nice having someone who sticks around even when times get tough.",
+"Có người ở bên trong những thời lúc khó khăn tuyệt thật.",
+"T"
+],
+"unconscious": [
+"He seemed unconscious of my presence.",
+"",
+"E"
+],
+"unexpected": [
+"An unexpected error has occurred.",
+"Một lỗi không mong muốn đã xảy ra.",
+"T"
+],
+"unique": [
+"We should become unique, mature individuals.",
+"",
+"E"
+],
+"unknown": [
+"The meaning is unknown to me.",
+"",
+"E"
+],
+"upper": [
+"Even the upper atmosphere is polluted.",
+"",
+"E"
+],
+"urban": [
+"Traffic is a major urban problem.",
+"",
+"E"
+],
+"virtual": [
+"Have you ever experienced virtual reality?",
+"",
+"E"
+],
+"visual": [
+"I'm losing visual contact with you.",
+"",
+"E"
+],
+"vital": [
+"Exercise is vital for a dog.",
+"",
+"E"
+],
+"willing": [
+"That's a risk I'm not willing to take.",
+"Đó là một rủi ro mà tôi không sẵn sàng muốn nhận lấy.",
+"T"
+],
+"wise": [
+"No man is wise at all times.",
+"Không có người lúc nào cũng khôn ngoan.",
+"T"
+]
+}

@@ -1,0 +1,142 @@
+{
+"living room": [
+"Oh, what a big living room!",
+"Ôi, phòng khách rộng thế!",
+"V"
+],
+"dining room": [
+"The dog isn't allowed in the dining room.",
+"Con chó không được phép vào phòng ăn.",
+"V"
+],
+"hall": [
+"This hall was full of people.",
+"Hội trường này đã chật kín người.",
+"C"
+],
+"roof": [
+"Look at that cat on the roof.",
+"Nhìn con mèo trên mái nhà đi.",
+"V"
+],
+"gate": [
+"He walked his horse to the gate.",
+"Anh ấy dẫn ngựa của anh ấy ra cổng.",
+"T"
+],
+"furniture": [
+"The truck carried a load of furniture.",
+"Chiếc xe tải đó đã chất đầy nội thất.",
+"V"
+],
+"sofa": [
+"The ball rolled under the sofa.",
+"Quả bóng lăn xuống gầm cái ghế sofa.",
+"V"
+],
+"cupboard": [
+"My mother puts cups in the kitchen cupboard.",
+"Mẹ tôi để ly tách ở trong tủ bếp.",
+"V"
+],
+"drawer": [
+"I'm going to keep this in the top drawer.",
+"Tôi sẽ cất nó ở ngăn tủ trên cùng.",
+"V"
+],
+"carpet": [
+"I still have to get rid of this carpet.",
+"Tớ còn phải bỏ tấm thảm đi.",
+"V"
+],
+"pillow": [
+"Tom hid the knife under his pillow.",
+"Tom giấu con dao dưới gối.",
+"V"
+],
+"blanket": [
+"I gave him a blanket.",
+"Tôi đã cho anh ấy một cái chăn.",
+"V"
+],
+"sheet": [
+"Give me a sheet of paper.",
+"Đưa tôi một tờ giấy.",
+"C"
+],
+"towel": [
+"Tom dried himself with a bath towel.",
+"Tom đã lau người bằng khăn tắm.",
+"V"
+],
+"bin": [
+"Do you have a recycle bin?",
+"Bạn có thùng rác tái chế không?",
+"C"
+],
+"rubbish": [
+"There is a lot of rubbish on the streets.",
+"Có rất nhiều rác trên các đường phố.",
+"V"
+],
+"repair": [
+"I will have him repair this watch.",
+"Tôi sẽ nhờ anh ấy sửa chiếc đồng hồ này.",
+"C"
+],
+"lock": [
+"They forgot to lock the door.",
+"Họ quên khoá cửa.",
+"C"
+],
+"fan": [
+"Stop it! I'm a Giants fan.",
+"Thôi đi, tôi là người hâm mộ đội Giants đấy.",
+"C"
+],
+"ground": [
+"The ground shaking lasted for 30 seconds.",
+"Mặt đất đã rung lắc trong 30 giây.",
+"T"
+],
+"safe": [
+"Let's put this in the safe.",
+"Chúng ta hãy cất cái này vào trong két đi.",
+"T"
+],
+"digital": [
+"All of my books are digital.",
+"",
+"E"
+],
+"electrical": [
+"Keep away from the electrical equipment.",
+"",
+"E"
+],
+"toy": [
+"The toy ran out of batteries.",
+"Món đồ chơi đã hết pin rồi.",
+"T"
+],
+"brush": [
+"I gave my coat a brush.",
+"",
+"E"
+],
+"lift": [
+"My shoulder hurts when I lift my arm.",
+"Vai tôi đau khi tôi nhấc cánh tay của mình lên.",
+"T"
+],
+"seat": [
+"Would you please have a seat?",
+"Bạn vui lòng ngồi xuống được không?",
+"T"
+],
+"stair": [
+"I'll buy him a stair gate.",
+"",
+"E"
+]
+}

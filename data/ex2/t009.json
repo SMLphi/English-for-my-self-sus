@@ -1,0 +1,127 @@
+{
+"box": [
+"He ate a box of chocolates.",
+"Anh ấy đã ăn một hộp sôcôla.",
+"T"
+],
+"cake": [
+"Does anyone want another piece of cake?",
+"Có ai muốn một miếng bánh khác không?",
+"T"
+],
+"chocolate": [
+"My friend likes chocolate ice cream.",
+"Bạn tôi thích kem sô cô la.",
+"T"
+],
+"dish": [
+"The dish told on my stomach.",
+"",
+"E"
+],
+"ice cream": [
+"I want to go eat an ice cream.",
+"Tôi muốn đi ăn kem.",
+"T"
+],
+"sandwich": [
+"I shouldn't have made you that sandwich.",
+"Tôi không nên làm cho bạn miếng san quít đó.",
+"T"
+],
+"fridge": [
+"Tom looked in the fridge to see what he could find to drink.",
+"Tom nhìn vào tủ lạnh xem có gì uống được không.",
+"C"
+],
+"snack": [
+"A carrot is a healthy snack.",
+"Một củ cà rốt là món ăn vặt lành mạnh.",
+"C"
+],
+"yogurt": [
+"There is yogurt in the fridge.",
+"Có sữa chua trong tủ lạnh.",
+"C"
+],
+"garlic": [
+"The food tasted slightly of garlic.",
+"Món ăn thoảng chút vị tỏi.",
+"C"
+],
+"sauce": [
+"The sauce is extremely spicy!",
+"Nước sốt quá cay!",
+"T"
+],
+"oil": [
+"This country is rich in oil.",
+"",
+"E"
+],
+"boil": [
+"Once it starts boiling, let it boil for about fifteen more minutes.",
+"Khi bắt đầu sôi, để nó sôi thêm mười lăm phút nữa.",
+"T"
+],
+"roast": [
+"How about some more roast beef?",
+"Dùng thêm chút thịt bò quay nhé?",
+"C"
+],
+"taste": [
+"I'm sick and tired of his lack of taste.",
+"Tôi phát bệnh và chán nản vì sự thiếu thẩm mỹ của hắn.",
+"T"
+],
+"tasty": [
+"The cake I ate yesterday was not as tasty as this one.",
+"Cái bánh tôi ăn hôm qua không ngon như cái này.",
+"T"
+],
+"sweet": [
+"My tea is a little too sweet.",
+"Tách trà của tôi hơi ngọt một chút.",
+"T"
+],
+"fresh": [
+"I opened the windows to let some fresh air in.",
+"Tôi mở cửa sổ để không khí trong lành tràn vào.",
+"T"
+],
+"chef": [
+"We have a very good chef.",
+"",
+"E"
+],
+"recipe": [
+"Can you give me the recipe?",
+"Bạn cho tôi xin công thức được không?",
+"C"
+],
+"plate": [
+"The second combination plate contains meat.",
+"Phần ăn thứ hai có chứa thịt.",
+"T"
+],
+"bowl": [
+"Do you have a soup bowl?",
+"Bạn có tô đựng súp không?",
+"C"
+],
+"knife": [
+"This knife was very useful to me.",
+"Con dao này rất hữu ích với tôi.",
+"T"
+],
+"fork": [
+"There is a fork missing.",
+"Thiếu một cái nĩa.",
+"T"
+],
+"spoon": [
+"Could somebody get me a spoon?",
+"Ai lấy giúp tôi cái thìa với?",
+"C"
+]
+}

@@ -8,7 +8,7 @@ Tep build/dlg_review/<tid>.json ghi ket qua doc tay:
   skip:   {id: [tu, ...]}        tu co mat nhung KHONG dung nghia chu de -> khong tinh
   pick:   [id, ...]              doan da duyet, giu co dinh o dau
   sense:  {tu: regex}            tu nhieu nghia chi tinh khi khop mau (dung nghia chu de)
-Cach dung: python build/pick_dialogs.py t01 [so_doan]
+Cach dung: python build/pick_dialogs.py g01 [so_doan]   (g01 = ma nhom trong data/groups.json)
 """
 import io, os, re, sys, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -19,7 +19,18 @@ rv_path = os.path.join(ROOT, 'build', 'dlg_review', tid + '.json')
 RV = json.load(io.open(rv_path, encoding='utf-8')) if os.path.exists(rv_path) else {}
 reject = set(RV.get('reject', [])); skip = RV.get('skip', {}); fixed = RV.get('pick', [])
 
-t = json.load(io.open(os.path.join(ROOT, 'data', tid + '.json'), encoding='utf-8'))
+# tid la ma nhom (g01) -> gom tu cua cac bai trong nhom; hoac ma bai (t001)
+if tid.startswith('g'):
+    grp = {g['id']: g for g in json.load(io.open(os.path.join(ROOT, 'data', 'groups.json'), encoding='utf-8'))}[tid]
+    t = {'words': [w for lid in grp['lessons']
+                   for w in json.load(io.open(os.path.join(ROOT, 'data', lid + '.json'), encoding='utf-8'))['words']]}
+else:
+    t = json.load(io.open(os.path.join(ROOT, 'data', tid + '.json'), encoding='utf-8'))
+# doan da bi loai vi noi dung/loi chinh ta o bat ky chu de nao cung loai luon
+import glob as _g
+for f in _g.glob(os.path.join(ROOT, 'build', 'dlg_review', '*.json')) + _g.glob(os.path.join(ROOT, 'build', 'dlg_archive', '*review*.json')):
+    if f.endswith('.pick.json') or os.path.basename(f) == tid + '.json': continue
+    reject |= set(json.load(io.open(f, encoding='utf-8')).get('reject', []))
 forms = {}
 for w in t['words']:
     b = w[0].lower(); forms[b] = b

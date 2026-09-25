@@ -43,7 +43,16 @@ process.on('uncaughtException', e => { fail('ngoai le: ' + e.message); finish();
 
   const W = E('WORDS'), T = E('TOPICS');
   if (!W || W.length < 1000) { fail('thieu tu vung'); return finish(); }
-  okc(T.length + ' chu de - ' + W.length + ' tu');
+  okc(T.length + ' bai - ' + W.length + ' tu');
+  // chu de chuan: 27 nhom Cambridge + 4 nhom cap do Oxford; moi bai toi da 30 tu; moi tu thuoc dung 1 bai
+  {
+    const GR = E('GROUPS'), big = T.filter(t => t.words.length > 30), orphan = T.filter(t => !E('GROUP_BY_ID').has(t.group));
+    const inG = new Set(GR.flatMap(g => g.lessons)), ids = new Set(W.map(x => x.id));
+    GR.filter(g => g.kind === 'cambridge').length === 27 && GR.filter(g => g.kind === 'oxford').length === 4
+      ? okc('27 chu de Cambridge + 4 nhom cap do Oxford') : fail('so nhom sai');
+    !big.length && !orphan.length && inG.size === T.length && ids.size === W.length
+      ? okc('moi bai <= 30 tu, bai nao cung thuoc mot nhom, khong trung tu') : fail('bai qua lon/khong nhom: ' + big.map(t => t.id) + orphan.map(t => t.id));
+  }
   if (W.some(x => !x.pic)) fail('co tu thieu bieu tuong'); else okc('moi tu deu co bieu tuong');
   const badIpa = W.filter(x => !/^\/.*\/$/.test(x.ipa)).length;
   if (badIpa) fail(badIpa + ' tu co IPA sai dinh dang'); else okc('IPA dung dinh dang o ca ' + W.length + ' tu');
@@ -58,8 +67,8 @@ process.on('uncaughtException', e => { fail('ngoai le: ' + e.message); finish();
     } catch (e) { fail('man hinh ' + v + ': ' + e.message); }
   }
 
-  // --- lap lai ngat quang kieu Anki, thu tren chu de Con nguoi & ngoai hinh (t01) ---
-  const t01 = W.filter(x => x.t === 't01');
+  // --- lap lai ngat quang kieu Anki, thu tren bai dau tien (Gia dinh & ban be) ---
+  const L1 = T[0].id, t01 = W.filter(x => x.t === L1);
   const id = t01[0].id, NL = E('nextLabel');
   const lab = () => [0, 3, 4, 5].map(q => NL(id, q)).join(' / ');
   const l1 = lab();
@@ -88,7 +97,7 @@ process.on('uncaughtException', e => { fail('ngoai le: ' + e.message); finish();
 
   // --- trong phien: bam Lai thi the quay lai khi toi gio, khong mat the ---
   try {
-    E('startSession')('t01'); await tick(); await tick();
+    E('startSession')(L1); await tick(); await tick();
     const first = E('SES').queue[0].w.id, n0 = E('SES').queue.length;
     E('advance')(E('SES').queue[0].w, 0, 'read'); await tick();
     const back = E('SES').queue.find(x => x.w.id === first);
@@ -98,6 +107,14 @@ process.on('uncaughtException', e => { fail('ngoai le: ' + e.message); finish();
     E('SES').queue[0].w.id === first ? okc('toi gio -> the do duoc hien lai truoc') : fail('the toi gio khong duoc uu tien');
     E('SES = null');
   } catch (e) { fail('phien hoc: ' + e.message); }
+
+  // --- tien do cua bo chu de cu (t05:bed) chuyen sang bai moi chua dung tu do ---
+  {
+    const bed = W.find(x => x.w === 'bed'), src = { 't05:bed': { t: 1, i: 3 }, 'G:g01': { t: 1 }, 't99:khongco': { t: 1 } };
+    const n = E('migrateProgress')(src);
+    n === 1 && src[bed.id] && src[bed.id].i === 3 && !src['t05:bed'] && src['G:g01']
+      ? okc('chuyen tien do cu: t05:bed -> ' + bed.id + ', giu tien do ngu phap') : fail('chuyen tien do sai ' + JSON.stringify(src));
+  }
 
   // --- nghe lai cung cau -> doc cham, lan nua -> binh thuong ---
   w.__said = [];
@@ -214,8 +231,14 @@ process.on('uncaughtException', e => { fail('ngoai le: ' + e.message); finish();
     const all = d.querySelectorAll('#res .wrow').length, info = (d.querySelector('#res .pg-info') || {}).textContent || '';
     all === 40 && /1–40 \//.test(info) ? okc('tra tu phan trang: 40 tu/trang (' + info + ')') : fail('tra tu phan trang sai: ' + all + ' ' + info);
     E('go')('topics'); await tick();
-    const tc = d.querySelectorAll('.topics .topic').length;
-    tc === 12 ? okc('chu de phan trang: 12/trang') : fail('chu de hien ' + tc);
+    const secs = d.querySelectorAll('.tgroup').length, info2 = (d.querySelector('.pg-info') || {}).textContent || '';
+    secs === 5 && /1–5 \/ 27 chủ đề/.test(info2) ? okc('trang Chu de: 5 nhom/trang (' + info2 + ')') : fail('trang Chu de hien ' + secs + ' nhom, ' + info2);
+    d.querySelector('#tTabs [data-tab="oxford"]').click(); await tick();
+    const ox = d.querySelector('.tgroup h2').textContent;
+    /Từ thông dụng A1/.test(ox) ? okc('tab Theo cap do: ' + ox + ', ' + d.querySelectorAll('.tgroup .topic').length + ' bai') : fail('tab cap do sai: ' + ox);
+    E('go')('home'); await tick(); E('go')('topics'); await tick();
+    d.querySelector('#tTabs [aria-pressed="true"]').dataset.tab === 'oxford' ? okc('quay lai van o tab da chon') : fail('khong nho tab');
+    E('PAGES').topicsTab = 'cambridge';
     E('go')('browse'); await tick();
     d.querySelector('.wrow').click(); await tick(); await tick();
     if (d.querySelector('.detail')) okc('mo duoc bang chi tiet tu'); else fail('khong mo duoc chi tiet tu');

@@ -3,15 +3,17 @@
 Ứng dụng học từ vựng tiếng Anh cho người Việt. Một bản build phục vụ **cả web lẫn app**:
 mở bằng trình duyệt là web, cài ra màn hình chính là app chạy toàn màn hình và offline.
 
-- **3.669 mục từ** — phủ **100% danh sách Oxford 3000** (A1 897 · A2 792 · B1 691 · B2 598),
-  cộng 566 từ mở rộng có gắn nhãn riêng
+- **3.195 từ** — phủ **100% danh sách Oxford 3000**, cộng các từ có trong danh sách từ vựng
+  chính thức A2 Key / B1 Preliminary của Cambridge. Không còn từ tự chọn ngoài chuẩn.
+- **Chủ đề theo chuẩn Cambridge**: 27 chủ đề trong Topic Lists của A2 Key và B1 Preliminary;
+  từ không thuộc chủ đề nào xếp theo cấp độ Oxford (A1→B2) và từ loại. 130 bài, mỗi bài ≤ 30 từ
 - **4 kỹ năng**: thẻ ghi nhớ, nghe hiểu, luyện nói (nhận dạng giọng), luyện viết
 - **Lặp lại ngắt quãng** kiểu Anki: từ mới học theo bước 1 phút / 10 phút ngay trong phiên, thuộc rồi ôn theo ngày (Khó < Tốt < Dễ)
 - **50 chuyên đề ngữ pháp** A1→C1, 300 bài tập 4 dạng
 - **Lộ trình luyện thi** TOEIC / IELTS sinh theo mục tiêu và quỹ thời gian
 - **Hội thoại theo chủ đề** lấy nguyên văn từ kho DailyDialog: đọc & nghe hai giọng, đóng vai
-  nói vào micro, điền từ. Mỗi đoạn mang thêm từ mới, ít lặp (hiện có chủ đề 1: 44 đoạn, 96/102 từ)
-- **869 ảnh minh hoạ** thật, phần còn lại dùng biểu tượng
+  nói vào micro, điền từ. Mỗi đoạn mang thêm từ mới, ít lặp (hiện có nhóm Gia đình & bạn bè: 13 đoạn, 31/32 từ)
+- **708 ảnh minh hoạ** thật, phần còn lại dùng biểu tượng
 - Chạy hoàn toàn phía trình duyệt — **không cần máy chủ ứng dụng, không có cơ sở dữ liệu**
 
 ---
@@ -41,7 +43,7 @@ Chuỗi việc: `get_fonts.py` (lần đầu, tải phông về tự host) → `
 
 ## Deploy lên server
 
-Thư mục cần đưa lên là **`pwa/`** — 9,4 MB, toàn tệp tĩnh. Không cần Node, PHP hay
+Thư mục cần đưa lên là **`pwa/`** — 8,0 MB, toàn tệp tĩnh. Không cần Node, PHP hay
 database. Không cần rewrite rule cho SPA vì app không dùng định tuyến theo URL.
 
 ### Ba điều bắt buộc
@@ -136,7 +138,7 @@ vocab.example.com {
   (iOS không cho trình duyệt khác cài PWA.)
 
 Cài xong: có icon riêng, mở toàn màn hình không thanh địa chỉ, và **chạy được khi mất mạng**
-vì service worker đã lưu sẵn 53 tệp gồm cả ảnh và phông chữ.
+vì service worker đã lưu sẵn 106 tệp gồm cả ảnh và phông chữ.
 
 ### Đặt ở thư mục con cũng được
 
@@ -170,13 +172,14 @@ JSON, rồi **Khôi phục** ở máy kia.
 
 ```
 app/shell.html        Vỏ ứng dụng: giao diện + toàn bộ logic (mẫu, chưa có dữ liệu)
-data/t01..t40.json    3.669 mục từ, chia 40 chủ đề
+data/groups.json      31 nhóm: 27 chủ đề Cambridge + 4 nhóm cấp độ Oxford
+data/t001..t130.json  130 bài (≤ 30 từ/bài), mỗi bài thuộc một nhóm
 data/ex2/             Câu ví dụ thứ hai + bản dịch, kèm nhãn nguồn
 data/grammar/         50 chuyên đề ngữ pháp, 300 bài tập
 data/exam.json        Cấu trúc TOEIC / IELTS, mẹo từng phần, thư viện nhiệm vụ
 data/dialogues/       Hội thoại theo chủ đề (DailyDialog) + bản dịch + từ đúng nghĩa từng đoạn
 build/*.py            Script dựng, tải ảnh, đối chiếu Oxford, chọn câu ví dụ
-build/smoke*.js       Kiểm thử tự động (89 mục)
+build/smoke*.js       Kiểm thử tự động (94 mục)
 pwa/                  ★ Bản deploy — đây là thứ đưa lên server
 ```
 
@@ -184,7 +187,7 @@ pwa/                  ★ Bản deploy — đây là thứ đưa lên server
 
 ```bash
 npm install            # chỉ cần jsdom
-node build/smoke.js            # 37 mục: từ vựng, lặp lại ngắt quãng, đọc chậm, 4 kỹ năng, tra từ
+node build/smoke.js            # 42 mục: từ vựng, lặp lại ngắt quãng, đọc chậm, 4 kỹ năng, tra từ
 node build/smoke_grammar.js    # 10 mục: ngữ pháp, 4 dạng bài, chấm điểm
 node build/smoke_plan.js       # 13 mục: lộ trình, kiểm tra trình độ
 node build/smoke_dialog.js     # 29 mục: hội thoại, chọn giọng A/B, từ mới không lặp, đóng vai, điền từ
@@ -198,12 +201,20 @@ python build/get_oxford.py     # PDF Oxford 3000 gốc
 python build/compare_oxford.py # đối chiếu độ phủ danh sách Oxford
 ```
 
-### Thêm hội thoại cho một chủ đề
+### Chia lại chủ đề theo chuẩn
 
 ```bash
-python build/pick_dialogs.py t02   # chọn đoạn: nhiều từ mới nhất, ít lặp nhất (tự tải kho ~4 MB)
-# đọc build/dlg_review/t02.txt, ghi đoạn loại / từ sai nghĩa vào build/dlg_review/t02.json, chạy lại
-python build/dialogues.py t02      # xuất data/dialogues/t02.json (giữ bản dịch đã có)
+python build/parse_cambridge.py    # tải + tách Topic Lists và danh sách từ A2 Key / B1 Preliminary
+python build/regroup.py            # xếp từ vào 27 chủ đề Cambridge / nhóm cấp độ Oxford, bài ≤ 30 từ
+                                   # báo cáo: build/regroup_report.md (kèm danh sách từ bị bỏ)
+```
+
+### Thêm hội thoại cho một nhóm chủ đề
+
+```bash
+python build/pick_dialogs.py g03   # g03 = mã nhóm trong data/groups.json; chọn đoạn nhiều từ mới, ít lặp
+# đọc build/dlg_review/g03.txt, ghi đoạn loại / từ sai nghĩa vào build/dlg_review/g03.json, chạy lại
+python build/dialogues.py g03      # xuất data/dialogues/g03.json (giữ bản dịch đã có)
 ```
 
 ---
@@ -212,7 +223,8 @@ python build/dialogues.py t02      # xuất data/dialogues/t02.json (giữ bản
 
 | Thành phần | Nguồn |
 |---|---|
-| Danh sách 3000 từ | **The Oxford 3000™** — Oxford University Press. Dùng làm danh sách đối chiếu; nghĩa tiếng Việt, IPA và chú giải trong app là nội dung riêng. |
+| Danh sách 3000 từ | **The Oxford 3000™** — Oxford University Press. Dùng làm danh sách đối chiếu và nhãn cấp độ; nghĩa tiếng Việt, IPA và chú giải trong app là nội dung riêng. |
+| Chủ đề | **Cambridge English** — Topic Lists và danh sách từ vựng trong *A2 Key and Key for Schools Vocabulary List* (UCLES 2025) và *B1 Preliminary Vocabulary List* (CUPA 2025), tài liệu công khai trên cambridgeenglish.org. Dùng để xếp từ vào chủ đề; tệp PDF gốc không kèm trong repo. |
 | Câu ví dụ thứ hai | **Tatoeba** — CC BY 2.0 FR. Câu tiếng Anh lấy nguyên từ kho; bản dịch tiếng Việt được đối chiếu lại, mỗi câu có ghi nhãn nguồn trong app. |
 | Hội thoại | **DailyDialog** (Li và cộng sự, IJCNLP 2017) — **CC BY-NC-SA 4.0, chỉ dùng phi thương mại**. Câu tiếng Anh giữ nguyên (chỉ chuẩn hoá dấu câu và sửa vài lỗi gõ ghi trong `build/dialogues.py`); bản dịch tiếng Việt do dự án biên dịch. |
 | Ảnh minh hoạ | **Wikipedia / Wikimedia** — ảnh đại diện bài viết, có ghi tên bài trong bảng chi tiết từ. |
