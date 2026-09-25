@@ -60,6 +60,36 @@ const $ = s => d.querySelector(s), $$ = s => [...d.querySelectorAll(s)];
     nNew === E('dlgTopicCover')(tid) ? okc('tong tu moi = do phu chu de') : fail('lech do phu ' + nNew);
   }
 
+  // giong nguoi B: chon giong tot, khac gioi; khong co giong tot thu hai thi dung lai giong A, khong ha tong
+  {
+    const V = (name, lang, local = true) => ({ name, lang, voiceURI: name, localService: local });
+    const cases = [
+      ['Chrome tren Windows', [V('Google US English', 'en-US', false), V('Microsoft David - English (United States)', 'en-US'),
+        V('Microsoft Zira - English (United States)', 'en-US'), V('Google UK English Female', 'en-GB', false), V('Google UK English Male', 'en-GB', false)],
+        'Google US English', /Google UK English/],
+      ['Edge tren Windows', [V('Microsoft Aria Online (Natural) - English (United States)', 'en-US', false),
+        V('Microsoft Guy Online (Natural) - English (United States)', 'en-US', false), V('Microsoft Jenny Online (Natural) - English (United States)', 'en-US', false),
+        V('Microsoft David - English (United States)', 'en-US')], /Aria|Jenny/, /Guy/],
+      ['may chi co giong co ban', [V('Microsoft David - English (United States)', 'en-US'), V('Microsoft Zira - English (United States)', 'en-US')],
+        /David|Zira/, 'SAME'],
+    ];
+    for (const [label, list, wantA, wantB] of cases) {
+      E('TTS').voices = list;
+      const [a, b] = E('dlgVoices')();
+      const okA = typeof wantA === 'string' ? a.name === wantA : wantA.test(a.name);
+      const okB = wantB === 'SAME' ? b === a : wantB.test(b.name) && E('voiceScore')(b) >= 50;
+      okA && okB ? okc('giong hoi thoai (' + label + '): A = ' + a.name.split(' - ')[0] + ', B = ' + b.name.split(' - ')[0])
+                 : fail(label + ': A=' + a.name + ' B=' + b.name);
+    }
+    // doc cau cua B: khong con ha tong (pitch 1)
+    const said = []; const orig = w.speechSynthesis.speak;
+    w.speechSynthesis.speak = u => said.push(u);
+    E('dlgSay')(D[tid][0], 1, {});
+    w.speechSynthesis.speak = orig;
+    said[0] && (said[0].pitch === 1 || said[0].pitch === undefined) ? okc('giong B doc tong binh thuong (khong meo tieng)') : fail('giong B van bi ha tong: ' + (said[0] && said[0].pitch));
+    E('TTS').voices = [];
+  }
+
   // the chu de co nut hoi thoai
   E('go')('topics'); await tick();
   const btn = $$('.topic-dlg')[0];

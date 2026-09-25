@@ -345,6 +345,8 @@ h3 .dw{pointer-events:none}
 .voice-warn.lv2{background:var(--again-soft)}
 .voice-warn span{color:var(--muted)}
 .voice-warn .btn{flex:none;margin-left:auto}
+.dlg-voices{font-size:12.5px;color:var(--muted);margin:-6px 0 14px}
+.dlg-voices a{color:var(--accent-ink)}
 .early-note{font-size:12.5px;color:var(--muted);text-align:center;margin:-4px 0 10px}
 .pager{display:flex;align-items:center;justify-content:center;gap:5px;flex-wrap:wrap;margin:22px 0 4px}
 .pg{min-width:38px;height:38px;padding:0 9px;border-radius:10px;font-family:var(--mono);font-weight:500;font-size:14px;color:var(--ink-2);background:var(--surface);border:1px solid var(--line)}
@@ -447,7 +449,7 @@ function lsGet(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d
 function lsSet(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}
 
 const S = Object.assign({
-  voice:'', rate:0.92, dialect:'en-US', goalNew:12, goalRev:60,
+  voice:'', voiceB:'', rate:0.92, dialect:'en-US', goalNew:12, goalRev:60,
   theme:'system', mode:'auto', autoPlay:true, showHook:true
 }, lsGet(LS_S,{}));
 function saveS(){lsSet(LS_S,S);}
@@ -1045,6 +1047,8 @@ function viewSettings(root){
       <div class="hint" style="margin-top:6px">${vs.length?`Đang dùng: <b>${esc(cur?cur.name:'—')}</b> · ${esc(cur?cur.lang:'')} · ${cur?esc(voiceTag(cur)):''}`:'<b style="color:var(--again)">Trình duyệt chưa nạp được giọng tiếng Anh nào.</b> Thử tải lại trang.'}
         ${voiceProblem()?`<br><span style="color:var(--hard)">${esc(voiceHelp())}</span>`:''}</div></div>
       <select id="sVoice"><option value="">Tự động (chọn giọng tốt nhất)</option>${vs.map(v=>`<option value="${esc(v.voiceURI)}"${S.voice===v.voiceURI?' selected':''}>${esc(v.name)} — ${esc(voiceTag(v))}</option>`).join('')}</select></div>
+    <div class="set-row"><div><div class="lbl">Giọng người B trong hội thoại</div><div class="hint">Tự động: chọn giọng tốt khác giới với giọng A.</div></div>
+      <select id="sVoiceB"><option value="">Tự động</option>${vs.filter(v=>voiceScore(v)>=40).map(v=>`<option value="${esc(v.voiceURI)}"${S.voiceB===v.voiceURI?' selected':''}>${esc(v.name)} — ${esc(voiceTag(v))}</option>`).join('')}</select></div>
     <div class="set-row"><div><div class="lbl">Chất giọng ưu tiên</div><div class="hint">Dùng khi để giọng đọc ở chế độ tự động.</div></div>
       <div class="seg"><button data-dia="en-US" aria-pressed="${S.dialect==='en-US'}">Anh–Mỹ</button><button data-dia="en-GB" aria-pressed="${S.dialect==='en-GB'}">Anh–Anh</button></div></div>
     <div class="set-row"><div><div class="lbl">Tốc độ đọc</div><div class="hint">Chậm hơn giúp nghe rõ từng âm. Mẹo: bấm 🔊 lần nữa để nghe chậm (🐢), bấm tiếp để về tốc độ thường.</div></div>
@@ -1111,6 +1115,7 @@ function viewSettings(root){
     }).catch(()=>{ st.textContent='Chưa bật'; sh.textContent='Chế độ offline chưa sẵn sàng ở môi trường này.'; });
   })();
   $('#sVoice').onchange=e=>{S.voice=e.target.value;saveS();};
+  $('#sVoiceB').onchange=e=>{S.voiceB=e.target.value;saveS();};
   root.querySelectorAll('[data-dia]').forEach(b=>b.onclick=()=>{S.dialect=b.dataset.dia;S.voice='';saveS();render();});
   $('#sRate').oninput=e=>{S.rate=+e.target.value;$('#rateV').textContent=S.rate.toFixed(2)+'×';saveS();};
   $('#sTest').onclick=()=>speak('The meeting starts at ten. She bought fresh vegetables at the market.');
@@ -2133,15 +2138,29 @@ function dlgTopicCover(tid){
 }
 
 /* ---- giọng đọc: hai người nói dùng hai giọng khác nhau ---- */
+// Đoán giới tính giọng qua tên (để hai người nói dễ phân biệt)
+const FEMALE=/female|woman|aria|jenny|zira|samantha|libby|sonia|ava|emma|michelle|ana|susan|hazel|karen|moira|tessa|fiona|victoria|allison|serena|kate|salli|joanna|ivy|kimberly|clara|natasha|maisie|sara|jane|nancy/i;
+const MALE=/male|man|guy|david|mark|ryan|christopher|eric|daniel|alex|tom|fred|george|james|brian|roger|steffan|andrew|brandon|davis|jason|tony|thomas|william|oliver|arthur|matthew|justin|joey|liam/i;
+const voiceSex=v=>{ const n=v.name||''; return FEMALE.test(n)?'f':MALE.test(n)?'m':''; };
+// Giọng B: chỉ lấy giọng chất lượng cao (Natural/Google...), ưu tiên khác giới với A.
+// Không có giọng tốt thứ hai -> dùng lại giọng A ở tông bình thường (không hạ tông làm méo tiếng).
 function dlgVoices(){
-  const a=pickVoice(); if(!a) return [null,null,false];
-  const r=rankedVoices();
-  const b=r.find(v=>v!==a&&v.lang===a.lang)||r.find(v=>v!==a)||a;
-  return [a,b,a===b];
+  const a=pickVoice(); if(!a) return [null,null];
+  if(S.voiceB){ const v=TTS.voices.find(x=>x.voiceURI===S.voiceB); if(v) return [a,v]; }
+  const sa=voiceSex(a);
+  const good=rankedVoices().filter(v=>v!==a&&voiceScore(v)>=50);
+  const pick=good.find(v=>sa&&voiceSex(v)&&voiceSex(v)!==sa)||good[0];
+  return [a,pick||a];
 }
 function dlgSay(d,k,opts={}){
-  const [va,vb,same]=dlgVoices();
-  speak(d.en[k],{voice:k%2?vb:va,pitch:(k%2&&same)?0.8:1,btn:opts.btn,onend:opts.onend});
+  const [va,vb]=dlgVoices();
+  speak(d.en[k],{voice:k%2?vb:va,btn:opts.btn,onend:opts.onend});
+}
+function dlgVoiceNote(){
+  const [va,vb]=dlgVoices(); if(!va) return '';
+  const nm=v=>esc(String(v.name).replace(/^(Microsoft|Google)\s+/,'').replace(/\s*Online.*$|\s*\(Natural\).*$/,''));
+  return va===vb?`Giọng đọc: <b>${nm(va)}</b> cho cả hai người (máy chưa có giọng tốt thứ hai)`
+    :`Giọng A: <b>${nm(va)}</b> · Giọng B: <b>${nm(vb)}</b>`;
 }
 function dlgStop(){
   if(DLGPLAY.tok){ DLGPLAY.tok=0; try{speechSynthesis.cancel();}catch(e){} }
@@ -2222,6 +2241,7 @@ function dlgRead(host,d,tid){
       <button class="btn btn-primary btn-sm" id="dPlay">▶ Nghe cả đoạn</button>
       <label class="dlg-tog"><input type="checkbox" id="dVi" ${DLG.vi?'checked':''}> Hiện tiếng Việt</label>
       <span class="dlg-hint">Chạm vào một câu để xem nghĩa câu đó</span></div>
+    ${dlgVoiceNote()?`<p class="dlg-voices">${dlgVoiceNote()} · <a href="#" id="dVoiceSet">đổi giọng</a></p>`:''}
     <div class="dlg-lines">${d.en.map((s,k)=>dlgBubble(d,k,
       `<div class="dl-en">${dlgLineHtml(s,tid,d)}</div><div class="dl-vi" ${DLG.vi?'':'hidden'}>${esc(d.vi[k])}</div>`)+
       `<button class="speak-btn dl-sp" data-k="${k}" aria-label="Nghe câu này">🔊</button></div>`).join('')}</div>
@@ -2229,6 +2249,7 @@ function dlgRead(host,d,tid){
     <div class="dlg-words">${chips(fresh)}</div>`:''}
     ${again.length?`<h3 class="dlg-h3"><span class="dw">Ôn lại</span> từ đã gặp ở đoạn trước (${again.length})</h3>
     <div class="dlg-words">${chips(again)}</div>`:''}`;
+  $('#dVoiceSet',host)?.addEventListener('click',e=>{ e.preventDefault(); go('settings'); });
   const play=$('#dPlay',host);
   const mark=k=>host.querySelectorAll('.dl').forEach(x=>x.classList.toggle('cur',+x.dataset.k===k));
   const stopUi=()=>{ play.textContent='▶ Nghe cả đoạn'; mark(-1); };
