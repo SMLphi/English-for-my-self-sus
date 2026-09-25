@@ -113,10 +113,11 @@ process.on('uncaughtException', e => { fail('ngoai le: ' + e.message); finish();
 
   // --- tien do cua bo chu de cu (t05:bed) chuyen sang bai moi chua dung tu do ---
   {
-    const bed = W.find(x => x.w === 'bed'), src = { 't05:bed': { t: 1, i: 3 }, 'G:g01': { t: 1 }, 't99:khongco': { t: 1 } };
+    const bed = W.find(x => x.w === 'bed'), tired4 = W.find(x => x.w === 'tired' && x.g === 't04');
+    const src = { 't05:bed': { t: 1, i: 3 }, 't04:tired': { t: 1, i: 7 }, 'G:g01': { t: 1 }, 't99:khongco': { t: 1 } };
     const n = E('migrateProgress')(src);
-    n === 1 && src[bed.id] && src[bed.id].i === 3 && !src['t05:bed'] && src['G:g01']
-      ? okc('chuyen tien do cu: t05:bed -> ' + bed.id + ', giu tien do ngu phap') : fail('chuyen tien do sai ' + JSON.stringify(src));
+    n === 2 && src[bed.id] && src[bed.id].i === 3 && src[tired4.id] && src[tired4.id].i === 7 && !src['t05:bed'] && src['G:g01']
+      ? okc('chuyen tien do cu: t05:bed -> ' + bed.id + ', t04:tired -> ' + tired4.id + ' (dung chu de), giu ngu phap') : fail('chuyen tien do sai ' + JSON.stringify(src));
   }
 
   // --- nghe lai cung cau -> doc cham, lan nua -> binh thuong ---

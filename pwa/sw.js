@@ -1,5 +1,5 @@
 // Ba Nghin Tu - service worker: luu toan bo app de chay offline
-const VERSION = 'bnt-0b2a167861';
+const VERSION = 'bnt-8d7825eb2f';
 const ASSETS = [
 "./",
 "index.html",

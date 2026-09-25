@@ -476,8 +476,10 @@ function migrateProgress(src){
   for(const k of Object.keys(src)){
     if(k.startsWith('G:')||BY_ID.has(k)) continue;
     const i=k.indexOf(':'); if(i<0) continue;
-    const w=k.slice(i+1).toLowerCase();
-    const nid=W2ID.get(w)||W2ID.get(w.replace(/s$/,''));
+    const w=k.slice(i+1).toLowerCase(), pre=k.slice(0,i);
+    // từ có ở nhiều chủ đề (tired: Cảm xúc & Sức khỏe) -> ưu tiên đúng chủ đề lớn cũ (t04:tired -> t04x:tired)
+    const same=WORDS.find(x=>x.g===pre&&x.w.toLowerCase()===w);
+    const nid=(same&&same.id)||W2ID.get(w)||W2ID.get(w.replace(/s$/,''));
     if(!nid) continue;
     if(!src[nid]||(src[k].t||0)>(src[nid].t||0)) src[nid]=src[k];
     delete src[k]; moved++;
