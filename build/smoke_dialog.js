@@ -87,6 +87,29 @@ const $ = s => d.querySelector(s), $$ = s => [...d.querySelectorAll(s)];
       okA && okB ? okc('giong hoi thoai (' + label + '): A = ' + a.name.split(' - ')[0] + ', B = ' + b.name.split(' - ')[0])
                  : fail(label + ': A=' + a.name + ' B=' + b.name);
     }
+    // iPhone: Safari khong liet ke giong tai them (Allison Nang cao) -> khong chi dinh giong, chi bao en-US
+    // de iOS doc bang giong mac dinh nguoi dung chon; nguoi B dung giong Apple co san (uu tien nam)
+    {
+      const UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1';
+      Object.defineProperty(w.navigator, 'userAgent', { value: UA, configurable: true });
+      E('TTS').voices = [V('Albert', 'en-US'), V('Samantha', 'en-US'), V('Samantha', 'en-US'), V('Karen', 'en-AU'),
+                         V('Daniel', 'en-GB'), V('Moira', 'en-IE'), V('Zarvox', 'en-US')];
+      const cap = []; const orig2 = w.speechSynthesis.speak;
+      w.speechSynthesis.speak = u => cap.push(u);
+      E('speak')('beard');
+      const [ia, ib] = E('dlgVoices')();
+      E('dlgSay')(D[tid][0], 1, {});
+      w.speechSynthesis.speak = orig2;
+      const u0 = cap[0], u1 = cap[1];
+      E('isIOS')() && E('pickVoice')() === null && u0 && !u0.voice && u0.lang === 'en-US' && E('voiceProblem')() === null
+        ? okc('iPhone: khong chi dinh giong, bao en-US -> iOS dung giong mac dinh (vd Allison Nang cao), khong canh bao')
+        : fail('iPhone doc sai: voice=' + (u0 && u0.voice && u0.voice.name) + ' lang=' + (u0 && u0.lang));
+      ia === null && ib && ib.name === 'Daniel' && u1 && u1.voice && u1.voice.name === 'Daniel'
+        ? okc('iPhone hoi thoai: A = giong mac dinh cua may, B = Daniel') : fail('iPhone hoi thoai sai: B=' + (ib && ib.name));
+      /mặc định của iPhone/.test(E('dlgVoiceNote')()) ? okc('ghi chu giong: ' + E('dlgVoiceNote')().replace(/<[^>]+>/g, '')) : fail('ghi chu giong sai');
+      delete w.navigator.userAgent;
+    }
+
     // doc cau cua B: khong con ha tong (pitch 1)
     const said = []; const orig = w.speechSynthesis.speak;
     w.speechSynthesis.speak = u => said.push(u);

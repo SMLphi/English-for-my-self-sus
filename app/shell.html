@@ -692,7 +692,14 @@ function voiceTag(v){
   return 'giọng cơ bản';
 }
 function rankedVoices(){ return [...TTS.voices].sort((a,b)=>voiceScore(b)-voiceScore(a)); }
+// iPhone/iPad: Safari chỉ cho trang web thấy các giọng cài sẵn; giọng tải thêm (vd Allison Nâng cao)
+// không có trong danh sách. Nhưng nếu KHÔNG chỉ định giọng mà chỉ báo ngôn ngữ, iOS đọc bằng giọng mặc định
+// người dùng chọn ở Cài đặt → Trợ năng → Nội dung được đọc → Giọng nói → Tiếng Anh.
+const isIOS=()=>{ const ua=navigator.userAgent||''; return /iPhone|iPad|iPod/i.test(ua)||(/Macintosh/.test(ua)&&(navigator.maxTouchPoints||0)>1); };
+const SYSTEM_VOICE='__system__';
+const useSystemVoice=()=>S.voice===SYSTEM_VOICE||(!S.voice&&isIOS());
 function pickVoice(){
+  if(useSystemVoice()) return null;              // null = để hệ điều hành chọn giọng mặc định
   if(!TTS.voices.length) return null;
   if(S.voice){const v=TTS.voices.find(x=>x.voiceURI===S.voice); if(v) return v;}
   return rankedVoices()[0]||null;
@@ -721,6 +728,7 @@ function speak(text,opts={}){
 }
 function voiceProblem(){
   if(!('speechSynthesis' in window)) return {lvl:2,msg:'Trình duyệt này không có chức năng đọc. Hãy dùng Chrome, Edge hoặc Safari.'};
+  if(useSystemVoice()) return null;              // dùng giọng mặc định người dùng đã chọn trong máy
   const v=pickVoice();
   if(!v) return {lvl:2,msg:'Máy chưa có giọng tiếng Anh nào, nên trình duyệt có thể đọc bằng giọng tiếng Việt, sai hoàn toàn phát âm.'};
   if(voiceScore(v)<50) return {lvl:1,msg:'Đang dùng giọng cơ bản “'+v.name+'”: đúng phát âm nhưng nghe như máy.'};
@@ -728,7 +736,7 @@ function voiceProblem(){
 }
 function voiceHelp(){
   const ua=navigator.userAgent||'';
-  if(/iPhone|iPad|iPod/i.test(ua)) return 'iPhone: Cài đặt → Trợ năng → Nội dung được đọc → Giọng nói → Tiếng Anh → chọn một giọng có chữ “Nâng cao” và tải về.';
+  if(isIOS()) return 'iPhone: Cài đặt → Trợ năng → Nội dung được đọc → Giọng nói → Tiếng Anh → tải và chọn một giọng có chữ “Nâng cao”, rồi để giọng đọc của app ở “Tự động”.';
   if(/Android/i.test(ua)) return 'Android: Cài đặt → Hệ thống → Ngôn ngữ → Chuyển văn bản thành lời nói → chọn “Dịch vụ lời nói của Google” → tải gói English (United States).';
   if(/Edg\//.test(ua)) return 'Edge: vào Cài đặt của app → Giọng đọc, chọn giọng có chữ “Natural” (Aria, Jenny, Guy...).';
   return 'Máy tính: mở app bằng Microsoft Edge (có giọng Natural như người thật) hoặc Chrome (giọng Google US English).';
@@ -1108,9 +1116,10 @@ function viewSettings(root){
   <div class="card" style="padding:6px 20px;margin-bottom:16px">
     <div class="set-row"><div><div class="lbl">Giọng đọc</div>
       <div class="hint">App không tải giọng từ mạng — nó dùng kho giọng đọc <b>cài sẵn trong trình duyệt và Windows của bạn</b>. Giọng có chữ <b>Natural</b>, <b>Neural</b> hoặc <b>Google</b> nghe gần người thật nhất; giọng Microsoft David/Zira là giọng máy đời cũ, nghe khô hơn.</div>
-      <div class="hint" style="margin-top:6px">${vs.length?`Đang dùng: <b>${esc(cur?cur.name:'—')}</b> · ${esc(cur?cur.lang:'')} · ${cur?esc(voiceTag(cur)):''}`:'<b style="color:var(--again)">Trình duyệt chưa nạp được giọng tiếng Anh nào.</b> Thử tải lại trang.'}
+      <div class="hint" style="margin-top:6px">${useSystemVoice()?`Đang dùng: <b>giọng mặc định của ${isIOS()?'iPhone':'máy'}</b> — giọng bạn chọn trong ${isIOS()?'Cài đặt → Trợ năng → Nội dung được đọc → Giọng nói → Tiếng Anh (chọn bản “Nâng cao” để nghe hay nhất)':'cài đặt giọng nói của hệ điều hành'}.`:vs.length?`Đang dùng: <b>${esc(cur?cur.name:'—')}</b> · ${esc(cur?cur.lang:'')} · ${cur?esc(voiceTag(cur)):''}`:'<b style="color:var(--again)">Trình duyệt chưa nạp được giọng tiếng Anh nào.</b> Thử tải lại trang.'}
         ${voiceProblem()?`<br><span style="color:var(--hard)">${esc(voiceHelp())}</span>`:''}</div></div>
-      <select id="sVoice"><option value="">Tự động (chọn giọng tốt nhất)</option>${vs.filter(v=>voiceScore(v)>0).map(v=>`<option value="${esc(v.voiceURI)}"${S.voice===v.voiceURI?' selected':''}>${esc(v.name)} — ${esc(voiceTag(v))}</option>`).join('')}</select></div>
+      <select id="sVoice"><option value="">${isIOS()?'Tự động (giọng mặc định của iPhone)':'Tự động (chọn giọng tốt nhất)'}</option>
+        <option value="${SYSTEM_VOICE}"${S.voice===SYSTEM_VOICE?' selected':''}>Giọng mặc định của máy</option>${vs.filter((v,i,a)=>voiceScore(v)>0&&a.findIndex(x=>x.name===v.name&&x.lang===v.lang)===i).map(v=>`<option value="${esc(v.voiceURI)}"${S.voice===v.voiceURI?' selected':''}>${esc(v.name)} — ${esc(voiceTag(v))}</option>`).join('')}</select></div>
     <div class="set-row"><div><div class="lbl">Giọng người B trong hội thoại</div><div class="hint">Tự động: chọn giọng tốt khác giới với giọng A.</div></div>
       <select id="sVoiceB"><option value="">Tự động</option>${vs.filter(v=>voiceScore(v)>=40).map(v=>`<option value="${esc(v.voiceURI)}"${S.voiceB===v.voiceURI?' selected':''}>${esc(v.name)} — ${esc(voiceTag(v))}</option>`).join('')}</select></div>
     <div class="set-row"><div><div class="lbl">Chất giọng ưu tiên</div><div class="hint">Dùng khi để giọng đọc ở chế độ tự động.</div></div>
@@ -2215,8 +2224,14 @@ const voiceSex=v=>{ const n=v.name||''; return FEMALE.test(n)?'f':MALE.test(n)?'
 // Giọng B: chỉ lấy giọng chất lượng cao (Natural/Google...), ưu tiên khác giới với A.
 // Không có giọng tốt thứ hai -> dùng lại giọng A ở tông bình thường (không hạ tông làm méo tiếng).
 function dlgVoices(){
-  const a=pickVoice(); if(!a) return [null,null];
+  const a=pickVoice();
   if(S.voiceB){ const v=TTS.voices.find(x=>x.voiceURI===S.voiceB); if(v) return [a,v]; }
+  if(!a){
+    if(!useSystemVoice()) return [null,null];
+    // A = giọng mặc định của máy (vd Allison Nâng cao); B = giọng Apple có sẵn, ưu tiên giọng nam để dễ phân biệt
+    const good=rankedVoices().filter(v=>voiceScore(v)>0&&APPLE_GOOD.test(v.name||'')&&/^en/i.test(v.lang||''));
+    return [null, good.find(v=>voiceSex(v)==='m')||good[0]||null];
+  }
   const sa=voiceSex(a);
   // giọng tốt (Natural/Google, hoặc giọng người thật của Apple), khác người với giọng A (Samantha ≠ Samantha Nâng cao)
   const base=v=>String(v.name).replace(/\s*\(.*\)\s*$/,'').toLowerCase();
@@ -2229,8 +2244,9 @@ function dlgSay(d,k,opts={}){
   speak(d.en[k],{voice:k%2?vb:va,btn:opts.btn,onend:opts.onend});
 }
 function dlgVoiceNote(){
-  const [va,vb]=dlgVoices(); if(!va) return '';
+  const [va,vb]=dlgVoices();
   const nm=v=>esc(String(v.name).replace(/^(Microsoft|Google)\s+/,'').replace(/\s*Online.*$|\s*\(Natural\).*$/,''));
+  if(!va) return vb?`Giọng A: <b>mặc định của ${isIOS()?'iPhone':'máy'}</b> · Giọng B: <b>${nm(vb)}</b>`:'';
   return va===vb?`Giọng đọc: <b>${nm(va)}</b> cho cả hai người (máy chưa có giọng tốt thứ hai)`
     :`Giọng A: <b>${nm(va)}</b> · Giọng B: <b>${nm(vb)}</b>`;
 }
