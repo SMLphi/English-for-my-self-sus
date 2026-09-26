@@ -133,6 +133,17 @@ process.on('uncaughtException', e => { fail('ngoai le: ' + e.message); finish();
   sp('nose'); sp('She has a small nose.'); sp('nose');
   const r2 = w.__said.map(u => u.rate);
   r2[2] < r0 ? okc('nghe cau khac xen giua van giu luot nghe cham cua tu (' + r2.join(' / ') + ')') : fail('nghe cau khac xen giua lam mat luot cham: ' + r2);
+  // doc cham ca cau: tach cum co ngat nghi (nghe ro cham ca khi may bo qua toc do), khong cum nao ket thuc bang "the/at..."
+  w.__said = [];
+  sp('The meeting starts at ten. She bought fresh vegetables at the market.', { slow: true });
+  {
+    const parts = w.__said.map(u => u.text), glue = /\b(the|at|a|to|of)$/i;
+    parts.length >= 4 && w.__said.every(u => u.rate < r0) && !parts.some(p => glue.test(p)) && parts.join(' ') === 'The meeting starts at ten. She bought fresh vegetables at the market.'
+      ? okc('doc cham cau: ' + parts.length + ' cum [' + parts.join(' | ') + ']') : fail('tach cum doc cham sai: ' + parts.join(' | '));
+  }
+  w.__said = [];
+  sp('shoulder', { slow: true });
+  w.__said.length === 1 && w.__said[0].rate < r0 ? okc('nut cham voi mot tu: doc 1 lan, cham') : fail('nut cham voi mot tu sai');
 
   for (const forced of ['auto', 'flash', 'listen', 'write', 'speak']) {
     try {

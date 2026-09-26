@@ -270,6 +270,8 @@ h1,h2,h3{font-family:var(--display);font-weight:800;margin:0;text-wrap:balance;l
 .set-row:last-child{border-bottom:0}
 .set-row .lbl{font-weight:700;font-size:15px}
 .set-row .hint{font-size:13px;color:var(--muted);margin-top:2px;max-width:46ch}
+.set-ctl{display:flex;align-items:center;gap:8px;max-width:100%}
+.set-ctl select{max-width:min(320px,calc(100vw - 150px))}
 .set-row select,.set-row input[type=number]{padding:8px 11px;border-radius:9px;border:1.5px solid var(--line-2);background:var(--surface-2);min-width:120px}
 .seg{display:inline-flex;background:var(--sunk);border-radius:9px;padding:3px;gap:2px}
 .seg button{padding:6px 13px;border-radius:7px;font-size:14px;font-weight:600;color:var(--muted)}
@@ -657,7 +659,7 @@ const TTS={voices:[],ready:false};
 function loadVoices(){
   try{ TTS.voices=(speechSynthesis.getVoices()||[]).filter(v=>/^en/i.test(v.lang)); TTS.ready=TTS.voices.length>0; }catch(e){}
 }
-if('speechSynthesis' in window){ loadVoices(); speechSynthesis.onvoiceschanged=()=>{loadVoices();}; }
+if('speechSynthesis' in window){ loadVoices(); speechSynthesis.onvoiceschanged=()=>{loadVoices(); try{ if(route.v==='settings') render(); }catch(e){}}; }
 // Xep hang giong: uu tien giong tong hop the he moi (Natural/Neural/Google)
 // vi chung nghe gan nguoi that hon han giong co ban cua Windows.
 // iPhone/Mac: Safari đưa ra cả giọng "vui nhộn" và giọng máy kiểu cũ (Albert, Bad News, Zarvox,
@@ -711,24 +713,50 @@ let speakBtnEl=null;
 const TTS_HIST=new Map();                        // text -> {t, slow}
 // Chậm còn khoảng một nửa (iPhone nén chênh lệch tốc độ nên cần giảm mạnh mới nghe rõ khác biệt)
 const slowRate=()=>Math.max(0.3,Math.round(S.rate*0.5*100)/100);
+// Đọc chậm câu dài: tách thành cụm 2–3 từ, mỗi cụm một lượt đọc -> có quãng nghỉ giữa các cụm.
+// Nhờ vậy vẫn nghe rõ là chậm cả khi máy bỏ qua tốc độ. Không để cụm kết thúc bằng mạo từ/giới từ ("the | meeting").
+const GLUE=/^(a|an|the|to|of|in|on|at|for|with|from|by|and|or|but|my|your|his|her|its|our|their|this|that|some|is|are|was|were|be|i|you|he|she|we|they|it|not|don't|can't|very)$/i;
+function slowChunks(text){
+  const out=[];
+  String(text).replace(/([,.;:!?])\s+/g,'$1\n').split('\n').forEach(cl=>{
+    const ws=cl.trim().split(/\s+/).filter(Boolean);
+    for(let i=0;i<ws.length;){
+      let n=Math.min(3,ws.length-i);
+      while(i+n<ws.length&&n<4&&GLUE.test(ws[i+n-1].replace(/[^\w']/g,''))) n++;
+      if(ws.length-(i+n)===1) n++;                 // không để một từ lẻ loi cuối câu
+      out.push(ws.slice(i,i+n).join(' ')); i+=n;
+    }
+  });
+  return out.length?out:[String(text)];
+}
+// iPhone đang dùng giọng mặc định (không chỉ định giọng): iOS đọc theo tốc độ trong Trợ năng và bỏ qua tốc độ
+// của app, nên nghe chậm không khác gì. Khi đọc chậm thì mượn giọng Apple có sẵn tốt nhất — giọng này theo đúng tốc độ.
+function slowVoice(){
+  if(!(useSystemVoice()&&isIOS())) return null;
+  return rankedVoices().find(v=>voiceScore(v)>0&&v.lang.replace('_','-').startsWith(S.dialect))||rankedVoices().find(v=>voiceScore(v)>0)||null;
+}
 function speak(text,opts={}){
   if(!('speechSynthesis' in window)) return;
   try{
     speechSynthesis.cancel();
-    const u=new SpeechSynthesisUtterance(text);
-    const v=opts.voice||pickVoice(); if(v){u.voice=v;u.lang=v.lang;} else u.lang=S.dialect;
-    let slow=false;
-    if(!opts.onend&&!opts.rate){
+    let slow=!!opts.slow;
+    if(!slow&&!opts.onend&&!opts.rate){
       const h=TTS_HIST.get(text), now=Date.now();
       slow=h&&now-h.t<30000?!h.slow:false;
       TTS_HIST.set(text,{t:now,slow});
       if(TTS_HIST.size>200) TTS_HIST.delete(TTS_HIST.keys().next().value);
-      if(slow) toast('🐢 Đọc chậm — bấm lần nữa để về tốc độ thường');
+      if(slow&&!opts.quiet) toast('🐢 Đọc chậm — bấm lần nữa để về tốc độ thường');
     }
-    u.rate=opts.rate||(slow?slowRate():S.rate); u.pitch=opts.pitch||1;
+    const v=opts.voice||(slow&&slowVoice())||pickVoice();
+    const parts=slow?slowChunks(text):[text];
     if(opts.btn){ opts.btn.classList.add('playing'); opts.btn.classList.toggle('slow',slow); }
-    u.onend=u.onerror=()=>{ if(opts.btn) opts.btn.classList.remove('playing'); if(opts.onend) opts.onend(); };
-    speechSynthesis.speak(u);
+    parts.forEach((p,i)=>{
+      const u=new SpeechSynthesisUtterance(p);
+      if(v){u.voice=v;u.lang=v.lang;} else u.lang=S.dialect;
+      u.rate=opts.rate||(slow?slowRate():S.rate); u.pitch=opts.pitch||1;
+      if(i===parts.length-1) u.onend=u.onerror=()=>{ if(opts.btn) opts.btn.classList.remove('playing'); if(opts.onend) opts.onend(); };
+      speechSynthesis.speak(u);
+    });
   }catch(e){}
 }
 function voiceProblem(){
@@ -1114,24 +1142,52 @@ function viewStats(root){
   </div>`;
 }
 
+// Chữ giới thiệu kho giọng theo đúng loại máy (trước đây luôn nói về Windows, kể cả trên iPhone)
+function voiceIntro(){
+  const ua=navigator.userAgent||'';
+  if(isIOS()) return 'App đọc bằng giọng có sẵn trong iPhone. Hay nhất là để <b>Tự động</b> và chọn giọng trong <b>Cài đặt → Trợ năng → Nội dung được đọc → Giọng nói → Tiếng Anh</b>: tải một giọng có chữ <b>Nâng cao</b> (Ava, Allison, Evan...). Danh sách bên cạnh chỉ có giọng cài sẵn, không có giọng tải thêm.';
+  if(/Android/i.test(ua)) return 'App đọc bằng giọng có sẵn trong điện thoại. Giọng <b>Google</b> nghe tự nhiên nhất.';
+  return 'App đọc bằng giọng có sẵn trong trình duyệt và máy tính, không tải từ mạng. Giọng có chữ <b>Natural</b>, <b>Neural</b> hoặc <b>Google</b> nghe gần người thật nhất; Microsoft David/Zira là giọng máy đời cũ, nghe khô hơn.';
+}
+// Danh sách giọng cho ô chọn: bỏ giọng trùng tên, chia nhóm "nghe tự nhiên" / "giọng khác"
+function voiceOptions(sel){
+  const vs=rankedVoices().filter((v,i,a)=>voiceScore(v)>0&&a.findIndex(x=>x.name===v.name&&x.lang===v.lang)===i);
+  // "Microsoft Aria Online (Natural) - English (United States)" -> "Aria (Natural)"
+  const nm=v=>String(v.name).replace(/^Microsoft\s+/,'').replace(/\s+Online\b/,'').replace(/\s+-\s+English.*$/,'');
+  const o=v=>`<option value="${esc(v.voiceURI)}"${sel===v.voiceURI?' selected':''}>${esc(nm(v))} · ${esc(v.lang)} — ${esc(voiceTag(v))}</option>`;
+  const hi=vs.filter(v=>voiceScore(v)>=50), lo=vs.filter(v=>voiceScore(v)<50);
+  return (hi.length?`<optgroup label="Nghe tự nhiên">${hi.map(o).join('')}</optgroup>`:'')
+    +(lo.length?`<optgroup label="Giọng khác">${lo.map(o).join('')}</optgroup>`:'');
+}
+const rateWord=r=>r<0.8?'chậm':r<0.95?'hơi chậm':r<=1.05?'bình thường':r<=1.15?'hơi nhanh':'nhanh';
+const VOICE_SAMPLE='The meeting starts at ten. She bought fresh vegetables at the market.';
+
 /* ---------- Cài đặt ---------- */
 function viewSettings(root){
-  const vs=rankedVoices(), cur=pickVoice();
+  const cur=pickVoice(), sv=slowVoice();
+  const using=useSystemVoice()?`Đang dùng: <b>giọng mặc định của ${isIOS()?'iPhone':'máy'}</b>${isIOS()?'':' (giọng chọn trong cài đặt giọng nói của hệ điều hành)'}.`
+    :TTS.voices.length?`Đang dùng: <b>${esc(cur?cur.name:'—')}</b> · ${esc(cur?cur.lang:'')} · ${cur?esc(voiceTag(cur)):''}`
+    :'<b style="color:var(--again)">Trình duyệt chưa nạp được giọng tiếng Anh nào.</b> Thử tải lại trang.';
   root.innerHTML=`<div class="page-h"><div><h1>Cài đặt</h1><p>Giọng đọc, mục tiêu hằng ngày và dữ liệu học.</p></div></div>
   <div class="card" style="padding:6px 20px;margin-bottom:16px">
     <div class="set-row"><div><div class="lbl">Giọng đọc</div>
-      <div class="hint">App không tải giọng từ mạng — nó dùng kho giọng đọc <b>cài sẵn trong trình duyệt và Windows của bạn</b>. Giọng có chữ <b>Natural</b>, <b>Neural</b> hoặc <b>Google</b> nghe gần người thật nhất; giọng Microsoft David/Zira là giọng máy đời cũ, nghe khô hơn.</div>
-      <div class="hint" style="margin-top:6px">${useSystemVoice()?`Đang dùng: <b>giọng mặc định của ${isIOS()?'iPhone':'máy'}</b> — giọng bạn chọn trong ${isIOS()?'Cài đặt → Trợ năng → Nội dung được đọc → Giọng nói → Tiếng Anh (chọn bản “Nâng cao” để nghe hay nhất)':'cài đặt giọng nói của hệ điều hành'}.`:vs.length?`Đang dùng: <b>${esc(cur?cur.name:'—')}</b> · ${esc(cur?cur.lang:'')} · ${cur?esc(voiceTag(cur)):''}`:'<b style="color:var(--again)">Trình duyệt chưa nạp được giọng tiếng Anh nào.</b> Thử tải lại trang.'}
-        ${voiceProblem()?`<br><span style="color:var(--hard)">${esc(voiceHelp())}</span>`:''}</div></div>
-      <select id="sVoice"><option value="">${isIOS()?'Tự động (giọng mặc định của iPhone)':'Tự động (chọn giọng tốt nhất)'}</option>
-        <option value="${SYSTEM_VOICE}"${S.voice===SYSTEM_VOICE?' selected':''}>Giọng mặc định của máy</option>${vs.filter((v,i,a)=>voiceScore(v)>0&&a.findIndex(x=>x.name===v.name&&x.lang===v.lang)===i).map(v=>`<option value="${esc(v.voiceURI)}"${S.voice===v.voiceURI?' selected':''}>${esc(v.name)} — ${esc(voiceTag(v))}</option>`).join('')}</select></div>
-    <div class="set-row"><div><div class="lbl">Giọng người B trong hội thoại</div><div class="hint">Tự động: chọn giọng tốt khác giới với giọng A.</div></div>
-      <select id="sVoiceB"><option value="">Tự động</option>${vs.filter(v=>voiceScore(v)>=40).map(v=>`<option value="${esc(v.voiceURI)}"${S.voiceB===v.voiceURI?' selected':''}>${esc(v.name)} — ${esc(voiceTag(v))}</option>`).join('')}</select></div>
-    <div class="set-row"><div><div class="lbl">Chất giọng ưu tiên</div><div class="hint">Dùng khi để giọng đọc ở chế độ tự động.</div></div>
+      <div class="hint">${voiceIntro()}</div>
+      <div class="hint" style="margin-top:6px">${using}${voiceProblem()?`<br><span style="color:var(--hard)">${esc(voiceHelp())}</span>`:''}</div></div>
+      <div class="set-ctl"><select id="sVoice" aria-label="Giọng đọc"><option value="">${isIOS()?'Tự động — giọng trong Cài đặt iPhone (nên dùng)':'Tự động — chọn giọng tốt nhất'}</option>
+        ${!isIOS()||S.voice===SYSTEM_VOICE?`<option value="${SYSTEM_VOICE}"${S.voice===SYSTEM_VOICE?' selected':''}>Giọng mặc định của hệ điều hành</option>`:''}${voiceOptions(S.voice)}</select>
+        <button class="btn btn-sm" id="sTestA">▶ Nghe</button></div></div>
+    <div class="set-row"><div><div class="lbl">Giọng người B trong hội thoại</div><div class="hint">Tự động: chọn một giọng tốt khác với giọng A, ưu tiên khác giới cho dễ phân biệt.</div>
+      <div class="hint" style="margin-top:6px">${dlgVoiceNote()}</div></div>
+      <div class="set-ctl"><select id="sVoiceB" aria-label="Giọng người B"><option value="">Tự động</option>${voiceOptions(S.voiceB)}</select>
+        <button class="btn btn-sm" id="sTestB">▶ Nghe</button></div></div>
+    <div class="set-row"><div><div class="lbl">Chất giọng ưu tiên</div><div class="hint">Dùng khi giọng đọc để Tự động. Đổi chất giọng sẽ đưa giọng đọc về Tự động.</div></div>
       <div class="seg"><button data-dia="en-US" aria-pressed="${S.dialect==='en-US'}">Anh–Mỹ</button><button data-dia="en-GB" aria-pressed="${S.dialect==='en-GB'}">Anh–Anh</button></div></div>
-    <div class="set-row"><div><div class="lbl">Tốc độ đọc</div><div class="hint">Chậm hơn giúp nghe rõ từng âm. Mẹo: bấm 🔊 lần nữa để nghe chậm (🐢), bấm tiếp để về tốc độ thường.</div></div>
-      <div style="display:flex;align-items:center;gap:10px"><input type="range" id="sRate" min="0.6" max="1.3" step="0.02" value="${S.rate}"><span class="mono" id="rateV">${S.rate.toFixed(2)}×</span>
-      <button class="btn btn-sm" id="sTest">Thử</button></div></div>
+    <div class="set-row"><div><div class="lbl">Tốc độ đọc</div>
+      <div class="hint">Tốc độ thường khi đọc từ và câu. <b>Nghe chậm 🐢</b>: bấm 🔊 lần nữa trên cùng từ/câu — đọc còn khoảng nửa tốc độ, câu dài ngắt thành từng cụm; bấm tiếp để về tốc độ thường.</div>
+      ${sv?`<div class="hint" style="margin-top:6px">iPhone không cho app đổi tốc độ của giọng mặc định (giọng đó đọc theo <b>Trợ năng → Nội dung được đọc → Tốc độ đọc</b>), nên khi nghe chậm app mượn giọng <b>${esc(sv.name)}</b>.</div>`:''}</div>
+      <div class="set-ctl" style="flex-wrap:wrap"><input type="range" id="sRate" min="0.6" max="1.3" step="0.02" value="${S.rate}" aria-label="Tốc độ đọc">
+        <span class="mono" id="rateV">${S.rate.toFixed(2)}× · ${rateWord(S.rate)}</span>
+        <button class="btn btn-sm" id="sTest">▶ Thường</button><button class="btn btn-sm" id="sTestSlow">🐢 Chậm</button></div></div>
     <div class="set-row"><div><div class="lbl">Tự phát âm thanh</div><div class="hint">Đọc từ ngay khi thẻ hiện ra.</div></div>
       <div class="seg"><button data-auto="1" aria-pressed="${S.autoPlay}">Bật</button><button data-auto="0" aria-pressed="${!S.autoPlay}">Tắt</button></div></div>
   </div>
@@ -1192,11 +1248,16 @@ function viewSettings(root){
       else { st.textContent='Chưa bật'; sh.textContent='Chế độ offline chỉ bật ở bản tải về khi chạy qua HTTPS hoặc localhost.'; }
     }).catch(()=>{ st.textContent='Chưa bật'; sh.textContent='Chế độ offline chưa sẵn sàng ở môi trường này.'; });
   })();
-  $('#sVoice').onchange=e=>{S.voice=e.target.value;saveS();};
-  $('#sVoiceB').onchange=e=>{S.voiceB=e.target.value;saveS();};
-  root.querySelectorAll('[data-dia]').forEach(b=>b.onclick=()=>{S.dialect=b.dataset.dia;S.voice='';saveS();render();});
-  $('#sRate').oninput=e=>{S.rate=+e.target.value;$('#rateV').textContent=S.rate.toFixed(2)+'×';saveS();};
-  $('#sTest').onclick=()=>speak('The meeting starts at ten. She bought fresh vegetables at the market.');
+  // đổi giọng: lưu, vẽ lại dòng "Đang dùng" rồi đọc thử luôn để nghe khác biệt
+  const testA=()=>speak(VOICE_SAMPLE,{rate:S.rate}), testB=()=>{ const [,vb]=dlgVoices(); speak('Sure, I can meet you there at six.',{voice:vb||undefined,rate:S.rate}); };
+  $('#sVoice').onchange=e=>{S.voice=e.target.value;saveS();render();testA();};
+  $('#sVoiceB').onchange=e=>{S.voiceB=e.target.value;saveS();render();testB();};
+  $('#sTestA').onclick=testA; $('#sTestB').onclick=testB;
+  root.querySelectorAll('[data-dia]').forEach(b=>b.onclick=()=>{S.dialect=b.dataset.dia;S.voice='';saveS();render();testA();});
+  $('#sRate').oninput=e=>{S.rate=+e.target.value;$('#rateV').textContent=S.rate.toFixed(2)+'× · '+rateWord(S.rate);saveS();};
+  $('#sRate').onchange=testA;
+  $('#sTest').onclick=testA;
+  $('#sTestSlow').onclick=()=>speak(VOICE_SAMPLE,{slow:true,quiet:true});
   root.querySelectorAll('[data-auto]').forEach(b=>b.onclick=()=>{S.autoPlay=b.dataset.auto==='1';saveS();render();});
   root.querySelectorAll('[data-hook]').forEach(b=>b.onclick=()=>{S.showHook=b.dataset.hook==='1';saveS();render();});
   root.querySelectorAll('[data-th]').forEach(b=>b.onclick=()=>{S.theme=b.dataset.th;saveS();applyTheme();render();});
@@ -1954,9 +2015,9 @@ async function cardListen(host,w){
   if(seq!==STUDY_SEQ) return;
   host.appendChild(fc);
   const q=sel=>fc.querySelector(sel);
-  const play=(rate)=>{replays++;speak(w.w,{rate,btn:q('#big')});};
-  q('#big').onclick=()=>play();
-  q('#slow').onclick=()=>play(slowRate());
+  const play=(slow)=>{replays++;speak(w.w,{slow,btn:q('#big')});};
+  q('#big').onclick=()=>play(false);
+  q('#slow').onclick=()=>play(true);
   q('#sent').onclick=()=>{replays++;speak(w.ex2&&Math.random()<0.5?w.ex2:w.ex);};
   setTimeout(()=>speak(w.w),180);
   const ob=q('#opts');
