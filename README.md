@@ -188,7 +188,7 @@ pwa/                  ★ Bản deploy — đây là thứ đưa lên server
 
 ```bash
 npm install            # chỉ cần jsdom
-node build/smoke.js            # 46 mục: từ vựng, lặp lại ngắt quãng, đọc chậm, 4 kỹ năng, tra từ
+node build/smoke.js            # 44 mục: từ vựng, lặp lại ngắt quãng, đọc chậm, 4 kỹ năng, tra từ
 node build/smoke_grammar.js    # 10 mục: ngữ pháp, 4 dạng bài, chấm điểm
 node build/smoke_plan.js       # 13 mục: lộ trình, kiểm tra trình độ
 node build/smoke_dialog.js     # 34 mục: hội thoại, chọn giọng A/B, từ mới không lặp, đóng vai, điền từ
