@@ -707,8 +707,10 @@ function pickVoice(){
 let speakBtnEl=null;
 // Nghe lại đúng câu vừa đọc (trong 20 giây) thì đọc chậm, bấm lần nữa lại đọc thường — như Google Dịch.
 // Chuỗi đọc liền nhiều câu (có onend) thì luôn đọc tốc độ thường.
-const TTS_LAST={text:'',t:0,slow:false};
-const slowRate=()=>Math.max(0.45,Math.round(S.rate*0.6*100)/100);
+// Nhớ riêng từng từ/câu: nghe câu ví dụ xen giữa không làm mất lượt "nghe chậm" của từ.
+const TTS_HIST=new Map();                        // text -> {t, slow}
+// Chậm còn khoảng một nửa (iPhone nén chênh lệch tốc độ nên cần giảm mạnh mới nghe rõ khác biệt)
+const slowRate=()=>Math.max(0.3,Math.round(S.rate*0.5*100)/100);
 function speak(text,opts={}){
   if(!('speechSynthesis' in window)) return;
   try{
@@ -717,8 +719,11 @@ function speak(text,opts={}){
     const v=opts.voice||pickVoice(); if(v){u.voice=v;u.lang=v.lang;} else u.lang=S.dialect;
     let slow=false;
     if(!opts.onend&&!opts.rate){
-      slow=TTS_LAST.text===text&&Date.now()-TTS_LAST.t<20000?!TTS_LAST.slow:false;
-      TTS_LAST.text=text; TTS_LAST.t=Date.now(); TTS_LAST.slow=slow;
+      const h=TTS_HIST.get(text), now=Date.now();
+      slow=h&&now-h.t<30000?!h.slow:false;
+      TTS_HIST.set(text,{t:now,slow});
+      if(TTS_HIST.size>200) TTS_HIST.delete(TTS_HIST.keys().next().value);
+      if(slow) toast('🐢 Đọc chậm — bấm lần nữa để về tốc độ thường');
     }
     u.rate=opts.rate||(slow?slowRate():S.rate); u.pitch=opts.pitch||1;
     if(opts.btn){ opts.btn.classList.add('playing'); opts.btn.classList.toggle('slow',slow); }
@@ -1951,7 +1956,7 @@ async function cardListen(host,w){
   const q=sel=>fc.querySelector(sel);
   const play=(rate)=>{replays++;speak(w.w,{rate,btn:q('#big')});};
   q('#big').onclick=()=>play();
-  q('#slow').onclick=()=>play(0.65);
+  q('#slow').onclick=()=>play(slowRate());
   q('#sent').onclick=()=>{replays++;speak(w.ex2&&Math.random()<0.5?w.ex2:w.ex);};
   setTimeout(()=>speak(w.w),180);
   const ob=q('#opts');

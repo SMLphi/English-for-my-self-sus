@@ -125,9 +125,14 @@ process.on('uncaughtException', e => { fail('ngoai le: ' + e.message); finish();
   const sp = E('speak'), r0 = E('S').rate;
   sp('beard'); sp('beard'); sp('beard'); sp('chin');
   const rates = w.__said.map(u => u.rate);
-  rates[0] === r0 && rates[1] < r0 && rates[2] === r0 && rates[3] === r0
-    ? okc('nghe lai: thuong ' + r0 + ' -> cham ' + rates[1] + ' -> thuong; tu khac doc thuong')
+  rates[0] === r0 && rates[1] <= r0 * 0.55 && rates[2] === r0 && rates[3] === r0
+    ? okc('nghe lai: thuong ' + r0 + ' -> cham ' + rates[1] + ' (con ~1/2) -> thuong; tu khac doc thuong')
     : fail('toc do nghe lai sai: ' + rates);
+  // the tu tu doc "nose", lat the nghe cau vi du, roi bam nghe lai "nose" -> van phai doc cham
+  w.__said = [];
+  sp('nose'); sp('She has a small nose.'); sp('nose');
+  const r2 = w.__said.map(u => u.rate);
+  r2[2] < r0 ? okc('nghe cau khac xen giua van giu luot nghe cham cua tu (' + r2.join(' / ') + ')') : fail('nghe cau khac xen giua lam mat luot cham: ' + r2);
 
   for (const forced of ['auto', 'flash', 'listen', 'write', 'speak']) {
     try {
