@@ -1,0 +1,36 @@
+name: Gemini English Tutor
+
+on:
+  push:
+    paths:
+      - 'daily_writing.md'
+  workflow_dispatch: # Cho phép bấm nút chạy thủ công bất cứ lúc nào
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install google-genai
+
+      - name: Run Gemini Review
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/review.py
+
+      - name: Commit and push feedback
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "Gemini Tutor Bot"
+          git add feedback.md
+          git commit -m "docs: update English feedback by Gemini [skip ci]" || exit 0
+          git push
